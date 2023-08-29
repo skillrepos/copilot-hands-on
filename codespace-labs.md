@@ -138,3 +138,59 @@ uvicorn main:app
 12. When the webpage comes up, you'll see a message like *{"detail":"Not Found"}*. In the url add the endpoint text "/prime/9" (or whatever number you want) and you should see the expected result message returned. You can try additional numbers if you want.
 
 ![testing the api](./images/cdd13.png?raw=true "testing the api") 
+
+
+**Lab 3 - Using Copilot to create test cases**
+
+**Purpose: In this lab, we’ll see how to use Copilot to create test cases**
+
+1. On the activity bar at the left of the codespace, click on the Explorer view icon, select one of the top-level files, then click the + icon for a new file at the top.
+   Name the new file *test-prime.py*.
+   
+2. Afterwards this file should be open in a tab in the editor. Add a comment that describes what we intend to happen and hit Enter.
+
+```
+# Test the FastAPI app using pytest:
+```
+![initial comment](./images/cdd14.png?raw=true "initial comment")   
+
+3. Hit Enter a couple of times until you see the first actual code line "import pytest".  Hit Tab to accept.
+
+![initial code](./images/cdd15.png?raw=true "initial code")   
+
+4. Now, let Copilot fill out the rest of the test program and test cases by hitting Enter to suggest lines of code and then hitting Tab to accept. You can stop after a couple of test cases are generated. The screenshot below shows 4. (Remember to pause and give Copilot a second to generate code, but if you don't see a suggestion, hit Enter and see if it suggests it on the next line.
+
+![code with test cases](./images/cdd16.png?raw=true "code with test cases")  
+
+5. Notice that the test cases picked up on the context from the api we defined in main.py automatically. (They reference the /prime/<number> format.)
+
+6. Let's have it test for something else. Add a comment to tell it to test for a negative value.
+
+```
+# test for a negative value
+```
+7. Hit return and you should see that it has generated a test case for a negative value.  Hit Tab to accept.
+
+![test case for negative value](./images/cdd17.png?raw=true "test case for negative value")
+
+8. Now let's add a test for an invalid value. Type the following comment and hit Enter to see what Copilot suggests.
+
+```
+# test for an invalid value
+```
+
+9. Copilot may suggest a standard test with a value that results in false as shown below.
+
+![initial suggestion](./images/cdd18.png?raw=true "initial suggestion")
+
+10. But this is not really an invalid value. Hover over the first line and see if there are other suggestions. Click on the ">" sign to advance to the next suggestion. Look for one (may be the 2nd one) that supplies a text string after "/prime". Do not hit Tab yet.
+
+![alternative suggestion](./images/cdd19.png?raw=true "alternative suggestion")
+
+11. Notice that while this has the test case we want, it also asserts a response that we did not build into the app. So we just want to accept the first three lines of the suggestion. Hover over each of the lines in turn. In the popup, select the "..." at the end. Then select "Accept line" from the additional options. After accepting the first 3 lines, you can click anywhere to ignore the rest of the suggestion.
+
+![accepting the first 2 lines](./images/cdd20.png?raw=true "accepting the first two lines") 
+
+12. Your final test case should look like the below.
+
+![final test case](./images/cdd21.png?raw=true "final test case") 
