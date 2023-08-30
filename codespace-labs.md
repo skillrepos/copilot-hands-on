@@ -194,3 +194,61 @@ uvicorn main:app
 12. Your final test case should look like the below.
 
 ![final test case](./images/cdd21.png?raw=true "final test case") 
+
+ <p align="center">
+**[END OF LAB]**
+</p>
+
+**Lab 4 - Using Copilot to explain code**
+
+**Purpose: In this lab, we’ll see some examples of how to have Copilot help explain code**
+
+1. If not already there, open the *test-prime.py* file and go to the end of the file.
+   
+2. Add a comment starting with "q:" to ask a question about what this code does. After you enter the comment, hit Enter to see the answer.
+
+```
+# q: what does the code in this file do?
+```
+![answer to what the code in the file does](./images/cdd22.png?raw=true "answer to what the code in the file does")  
+
+3. Change the same comment starting with "q:" to ask a question about what the app does. After you enter the comment, hit Enter to see the answer.
+
+```
+# q: what does the code in the app do?
+```
+![answer to what the code in the app does](./images/cdd23.png?raw=true "answer to what the code in the app does")  
+
+4. Let's try one more. Change the same comment starting with "q:" to tell Copilot to explain the lines in this file.
+
+```
+# q: explain in detail what each line of this file does
+```
+
+5. Hit Enter and Copilot will start responding with the explanation of each line. You will need to hit Tab for each suggested line and then hit Enter to see the next line. Note that you will need to give Copilot time to complete some lines. And some lines will have multiple suggestions as the line builds out. Just pause and hit Tab when needed to make sure the lines are complete before hitting return. You can generate the explanation for as many lines as you want. You don't need to do them all.
+
+Example output from this process is shown below.
+
+![line-by-line explanation](./images/cdd24.png?raw=true "line-by-line explanation")
+
+6. On a new line, add a comment to start explaining how the tests can be run. Enter the text below and then hit Tab to accept the rest of the suggestion:
+
+```
+# run this
+```
+
+![starting the run info](./images/cdd25.png?raw=true "starting the run info") 
+
+7. Hit Enter and Tab repeatedly to build out an example of what the output from running the tests might look like. Note in some cases you may have to hit Enter on a blank line to nudge Copilot to give the next suggestion.
+
+![filling out the run info](./images/cdd26.png?raw=true "filling out the run info") 
+
+8. Notice that some details shown in the example output may not match up with the file contents. For example, the number of tests shown in the example output may not match up with the number of test cases. And the root directory may not match.
+
+9. To see how the example run info from Copilot corresponds to the output from an actual run, you can run the tests in the Codespace terminal.
+
+![actual run output](./images/cdd27.png?raw=true "actual run output") 
+
+<p align="center">
+**[END OF LAB]**
+</p>
