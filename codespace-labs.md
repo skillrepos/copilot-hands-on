@@ -327,3 +327,101 @@ select * from courses.registration where year(registration_date) = 2023 and mont
 <p align="center">
 **[END OF LAB]**
 </p>
+
+**Lab 6 - Teaching Copilot about updates **
+
+**Purpose: In this lab, we’ll see an example of what to do when Copilot does not have the most up-to-date information**
+
+1. On the activity bar at the left of the codespace, click on the Explorer view icon, select one of the top-level files, then click the + icon for a new file at the top.
+   Name the new file *explore.go*.
+
+2. This file should now be open in an editor tab. Let's say we want to seed a random number generator with Go. Let's ask Copilot to write a function to do that. Then you can accept the suggested code.
+
+```
+// write a function to seed a random number generator
+```
+
+3. Copilot has probably generated code something like the below. Notice that it used the rand.Seed function. The challenge is that as of Go 1.20, the Seed function is deprecated.  Ref: https://cs.opensource.google/go/go/+/refs/tags/go1.21.0:src/math/rand/rand.go;l=394
+
+   <insert screenshot here of code with Seed>
+
+4. Let's see if Copilot understands that this is deprecrated. We'll ask it via a query.
+
+```
+// q: Is the Seed function deprecated in Go?
+```
+
+5. Copilot may respond with a link to documentation, which really doesn't answer the question.  Let's tell it how to respond.
+
+```
+// q: Is the Seed function deprecated in Go? Respond yes or no.
+```
+
+6. This time Copilot probably responded no. So one way we can help Copilot understand language updates is by providing the context in our file. So let's start again. Delete the comment and code block from step 3.
+
+7. Now,let's provide Copilot some more direct context by copying in updated code examples. After deleting the comment and code block from step 3, add in the following example of the replacement for the Seed deprecation into your file.  This is taken from pkg.go.dev/math/rand.
+
+```
+	// Create and seed the generator.
+	// Typically a non-fixed seed should be used, such as time.Now().UnixNano().
+	// Using a fixed seed will produce the same output on every run.
+	r := rand.New(rand.NewSource(99))
+```
+
+8. Now, let's try the creation of the function again. Underneath the comments and code you just pasted, enter in the same comment as before. You may need to start typing "func" to nudge Copilot.
+
+```
+// write a function to seed a random number generator
+```
+
+9. This time, the code should be using the same format and NewSource function as you added in Step 7.
+
+<p align="center">
+**[END OF LAB]**
+</p>
+
+**Lab 7 - Leveraging Copilot for simple tasks and discovery **
+
+**Purpose: In this lab, we’ll see some examples of how to use Copilot to do simple repetitive type of tasks and discovery**
+
+1. You can do this lab in the same misc.go file as before. Suppose we want to create a map of Kubernetes components to their abbreviations. Prompt Copilot with the comment below.
+
+```
+// create a map of Kubernetes resources to abbreviations
+```
+
+2. Press Tab and Enter to get the first few in the map. This would be tedious for us to have to go through each one. So just use the Ctrl + Enter option to get suggested solutions for the remaining ones. Pick one of the suggested solutions to finish out the map entries.
+
+To-do: insert picture here unless you can get multi-line suggestions to work
+
+3. Now, suppose we want to know what the API is for to get a list of pods for Kubernetes in a namespace called "test". Enter the prompt comment below. You may need to hit return to nudge Copilot.
+
+```
+// q: what is the Kubernetes API to get a list of pods in the namespace "test"?
+```
+
+4. We can get more specific as well. Try this one.
+
+```
+// q: what is the k8s 1.27 rest call to get a list of pods in the namespace "test" with label "type=test"?
+```
+
+5. Knowing the API is good, but let's have Copilot write an actual function for us to use. Enter the comment below.
+
+```
+// write the code to get a list of pods in the namespace "test" and print their names
+```
+
+6. You can accept the suggested answer or use the Ctrl + Enter option to choose a different answer.
+
+7. Now, let's have Copilot explain the code it just created. Above the start of the function, add this comment:
+
+```
+// explain the steps in the code below
+```
+
+8. Hit Tab to accept the suggested explanation of the steps.
+
+   
+
+5. 
