@@ -252,3 +252,78 @@ Example output from this process is shown below.
 <p align="center">
 **[END OF LAB]**
 </p>
+
+**Lab 5 - Using Copilot to help with SQL**
+
+**Purpose: In this lab, we’ll see some examples of how to have Copilot help with writing SQL**
+
+1. On the activity bar at the left of the codespace, click on the Explorer view icon, select one of the top-level files, then click the + icon for a new file at the top.
+   Name the new file *dev.sql*.
+   
+2. Afterwards this file should be open in a tab in the editor. Assume we have a database or database definition that defines a dataset for students, staff, curriculums, courses, schools of study, locations, and registrations for a university system. Let's see what Copilot would generate without any other context for a query to get all students in a course. Enter the following comment below and press Tab to accept suggestions.  Remember that you may have to hit Enter multiple times to get Copilot to prompt.
+
+```
+-- define a select statement to get all students enrolled in a course
+```
+
+3. Let's see if we get any different results if we provide Copilot additional context. Open the file create-tables.sql in the GitHub repository. Scroll through it and take a quick look at the contents.
+
+4. Now with that file open, switch back to the dev.sql file and enter the same command again and see what Copilot suggests this time. You can accept the suggestions or cycle through options or use the Ctrl + Enter to see other options.
+
+```
+-- define a select statement to get all students enrolled in a course
+```
+
+5. Let's try something a little more complex. Let's ask Copilot to define a query to get how many hours a student is currently enrolled in. You can choose from the options as before to complete the query.  
+
+```
+-- define a query to get how many hours a student is currently enrolled in
+```
+
+6. In some cases, we might be able to use a separate index to speed up operations.  Let's ask Copilot to create a new index based on the last query.
+
+```
+-- write the index for the previous query
+```
+
+7. Let's suppose we want to have a table to capture student attendance. We can ask Copilot to create the table definition for us.
+
+```
+-- define a table for student attendance to capture attendance by class
+```
+
+8. In the definition Copilot provided, it may have added a comment for the enrollment status in the same format as the comment in the courses.registration table definition in the create-tables.sql file.
+
+9. Copilot can also create stored procedures. Let's ask it to create a new stored procedure for getting a list of enrolled students at a particular location.
+
+```
+-- define a stored procedure to get course enrollment by location
+```
+
+10. Within the query, it may have included the 'registration status = 2' condition. That was only mentioned in the comments for the courses.registration table definition in the create-tables.sql file.
+    
+11. We can be more prescriptive with our stored procedure definition.  Let's add a more complex request.
+
+```
+-- define a stored procedure to get instructor details associated with a location
+-- include instructor details, location details, and courses associated with the instructor
+-- use instructor_id as the input parameter
+```
+
+12. Finally, let's see Copilot optimize a query for us. Suppose we want to get all the course registrations for September, 2023.  Enter the following query in the file.
+
+```
+select * from courses.registration where year(registration_date) = 2023 and month(registration_date) = 9
+```
+
+13. Ask Copilot to optimize the previous query. 
+
+```
+-- optimize the query above
+```
+
+14. Take a look at the differences in the new query that Copilot produced. In actual practice, this should run a bit faster.
+    
+<p align="center">
+**[END OF LAB]**
+</p>
