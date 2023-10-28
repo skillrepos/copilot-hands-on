@@ -83,6 +83,50 @@ function splitURLandReturnComponents (
 **[END OF LAB]**
 </p>
 
+**Lab 2 - Using Copilot to simplify and explain code**
+
+1. Create a new file named prime.py. You can create it via the same process as we used in Lab 1.
+
+2. Start typing a function definition as below
+```
+def is_prime(n
+```
+3. Pick one of the offered suggestions and hit Tab.
+
+4. Highlight the text and hit **Ctrl+Enter** to see options
+
+5. Pick one of the options that is longer and/or more complex and **Accept Solution**.
+
+![alternative suggestions](./images/cdd34.png?raw=true "alternative suggestions") 
+
+6. Highlight the code and select the Chat extension icon to open the chat window.  Tell Copilot to simplify the code by typing in the chat window.
+```
+/simplify
+```
+
+![simplifying via chat box](./images/cdd35.png?raw=true "simplifying via chat box") 
+
+7. Hover over the simplified text and tell Copilot to insert the suggestion at the cursor to replace the text that's currently there.
+
+![replace from chat suggestion](./images/cdd36.png?raw=true "replace from chat suggestion")    
+
+8. Now, let's introduce an error into the code to see how Copilot can fix it. Pick an instance of a variable name and change it to one that doesn't exist. For example, change an instance of "n" to "x". 
+
+![introduce error](./images/cdd37.png?raw=true "introduce error")   
+
+9. Notice the light bulb icon that has popped up. Click on that and you'll have additional options to fix or explain with Copilot.
+
+![Copilot options inline](./images/cdd38.png?raw=true "Copilot options inline")   
+
+10. Go ahead and click on the "Fix using Copilot" option.
+
+11. After a few moments, it will propose a fix that you can just accept (via the Accept button).
+
+![Fixing with Copilot](./images/cdd39.png?raw=true "Fixing with Copilot")       
+
+12. (Optional) If you'd like, you can go back and make the error again, then use the /fix command in the chat window to get the same results.
+
+
 **Lab 2 - Using Copilot to create test cases**
 
 **Purpose: In this lab, we’ll see an example of how Copilot can create test cases**
