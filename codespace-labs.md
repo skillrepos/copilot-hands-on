@@ -126,6 +126,45 @@ def is_prime(n
 
 12. (Optional) If you'd like, you can go back and make the error again, then use the /fix command in the chat window to get the same results.
 
+**Lab 3 - Other ways to get Copilot's functionality**
+
+**Purpose: In this lab, we’ll see a few other ways to leverage Copilot**
+
+1. Now that we have some code to work with, let's see what else Copilot can do for us. Let's have it explain the current code in our *prime.py* file.  Select the code. Then, use the **Cmd+I** keys to bring up the Copilot interactive chat dialog.
+
+![Interactively telling Copilot to explain code](./images/cdd40.png?raw=true "Interactively telling Copilot to explain code")
+
+
+2. Tell Copilot to explain the code by typing the command below in the dialog. Then, you should see the output in the chat window.
+
+```
+/explain
+```
+![Output of interactively telling Copilot to explain code](./images/cdd41.png?raw=true "Output of interactively telling Copilot to explain code")
+
+3. Now, let's do the same request but through a comment. In the *prime.py* file, below the code, enter the following comment and hit Enter.
+```
+# explain the code above line-by-line
+```
+4. After this, Copilot should start showing the explanation in comments. Just hit tab to accept each line and then Enter to move to the next one.
+
+![Output of telling Copilot to explain code via comment](./images/cdd42.png?raw=true "Output of telling Copilot to explain code via comment")
+
+5. We can also query Copilot inline via asking a question in a comment. To be clear you can prefix it with :q but that is not required with the chat feature installed.
+
+![Prompting for what code does with q:](./images/cdd43.png?raw=true "Prompting for what code does with q:")
+
+6. Finally, let's see how to use the doc feature to automatically document our code. Highlight the actual code.
+
+7. Now, enter **Cmd+I** and enter the **/doc** command. After a few moments, Copilot should generate some documentation for the code. Do not Accept or Discard yet.
+
+![Generated doc for the code](./images/cdd44.png?raw=true "Generated doc for the code")  
+
+8. Let's see what other doc could be generated. Click on the circular arrow button next to Discard at the bottom of the dialog and click on it to regenerate another possible doc.
+
+![Regenerating doc](./images/cdd45.png?raw=true "Regenerating doc")  
+
+9. Once you find a doc example you like, go ahead and click **Accept**.
 
 **Lab 2 - Using Copilot to create test cases**
 
