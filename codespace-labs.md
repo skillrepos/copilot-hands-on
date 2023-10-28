@@ -290,6 +290,54 @@ uvicorn main:app
 **[END OF LAB]**
 </p>
 
+**Lab 4 - Using Copilot to generate tests**
+
+**Purpose: In this lab, we'll see some examples of having Copilot generate tests**
+
+1. Start out in the *prime.py* file we've been using. Position the cursor below the code.
+
+2. Enter a comment to create unit tests
+```
+# create a function to do 5 unit tests of the code above
+```
+
+3. *If you don't get a suggestion*, enter code below to start nudging. Otherwise you can just accept the suggestion.
+
+```
+def test_is_prime():
+```
+![generating tests via comment](./images/cdd46.png?raw=true "generating tests via comment") 
+
+4. Let's try a slightly different way of generating tests.  First, highlight and delete the current test function.
+
+5. Now type the code below - we are deliberately not adding the closing parenthesis, so if it gets added, delete it.
+
+```
+def test_is_prime(
+```
+6. Now,put your cursor at the end of the line (after the opening parenthesis).  You should see the lightbulb icon come up.  Click on that and then click on "Fix using Copilot".
+
+![Using fix to finish generating tests](./images/cdd47.png?raw=true "Using fix to finish generating tests") 
+
+7. After a few moments, you should see that Copilot has generated a substantial list of potential tests. We won't use these for now, so you can click the *Discard* button.
+
+![Fix-generated tests](./images/cdd48.png?raw=true "Fix-generated tests") 
+   
+8. Let's have chat generate the tests.  Go ahead and highlight any existing ones and the test function in the prime.py file.
+
+9. Select the set of code. Then Go to chat and tell it to generate tests
+
+```
+/tests
+```
+![Tests-generated tests](./images/cdd49.png?raw=true "Tests-generated tests") 
+
+10. Now we'll put this into a new file by hovering over the output in the Chat window, then selecting the "..." from the pop-up menu and selecting "Insert into new file".  Don't worry about the file name for now.
+
+![Insert tests into new file](./images/cdd50.png?raw=true "Insert tests into new file") 
+
+
+
 **Lab 4 - Using Copilot to explain code**
 
 **Purpose: In this lab, we’ll see some examples of how to have Copilot help explain code**
