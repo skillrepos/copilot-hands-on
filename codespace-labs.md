@@ -352,6 +352,75 @@ write a function to seed a random number generator
 **[END OF LAB]**
 </p>
 
+**Lab 7 - Kubernetes, YAML generation the and 2021 problem**
+
+**Purpose: Show YAML generation and out of date content.**
+
+1. Create a new file - **deployment.yaml**
+
+```
+code deployment.yaml
+```
+
+2. Bring up the Copilot Chat dialog via **CMD+I** and enter in the following request.
+
+```
+write spec for deployment in Kubernetes with 2 replicas and image from busybox
+add command to run in containers: sleep 3600
+add label app: myapp
+add label type: front-end
+```
+
+3. After a few moments, you should see it respond with the code. You can just Accept this.
+![Kubernetes manifest](./images/cdd57.png?raw=true "Kubernetes manifest")
+
+4. Suppose we don't know how to execute this code. Let's ask Copilot. Highlight the generated YAML in the deployment.yaml file.  Then go to the larger Chat interface and ask it. Put the following in the Chat interface.
+
+```
+How do I execute this - short version?
+```
+
+5. Copilot should respond with something like the following:
+
+![How to execute deployment](./images/cdd58.png?raw=true "How to execute deployment")
+
+
+6. While we're in the Chat interface, let's ask it for the latest K8s version. Put the following into the dialog.
+
+```
+what is the latest Kubernetes version?
+```
+
+7. Notice that it identifies the latest version as 1.22 as of September 2021. This highlights the out-of-date issue with the LLM.
+
+![Answer to latest K8s version](./images/cdd59.png?raw=true "Answer to latest K8s version")
+
+
+8. Let's have Copilot generate some code to work with Kubernetes through the API. In the chat interface, enter the following.
+
+```
+How do I call the K8s API for scaling a deployment to 5 replicas with Python?
+```
+
+9. Click in chat output and paste to new file via clicking on the "..." menu option.
+
+![Add code to new file](./images/cdd60.png?raw=true "Add code to new file")
+
+
+10. Suppose we change our mind and want to convert this code to Go. Click in the new file, and highlight the new code. Then, in the Chat interface tell it to translate to Go.
+
+```
+translate to Go 
+```
+
+11. If you look at the output from the Chat interface, you should not how the equivalent Go code available.
+
+![Go translation](./images/cdd61.png?raw=true "Go translation")
+
+<p align="center">
+**[END OF LAB]**
+</p>
+    
 **Lab 7 - Leveraging Copilot for simple tasks and discovery **
 
 **Purpose: In this lab, we’ll see some examples of how to use Copilot to do simple repetitive type of tasks and discovery**
