@@ -5,16 +5,20 @@
 	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
-	"features": {
-    	    "ghcr.io/devcontainers/features/node:1",
-             "ghcr.io/devcontainers/features/go:1",
-             "ghcr.io/devcontainers-contrib/features/mysql-homebrew:1"
-        },
+
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
-			"settings": {},
+			"settings": {
+				"editor.rulers": [80],
+				"editor.renderWhitespace": "boundary",
+				"errorLens.gutterIconsEnabled": true,
+				"errorLens.addAnnotationTextPrefixes": false,
+				"errorLens.enabledDiagnosticLevels": ["error", "warning"],
+			        "editor.wordWrap": "bounded",
+				"editor.wordWrapColumn": 9999
+			},
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
 				"GitHub.copilot-chat",
