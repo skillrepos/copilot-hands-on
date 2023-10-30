@@ -470,6 +470,6 @@ the value is an array of area codes
 
    
 <p align="center">
-**[END OF DEMO]**
+**[END OF LAB]**
 </p>
  
