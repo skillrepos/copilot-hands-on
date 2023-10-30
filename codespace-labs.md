@@ -352,7 +352,7 @@ write a function to seed a random number generator
 **[END OF LAB]**
 </p>
 
-**Lab 7 - Kubernetes, YAML generation the and 2021 problem**
+**Lab 7 - Kubernetes, YAML generation and the 2021 problem**
 
 **Purpose: Show YAML generation and out of date content.**
 
@@ -421,48 +421,55 @@ translate to Go
 **[END OF LAB]**
 </p>
     
-**Lab 7 - Leveraging Copilot for simple tasks and discovery **
+**Lab 8 - Exploring Javascript, regular expression generator, auto-generating data**
 
-**Purpose: In this lab, we’ll see some examples of how to use Copilot to do simple repetitive type of tasks and discovery**
+**Purpose: Show Javascript and regular expression generation, auto-generate routine mappings**
 
-1. You can do this lab in the same misc.go file as before. Suppose we want to create a map of Kubernetes components to their abbreviations. Prompt Copilot with the comment below.
-
-```
-// create a map of Kubernetes resources to abbreviations
-```
-
-2. Press Tab and Enter to get the first few in the map. This would be tedious for us to have to go through each one. So just use the Ctrl + Enter option to get suggested solutions for the remaining ones. Pick one of the suggested solutions to finish out the map entries.
-
-To-do: insert picture here unless you can get multi-line suggestions to work
-
-3. Now, suppose we want to know what the API is for to get a list of pods for Kubernetes in a namespace called "test". Enter the prompt comment below. You may need to hit return to nudge Copilot.
+1. Create a new file as **phone.js**
 
 ```
-// q: what is the Kubernetes API to get a list of pods in the namespace "test"?
+code contact.js
 ```
 
-4. We can get more specific as well. Try this one.
+2. Prompt Copilot to create a function with a regular expression to validate a US phone number. You can use the **CMD+I** interface.
+```
+create a function to validate any global phone number using a regular expression
+```
+![Regex function to validate phone #](./images/cdd62.png?raw=true "regex function to validate phone #")
+
+3. Let's tell it to document the function by highlighting the code, invoking **CMD+I** and **/doc**.  You can just Accept the results.
+
+![Automatic doc of function](./images/cdd63.png?raw=true "Automatic doc of function")  
+
+4. Let's see how Copilot can generate some data and mappings for us automatically. Enter the prompt below in the main Chat text entry area.
+```
+create a mapping of states to area codes
+the key is the state abbreviation
+the value is an array of area codes
+```
+5. After running this, Copilot will generate the start of a list as shown below. Hover over the output area and click to insert the updates at the cursor in the *phone.js* file. (This assumes the cursor is below the previous function in the file.)
+
+![Automatic gen of data](./images/cdd65.png?raw=true "Automatic gen of data") 
+
+6. Notice that the example mapping was only for the first few states. We want to get the remaining mappings for the other states.
+
+![Partial list of mappings](./images/cdd66.png?raw=true "Partial list of mappings") 
+
+7. Let's craft a prompt to complete the sequence. Enter the following in the main Copilot Chat entry box and then execute it.
 
 ```
-// q: what is the k8s 1.27 rest call to get a list of pods in the namespace "test" with label "type=test"?
+create a mapping of the remaining states to area codes 
+the key is the state abbreviation
+the value is an array of area codes
 ```
+![Completing the mappings](./images/cdd67.png?raw=true "Completing the mappings") 
 
-5. Knowing the API is good, but let's have Copilot write an actual function for us to use. Enter the comment below.
-
-```
-// write the code to get a list of pods in the namespace "test" and print their names
-```
-
-6. You can accept the suggested answer or use the Ctrl + Enter option to choose a different answer.
-
-7. Now, let's have Copilot explain the code it just created. Above the start of the function, add this comment:
-
-```
-// explain the steps in the code below
-```
-
-8. Hit Tab to accept the suggested explanation of the steps.
+8. From the generated text in the chat, you can copy the mappings and add them into the code file.
+   
+![Copying remaining mappings](./images/cdd69.png?raw=true "Copying remaining mappings") 
 
    
-
-5. 
+<p align="center">
+**[END OF DEMO]**
+</p>
+ 
