@@ -31,10 +31,10 @@ You can also find help there for using Copilot in other supported IDEs, set the 
 
 In your forked repository, start a new codespace.
 
-    - Click the `Code` button on your repository's landing page.
-    - Click the `Codespaces` tab.
-    - Click `Create codespaces on main` to create the codespace.
-    - After the codespace has initialized there will be a terminal present.
+- Click the `Code` button on your repository's landing page.
+- Click the `Codespaces` tab.
+- Click `Create codespaces on main` to create the codespace.
+- After the codespace has initialized there will be a terminal present.
 
 ![Starting codespace](./images/cdd30.png?raw=true "Starting your codespace")
 
