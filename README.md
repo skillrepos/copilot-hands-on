@@ -7,7 +7,11 @@ These steps **must** be completed prior to starting the actual labs.
 
 ## Ensure that you are signed up for Copilot access. 
 
-If not, when signed into GitHub, go to [Settings->Copilot](https://github.com/settings/copilot) and sign up.
+If not, when signed into GitHub, click on your profile picture/icon in the upper right and either select [Copilot](https://github.com/github-copilot/signup) 
+
+![Signing up for Copilot](./images/cdd70.png?raw=true "Signing up for Copilot")
+
+**OR** select [Settings->Copilot](https://github.com/settings/copilot) and sign up.
 
 ![Signing up for Copilot](./images/cdd32.png?raw=true "Signing up for Copilot")
 
