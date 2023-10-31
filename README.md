@@ -34,6 +34,9 @@ In your forked repository, start a new codespace.
 - Click the `Code` button on your repository's landing page.
 - Click the `Codespaces` tab.
 - Click `Create codespaces on main` to create the codespace.
+
+This will run for several minutes while it gets everything ready.
+  
 - After the codespace has initialized there will be a terminal present.
 
 ![Starting codespace](./images/cdd30.png?raw=true "Starting your codespace")
