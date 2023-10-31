@@ -5,7 +5,7 @@ If you prefer and if you know one of the other IDEs supported by Copilot, you ca
 
 These steps **must** be completed prior to starting the actual labs.
 
-## Ensure that you are signed up for Copilot access. 
+## 1. Ensure that you are signed up for Copilot access. 
 
 If not, when signed into GitHub, click on your profile picture/icon in the upper right and either select [Copilot](https://github.com/github-copilot/signup) 
 
@@ -23,7 +23,7 @@ You can also find help there for using Copilot in other supported IDEs, set the 
 
 ![Signing up for Copilot Labs](./images/cdd71.png?raw=true "Signing up for Copilot Labs")
 
-## Create your own fork of the repository for these labs
+## 2. Create your own fork of the repository for these labs
 
 - Ensure that you have created a repository by forking the [skillrepos/copilot-dd](https://github.com/skillrepos/copilot-dd) project as a template into your own GitHub area.
 - You do this by navigating to the repo, clicking the `Fork` button in the upper right portion of the main project page and following the steps to create a copy in **your-github-userid/copilot-dd** .
@@ -31,7 +31,7 @@ You can also find help there for using Copilot in other supported IDEs, set the 
 ![Forking repository](./images/cdd28.png?raw=true "Forking the repository")
 ![Forking repository](./images/cdd29.png?raw=true "Forking the repository")
 
-## Configure your codespace
+## 3. Configure your codespace
 
 In your forked repository, start a new codespace.
 
@@ -39,7 +39,7 @@ In your forked repository, start a new codespace.
 - Click the `Codespaces` tab.
 - Click `Create codespaces on main` to create the codespace.
 
-This will run for several minutes while it gets everything ready.
+**This will run for several minutes while it gets everything ready.**
   
 - After the codespace has initialized there will be a terminal present.
 
@@ -47,7 +47,7 @@ This will run for several minutes while it gets everything ready.
 
 This will take a while to run.
 
-## Labs
+## 4. Open the labs
 
 After the codespace has started, open the labs document by going to the file tree on the left, find the file named **codespace-labs.md**, right-click on it, and open it with the **Preview** option.)
 
