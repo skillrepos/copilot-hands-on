@@ -22,7 +22,7 @@ You can also find help there for using Copilot in other supported IDEs, set the 
 ## Create your own fork of the repository for these labs
 
 - Ensure that you have created a repository by forking the [skillrepos/copilot-dd](https://github.com/skillrepos/copilot-dd) project as a template into your own GitHub area.
-- You do this by clicking the `Fork` button in the upper right portion of the main project page and following the steps to create a copy in **your-github-userid/copilot-dd** .
+- You do this by navigating to the repo, clicking the `Fork` button in the upper right portion of the main project page and following the steps to create a copy in **your-github-userid/copilot-dd** .
 
 ![Forking repository](./images/cdd28.png?raw=true "Forking the repository")
 ![Forking repository](./images/cdd29.png?raw=true "Forking the repository")
