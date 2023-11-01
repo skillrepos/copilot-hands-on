@@ -437,7 +437,7 @@ create a function to validate any global phone number using a regular expression
 
 ![Automatic doc of function](./images/cdd63.png?raw=true "Automatic doc of function")  
 
-4. Let's see how Copilot can generate some data and mappings for us automatically. Enter the prompt below in the main Chat text entry area.
+4. Now let's see how Copilot can generate some data and mappings for us automatically. Enter the prompt below in the main Chat text entry area.
 ```
 create a mapping of states to area codes
 the key is the state abbreviation
