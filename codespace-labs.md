@@ -340,7 +340,7 @@ Is the Seed function deprecated in Go?
 write a function to seed a random number generator
 ```
 
-8. This time, the code should be using the same format and NewSource function as you put in the file in step 7. You can just Accept the change.
+8. This time, the code should be using the same format and NewSource function as you put in the file in step 6. You can just Accept the change.
 
 ![Updated random number gen code after including updated usage](./images/cdd54.png?raw=true "Updated random number gen code after including updated usage")
 
