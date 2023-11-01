@@ -120,7 +120,7 @@ def is_prime(n
 
 ![Fixing with Copilot](./images/cdd39.png?raw=true "Fixing with Copilot")       
 
-12. (Optional) If you'd like, you can go back and make the error again, then use the /fix command in the chat window to get the same results.
+12. (Optional) If you'd like, you can go back and make the error again, highlight the code, and then use the /fix command in the chat window to get the same results.
 
 <p align="center">
 **[END OF LAB]**
