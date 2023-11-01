@@ -77,7 +77,7 @@ function splitURLandReturnComponents (
 
 **Lab 2 - Using Copilot to simplify and explain code**
 
-1. Create a new file named prime.py. You can create it via the same process as we used in Lab 1 or by entering the line below in the terminal.
+1. Create a new file named prime.py. Create it via the same process as we used in Lab 1 by entering the line below in the terminal.
 
 ```
 code prime.py
