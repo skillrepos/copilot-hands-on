@@ -192,7 +192,7 @@ def test_is_prime():
 ```
 ![generating tests via comment](./images/cdd46.png?raw=true "generating tests via comment") 
 
-4. Let's try a slightly different way of generating tests.  First, highlight and delete the current test function.
+4. Let's try a slightly different way of generating tests.  First, highlight and delete any parts of the current test function, including comments.
 
 5. Now type the code below - we are deliberately not adding the closing parenthesis, so if it gets added, delete it.
 
