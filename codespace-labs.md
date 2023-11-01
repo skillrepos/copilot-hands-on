@@ -51,14 +51,14 @@
 function parseURL(url) {
 ```
 
-9. After that Copilot may or may not offer a suggestion.  Sometimes it is necessary to further "nudge" Copilot by giving more prompts. Hit return and type the comment below to nudge Copilot.
+9. Just hit Tab to accept it and Enter again. After that Copilot may or may not offer a suggestion.  If it does, great - you can just hit Tab and accept it.  If not, it may be necessary to further "nudge" Copilot by giving more prompts. Only if you're not getting responses from Copilot, hit return and type the comment below to nudge Copilot.
 
 ```
 // parse url
 ```
 ![nudge comment](./images/cdd3.png?raw=true "nudge comment")   
 
-10. Hit return and Copilot should start generating suggestions again. You can just hit tab to accept each line and then return to get the next part of the code until the function is complete. You may get some blank lines along the way - just hit return until you get to the end of a function.
+10. Only if needed, hit return and Copilot should start generating suggestions again. You can just hit tab to accept each line and then return to get the next part of the code until the function is complete. You may get some blank lines along the way - just hit return until you get to the end of a function.
 
 11. Suppose you're not happy with that suggestion. Copilot can provide other options for the code. To see those, hit **Ctrl + Enter** and a second window will open up with other suggestions.
 Be patient - it takes a bit of time for Copilot to generate alternative suggestions. After a moment though, you will have up to 10 alternatives to pick from.
