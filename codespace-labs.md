@@ -207,9 +207,9 @@ def test_is_prime(
 
 ![Fix-generated tests](./images/cdd48.png?raw=true "Fix-generated tests") 
    
-8. Let's have chat generate the tests.  Go ahead and highlight any existing ones and the test function in the prime.py file.
+8. Let's have chat generate the tests.  Go ahead and highlight/delete any existing ones and the test function in the prime.py file.
 
-9. Select the set of code. Then Go to chat and tell it to generate tests
+9. Select the set of code for *is_prime*. Then Go to chat and tell it to generate tests
 
 ```
 /tests
