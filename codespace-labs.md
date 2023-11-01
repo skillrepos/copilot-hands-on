@@ -11,15 +11,7 @@
 
 **Purpose: In this lab, we’ll start to learn about Copilot and how it generates code based on the prompts we provide**
 
-1. Create a new file via one of the two ways listed below.
-   a. On the activity bar at the left of the codespace, click on the Explorer view icon, select one of the top-level files, then click the + icon for a new file at the top.
-   Name the new file *index.js*.
-   
-![Creating new js file](./images/cdd1.png?raw=true "Creating new js file")
-
-**OR**
-
-   b. In the terminal, enter
+1. Create a new file. In the terminal, enter
 
    ```
    code index.js
