@@ -203,7 +203,7 @@ def test_is_prime(
 
 ![Using fix to finish generating tests](./images/cdd47.png?raw=true "Using fix to finish generating tests") 
 
-7. After a few moments, you should see that Copilot has generated a substantial list of potential tests. We won't use these for now, so you can click the *Discard* button.
+7. After a few moments, you should see that Copilot has generated anywhere from a few tests to a large list of potential tests. We won't use these for now, so you can click the *Discard* button.
 
 ![Fix-generated tests](./images/cdd48.png?raw=true "Fix-generated tests") 
    
