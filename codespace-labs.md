@@ -228,7 +228,7 @@ def test_is_prime(
 
 **Purpose: In this lab, we’ll see some examples of how to have Copilot help with writing SQL**
 
-1. Create a new file named dev.sql. You can create it via the same process as we used in Lab 1 or by entering the line below in the terminal.
+1. Create a new file named dev.sql. You can create it via entering the line below in the terminal.
 
 ```
 code dev.sql
