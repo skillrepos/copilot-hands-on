@@ -126,9 +126,9 @@ def is_prime(n
 **[END OF LAB]**
 </p>
 
-**Lab 3 - Other ways to get Copilot's functionality**
+**Lab 3 - Using Copilot after the coding**
 
-**Purpose: In this lab, we’ll see a few other ways to leverage Copilot**
+**Purpose: In this lab, we’ll see a few other ways to leverage Copilot after the initial coding is done**
 
 1. Now that we have some code to work with, let's see what else Copilot can do for us. Let's have it explain the current code in our *prime.py* file.  Select the code. Then, use the **Cmd+I** keys to bring up the Copilot interactive chat dialog.
 
@@ -150,7 +150,11 @@ def is_prime(n
 
 ![Output of telling Copilot to explain code via comment](./images/cdd42.png?raw=true "Output of telling Copilot to explain code via comment")
 
-5. We can also query Copilot inline via asking a question in a comment. To be clear you can prefix it with :q but that is not required with the chat feature installed.
+5. We can also query Copilot inline via asking a question in a comment. Try out the question below. To be clear you can prefix it with :q but that is not required with the chat feature installed.
+
+```
+# q: what does this function do?
+```
 
 ![Prompting for what code does with q:](./images/cdd43.png?raw=true "Prompting for what code does with q:")
 
