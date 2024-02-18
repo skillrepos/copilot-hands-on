@@ -19,10 +19,6 @@ You can also find help there for using Copilot in other supported IDEs, set the 
 
 ![Using Copilot options](./images/cdd31.png?raw=true "Using Copilot options")
 
-**OPTIONAL** If you want, you can sign up for [GitHub Copilot Labs](https://githubnext.com/projects/copilot-labs/) - this provides access to experimental applications being worked on for GitHub Copilot. The codespace will install the extension but it is not required for the labs.
-
-![Signing up for Copilot Labs](./images/cdd71.png?raw=true "Signing up for Copilot Labs")
-
 ## 2. Create your own fork of the repository for these labs
 
 - Ensure that you have created a repository by forking the [skillrepos/copilot-dd](https://github.com/skillrepos/copilot-dd) project as a template into your own GitHub area.
