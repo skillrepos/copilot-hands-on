@@ -1,9 +1,9 @@
 # Copilot Deep Dive
 ## An introduction to GitHub Copilot
 ## Session labs for codespace only
-## Revision 2.1 - 10/29/23
+## Revision 3.0 - 02/18/24
 
-**Startup IF NOT ALREADY DONE!**
+**Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
 **NOTE: To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.**
 
@@ -166,7 +166,7 @@ def is_prime(n
 
 8. Let's see what other doc could be generated. Click on the circular arrow button next to Discard at the bottom of the dialog and click on it to regenerate another possible doc.
 
-![Regenerating doc](./images/cdd45.png?raw=true "Regenerating doc")  
+![Regenerating doc](./images/cdd45b.png?raw=true "Regenerating doc")  
 
 9. Once you find a doc example you like, go ahead and click **Accept**.
 
@@ -194,31 +194,21 @@ def test_is_prime():
 
 4. Let's try a slightly different way of generating tests.  First, highlight and delete any parts of the current test function, including comments.
 
-5. Now type the code below - we are deliberately not adding the closing parenthesis, so if it gets added, delete it.
+5. Let's have chat generate the tests.  Go ahead and highlight/delete any existing ones and the test function in the prime.py file.
 
-```
-def test_is_prime(
-```
-6. Now,put your cursor at the end of the line (after the opening parenthesis).  You should see the lightbulb icon come up.  Click on that and then click on "Fix using Copilot".
-
-![Using fix to finish generating tests](./images/cdd47.png?raw=true "Using fix to finish generating tests") 
-
-7. After a few moments, you should see that Copilot has generated anywhere from a few tests to a large list of potential tests. We won't use these for now, so you can click the *Discard* button.
-
-![Fix-generated tests](./images/cdd48.png?raw=true "Fix-generated tests") 
-   
-8. Let's have chat generate the tests.  Go ahead and highlight/delete any existing ones and the test function in the prime.py file.
-
-9. Select the set of code for *is_prime*. Then Go to chat and tell it to generate tests
+6. Select the set of code for *is_prime*. Then Go to chat and tell it to generate tests
 
 ```
 /tests
 ```
 ![Tests-generated tests](./images/cdd49.png?raw=true "Tests-generated tests") 
 
-10. Now we'll put this into a new file by hovering over the output in the Chat window, then selecting the "..." from the pop-up menu and selecting "Insert into new file".  Don't worry about the file name for now.
+7. We could put this into a new file by hovering over the output in the Chat window, then selecting the "..." from the pop-up menu and selecting "Insert into new file".  Go ahead and select that option and then you'll have a new file in your editor with the code that you can save as needed.
 
 ![Insert tests into new file](./images/cdd50.png?raw=true "Insert tests into new file") 
+
+![Saved generated unit tests file](./images/cdd50b-4.png?raw=true "Saved generated unit tests file") 
+
 
 <p align="center">
 **[END OF LAB]**
