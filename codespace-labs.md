@@ -455,7 +455,7 @@ the value is an array of area codes
 ![Copying remaining mappings](./images/cdd69.png?raw=true "Copying remaining mappings") 
 
 
-**Lab 9 - Agents**
+**Lab 9 - Agents and CLI**
 
 **Purpose: Discuss GitHub Copilot Agents.**
 
