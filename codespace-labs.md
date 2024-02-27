@@ -457,7 +457,7 @@ the value is an array of area codes
 
 **Lab 9 - Agents and CLI**
 
-**Purpose: Discuss GitHub Copilot Agents.**
+**Purpose: In this lab, we'll get some practice using GitHub Copilot agents and the Copilot CLI.**
 
 1. Let's go ahead and invoke the **@terminal** agent to ask a common question about how to commit code changes. Go to the **chat** interface and enter the prompt below. Afterwards, the commands to do the commit should show up in the chat window as shown below.
 
