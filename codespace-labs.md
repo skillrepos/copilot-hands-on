@@ -409,7 +409,7 @@ How do I call the K8s API for scaling a deployment to 5 replicas with Python?
 translate to Go 
 ```
 
-11. If you look at the output from the Chat interface, you should not how the equivalent Go code available.
+11. If you look at the output from the Chat interface, you should now have the equivalent Go code available.
 
 ![Go translation](./images/cdd61.png?raw=true "Go translation")
 
