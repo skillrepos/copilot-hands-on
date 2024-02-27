@@ -229,30 +229,37 @@ code dev.sql
 ```
 -- define a select statement to get all students enrolled in a course
 ```
+3. Go ahead and save this file as part of the project.  Click on the *X* next to the file's name in it's tab and select to *Save* it.
 
-3. Let's see if we get any different results if we provide Copilot additional context. Open the file create-tables.sql in the GitHub repository. (You can either select and open it from the file list or use the command below from the terminal.) Scroll through it and take a quick look at the contents.
+![Save sql file](./images/cdd96.png?raw=true "Save sql file") 
+   
+4. Let's see if we get any different results if we provide Copilot additional context. Open the file create-tables.sql in the editor from the GitHub repository. (You can either select and open it from the file list or use the command below from the terminal.) Scroll through it and take a quick look at the contents.
 
 ```
 code create-tables.sql
 ```
 
-4. Now with that file open, highlight and copy the contents. Switch back to the dev.sql file and paste the contents from the create-tables.sql file at the bottom of the dev.sql file.
+5. Now with that file open, go back up to the top of the dev.sql file.  Highlight and delete the comment and resulting query from step 2.
   
-5. Go back up to the top of the dev.sql file.  Highlight and delete the comment and resulting query from step 2.
-  
-6. Enter the same comment as before to request the query. (Basically, repeat step 2.) See what Copilot suggests this time. You can accept the suggestions or cycle through options.
+6. Enter the same comment as before to request the query. (Basically, repeat step 2.) See what Copilot suggests this time. You can accept the suggestions or cycle through options. 
 
 ```
 -- define a select statement to get all students enrolled in a course
 ```
 
-7. In some cases, we might be able to use a separate index to speed up operations.  Let's ask Copilot to create a new index based on the last query.
+7. If all goes well, this second pass should generate a query with many more specific references to the names and identifiers used in *create-tables.sql*.  Take a look at the query and then compare the names/identifiers used to the ones in the *create-tables.sql* file. This will show that Copilot picks up on context from other files available to it to make better suggestions.
+
+![New query](./images/cdd97.png?raw=true "New query") 
+
+   
+8. In some cases, we might be able to use a separate index to speed up operations.  Let's ask Copilot to create a new index based on the last query. Add the following line after the current query in the file *dev.sql*.
 
 ```
 -- write an index to improve the performance of the query
 ```
+![index](./images/cdd98.png?raw=true "index") 
 
-8. Let's suppose we want to have a table to capture student attendance. We can ask Copilot to create the table definition for us.
+8. Let's suppose we also want to have a table to capture student attendance. We can ask Copilot to create the table definition for us.
 
 ```
 -- define a table for student attendance to capture attendance by class
@@ -260,11 +267,14 @@ code create-tables.sql
 
 In the definition Copilot provided, it may have added a comment for the status in the same format as the comment in the courses.registration table definition in the create-tables.sql file.
 
-9. Copilot can also create stored procedures. Let's ask it to create a new stored procedure for getting a list of enrolled students at a particular location. Let's use the **CMD+I** shortcut. Invoke Copilot Chat via the shortcut and then enter the line below in the dialog. You can choose to Accept or Discard the result.
+![status values](./images/cdd99.png?raw=true "status values") 
+
+9. Copilot can also create stored procedures. Let's ask it to create a new stored procedure for getting a list of enrolled students at a particular location. Let's use the **CMD+I** shortcut. Go to the bottom of the *dev.sql* file, invoke Copilot Chat via the shortcut and then enter the line below in the dialog. You can choose to **Accept** or **Discard** the result.
 
 ```
 define a stored procedure to get course enrollment by location
 ```
+![prompt for stored procedure](./images/cdd100.png?raw=true "prompt for stored procedure") 
   
 10. We can be more prescriptive with our stored procedure definition.  Let's add a more complex request. Go to the Chat interface extension via clicking on the icon on the tool bar (if its not already opened). In the Chat window, enter the prompt below.
 
@@ -281,7 +291,7 @@ use instructor_id as the input parameter
 select * from courses.registration where year(registration_date) = 2023 and month(registration_date) = 9
 ```
 
-12. Ask Copilot to optimize the previous query. You can do this via using the **CMD+I** shortcut and entering "/optimize" in the dialog. You can Accept or Discard the suggested optimization after that.
+12. Ask Copilot to optimize the previous query. You can do this via highlighting the query, using the **CMD+I** shortcut and entering "/optimize" in the dialog. You can Accept or Discard the suggested optimization after that.
 
 ```
 /optimize
