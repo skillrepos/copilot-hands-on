@@ -24,9 +24,9 @@
 ```
 // function to parse data
 ```
-4. Hit return and notice the code that Copilot suggested. This is not what we wanted, but hit tab to select that line.
+4. Hit return and notice the code that Copilot suggested. This is likely more generic than we want, but hit tab to select that line.
    
-5. Hit return and Copilot will generate another part of the function.  Hit tab to accept it. Continue until you get a complete function. One example of what code may look like is below.
+5. After hitting tab, Copilot will generate another part of the function. (If not, you may need to hit return.) Hit tab to accept it. Continue until you get a complete function. One example of what code may look like is below.
 
 ![Copilot generated function](./images/cdd2.png?raw=true "Copilot generated function")
    
