@@ -498,9 +498,7 @@ the value is an array of area codes
 @workspace what do I use to test my prime number code?
 ```
 
-5. After executing this ...
-
-
+5. After executing this, you'll have some suggested information on how to test the code in your workspace.
 
 6. Finally, let's work with the Copilot command line interface. The codespace already has the GitHub CLI installed, so we just need to install the Copilot extension and authenticate. Enter the following in the terminal.
 
