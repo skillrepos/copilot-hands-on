@@ -1,7 +1,7 @@
 # Copilot Deep Dive
 ## An introduction to GitHub Copilot
 ## Session labs for codespace only
-## Revision 3.1 - 02/26/24
+## Revision 3.2 - 02/27/24
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
