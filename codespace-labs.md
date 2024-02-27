@@ -59,10 +59,10 @@ You can scan through these and then pick a different one if you want by clicking
 ![alternative suggestions](./images/cdd4.png?raw=true "alternative suggestions")   
 
 12. Let's do one more pass at getting a specific prompt for Copilot. Delete all the code currently in index.js. This time we will not enter a comment, but will enter a specific funtion name.
-Type the following in the empty file.  Do not hit tab or return yet.
+Type the following in the empty file. (There are no parentheses after the *splitURLandReturnComponents* text.)  Do not hit tab or return yet.
 
 ```
-function splitURLandReturnComponents (
+function splitURLandReturnComponents
 ```
 
 13.  With this function name, Copilot should suggest a full function definition - in fact it may suggest several.  To see the options, hover over the first line and a small window should appear. This window will not how many options there are (probably 2 or 3) and provide "<" and ">" links to toggle between them.  Click on the "<" and ">" buttons to see the differences in the available suggestions.
