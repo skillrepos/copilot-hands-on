@@ -441,11 +441,11 @@ create a function to validate any global phone number using a regular expression
 ```
 create a mapping of states to area codes
 the key is the state abbreviation
-the value is an array of area codes
+the value is an array of area codes with max 5
 ```
 5. After running this, Copilot will generate the start of a list as shown below. Hover over the output area and click to insert the updates at the cursor in the *phone.js* file. (This assumes the cursor is below the previous function in the file.)
 
-![Automatic gen of data](./images/cdd65.png?raw=true "Automatic gen of data") 
+![Automatic gen of data](./images/cdd102.png?raw=true "Automatic gen of data") 
 
 6. Notice that the example mapping was only for the first few states. We want to get the remaining mappings for the other states.
 
@@ -456,11 +456,18 @@ the value is an array of area codes
 ```
 create a mapping of the remaining states to area codes 
 the key is the state abbreviation
-the value is an array of area codes
+the value is an array of area codes with max 5
 ```
 ![Completing the mappings](./images/cdd67.png?raw=true "Completing the mappings") 
 
-8. From the generated text in the chat, you can copy the mappings and add them into the code file.
+8. From the generated text in the chat, if the results look ok, you can copy the mappings and add them into the code file. But, if not, you may have to give a better prompt. You can try highlighting the current mappings and use a prompt like the one shown below.  (Note that the chat shows that it only used the lines highlighted as a reference.)
+
+```
+create a mapping of the next 25 states to area codes in the same format where
+the key is the state abbreviation
+the value is an array of area codes
+```
+![Better prompt for remaining mappings](./images/cdd103.png?raw=true "Better prompt for remaining mappings") 
    
 ![Copying remaining mappings](./images/cdd69.png?raw=true "Copying remaining mappings") 
 
@@ -527,5 +534,8 @@ gh copilot suggest "install terraform"
  
 <p align="center">
 **[END OF LAB]**
+
+<p align="center">
+**THANKS!**
 </p>
  
