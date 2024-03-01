@@ -28,7 +28,7 @@
    
 5. After hitting tab, Copilot will generate another part of the function. (If not, you may need to hit return.) Hit tab to accept it. Continue until you get a complete function. One example of what code may look like is below.
 
-![Copilot generated function](./images/cdd2.png?raw=true "Copilot generated function")
+![Copilot generated function](./images/cpho5.png?raw=true "Copilot generated function")
    
 6. This prompt is not specific enough for Copilot to interpret what we want to do.  Highlight the code and delete it, so we can try again.
 
