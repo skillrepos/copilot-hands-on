@@ -1,4 +1,4 @@
-# Copilot Deep Dive - lab setup
+# GitHub Copilot Hands-on - lab setup
 
 These instructions will guide you through configuring a GitHub Codespaces environment that you can use to run the course labs. 
 If you prefer and if you know one of the other IDEs supported by Copilot, you can use that. But the instructions will reference the codespace version.
@@ -21,7 +21,7 @@ You can also find help there for using Copilot in other supported IDEs, set the 
 
 ## 2. Create your own fork of the repository for these labs
 
-- Ensure that you have created a repository by forking the [skillrepos/copilot-dd](https://github.com/skillrepos/copilot-dd) project as a template into your own GitHub area.
+- Ensure that you have created a repository by forking the [skillrepos/copilot-hands-on](https://github.com/skillrepos/copilot-hands-on) project as a template into your own GitHub area.
 - You do this by navigating to the repo, clicking the `Fork` button in the upper right portion of the main project page and following the steps to create a copy in **your-github-userid/copilot-dd** .
 
 ![Forking repository](./images/cdd28.png?raw=true "Forking the repository")
@@ -52,6 +52,6 @@ After the codespace has started, open the labs document by going to the file tre
 This will open it up in a tab above your terminal. Then you can follow along with the steps in the labs. 
 Any command in the gray boxes is either code intended to be run in the console or code to be updated in a file.
 
-Labs doc: [Copilot Deep Dive Labs](codespace-labs.md)
+Labs doc: [Copilot Hands-on Labs](labs.md)
 
 
