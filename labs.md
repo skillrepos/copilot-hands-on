@@ -229,9 +229,14 @@ code dev.sql
 ```
 -- define a select statement to get all students enrolled in a course
 ```
-3. Go ahead and save this file as part of the project.  Click on the *X* next to the file's name in it's tab and select to *Save* it.
+3. Go ahead and save this file as part of the project.  You can do this from the "3-line" menu under *File->Save*, or just
+click on the *X* next to the file's name in it's tab and select to *Save* it.
 
 ![Save sql file](./images/cdd96.png?raw=true "Save sql file") 
+
+(If the file is no longer open in the tabs, you can select the "Explorer" icon at the top of the sidebar and select the file in the list to open it back up.)
+
+![Reopening the file](./images/cpho06.png?raw=true "Reopening the file") 
    
 4. Let's see if we get any different results if we provide Copilot additional context. Open the file create-tables.sql in the editor from the GitHub repository. (You can either select and open it from the file list or use the command below from the terminal.) Scroll through it and take a quick look at the contents.
 
