@@ -27,13 +27,13 @@ You can also find help there for using Copilot in other supported IDEs, set the 
 ![Forking repository](./images/cpho1.png?raw=true "Forking the repository")
 ![Forking repository](./images/cpho2.png?raw=true "Forking the repository")
 
-## 3. Configure your codespace
+## 3. Start your codespace
 
 In your forked repository, start a new codespace.
 
 - Click the `Code` button on your repository's landing page.
 - Click the `Codespaces` tab.
-- Click `Create codespaces on main` to create the codespace.
+- Click `Create codespace on main` to create the codespace.
 
 **This will run for several minutes while it gets everything ready.**
   
