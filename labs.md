@@ -429,7 +429,7 @@ translate to Go
 1. Create a new file as **phone.js**
 
 ```
-code contact.js
+code phone.js
 ```
 
 2. Prompt Copilot to create a function with a regular expression to validate a US phone number. You can use the **CMD+I** interface.
