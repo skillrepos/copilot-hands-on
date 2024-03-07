@@ -476,11 +476,71 @@ the value is an array of area codes
    
 ![Copying remaining mappings](./images/cdd69.png?raw=true "Copying remaining mappings") 
 
+<p align="center">
+**[END OF LAB]**
+</p>
+
+**Lab 9 - Agents and CLI**
+
+**Purpose: In this lab, we'll get some practice using GitHub Copilot agents and the Copilot CLI.**
+
+1. Let's go ahead and invoke the **@terminal** agent to ask a common question about how to commit code changes. Go to the **chat** interface and enter the prompt below. Afterwards, the commands to do the commit should show up in the chat window as shown below.
+
+```
+@terminal how do I commit my code changes?
+```
+![querying for commit](./images/cdd89.png?raw=true "query for commit")
+![query output](./images/cdd90.png?raw=true "query output") 
+
+2. Hover over the window with the commands in it, and then click on the icon that pops up for the terminal. Click on that to insert it into the terminal. You don't have to commit the changes right now.  
+
+![insert into terminal](./images/cdd91.png?raw=true "insert into terminal")
+
+3. Now let's see how Copilot can help with generating commit messages. Click on the source control extension icon in the left sidebar. If you don't have any files showing up as eligible for commit, try closing some of the open files you have in the codespace by clicking on the "x" in the tab. With some files showing up to commit, click on the *sparkle* icon (in the upper right of the commit message box) to have Copilot generate a commit message. If you don't like the message it generates, you can click on the same icon again to see another option. You can commit the changes if you want, but its not necessary.
+
+![copilot generating commit messages](./images/cdd92.png?raw=true "copilot generating commit messages")
+
+4. Now, let's use the **@workspace** agent to help identify how we can test our code. In the **chat** text area, enter the following prompt:
+
+```
+@workspace what do I use to test my prime number code?
+```
+
+5. After executing this, you'll have some suggested information on how to test the code in your workspace.
+
+6. Finally, let's work with the Copilot command line interface. The codespace already has the GitHub CLI installed, so we just need to install the Copilot extension and authenticate. Enter the following in the terminal.
+
+```
+gh extension install github/gh-copilot
+```
+
+7. After this, you can invoke the copilot command line to see the options available.
+
+```
+gh copilot
+```
+![Copilot CLI help](./images/cdd94.png?raw=true "Copilot CLI help")
+
+8. To authenticate, use the command below in the terminal.
+
+```
+gh auth login --web
+```
+
+9. Follow the prompts. You'll get a one-time activation code that you should copy and then paste in the browser when prompted. (If you happen to get a message about an issue with GITHUB_TOKEN, you can use the command *export GITHUB_TOKEN=* to clear that.) You'll need to click on the "Authorize" button on the next screen after this to complete the process.
+
+![Copilot CLI auth](./images/cdd95.png?raw=true "Copilot CLI auth")
+
+10. Once you have authenticate, you can try a couple of *gh copilot* commands like the ones below to see an example of how the CLI works.
+
+```
+gh copilot explain "ps -aux"
+gh copilot suggest "install terraform"
+```
  
 <p align="center">
 **[END OF LAB]**
 
 <p align="center">
 **THANKS!**
-</p>
- 
+</p> 
