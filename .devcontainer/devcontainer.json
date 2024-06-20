@@ -25,7 +25,8 @@
 				"streetsidesoftware.code-spell-checker",
 				"GitHub.copilot-chat",
 				"GitHub.copilot",
-				"GitHub.copilot-labs"
+				"GitHub.copilot-labs",
+				"bierner.markdown-preview-github-styles"
 			]
 		}
 	},
