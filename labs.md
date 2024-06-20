@@ -560,7 +560,7 @@ gh copilot suggest "install terraform"
 
 **Purpose: In this lab, we'll show how you can use GitHub Copilot Chat to get answers to programming related questions without leaving your editor.**
 
-1. You can use GitHub Copilot Chat to get answers to programming related questions without leaving your editor. Use the chat interface to ask a question about a programming topic. For example, you can ask about the latest version of a programming language, how to use a specific function, or how to solve a specific problem. Enter the question below in the chat interface.
+1. Use the chat interface to ask a question about a programming topic. For example, you can ask about the latest version of a programming language, how to use a specific function, or how to solve a specific problem. Enter the question below in the chat interface.
 
 ```
 What is the latest LTS version of Node.js?
