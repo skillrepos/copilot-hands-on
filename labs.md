@@ -18,6 +18,8 @@ Before we begin, we will configure the Codespace to make the labs.md file always
 
 4. Now we can enter commands in the terminal to create new files and they will appear in the bottom editor window. Now we can see the labs.md file at the top and any file we are editing at the bottom.
 
+NOTE: You may need to repeat these steps again later if you close all files you are editing and want to open a new one in the bottom editor window.
+
 ![Split View](./images/pic001.png?raw=true "Split View")
 
 **Lab 1 - Learning how to create good prompts for Copilot**
@@ -265,7 +267,7 @@ code create-tables.sql
 -- define a select statement to get all students enrolled in a course
 ```
 
-8. If all goes well, this second pass should generate a query with many more specific references to the names and identifiers used in *create-tables.sql*.  (If not, delete the result and try again.) Take a look at the query and then compare the names/identifiers used to the ones in the *create-tables.sql* file. This will show that Copilot picks up on context from other files available to it to make better suggestions.
+8. If all goes well, this second pass should generate a query with many more specific references to the names and identifiers used in *create-tables.sql*.  (If not, delete the result and try again.) Take a look at the query and then compare the names/identifiers used to the ones in the *create-tables.sql* file. **This will show that Copilot picks up on context from other files available to it to make better suggestions.** This is one of of the key principles of **Prompt Engineering** - providing the right context to Copilot to get the best results. **Remember that Copilot is context-aware and will provide better results with more context. To learn more about Prompt Engineering, see the [Prompt engineering for GitHub Copilot](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot
 
 ![New query](./images/cdd97.png?raw=true "New query") 
 
