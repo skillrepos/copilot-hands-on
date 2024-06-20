@@ -7,6 +7,19 @@
 
 **NOTE: To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.**
 
+**Configure the Codespace to make LABS.MD always visible**
+
+Before we begin, we will configure the Codespace to make the labs.md file always visible. This will allow you to easily switch between the lab instructions and any editor windows you have open.
+1. Right-click on the labs.md tab at the top of the editor window.
+
+2. Click on the "Split Down" option in the context menu that appears.
+
+3. Click inside the new editor window that appears at the bottom of the screen. We want our next new file to appear here.
+
+4. Now we can enter commands in the terminal to create new files and they will appear in the bottom editor window. Now we can see the labs.md file at the top and any file we are editing at the bottom.
+
+![Split View](./images/pic001.png?raw=true "Split View")
+
 **Lab 1 - Learning how to create good prompts for Copilot**
 
 **Purpose: In this lab, we’ll start to learn about Copilot and how it generates code based on the prompts we provide**
