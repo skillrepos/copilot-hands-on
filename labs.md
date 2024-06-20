@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs
-## Revision 1.0 - 02/29/24
+## Revision 1.1 - 06/21/24
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
