@@ -556,6 +556,53 @@ gh copilot suggest "install terraform"
 <p align="center">
 **[END OF LAB]**
 
+**Lab 10 - Stay in the flow with GitHub Copilot**
+
+**Purpose: In this lab, we'll show how you can use GitHub Copilot Chat to get answers to programming related questions without leaving your editor.**
+
+1. You can use GitHub Copilot Chat to get answers to programming related questions without leaving your editor. Use the chat interface to ask a question about a programming topic. For example, you can ask about the latest version of a programming language, how to use a specific function, or how to solve a specific problem. Enter the question below in the chat interface.
+
+```
+What is the latest LTS version of Node.js?
+```
+![Use Copilot to ask programming questions](./images/pic002.png?raw=true "Use Copilot to ask programming questions")
+
+The response is based on the information available to Copilot at the time the models were trained. [As of June 2024, there is a new preview feature](https://github.blog/changelog/2024-06-14-new-copilot-enterprise-features-in-vs-code-preview/): GitHub Copilot can now search Bing within chat conversations in VS Code to answer questions and find information outside of its general knowledge or your codebase. To get answers enriched with Bing search results, start your message with `@github`. Copilot will intelligently decide when to use Bing. 
+
+2. Let's try using `@github` to get an answer based on a Bing search. Enter the question below in the chat interface.
+
+```
+@github What is the latest LTS version of Node.js?
+```
+![Use Bing with Copilot to ask programming questions](./images/pic003.png?raw=true "Use Bing with Copilot to ask programming questions")
+
+This response is enriched with Bing search results. You can use this feature to get answers to questions that are not covered by Copilot's general knowledge or your codebase.
+
+3. Let's see if we can use `@github` to learn about the advantages of using **GitHub Copilot**. Enter the question below in the chat interface.
+
+```
+@github Why is GitHub Copilot better and more secure to use than prompting ChatGPT and copy/pasting the code back into my IDE?
+```
+Does the response help you understand why GitHub Copilot is better and **more secure** to use than prompting ChatGPT and copy/pasting the code back into your IDE?
+
+4. While we can use `@github` to get answers to programming questions, we cannot use GitHub Copilot Chat to ask general questions. For example, you cannot ask about the weather or the latest sports scores. Enter the question below in the chat interface.
+
+```
+@github 	Who won the Super Bowl in 1986?
+```
+![GitHub Copilot is only for programming](./images/pic004.png?raw=true "GitHub Copilot is only for programming")
+
+That's ok. Everyone knows that [the Chicago Bears won Super Bowl XX in 1986](https://www.chicagotribune.com/2016/01/26/chicago-bears-win-super-bowl-xx/). 😉
+
+![Chicago Bears win Super Bowl XX](https://www.chicagotribune.com/wp-content/uploads/migration/2016/01/26/QP6TV57DS5ABJDLYCFXR6BGJEM.jpg?w=1200 "Chicago Bears win Super Bowl XX")
+
+
+<p align="center">
+**[END OF LAB]**
+
+**GitHub Copilot can be used with almost any language, including MarkDown!**
+As you have seen in this lab, you can use GitHub Copilot to generate code in almost any language. You can also use it to generate MarkDown. **GitHub Copilot** was used to generate the content of this lab guide.
+
 **Check out these resources to dive in and learn more**
 If you have completed all the labs, and there is still time left in today's session you can check out the resources in [**GitHub-Copilot-Resources.md**](./GitHub-Copilot-Resources.md). 
 
