@@ -613,17 +613,19 @@ That's ok. Everyone knows that [the Chicago Bears won Super Bowl XX in 1986](htt
 <p align="center">
 **[END OF LAB]**
 
+## Wrap up and next steps
+
 **GitHub Copilot can be used with almost any language, including MarkDown!**
 As you have seen in this lab, you can use GitHub Copilot to generate code in almost any language. You can also use it to generate MarkDown. **GitHub Copilot** was used to generate the content of this lab guide.
 
-**Check out these resources to dive in and learn more**
+### Check out these resources to dive in and learn more
 If you have completed all the labs, and there is still time left in today's session you can check out the resources in [**GitHub-Copilot-Resources.md**](./GitHub-Copilot-Resources.md). 
 
 This resource list has been carefully curated to help you to learn more about GitHub Copilot, how to use it effectively, what is coming in the future, what are GitHub customers saying and more. There is even a YouTube playlist that includes the latest videos from the GitHub Developer Relations team and others from Github. 
 
 Add https://github.com/DaveOps30/copilot-hands-on/blob/main/GitHub-Copilot-Resources.md to your browser favorites for easy access to these resources at any time in the future.
 
-**Please let us know what you think of GitHub Copilot and this workshop**
+### Please let us know what you think of GitHub Copilot and this workshop
 <!-- Instruct lab participants to answer the poll questions found here: https://github.com/DaveOps30/copilot-hands-on/discussions -->
 <!-- Specifically reference the "Workshop Survey" poll questions. Also, mention that they can use the "Workshop Feedback & Suggestions" for general feedback and/or suggestions. -->
 We would love to hear your thoughts on GitHub Copilot and this workshop. 
