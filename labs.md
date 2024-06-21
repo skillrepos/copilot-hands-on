@@ -1,13 +1,12 @@
-# Hands-on GitHub Copilot
-## Practical Tips and Best Practices
-## Session labs
-## Revision 1.1 - 06/21/24
+# Hands-on Workshop
+## GitHub Copilot - The World’s Most Widely Adopted AI Developer Tool
+Revision 1.1 - 06/21/24
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
 **NOTE: To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.**
 
-**Configure the Codespace to make LABS.MD always visible**
+### Configure the Codespace to make LABS.MD always visible
 
 Before we begin, we will configure the Codespace to make the labs.md file always visible. This will allow you to easily switch between the lab instructions and any editor windows you have open.
 1. Right-click on the labs.md tab at the top of the editor window.
@@ -22,7 +21,16 @@ NOTE: You may need to repeat these steps again later if you close all files you 
 
 ![Split View](./images/pic001.png?raw=true "Split View")
 
-**Lab 1 - Learning how to create good prompts for Copilot**
+### Let us know how we are doing
+<!-- Instruct lab participants to leverage GitHub disussions found here: https://github.com/DaveOps30/copilot-hands-on/discussions -->
+<!-- Specifically reference the "Workshop Feedback & Suggestions" and "Workshop Issues" categories -->
+We are leveraging [**GitHub Discussions**](https://github.com/DaveOps30/copilot-hands-on/discussions) located in this repository for real time issue reporting, feedback and suggestions.
+- If you encounter any issues or need help, please post in the [`Workshop Issues` discussion category](https://github.com/DaveOps30/copilot-hands-on/discussions/categories/workshop-issues). Be sure to check the existing discussions to see if your question has already been answered.
+- If you have any feedback or suggestions for improvement, please let us know in the [`Workshop Feedback & Suggestions` discussion category](https://github.com/DaveOps30/copilot-hands-on/discussions/categories/workshop-feedback-suggestions). 
+- When you encounter something you want to share, please post in the [`Show and Tell` discussion category](https://github.com/DaveOps30/copilot-hands-on/discussions/categories/show-and-tell).
+
+
+## Lab 1 - Learning how to create good prompts for Copilot
 
 **Purpose: In this lab, we’ll start to learn about Copilot and how it generates code based on the prompts we provide**
 
@@ -90,7 +98,7 @@ function splitURLandReturnComponents
 **[END OF LAB]**
 </p>
 
-**Lab 2 - Using Copilot to simplify and explain code**
+## Lab 2 - Using Copilot to simplify and explain code
 
 1. Create a new file named prime.py. Create it via the same process as we used in Lab 1 by entering the line below in the terminal.
 
@@ -141,7 +149,7 @@ def is_prime(n
 **[END OF LAB]**
 </p>
 
-**Lab 3 - Using Copilot after the coding**
+## Lab 3 - Using Copilot after the coding
 
 **Purpose: In this lab, we’ll see a few other ways to leverage Copilot after the initial coding is done**
 
@@ -189,7 +197,7 @@ def is_prime(n
 **[END OF LAB]**
 </p>
 
-**Lab 4 - Using Copilot to generate tests**
+## Lab 4 - Using Copilot to generate tests
 
 **Purpose: In this lab, we'll see some examples of having Copilot generate tests**
 
@@ -229,7 +237,7 @@ def test_is_prime():
 **[END OF LAB]**
 </p>
 
-**Lab 5 - Using Copilot to help with SQL**
+## Lab 5 - Using Copilot to help with SQL
 
 **Purpose: In this lab, we’ll see some examples of how to have Copilot help with writing SQL**
 
@@ -323,7 +331,7 @@ select * from courses.registration where year(registration_date) = 2023 and mont
 **[END OF LAB]**
 </p>
 
-**Lab 6 - Teaching Copilot about updates**
+## Lab 6 - Teaching Copilot about updates
 
 **Purpose: In this lab, we’ll see an example of what to do when Copilot does not have the most up-to-date information**
 
@@ -368,7 +376,7 @@ write a function to seed a random number generator
 **[END OF LAB]**
 </p>
 
-**Lab 7 - Kubernetes, YAML generation and the 2021 problem**
+## Lab 7 - Kubernetes, YAML generation and the 2021 problem
 
 **Purpose: Show YAML generation and out of date content.**
 
@@ -437,7 +445,7 @@ translate to Go
 **[END OF LAB]**
 </p>
     
-**Lab 8 - Exploring Javascript, regular expression generator, auto-generating data**
+## Lab 8 - Exploring Javascript, regular expression generator, auto-generating data
 
 **Purpose: Show Javascript and regular expression generation, auto-generate routine mappings**
 
@@ -495,7 +503,7 @@ the value is an array of area codes
 **[END OF LAB]**
 </p>
 
-**Lab 9 - Agents and CLI**
+## Lab 9 - Agents and CLI
 
 **Purpose: In this lab, we'll get some practice using GitHub Copilot agents and the Copilot CLI.**
 
@@ -556,7 +564,7 @@ gh copilot suggest "install terraform"
 <p align="center">
 **[END OF LAB]**
 
-**Lab 10 - Stay in the flow with GitHub Copilot**
+ ## Lab 10 - Stay in the flow with GitHub Copilot
 
 **Purpose: In this lab, we'll show how you can use GitHub Copilot Chat to get answers to programming related questions without leaving your editor.**
 
@@ -609,6 +617,15 @@ If you have completed all the labs, and there is still time left in today's sess
 This resource list has been carefully curated to help you to learn more about GitHub Copilot, how to use it effectively, what is coming in the future, what are GitHub customers saying and more. There is even a YouTube playlist that includes the latest videos from the GitHub Developer Relations team and others from Github. 
 
 Add https://github.com/DaveOps30/copilot-hands-on/blob/main/GitHub-Copilot-Resources.md to your browser favorites for easy access to these resources at any time in the future.
+
+**Please let us know what you think of GitHub Copilot and this workshop**
+<!-- Instruct lab participants to answer the poll questions found here: https://github.com/DaveOps30/copilot-hands-on/discussions -->
+<!-- Specifically reference the "Workshop Survey" poll questions. Also, mention that they can use the "Workshop Feedback & Suggestions" for general feedback and/or suggestions. -->
+We would love to hear your thoughts on GitHub Copilot and this workshop. 
+- Please take a moment to answer the poll questions in the [**Workshop Survey**](https://github.com/DaveOps30/copilot-hands-on/discussions/categories/workshop-survey). 
+  - For each of the two questions, simply select your response and click the "Vote" button. 
+  - Please feel free to leave a comment to let us know what you really liked and/or what we could do differently to make this workshop more valuable in the future. Feel 
+- If you have any feedback or suggestions for improvement, please let us know in the [`Workshop Feedback & Suggestions` discussion category](https://github.com/DaveOps30/copilot-hands-on/discussions/categories/workshop-feedback-suggestions).
 
 <p align="center">
 **THANKS!**
