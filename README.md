@@ -21,15 +21,7 @@ You can also find help there for using Copilot in other supported IDEs, set the 
 
 ![Using Copilot options](./images/cdd31.png?raw=true "Using Copilot options")
 
-## 2. Create your own fork of the repository for these labs
-
-- Ensure that you have created a repository by forking the [skillrepos/copilot-hands-on](https://github.com/skillrepos/copilot-hands-on) project as a template into your own GitHub area.
-- You do this by navigating to the repo, clicking the `Fork` button in the upper right portion of the main project page and following the steps to create a copy in **your-github-userid/copilot-dd** .
-
-![Forking repository](./images/cpho1.png?raw=true "Forking the repository")
-![Forking repository](./images/cpho2.png?raw=true "Forking the repository")
-
-## 3. Start your codespace
+## 2. Start your codespace
 
 In your forked repository, start a new codespace.
 
@@ -45,7 +37,7 @@ In your forked repository, start a new codespace.
 
 This will take a while to run.
 
-## 4. Open the labs
+## 3. Open the labs
 
 After the codespace has started, open the labs document by going to the file tree on the left, find the file named **labs.md**, right-click on it, and open it with the **Preview** option.)
 
