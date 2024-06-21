@@ -588,7 +588,7 @@ Does the response help you understand why GitHub Copilot is better and **more se
 4. While we can use `@github` to get answers to programming questions, we cannot use GitHub Copilot Chat to ask general questions. For example, you cannot ask about the weather or the latest sports scores. Enter the question below in the chat interface.
 
 ```
-@github 	Who won the Super Bowl in 1986?
+@github Who won the Super Bowl in 1986?
 ```
 ![GitHub Copilot is only for programming](./images/pic004.png?raw=true "GitHub Copilot is only for programming")
 
