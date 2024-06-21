@@ -24,6 +24,8 @@ One of the advantages of using **GitHub Codespaces** for this workshop is that *
 
 If you were using the **Visual Studio Code** application, you would have to manually install the **GitHub Copilot** extensions. Refer to [Set up GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/setup) for step-by-step instructions. 
 
+**NOTE:** You can also use **GitHub Copilot** in [Visual Studio](https://docs.github.com/en/copilot/quickstart?tool=visualstudio) and [compatible JetBrains IDEs](https://docs.github.com/en/copilot/quickstart?tool=jetbrains). 
+
 ### 3. Configure the Codespace to make LABS.MD always visible
 
 Before we begin, we will configure the Codespace to make the labs.md file always visible. This will allow you to easily switch between the lab instructions and any editor windows you have open.
