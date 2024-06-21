@@ -613,7 +613,18 @@ This response is enriched with Bing search results. You can use this feature to 
 ```
 Does the response help you understand why GitHub Copilot is better and **more secure** to use than prompting ChatGPT and copy/pasting the code back into your IDE?
 
-4. While we can use `@github` to get answers to programming questions, we cannot use GitHub Copilot Chat to ask general questions. For example, you cannot ask about the weather or the latest sports scores. Enter the question below in the chat interface.
+4. Learn how to get started with the **Azure OpenAI Service**
+
+You can leverage the **Azure OpenAI Service** to build your own copilot and generative AI applications. But, how do you get started? Let's ask GitHub Copilot. Enter the question below in the chat interface, **be sure to replace `[language X]` with the language you are most likely to use, e.g. `JavaScript` or, `Python` or, `Java`, etc.** 
+
+```
+@github We use [language X] for application development. How would I get started with Azure OpenAI?
+```
+![Visual for step 1](./images/pic006.png?raw=true "Visual for step 1")
+
+This provides a wealth of information. To save the response, right-click anywhere in the response and select `Copy`. Now you can paste the response somewhere that you can reference later such as a **GitHub Issue** or, a **GitHub Discussion post**.
+
+5. While we can use `@github` to get answers to programming questions, we cannot use GitHub Copilot Chat to ask general questions. For example, you cannot ask about the weather or the latest sports scores. Enter the question below in the chat interface.
 
 ```
 @github Who won the Super Bowl in 1986?
