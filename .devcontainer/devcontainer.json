@@ -27,13 +27,6 @@
 				"GitHub.copilot-chat",
 				"GitHub.copilot"
 			]
-		},
-		"codespaces": {
-			// Open files freqently used in demos.
-			"openFiles": [
-			  "README.md",
-			  ".devcontainer/devcontainer.json"
-			]
 		}
 	},
 
