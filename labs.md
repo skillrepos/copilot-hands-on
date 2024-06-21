@@ -2,16 +2,16 @@
 ## GitHub Copilot - The World’s Most Widely Adopted AI Developer Tool
 Revision 1.1 - 06/21/24
 
-**Follow the startup instructions in [the README.md file](README.md) IF NOT ALREADY DONE!**
-
-**NOTE: To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.**
+**NOTE: To copy and paste in the codespace, you may need to use keyboard commands - `CTRL-C` and `CTRL-V` (Or, the appropriate keyboard commands for your OS).**
 
 ## Introduction
 Welcome to the GitHub Copilot Hands-On Workshop! In this workshop, you will learn how to use GitHub Copilot, the world's most widely adopted AI developer tool. GitHub Copilot is an AI pair programmer that helps you write code faster and with fewer errors. It is powered by OpenAI's Large Language Model (LLM), which is a state-of-the-art language model trained on a diverse range of data sources, including publicly available code from GitHub. GitHub Copilot is available as a Visual Studio Code extension and can be used in any language, including Python, JavaScript, TypeScript, Go, Ruby, Java, C++, and many more.
 
 ## Befrore you begin
 
-### 1. Configure the Codespace to make LABS.MD always visible
+### 1. Follow the startup instructions in [the README.md file](README.md) IF NOT ALREADY DONE!
+
+### 2. Configure the Codespace to make LABS.MD always visible
 
 Before we begin, we will configure the Codespace to make the labs.md file always visible. This will allow you to easily switch between the lab instructions and any editor windows you have open.
 1. Right-click on the labs.md tab at the top of the editor window.
@@ -26,7 +26,7 @@ NOTE: You may need to repeat these steps again later if you close all files you 
 
 ![Split View](./images/pic001.png?raw=true "Split View")
 
-### 2. Let us know how we are doing
+### 3. Let us know how we are doing
 <!-- Instruct lab participants to leverage GitHub disussions found here: https://github.com/DaveOps30/copilot-hands-on/discussions -->
 <!-- Specifically reference the "Workshop Feedback & Suggestions" and "Workshop Issues" categories -->
 We are leveraging [**GitHub Discussions**](https://github.com/DaveOps30/copilot-hands-on/discussions) located in this repository for real time issue reporting, feedback and suggestions.
