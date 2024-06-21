@@ -11,7 +11,20 @@ Welcome to the GitHub Copilot Hands-On Workshop! In this workshop, you will lear
 
 ### 1. Follow the startup instructions in [the README.md file](README.md) IF NOT ALREADY DONE!
 
-### 2. Configure the Codespace to make LABS.MD always visible
+### 2. Reivew the GitHub Copilot Extension installation
+
+One of the advantages of using **GitHub Codespaces** for this workshop is that **GitHub Copilot** is preconfigured for you.  
+1. Open `.devcontainer/devcontainer.json`.
+
+2. If it is not visible, scroll down until you see the `"extensions"` section. 
+
+3. Notice how the `GitHub.copilot` and `GitHub.copilot-chat` extensions are already installed. 
+
+![GitHub Copilot Extensions are already installed](./images/pic005.png?raw=true "GitHub Copilot Extensions are already installed")
+
+If you were using the **Visual Studio Code** application, you would have to manually install the **GitHub Copilot** extensions. Refer to [Set up GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/setup) for step-by-step instructions. 
+
+### 3. Configure the Codespace to make LABS.MD always visible
 
 Before we begin, we will configure the Codespace to make the labs.md file always visible. This will allow you to easily switch between the lab instructions and any editor windows you have open.
 1. Right-click on the labs.md tab at the top of the editor window.
@@ -26,7 +39,7 @@ NOTE: You may need to repeat these steps again later if you close all files you 
 
 ![Split View](./images/pic001.png?raw=true "Split View")
 
-### 3. Let us know how we are doing
+### 4. Let us know how we are doing
 <!-- Instruct lab participants to leverage GitHub disussions found here: https://github.com/DaveOps30/copilot-hands-on/discussions -->
 <!-- Specifically reference the "Workshop Feedback & Suggestions" and "Workshop Issues" categories -->
 We are leveraging [**GitHub Discussions**](https://github.com/DaveOps30/copilot-hands-on/discussions) located in this repository for real time issue reporting, feedback and suggestions.
