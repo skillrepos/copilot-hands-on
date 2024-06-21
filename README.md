@@ -21,7 +21,15 @@ You can also find help there for using Copilot in other supported IDEs, set the 
 
 ![Using Copilot options](./images/cdd31.png?raw=true "Using Copilot options")
 
-## 2. Start your codespace
+## 2. Create your own fork of the repository for these labs
+
+- Ensure that you have created a repository by forking the [DaveOps30/copilot-hands-on](https://github.com/DaveOps30/copilot-hands-on) project as a template into your own GitHub area.
+- You do this by navigating to the repo, clicking the `Fork` button in the upper right portion of the main project page and following the steps to create a copy in **your-github-userid/copilot-hands-on** .
+
+![Forking repository](./images/cpho1.png?raw=true "Forking the repository")
+![Forking repository](./images/cpho2.png?raw=true "Forking the repository")
+
+## 3. Start your codespace
 
 In your forked repository, start a new codespace.
 
