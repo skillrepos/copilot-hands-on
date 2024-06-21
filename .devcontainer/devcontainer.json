@@ -23,14 +23,18 @@
 			},
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
+				"bierner.markdown-preview-github-styles",
 				"GitHub.copilot-chat",
-				"GitHub.copilot",
-				"GitHub.copilot-labs",
-				"bierner.markdown-preview-github-styles"
+				"GitHub.copilot"
+			]
+		}
+		"codespaces": {
+			// Open files freqently used in demos.
+			"openFiles": [
+			  ".devcontainer/devcontainer.json"
 			]
 		}
 	},
-
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "pip3 install -r requirements.txt"
