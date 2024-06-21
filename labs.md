@@ -2,7 +2,7 @@
 ## GitHub Copilot - The World’s Most Widely Adopted AI Developer Tool
 Revision 1.1 - 06/21/24
 
-**Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
+**Follow the startup instructions in [the README.md file](README.md) IF NOT ALREADY DONE!**
 
 **NOTE: To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.**
 
