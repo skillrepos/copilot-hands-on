@@ -114,9 +114,7 @@ function splitURLandReturnComponents
 
 14. When you find an alternative you like, go ahead and tab to select it.
 
- <p align="center">
-**[END OF LAB]**
-</p>
+**=========== END OF LAB ===========**
 
 ## Lab 2 - Using Copilot to simplify and explain code
 
@@ -165,9 +163,7 @@ def is_prime(n
 
 12. (Optional) If you'd like, you can go back and make the error again, highlight the code, and then use the /fix command in the chat window to get the same results.
 
-<p align="center">
-**[END OF LAB]**
-</p>
+**=========== END OF LAB ===========**
 
 ## Lab 3 - Using Copilot after the coding
 
@@ -213,9 +209,7 @@ def is_prime(n
 
 9. Once you find a doc example you like, go ahead and click **Accept**.
 
-<p align="center">
-**[END OF LAB]**
-</p>
+**=========== END OF LAB ===========**
 
 ## Lab 4 - Using Copilot to generate tests
 
@@ -253,9 +247,7 @@ def test_is_prime():
 ![Saved generated unit tests file](./images/cdd50b-4.png?raw=true "Saved generated unit tests file") 
 
 
-<p align="center">
-**[END OF LAB]**
-</p>
+**=========== END OF LAB ===========**
 
 ## Lab 5 - Using Copilot to help with SQL
 
@@ -347,9 +339,7 @@ select * from courses.registration where year(registration_date) = 2023 and mont
 ![Optimizing a query](./images/cdd52.png?raw=true "Optimizing a query") 
 
     
-<p align="center">
-**[END OF LAB]**
-</p>
+**=========== END OF LAB ===========**
 
 ## Lab 6 - Teaching Copilot about updates
 
@@ -392,9 +382,7 @@ write a function to seed a random number generator
 
 ![Updated random number gen code after including updated usage](./images/cdd54.png?raw=true "Updated random number gen code after including updated usage")
 
-<p align="center">
-**[END OF LAB]**
-</p>
+**=========== END OF LAB ===========**
 
 ## Lab 7 - Kubernetes, YAML generation and the 2021 problem
 
@@ -461,10 +449,8 @@ translate to Go
 
 ![Go translation](./images/cdd61.png?raw=true "Go translation")
 
-<p align="center">
-**[END OF LAB]**
-</p>
-    
+**=========== END OF LAB ===========**
+ 
 ## Lab 8 - Exploring Javascript, regular expression generator, auto-generating data
 
 **Purpose: Show Javascript and regular expression generation, auto-generate routine mappings**
@@ -519,9 +505,7 @@ the value is an array of area codes
    
 ![Copying remaining mappings](./images/cdd69.png?raw=true "Copying remaining mappings") 
 
-<p align="center">
-**[END OF LAB]**
-</p>
+**=========== END OF LAB ===========**
 
 ## Lab 9 - Agents and CLI
 
@@ -581,8 +565,7 @@ gh copilot explain "ps -aux"
 gh copilot suggest "install terraform"
 ```
  
-<p align="center">
-**[END OF LAB]**
+**=========== END OF LAB ===========**
 
  ## Lab 10 - Stay in the flow with GitHub Copilot
 
@@ -636,8 +619,26 @@ That's ok. Everyone knows that [the Chicago Bears won Super Bowl XX in 1986](htt
 ![Chicago Bears win Super Bowl XX](https://www.chicagotribune.com/wp-content/uploads/migration/2016/01/26/QP6TV57DS5ABJDLYCFXR6BGJEM.jpg?w=1200 "Chicago Bears win Super Bowl XX")
 
 
-<p align="center">
-**[END OF LAB]**
+**=========== END OF LAB ===========**
+
+**Lab 11 - Lab Name**
+
+**Purpose: In this lab, we'll blah, blah, blah.**
+
+1. Text for Step 1
+
+```
+Text to copy and paste to complete Step 1
+```
+![Visual for step 1](./images/pic001.png?raw=true "Visual for step 1")
+
+Explanation and perhaps link to docs/more info.
+
+2. Text for Step 2
+
+3. Text for Step 3
+
+**=========== END OF LAB ===========**
 
 ## Wrap up and next steps
 
