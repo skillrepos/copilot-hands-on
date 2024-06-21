@@ -9,17 +9,15 @@ These steps **must** be completed prior to starting the actual labs.
 
 ## 1. Ensure that you are signed up for Copilot access. 
 
-If not, when signed into GitHub, click on your profile picture/icon in the upper right and either select [Copilot](https://github.com/github-copilot/signup) 
+If you do not already have access to **GitHub Copilot**, go to **https://github.com/redeem/XXX-YYY** where `XXX-YYY` is the coupon code for your workshop. 
 
-![Signing up for Copilot](./images/cdd70.png?raw=true "Signing up for Copilot")
+Fill in any information requested and press the `Apply coupon` button.
 
-**OR** select [Settings->Copilot](https://github.com/settings/copilot) and sign up.
+![Signing up for Copilot](./images/pic007.png?raw=true "Signing up for Copilot")
 
-![Signing up for Copilot](./images/cdd32.png?raw=true "Signing up for Copilot")
+If everything is succesful, you will see a banner that says `You have successfully redeemed your coupon`.
 
-You can also find help there for using Copilot in other supported IDEs, set the switch for whether or not to allow matching public code suggestions, etc.
-
-![Using Copilot options](./images/cdd31.png?raw=true "Using Copilot options")
+![Signing up for Copilot](./images/pic008.png?raw=true "Signing up for Copilot")
 
 ## 2. Create your own fork of the repository for these labs
 
