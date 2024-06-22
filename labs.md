@@ -209,6 +209,19 @@ def is_prime(n
 
 9. Once you find a doc example you like, go ahead and click **Accept**.
 
+10. What else can we do in the chat panel?
+
+Since we have the **GitHub Copilot Chat** panel up, let's see if we can use chat to learn more about Copilt's capabilities. Enter the following in the chat panel and press `Enter`.
+
+```
+/help
+```
+![Output of /help](./images/pic012.png?raw=true "Output of /help")
+
+As you can see in the output there are a growing number of `Participants` and `Variables` that you can use in **GitHub Copilot Chat**. For example, review the output to answer these questions:
+- Which `Participant` would you use to get the meaning of the selected lines in the terminal?
+- Which `Variable` would you use to feed a specific file to **GitHub Copilot Chat** as context, even though that file may not be in an open editor at the moment? 
+
 **=========== END OF LAB ===========**
 
 ## Lab 4 - Using Copilot to generate tests
