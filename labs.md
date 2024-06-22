@@ -211,7 +211,11 @@ def is_prime(n
 
 10. What else can we do in the chat panel?
 
-Since we have the **GitHub Copilot Chat** panel up, let's see if we can use chat to learn more about Copilt's capabilities. Enter the following in the chat panel and press `Enter`.
+If it is not already visible, open the **GitHub Copilot Chat** panel. Click on the icon for the **GitHub Copilot Chat** extension in the side panel. 
+
+![Output of /help](./images/pic013.png?raw=true "Output of /help")
+
+Let's see if we can use chat to learn more about Copilt's capabilities. Enter the following in the chat panel and press `Enter`.
 
 ```
 /help
