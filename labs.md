@@ -654,7 +654,7 @@ then, run a set of load tests using Azure Load Tests.
 ```
 Take a look at the new workflow and related notes. By adding more and more specifics to our prompt we were able to get a more comprehensive **GitHub Actions** workflow and, we did not have to break our flow, leave the IDE and go to the GitHub Marketplace to figure out which Actions to use. 
 
-Now that we have this workflow, we can ask GitHub Copilot to insert the suggested workflow into a new file in our workspace. To do this you would hover over the top of the suggestion the, click on the `...` and select `Insert into New File`. You may also want to copy the related notes from that chat window and paste those into your planning and tracking tool (e.g. **GitHub Issues and Projects**, Jira, Azure Boards, etc.).
+Now that we have this workflow, we can ask GitHub Copilot to insert the suggested workflow into a new file in our workspace. To do this you would hover over the top of the suggestion, click on the `...` and select `Insert into New File`. You may also want to copy the related notes from that chat window and paste those into your planning and tracking tool (e.g. **GitHub Issues and Projects**, Jira, Azure Boards, etc.).
 
 ![Generate a GitHub Actions Workflow](./images/pic011.png?raw=true "Generate a GitHub Actions Workflow")
 
