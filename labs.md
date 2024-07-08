@@ -3,6 +3,8 @@
 ## Session labs (codespace version)
 ## Revision 1.2 - 07/08/24
 
+**Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
+
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
 **NOTE: To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.**
