@@ -121,7 +121,7 @@ def is_prime(n):
 
 10. Go ahead and click on the "Fix using Copilot" option.
 
-11. After a few moments, it will propose a fix that you can just accept (via the Accept button). You can also click on the *Show Changes* icon to see before/after for the proposed changes.
+11. After a few moments, it should propose a fix that you can just accept (via the Accept button). You can also click on the *Show Changes* icon to see before/after for the proposed changes. (If it doesn't propose a fix in the dialog, you can skip to step 12 and use the /fix command in chat instead.)
 
 ![Fixing with Copilot](./images/cdd107a.png?raw=true "Fixing with Copilot")       
 
