@@ -109,9 +109,9 @@ def is_prime(n):
 
 ![simplifying via chat box](./images/cdd35.png?raw=true "simplifying via chat box") 
 
-7. Hover over the simplified text and tell Copilot to insert the suggestion at the cursor to replace the text that's currently there. (Note: *Insert at Cursor* is now *Apply in Editor*.)
+7. Hover over the simplified text and tell Copilot to insert the suggestion at the cursor to replace the text that's currently there. 
 
-![replace from chat suggestion](./images/cdd36b.png?raw=true "replace from chat suggestion")    
+![replace from chat suggestion](./images/cdd143.png?raw=true "replace from chat suggestion")    
 
 8. Now, let's introduce an error into the code to see how Copilot can fix it. Pick an instance of a variable name and change it to one that doesn't exist. For example, change an instance of "n" to "x". 
 
