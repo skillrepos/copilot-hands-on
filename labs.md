@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.1 - 07/08/24
+## Revision 1.2 - 07/08/24
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -107,7 +107,7 @@ def is_prime(n):
 
 ![simplifying via chat box](./images/cdd35.png?raw=true "simplifying via chat box") 
 
-7. Hover over the simplified text and tell Copilot to insert the suggestion at the cursor to replace the text that's currently there.
+7. Hover over the simplified text and tell Copilot to insert the suggestion at the cursor to replace the text that's currently there. (Note: "Insert at cursor" is now "Apply in Editor".)
 
 ![replace from chat suggestion](./images/cdd36b.png?raw=true "replace from chat suggestion")    
 
