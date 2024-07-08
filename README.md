@@ -29,8 +29,6 @@ Then click on the option to create a new codespace.
 
 **This will run for several minutes while it gets everything ready.**
   
-After the codespace has initialized there will be a terminal present.
-
 ## 3. Open the labs
 
 After the codespace has started, open the labs document by going to the file tree on the left, find the file named **labs.md**, right-click on it, and open it with the **Preview** option.)
