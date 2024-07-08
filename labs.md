@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
-## Session labs
-## Revision 1.0 - 02/29/24
+## Session labs (codespace version)
+## Revision 1.1 - 07/08/24
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -24,9 +24,9 @@
 ```
 // function to parse data
 ```
-4. Hit return and notice the code that Copilot suggested. This is likely more generic than we want, but hit tab to select that line.
+4. Hit return and notice the code that Copilot suggested. This is likely more generic than we want, but hit tab to select that line. (Note that you should give Copilot a second to provide code suggestions before moving on to the next line.)
    
-5. After hitting tab, Copilot will generate another part of the function. (If not, you may need to hit return.) Hit tab to accept it. Continue until you get a complete function. One example of what code may look like is below.
+5. After hitting tab, Copilot will generate another part of the function. (If not, you may need to hit return.) Hit tab to accept it. Continue until you get a complete function (or Copilot stops generating additional code suggestions). One example of what code may look like is below.
 
 ![Copilot generated function](./images/cpho5.png?raw=true "Copilot generated function")
    
@@ -43,33 +43,36 @@
 function parseURL(url) {
 ```
 
-9. Just hit Tab to accept it and Enter again. After that Copilot may or may not offer a suggestion.  If it does, great - you can just hit Tab and accept it.  If not, it may be necessary to further "nudge" Copilot by giving more prompts. Only if you're not getting responses from Copilot, hit return and type the comment below to nudge Copilot.
+9. Just hit Tab to accept it and Enter again. Pause. After that Copilot may or may not offer a suggestion.  If it does, great - you can just hit Tab and accept it.  If not, it may be necessary to further "nudge" Copilot by giving more prompts. Only if you're not getting responses from Copilot, hit return and type the comment below to nudge Copilot.
 
 ```
 // parse url
 ```
 ![nudge comment](./images/cdd3.png?raw=true "nudge comment")   
 
-10. Only if needed, hit return and Copilot should start generating suggestions again. You can just hit tab to accept each line and then return to get the next part of the code until the function is complete. You may get some blank lines along the way - just hit return until you get to the end of a function. (You will be at the end when the indentation is done.  Also Copilot may start to suggest another function in comments like // test...)
+10. Only if needed, hit return and Copilot should start generating suggestions again. Pause after each return to give Copilot a chance to suggest code. Then you can just hit tab to accept each line and then return to get the next part of the code until the function is complete. You may get some blank lines along the way or for some lines you might need to hit Tab twice to accept the code if it is indented more. But just hit return until you get to the end of a function. (You will be at the end when the indentation is done.  Also Copilot may start to suggest another function in comments like // test...)
 
-11. Suppose you're not happy with that suggestion. Copilot can provide other options for the code. To see those, make sure you are in the editor for the file, highlight/select the existing code and hit **Ctrl + Enter**. A second window will open up with other suggestions.
-Be patient - it takes a bit of time for Copilot to generate alternative suggestions. After a moment though, you will have up to 10 alternatives to pick from.
-You can scan through these and then pick a different one if you want by clicking on the "Accept Solution" button under the alternative suggestion.  Note that this will add the code to the existing set, so you may want to delete the other code first.
+11. Suppose you're not happy with that suggestion. Copilot can provide other options for the code. To see those, make sure you are in the editor for the file, then delete all but the first line of the function **and** put the cursor at the end of the first line.
 
-![alternative suggestions](./images/cdd4.png?raw=true "alternative suggestions")   
+![reset for altenate choices](./images/cdd105.png?raw=true "reset for alternate choices")   
+   
+12. Hit **Ctrl + Enter**. A second window will open up with other suggestions.
+Be patient - it takes a bit of time for Copilot to generate alternative suggestions. After a moment though, you will have up to 10 alternatives to pick from. These will be of varying quality and completeness. You can scan through these and then pick one if suitable by clicking on the **Accept suggestion #** button under the alternative suggestion.  Note that this will add the code to the existing set, so you may need to do some minor editing afterwards.
 
-12. Let's do one more pass at getting a specific prompt for Copilot. Delete all the code currently in index.js. This time we will not enter a comment, but will enter a specific funtion name.
+![alternative suggestions](./images/cdd106.png?raw=true "alternative suggestions")   
+
+13. Let's do one more pass at getting a specific prompt for Copilot. Delete all the code currently in index.js. This time we will not enter a comment, but will enter a specific function name.
 Type the following in the empty file. (There are no parentheses after the *splitURLandReturnComponents* text.)  Do not hit tab or return yet.
 
 ```
 function splitURLandReturnComponents
 ```
 
-13.  With this function name, Copilot should suggest a full function definition - in fact it may suggest several.  To see the options, hover over the first line and a small window should appear. This window will not how many options there are (probably 2 or 3) and provide "<" and ">" links to toggle between them.  Click on the "<" and ">" buttons to see the differences in the available suggestions.
+14.  With this function name, Copilot should suggest a full function definition - in fact it may suggest several.  To see the options, hover over the first line and a small window should appear. This window will not how many options there are (probably 2 or 3) and provide "<" and ">" links to toggle between them.  Click on the "<" and ">" buttons to see the differences in the available suggestions.
 
 ![alternative suggestions inline](./images/cdd5b.png?raw=true "alternative suggestions inline")   
 
-14. When you find an alternative you like, go ahead and tab to select it.
+15. When you find an alternative you like, go ahead and tab to select it.
 
  <p align="center">
 **[END OF LAB]**
@@ -85,13 +88,15 @@ code prime.py
 
 2. Start typing a function definition as below
 ```
-def is_prime(n
+def is_prime(n):
 ```
-3. Pick one of the offered suggestions and hit Tab.
+3. Leave the cursor at the end of the line.
 
-4. Highlight the text and hit **Ctrl+Enter** to see options
+![starting point](./images/cdd104.png?raw=true "starting point") 
 
-5. Pick one of the options that is longer and/or more complex (if there is one) and **Accept Solution**. If there's not one that's longer/more complex, just pick an alternative one and **Accept Solution**.
+4. Hit **Ctrl+Enter** to see options
+
+5. Pick one of the options that is longer and/or more complex (if there is one) and **Accept suggestion #**. If there's not one that's longer/more complex, just pick an alternative one and **Accept suggestion #**.
 
 ![alternative suggestions](./images/cdd34b.png?raw=true "alternative suggestions") 
 
@@ -116,9 +121,9 @@ def is_prime(n
 
 10. Go ahead and click on the "Fix using Copilot" option.
 
-11. After a few moments, it will propose a fix that you can just accept (via the Accept button).
+11. After a few moments, it will propose a fix that you can just accept (via the Accept button). You can also click on the *Show Changes* icon to see before/after for the proposed changes.
 
-![Fixing with Copilot](./images/cdd39b.png?raw=true "Fixing with Copilot")       
+![Fixing with Copilot](./images/cdd107a.png?raw=true "Fixing with Copilot")       
 
 12. (Optional) If you'd like, you can go back and make the error again, highlight the code, and then use the /fix command in the chat window to get the same results.
 
@@ -135,7 +140,7 @@ def is_prime(n
 ![Interactively telling Copilot to explain code](./images/cdd40b.png?raw=true "Interactively telling Copilot to explain code")
 
 
-2. Tell Copilot to explain the code by typing the command below in the dialog. (Note, the actual word may not show up after you type.) Hit Enter. Then, you should see the output in the chat window.
+2. Tell Copilot to explain the code by typing the command below in the dialog. Hit Enter. Then, you should see the output in the chat window.
 
 ```
 /explain
@@ -160,15 +165,13 @@ def is_prime(n
 
 6. Finally, let's see how to use the doc feature to automatically document our code. Highlight the actual code.
 
-7. Now, enter **Cmd+I** and enter the **/doc** command. After a few moments, Copilot should generate some documentation for the code. Do not Accept or Discard yet.
+7. Now, enter **Cmd+I** and enter the **/doc** command. After a few moments, Copilot should generate some documentation for the code. You can go ahead and *Accept* the changes.
 
-![Generated doc for the code](./images/cdd44b.png?raw=true "Generated doc for the code")  
+![Generated doc for the code](./images/cdd44d.png?raw=true "Generated doc for the code")  
 
-8. Let's see what other doc could be generated. Click on the circular arrow button next to Discard at the bottom of the dialog and click on it to regenerate another possible doc.
+8. While this is useful documentation for the start of the function, we'd like to have more extensive comments in the function body. So,let's get Copilot's help with that. Bring up the chat dialog again with **Cmd+I** and enter the text "verbosely comment this code". After Copilot completes its suggestions, if you're happy with them, you can just click *Accept*. 
 
-![Regenerating doc](./images/cdd45b.png?raw=true "Regenerating doc")  
-
-9. Once you find a doc example you like, go ahead and click **Accept**.
+![Regenerating doc](./images/cdd110.png?raw=true "Regenerating doc")  
 
 <p align="center">
 **[END OF LAB]**
@@ -190,24 +193,45 @@ def is_prime(n
 ```
 def test_is_prime():
 ```
-![generating tests via comment](./images/cdd46.png?raw=true "generating tests via comment") 
+![generating tests via comment](./images/cdd46a.png?raw=true "generating tests via comment") 
 
-4. Let's try a slightly different way of generating tests.  First, highlight and delete any parts of the current test function, including comments.
+4. What if we didn't know how to test the code at all? Let's ask Copilot. Highlight the *is_prime()* function.
 
-5. Let's have chat generate the tests.  Go ahead and highlight/delete any existing ones and the test function in the prime.py file.
+![selecting code](./images/cdd111.png?raw=true "selecting code") 
 
-6. Select the set of code for *is_prime*. Then Go to chat and tell it to generate tests
+5. Now, switch to the chat interface and ask Copilot using the following prompt:
 
+```
+#selection: How do I test this code?
+```
+![prompting on how to test](./images/cdd112.png?raw=true "prompting on how to test") 
+
+6. After entering this, you should see an explanation of how to test the code along with suggested testing code. If you expand the reference in the chat output, you can see that it only used the selected lines.
+
+![testing explanation](./images/cdd113.png?raw=true "testing explanation") 
+
+7. Let's see what the shortcut command would do. In the chat dialog enter "/tests" and then Enter. Copilot will want to add the *@workspace* agent onto the command. Just remove the *@workspace* from the beginning of the command. **Do not hit enter yet**.
 ```
 /tests
 ```
-![Tests-generated tests](./images/cdd49.png?raw=true "Tests-generated tests") 
+8. Type a hash/sharp sign after /tests. At this point, Copilot should present a selection dialog. Choose #file from the menu.
+```
+/tests #
+```
+   
+![shortcut test command](./images/cdd140.png?raw=true "shortcut test command")
 
-7. We could put this into a new file by hovering over the output in the Chat window, then selecting the "..." from the pop-up menu and selecting "Insert into new file".  Go ahead and select that option and then you'll have a new file in your editor with the code that you can save as needed.
+9. A dialog will pop up near the top of the codespace with a selection of files. Select the *prime.py* file to complete the command. 
 
-![Insert tests into new file](./images/cdd50.png?raw=true "Insert tests into new file") 
+![file choice dialog](./images/cdd141.png?raw=true "file choice dialog")
 
-![Saved generated unit tests file](./images/cdd50b-4.png?raw=true "Saved generated unit tests file") 
+10. Once the command looks like */tests #file:prime.py*, go ahead and hit enter to see the suggested test results.
+
+![file choice dialog](./images/cdd142.png?raw=true "file choice dialog")
+
+11. We can put this into a new file by hovering over the output in the Chat window, then selecting the "..." from the pop-up menu and selecting "Insert into new file". Go ahead and select that option and then you'll have a new file in your editor with the code that you can save as needed.
+
+![Insert tests into new file](./images/cdd115a.png?raw=true "Insert tests into new file") 
 
 
 <p align="center">
@@ -224,20 +248,21 @@ def test_is_prime():
 code dev.sql
 ```
    
-2. Afterwards this file should be open in a tab in the editor. Assume we want to work with a database or database definition that defines a dataset for students, staff, curriculums, courses, schools of study, locations, and registrations for a university system. Let's see what Copilot would generate without any other context for a query to get all students in a course. Enter the following comment below and press Tab to accept suggestions. Remember that you may have to hit Enter multiple times to get Copilot to prompt. Or if you don't get a suggestion or only get a comment, try "nudging" Copilot via typing "select". 
+2. Afterwards this file should be open in a tab in the editor. Assume we want to work with a database or database definition that defines a dataset for students, staff, curriculums, courses, schools of study, locations, and registrations for a university system. Let's see what Copilot would generate for a query to get all students in a course - without any other context.
+
+Enter the following comment below and press Tab to accept suggestions. Remember that you may have to hit Enter multiple times to get Copilot to prompt. Or if you don't get a suggestion or only get a comment, try "nudging" Copilot via typing "select". 
 
 ```
 -- define a select statement to get all students enrolled in a course
 ```
-3. Go ahead and save this file as part of the project.  You can do this from the "3-line" menu under *File->Save*, or just
-click on the *X* next to the file's name in it's tab and select to *Save* it.
+3. Go ahead and save this file as part of the project.  You can do this from the "3-line" menu under File->Save, or just click on the X next to the file's name in it's tab and select to Save it.
 
 ![Save sql file](./images/cdd96.png?raw=true "Save sql file") 
 
 4. If the file is no longer open in the tabs, you can select the "Explorer" icon at the top of the sidebar and select the file in the list to open it back up.
 
-![Reopening the file](./images/cpho6.png?raw=true "Reopening the file") 
-   
+![Reopening the file](./images/cdd108.png?raw=true "Reopening the file")    
+
 5. Let's see if we get any different results if we provide Copilot additional context. Open the file create-tables.sql in the editor from the GitHub repository. (You can either select and open it from the file list or use the command below from the terminal.) Scroll through it and take a quick look at the contents.
 
 ```
@@ -246,7 +271,7 @@ code create-tables.sql
 
 6. Now with that file open, go back up to the top of the dev.sql file.  Highlight and delete the comment and resulting query from step 2.
   
-7. Enter the same comment as before to request the query. (Basically, repeat step 2.) See what Copilot suggests this time. You can accept the suggestions or cycle through options. 
+7. Enter the same comment as before to request the query. (Basically, repeat step 2.) See what Copilot suggests this time. You can accept the suggestions or cycle through options. (If you first get a duplicate line as the query, just hit Enter and Copilot should start making more meaningful suggestions.)
 
 ```
 -- define a select statement to get all students enrolled in a course
@@ -293,15 +318,15 @@ use instructor_id as the input parameter
 13. Finally, let's see Copilot optimize a query for us. Suppose we want to get all the course registrations for September, 2023.  Enter the following query in the file.
 
 ```
-select * from courses.registration where year(registration_date) = 2023 and month(registration_date) = 9
+select * from courses.registrations where year(registration_date) = 2023 and month(registration_date) = 9;
 ```
 
-14. Ask Copilot to optimize the previous query. You can do this via highlighting the query, using the **CMD+I** shortcut and entering "/optimize" in the dialog. You can Accept or Discard the suggested optimization after that.
+14. Ask Copilot to optimize the previous query. You can do this via highlighting the query (make sure to highlight the *entire* query), switch to the separate chat interface and entering "/optimize" in the dialog. You can Accept or Discard the suggested optimization after that.
 
 ```
 /optimize
 ```
-![Optimizing a query](./images/cdd52.png?raw=true "Optimizing a query") 
+![Optimizing a query](./images/cdd116.png?raw=true "Optimizing a query") 
 
     
 <p align="center">
@@ -319,15 +344,16 @@ select * from courses.registration where year(registration_date) = 2023 and mont
 ```
 write a function to seed a random number generator
 ```
-![Asking Copilot to write function to seed a random number generator](./images/cdd53.png?raw=true "Asking Copilot to write function to seed a random number generator") 
+![Asking Copilot to write function to seed a random number generator](./images/cdd117.png?raw=true "Asking Copilot to write function to seed a random number generator") 
 
 3. Copilot has probably generated code using the rand.Seed function. The challenge is that as of Go 1.20, the Seed function is deprecated.  Ref: https://cs.opensource.google/go/go/+/refs/tags/go1.21.0:src/math/rand/rand.go;l=394
 
-4. Let's see if Copilot understands that this is deprecrated. We'll ask it via a query. Use **CMD+I** and the query below.
+4. Let's see if Copilot understands that this is deprecrated. We'll ask it via a query. Switch to the separate chat inferface and enter the query below.
 
 ```
 Is the Seed function deprecated in Go?
 ```
+![Is Seed function deprecated?](./images/cdd118.png?raw=true "Is Seed function deprecated?") 
 
 5. Copilot probably responded with no and some info about the function. So one way we can help Copilot understand language updates is by providing the context in our file. So let's start again. Delete the current content in the explore.go file.
 
@@ -337,7 +363,7 @@ Is the Seed function deprecated in Go?
 	// Create and seed the generator.
 	// Typically a non-fixed seed should be used, such as time.Now().UnixNano().
 	// Using a fixed seed will produce the same output on every run.
-	r := rand.New(rand.NewSource(99))
+	// r := rand.New(rand.NewSource(99))
 ```
 
 7. Now, let's try the creation of the function again. Underneath the comments and code you just pasted, invoke the dialog via **CMD+I** and enter the statement below again.
@@ -345,9 +371,9 @@ Is the Seed function deprecated in Go?
 write a function to seed a random number generator
 ```
 
-8. This time, the code should be using the same format and NewSource function as you put in the file in step 6. You can just Accept the change.
+8. This time, the code should be using the same format and NewSource function as you put in the file in step 6. You can just Accept the change. (If you don't see a complete function, but just a single line, try changing the prompt to be "write a complete function to seed a random number generator".
 
-![Updated random number gen code after including updated usage](./images/cdd54.png?raw=true "Updated random number gen code after including updated usage")
+![Updated random number gen code after including updated usage](./images/cdd119.png?raw=true "Updated random number gen code after including updated usage")
 
 <p align="center">
 **[END OF LAB]**
@@ -373,17 +399,17 @@ add label type: front-end
 ```
 
 3. After a few moments, you should see it respond with the code. You can just Accept this.
-![Kubernetes manifest](./images/cdd57.png?raw=true "Kubernetes manifest")
+![Kubernetes manifest](./images/cdd120.png?raw=true "Kubernetes manifest")
 
 4. Suppose we don't know how to execute this code. Let's ask Copilot. Highlight the generated YAML in the deployment.yaml file.  Then go to the larger Chat interface and ask it. Put the following in the Chat interface.
 
 ```
-How do I execute this - short version?
+How do I execute this?
 ```
 
 5. Copilot should respond with something like the following:
 
-![How to execute deployment](./images/cdd58.png?raw=true "How to execute deployment")
+![How to execute deployment](./images/cdd121.png?raw=true "How to execute deployment")
 
 
 6. While we're in the Chat interface, let's ask it for the latest K8s version. Put the following into the dialog.
@@ -394,7 +420,7 @@ what is the latest Kubernetes version?
 
 7. Notice that it identifies the latest version as 1.22 as of September 2021. This highlights the out-of-date issue with the LLM.
 
-![Answer to latest K8s version](./images/cdd59.png?raw=true "Answer to latest K8s version")
+![Answer to latest K8s version](./images/cdd122.png?raw=true "Answer to latest K8s version")
 
 
 8. Let's have Copilot generate some code to work with Kubernetes through the API. In the chat interface, enter the following.
@@ -402,136 +428,167 @@ what is the latest Kubernetes version?
 ```
 How do I call the K8s API for scaling a deployment to 5 replicas with Python?
 ```
+9. The results may tell us that we first need to make sure something like PIP is installed. If so, we don't need to worry about this at the moment. Go to the actual generated code in the chat output. Click in that output area and paste the code into a new file via clicking on the "..." and then the *Insert into new file* menu option.
 
-9. Click in chat output and paste to new file via clicking on the "..." menu option.
-
-![Add code to new file](./images/cdd60.png?raw=true "Add code to new file")
+![Add code to new file](./images/cdd124.png?raw=true "Add code to new file")
 
 
-10. Suppose we change our mind and want to convert this code to Go. Click in the new file, and highlight the new code. Then, in the Chat interface tell it to translate to Go.
+10. Suppose we change our mind and want to convert this code to Go. Click in the new file, and highlight the new code. Then, in the Chat interface tell it to translate to Go. Then, look in the separate chat output and you should see the equivalent Go code available.
 
 ```
 translate to Go 
 ```
+![Go translation](./images/cdd125.png?raw=true "Go translation")
 
-11. If you look at the output from the Chat interface, you should now have the equivalent Go code available.
 
-![Go translation](./images/cdd61.png?raw=true "Go translation")
 
 <p align="center">
 **[END OF LAB]**
 </p>
     
-**Lab 8 - Exploring Javascript, regular expression generator, auto-generating data**
+**Lab 8 - Exploring JavaScript, regular expression generation, and auto-generating data**
 
 **Purpose: Show Javascript and regular expression generation, auto-generate routine mappings**
 
 1. Create a new file as **phone.js**
 
 ```
-code phone.js
+code contact.js
 ```
 
-2. Prompt Copilot to create a function with a regular expression to validate a US phone number. You can use the **CMD+I** interface.
+2. Prompt Copilot to create a function with a regular expression to validate a US phone number. You can use the **CMD+I** interface and just *Accept* the results.
 ```
 create a function to validate any global phone number using a regular expression
 ```
-![Regex function to validate phone #](./images/cdd62.png?raw=true "regex function to validate phone #")
+![Regex function to validate phone #](./images/cdd127.png?raw=true "regex function to validate phone #")
 
 3. Let's tell it to document the function by highlighting the code, invoking **CMD+I** and **/doc**.  You can just Accept the results.
 
-![Automatic doc of function](./images/cdd63.png?raw=true "Automatic doc of function")  
+![Automatic doc of function](./images/cdd128.png?raw=true "Automatic doc of function")  
 
-4. Now let's see how Copilot can generate some data and mappings for us automatically. Enter the prompt below in the main Chat text entry area.
+4. Now let's see how Copilot can generate some data and mappings for us automatically. Enter the prompt below in the main/separate chat text entry area.
 ```
-create a mapping of states to area codes
-the key is the state abbreviation
-the value is an array of area codes with max 5
+create a mapping of all 50 states to area codes where
+the key is the state abbreviation and the value
+ is an array of area codes with max 10
 ```
 5. After running this, Copilot will generate the start of a list as shown below. Hover over the output area and click to insert the updates at the cursor in the *phone.js* file. (This assumes the cursor is below the previous function in the file.)
 
-![Automatic gen of data](./images/cdd102.png?raw=true "Automatic gen of data") 
+![Automatic gen of data](./images/cdd129.png?raw=true "Automatic gen of data") 
 
-6. Notice that the example mapping was only for the first few states. We want to get the remaining mappings for the other states.
-
-![Partial list of mappings](./images/cdd66.png?raw=true "Partial list of mappings") 
-
-7. Let's craft a prompt to complete the sequence. Enter the following in the main Copilot Chat entry box and then execute it.
+6. Notice that the example mapping was only for the first few states. We want to get the remaining mappings for the other states. Let's craft a prompt to complete the sequence. Enter the following in the main Copilot Chat entry box and then execute it.
 
 ```
-create a mapping of the remaining states to area codes 
-the key is the state abbreviation
-the value is an array of area codes with max 5
+create a mapping of the remaining states to area codes where
+the key is the state abbreviation and the value
+ is an array of area codes with max 10
 ```
-![Completing the mappings](./images/cdd67.png?raw=true "Completing the mappings") 
+![Completing the mappings](./images/cdd130.png?raw=true "Completing the mappings") 
 
-8. From the generated text in the chat, if the results look ok, you can copy the mappings and add them into the code file. But, if not, you may have to give a better prompt. You can try highlighting the current mappings and use a prompt like the one shown below.  (Note that the chat shows that it only used the lines highlighted as a reference.)
+7. It is likely that the generated text in the chat is still not complete. If that's the case, we may need to find a way to narrow the amount of data that's returned back in one instance by Copilot. Let's try a prompt that limits the max values returned to 5.
 
 ```
-create a mapping of the next 25 states to area codes in the same format where
-the key is the state abbreviation
-the value is an array of area codes
+create a complete mapping of all 50 states to area codes where
+the key is the state abbreviation and the value
+ is an array of area codes with max 5
 ```
-![Better prompt for remaining mappings](./images/cdd103.png?raw=true "Better prompt for remaining mappings") 
+![Better prompt for remaining mappings](./images/cdd131.png?raw=true "Better prompt for remaining mappings") 
+
+
+8. You can scroll to the bottom to confirm if you got entries for all the states. If you didn't, you could create additional prompts for specific ranges of states, change the number of values downward, etc. You could then copy these into your file if you want. Notice also the disclaimer at the bottom of the output that these may not be actual values.
    
-![Copying remaining mappings](./images/cdd69.png?raw=true "Copying remaining mappings") 
+![Disclaimer on actual values](./images/cdd132.png?raw=true "Disclaimer on actual values") 
+
+<p align="center">
+**[END OF LAB]**
+
+**Lab 9 - Agents**
+
+**Purpose: In this lab, we'll see how to work with GitHub Copilot agents.**
+
+1. Now let's see how Copilot can help with tasks using agents. First, we'll have Copilot help us commit a change.  Let's use the *explore.go* file we created in Lab 6. If you haven't already, make sure that file is saved. You can do this by:
+   
+- Select the *explore.go* file
+- Click on the *three-line menu* in the top left.
+- From the menu that comes up, select *File* and then select *Save* (or use the shortcut).
+
+![Save file](./images/cdd133.png?raw=true "Save file")
+
+2. Now, let's invoke the **@terminal** agent to ask a common question about how to stage your code changes. Go to the *chat* interface and enter the prompt below. Afterwards, the command to do the staging should show up in the chat output.
+
+```
+@terminal how do I stage explore.go?
+```
+![query output](./images/cdd134.png?raw=true "query output") 
+
+3. Hover over the window with the commands in it, and then click on the icon that pops up for the terminal. Click on that to insert the command into the terminal. Then hit return.
+
+![insert into terminal](./images/cdd135.png?raw=true "insert into terminal")
+
+
+4. Now let's commit our change through the interface and have Copilot suggest a commit message for us. Click on the source control icon in the sidebar (#1 in the figure below). Your *explore.go* file should be selected. In the box titled "Message" above the *Commit bar*, click on the *sparkle icon* at the far right side (#2 in the figure below).
+
+![insert into terminal](./images/cdd136.png?raw=true "insert into terminal")
+
+5. After this, Copilot should (hopefully) generate an appropriate commit message in that box. You can then copy the message and paste it into a *git commit* command in the terminal. **If you started your codespace from a fork, you can hit return to complete the commit if you want. This is optional. If you started your codespace via the one-click button, you will not have permissions to commit.**
+```
+git commit -m "<contents of generated commit message from Copilot goes here>"
+```
+![commit with generated message](./images/cdd137.png?raw=true "commit with generated message")
+
+6. Now, let's switch gears and use the **@workspace** agent to help identify where we use certain things in our code. With the *explore.go* file still active in your editor, in the separate *chat* interface , enter the following prompt:
+
+```
+Which files are using SQL?
+```
+
+7. After executing this, you'll likely have some suggested information on how to search for files that use SQL in your project with search functionality for Visual Studio Code.
+   
+![initial query response](./images/cdd138.png?raw=true "initial query response")   
+
+8. This is not the kind of answer we were looking for. Let's repeat the query with the *@workspace* agent.
+```
+@workspace Which files are using SQL?
+```
+
+9. After executing this, you should see Copilot assessing all of the files in the workspace and then returning a more specific and expected answer.
+    
+![more specific response](./images/cdd139.png?raw=true "more specific response")
 
 <p align="center">
 **[END OF LAB]**
 </p>
 
-**Lab 9 - Agents and CLI**
+**Lab 10 - Copilot CLI**
 
-**Purpose: In this lab, we'll get some practice using GitHub Copilot agents and the Copilot CLI.**
-
-1. Let's go ahead and invoke the **@terminal** agent to ask a common question about how to commit code changes. Go to the **chat** interface and enter the prompt below. Afterwards, the commands to do the commit should show up in the chat window as shown below.
-
-```
-@terminal how do I commit my code changes?
-```
-![querying for commit](./images/cdd89.png?raw=true "query for commit")
-![query output](./images/cdd90.png?raw=true "query output") 
-
-2. Hover over the window with the commands in it, and then click on the icon that pops up for the terminal. Click on that to insert it into the terminal. You don't have to commit the changes right now.  
-
-![insert into terminal](./images/cdd91.png?raw=true "insert into terminal")
-
-3. Now let's see how Copilot can help with generating commit messages. Click on the source control extension icon in the left sidebar. If you don't have any files showing up as eligible for commit, try closing some of the open files you have in the codespace by clicking on the "x" in the tab. With some files showing up to commit, click on the *sparkle* icon (in the upper right of the commit message box) to have Copilot generate a commit message. If you don't like the message it generates, you can click on the same icon again to see another option. You can commit the changes if you want, but its not necessary.
-
-![copilot generating commit messages](./images/cdd92.png?raw=true "copilot generating commit messages")
-
-4. Now, let's use the **@workspace** agent to help identify how we can test our code. In the **chat** text area, enter the following prompt:
-
-```
-@workspace what do I use to test my prime number code?
-```
-
-5. After executing this, you'll have some suggested information on how to test the code in your workspace.
-
-6. Finally, let's work with the Copilot command line interface. The codespace already has the GitHub CLI installed, so we just need to install the Copilot extension and authenticate. Enter the following in the terminal.
+**Purpose: In this lab, we'll finish up with Copilot by using the CLI.**
+    
+1. Finally, let's work with the Copilot command line interface. The codespace already has the GitHub CLI installed, so we just need to install the Copilot extension and authenticate. Enter the following in the terminal.
 
 ```
 gh extension install github/gh-copilot
 ```
 
-7. After this, you can invoke the copilot command line to see the options available.
+2. After this, you can invoke the copilot command line to see the options available.
 
 ```
 gh copilot
 ```
 ![Copilot CLI help](./images/cdd94.png?raw=true "Copilot CLI help")
 
-8. To authenticate, use the command below in the terminal.
+3. To authenticate, use the command below in the terminal.
 
 ```
 gh auth login --web
 ```
 
-9. Follow the prompts. You'll get a one-time activation code that you should copy and then paste in the browser when prompted. (If you happen to get a message about an issue with GITHUB_TOKEN, you can use the command *export GITHUB_TOKEN=* to clear that.) You'll need to click on the "Authorize" button on the next screen after this to complete the process.
-
+4. Follow the prompts. You'll get a one-time activation code that you should copy and then paste in the browser when prompted. (If you happen to get a message about an issue with GITHUB_TOKEN, you can use the command *export GITHUB_TOKEN=* to clear that.) You'll need to click on the "Authorize GitHub" button on the next screen and then confirm your signin after this to complete the process.
+```   
+export GITHUB_TOKEN=
+```
 ![Copilot CLI auth](./images/cdd95.png?raw=true "Copilot CLI auth")
 
-10. Once you have authenticate, you can try a couple of *gh copilot* commands like the ones below to see an example of how the CLI works.
+5. Once you have authenticate, you can try a couple of *gh copilot* commands like the ones below to see an example of how the CLI works.
 
 ```
 gh copilot explain "ps -aux"
@@ -540,7 +597,10 @@ gh copilot suggest "install terraform"
  
 <p align="center">
 **[END OF LAB]**
+</p>
 
 <p align="center">
 **THANKS!**
-</p> 
+</p>
+ 
+
