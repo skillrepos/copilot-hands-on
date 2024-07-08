@@ -31,7 +31,7 @@ Then click on the option to create a new codespace.
   
 ## 3. Open the labs
 
-After the codespace has started, open the labs document by going to the file tree on the left, find the file named **labs.md**, right-click on it, and open it with the **Preview** option.) Alternatively, you can open it up in a separate browser tab directly from the GitHub site.
+After the codespace has started, open the labs document by going to the file tree on the left, find the file named **labs.md**, right-click on it, and open it with the **Preview** option.) *Alternatively, you can open it up in a separate browser tab directly from the GitHub site.*
 
 ![Labs doc preview in codespace](./images/cpho4.png?raw=true "Labs doc preview in codespace")
 
