@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.2 - 07/08/24
+## Revision 1.3 - 07/10/24
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -142,11 +142,13 @@ def is_prime(n):
 ![Interactively telling Copilot to explain code](./images/cdd40b.png?raw=true "Interactively telling Copilot to explain code")
 
 
-2. Tell Copilot to explain the code by typing the command below in the dialog. Hit Enter. Then, you should see the output in the chat window.
+2. Tell Copilot to explain the code by typing the command below in the dialog. Hit Enter. Then, you should see the output in the dialog. Click on the *View in Chat* button to see the output in the separate chat window.
 
 ```
 /explain
 ```
+
+![Output of interactively telling Copilot to explain code in dialog](./images/cdd144.png?raw=true "Output of interactively telling Copilot to explain code in dialog")
 ![Output of interactively telling Copilot to explain code](./images/cdd41b.png?raw=true "Output of interactively telling Copilot to explain code")
 
 3. Now, let's do the same request but through a comment. In the *prime.py* file, below the code, enter the following comment and hit Enter.
