@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.3 - 07/10/24
+## Revision 1.4 - 07/16/24
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -80,7 +80,7 @@ function splitURLandReturnComponents
 **[END OF LAB]**
 </p>
 
-**Lab 2 - Using Copilot to simplify and explain code**
+**Lab 2 - Using Copilot to simplify code**
 
 1. Create a new file named prime.py. Create it via the same process as we used in Lab 1 by entering the line below in the terminal.
 
@@ -457,7 +457,7 @@ translate to Go
 1. Create a new file as **phone.js**
 
 ```
-code contact.js
+code phone.js
 ```
 
 2. Prompt Copilot to create a function with a regular expression to validate a US phone number. You can use the **CMD+I** interface and just *Accept* the results.
