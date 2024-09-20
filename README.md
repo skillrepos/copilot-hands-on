@@ -9,21 +9,13 @@ These steps **must** be completed prior to starting the actual labs.
 
 ## 1. Ensure that you are signed up for Copilot access. 
 
-If you do not already have access to **GitHub Copilot**, go to **https://gh.io/cfp-sea24aic** to redeem a 7-day free trial of GitHub Copilot. You can also use this QR code. 
-<p align="center">
-<img width="250" height="250" src="./images/GitHub Copilot Coupon 2024-08-14.png"></p>
+Everyone in this workshop should have access to GitHub Copilot through your organization.
 
-Fill in any information requested and press the `Apply coupon` button.
-
-![Signing up for Copilot](./images/pic007.png?raw=true "Signing up for Copilot")
-
-If everything is successful, you will see a banner that says `You have successfully redeemed your coupon`.
-
-![Signing up for Copilot](./images/pic008.png?raw=true "Signing up for Copilot")
+If you do not have a Copilot license assigned from your organization, you can [sign up for a free 30 day trial.](https://github.com/github-copilot/signup?ref_cta=Copilot+trial&ref_loc=quickstart+for+github+copilot&ref_page=docs)
 
 ## 2. Create your own fork of the repository for these labs
 
-- Ensure that you have created a repository by forking the [DaveOps30/copilot-hands-on](https://github.com/DaveOps30/copilot-hands-on) project as a template into your own GitHub area.
+- Ensure that you have created a repository by forking the [Scubaninja/copilot-hands-on](https://github.com/scubaninja/copilot-hands-on) project as a template into your own GitHub area.
 - You do this by navigating to the repo, clicking the `Fork` button in the upper right portion of the main project page and following the steps to create a copy in **your-github-userid/copilot-hands-on**.
 
 ![Forking repository](./images/cpho1.png?raw=true "Forking the repository")
