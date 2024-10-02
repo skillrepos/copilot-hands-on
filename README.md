@@ -1,5 +1,7 @@
 # GitHub Copilot Hands-on-lab setup
 
+### LEGO is awesome
+
 These instructions will guide you through configuring a GitHub Codespaces environment that you can use to run the course labs. 
 If you prefer and if you know one of the other IDEs supported by Copilot, you can use that. But the instructions will reference the codespace version.
 
