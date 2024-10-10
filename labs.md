@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.4 - 07/16/24
+## Revision 2.0 - 10/10/24
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -608,3 +608,29 @@ gh copilot suggest "install terraform"
 </p>
  
 
+**Lab 11 - Copilot in GitHub**
+
+**Purpose: In this lab, we'll see how to use the integrated chat interface in GitHub.**
+
+1. To give us a project to work with, we'll fork a repository from my GitHub area. Switch back to GitHub in the browser and go to https://github.com/skillrepos/sec-demo. (Make sure you are logged in as your GitHub userid that has Copilot access.)
+
+2. Fork the skillsrepo/demo repository into your own GitHub space via the *Fork* button at the top right. Make sure to **uncheck** the *Copy the main branch only* box on the second screen.
+
+![fork repo](./images/cdd146.png?raw=true "Fork repo")
+![uncheck checkbox](./images/cdd147.png?raw=true "Uncheck checkbox")
+
+3. After the fork is complete, click on the *Chat with Copilot* button at the top right. The chat dialog will open up and then you will have a chat input box and some suggested questions. Click on the *Can you tell me about this repository?* question.  (If you don't see it, you can select one of the others or type in the question.) After this runs, you'll get some basic info about the repository.
+
+ ![about the repo query](./images/cdd148.png?raw=true "About the repo query") 
+ ![about the repo response](./images/cdd149.png?raw=true "About the repo response") 
+ 
+4. Now, in the list of files in the repo, select the *main.go* file to open it up. The Copilot Chat interface should change to one specific for the file. Click on the *Summarize this file for me* question or type it into the input area. After this runs, you'll see a summarization of the file.
+
+ ![about the file query](./images/cdd150.png?raw=true "About the file query") 
+ ![about the file response](./images/cdd151.png?raw=true "About the file response") 
+ 
+5. In this repo, we have a *dev* branch with some fixes for security vulnerabilities in the *main* branch. Let's create a pull request to merge the *dev* branch into the *main* branch. We could initiate the pull request manually, but since we have the Copilot Chat available, let's have it expedite the process by creating a simple link for us to use to start the pull request. In the Chat input area, tell Copilot to generate an appropriate URL via the following prompt and then submit it. After Copilot is done, you should see a link displayed.
+
+ ![generate pr link](./images/cdd152.png?raw=true "Generate pr link") 
+ ![generated link](./images/cdd153.png?raw=true "Generated link") 
+ 
