@@ -629,7 +629,10 @@ gh copilot suggest "install terraform"
  ![about the file query](./images/cdd150.png?raw=true "About the file query") 
  ![about the file response](./images/cdd151.png?raw=true "About the file response") 
  
-5. In this repo, we have a *dev* branch with some fixes for security vulnerabilities in the *main* branch. Let's create a pull request to merge the *dev* branch into the *main* branch. We could initiate the pull request manually, but since we have the Copilot Chat available, let's have it expedite the process by creating a simple link for us to use to start the pull request. In the Chat input area, tell Copilot to generate an appropriate URL via the following prompt and then submit it. After Copilot is done, you should see a link displayed.
+5. In this repo, we have a *dev* branch with some fixes for security vulnerabilities in the *main* branch. Let's create a pull request to merge the *dev* branch into the *main* branch. We could initiate the pull request manually, but since we have the Copilot Chat available, let's have it expedite the process by creating a simple link for us to use to start the pull request. In the Chat input area, tell Copilot to generate an appropriate URL via the prompt below and then submit it. After Copilot is done, you should see a link displayed.
+```
+Generate a url that I can use to create a pull request to merge the dev branch into the main branch
+```
 
  ![generate pr link](./images/cdd152.png?raw=true "Generate pr link") 
  ![generated link](./images/cdd153.png?raw=true "Generated link") 
@@ -656,6 +659,13 @@ gh copilot suggest "install terraform"
  ![request explanation](./images/cdd159.png?raw=true "Request explanation") 
  ![section explanation](./images/cdd160.png?raw=true "Section explanation")
 
-11. Now, let's add a file to the context for the chat. Click on the *Ask Copilot* button at the top of the screen. In the *Select files to discuss* dialog, select *models/models.go*
-     
- 
+11. Now, let's add a file to the context for the chat. Click on the *Ask Copilot* button at the top of the screen. In the *Select files to discuss* dialog, select *models/models.go*, check the box and then *Save*. You'll then see the file attached as context in the Chat dialog.
+    
+![add file for context](./images/cdd161.png?raw=true "Add file for context")
+![file added to context](./images/cdd162.png?raw=true "File added to context")
+
+12. Now, let's prompt Copilot about why the changes need to be made. In the Chat input area, enter the prompt *Why do these changes need to be made?* It will use this file as context and respond accordingly. Notice in the screenshot below, the indicator for *1 reference - models.go*.
+```
+Why do these changes need to be made?
+```
+![answer with file as context](./images/cdd163.png?raw=true "Answer with file as context")
