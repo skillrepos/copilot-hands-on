@@ -634,3 +634,28 @@ gh copilot suggest "install terraform"
  ![generate pr link](./images/cdd152.png?raw=true "Generate pr link") 
  ![generated link](./images/cdd153.png?raw=true "Generated link") 
  
+6. Click on the link in the chat dialog. This should open up a screen with a pull request initiated for merging the dev branch into the main branch. Close the Chat interface by clicking on the **^** symbol in the upper right corner of the dialog.
+
+ ![collapse chat](./images/cdd154.png?raw=true "Collapse chat")  
+  
+7. In the pull request, update the title if you want. Then, we'll have Copilot automatically generate a description of our pull request. To do this, click on the *Copilot actions* button in the row under the *Add a description*. In the pop-up, select *Summary*. This will run for a few moments and then generate a draft summmary.
+
+ ![generate summary](./images/cdd155.png?raw=true "Generate summary")  
+ ![summary](./images/cdd156.png?raw=true "Summary")  
+  
+8. The summary will be in *markdown* format. You can click on the *Preview* button to see a readable presentation. When ready, click the *Create pull request* button to finish the creation.
+
+ ![summary](./images/cdd157.png?raw=true "Summary") 
+
+9. Notice that in the *Security Improvements* section, Copilot has generated links for each of the changes in the *models/models.go* file. Let's click on the 2nd link to look at those changes.
+
+ ![looking at a change](./images/cdd158.png?raw=true "Looking at a change") 
+
+10. This will open up the change comparison screen. Let's ask Copilot for some more information about the highlighted change. In the lower right, will be a small GitHub icon. Click on that and select the *Explain* option. After this runs, you'll see an explanation of the highlighted section.
+
+ ![request explanation](./images/cdd159.png?raw=true "Request explanation") 
+ ![section explanation](./images/cdd160.png?raw=true "Section explanation")
+
+11. Now, let's add a file to the context for the chat. Click on the *Ask Copilot* button at the top of the screen. In the *Select files to discuss* dialog, select *models/models.go*
+     
+ 
