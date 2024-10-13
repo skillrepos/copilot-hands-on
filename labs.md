@@ -235,7 +235,7 @@ def test_is_prime():
 
 11. We can put this into a new file selecting the checkmark symbol in the chat output. Go ahead and click on the checkmark and then you'll have a new file in your editor with the code that you can save as needed.
 
-![After insert](./images/cdd168a.png?raw=true "after insert") 
+![After insert](./images/cdd168.png?raw=true "after insert") 
 
 
 <p align="center">
