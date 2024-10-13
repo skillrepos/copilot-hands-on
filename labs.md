@@ -214,7 +214,7 @@ def test_is_prime():
 
 ![testing explanation](./images/cdd113.png?raw=true "testing explanation") 
 
-7. Let's see what the shortcut command would do. In the chat dialog enter "/tests" and then Enter. Copilot will want to add the *@workspace* agent onto the command. Just remove the *@workspace* from the beginning of the command. **Do not hit enter yet**.
+7. Let's see what the shortcut command would do. In the main chat interface, enter "/tests" and then Enter. Copilot will want to add the *@workspace* agent onto the command. Just remove the *@workspace* from the beginning of the command. **Do not hit enter yet**.
 ```
 /tests
 ```
@@ -231,11 +231,11 @@ def test_is_prime():
 
 10. Once the command looks like */tests #file:prime.py*, go ahead and hit enter to see the suggested test results.
 
-![file choice dialog](./images/cdd142.png?raw=true "file choice dialog")
+![Select to insert](./images/cdd167.png?raw=true "select to insert")
 
-11. We can put this into a new file by hovering over the output in the Chat window, then selecting the "..." from the pop-up menu and selecting "Insert into new file". Go ahead and select that option and then you'll have a new file in your editor with the code that you can save as needed.
+11. We can put this into a new file selecting the checkmark symbol in the chat output. Go ahead and click on the checkmark and then you'll have a new file in your editor with the code that you can save as needed.
 
-![Insert tests into new file](./images/cdd115a.png?raw=true "Insert tests into new file") 
+![After insert](./images/cdd168a.png?raw=true "after insert") 
 
 
 <p align="center">
