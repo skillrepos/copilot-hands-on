@@ -615,7 +615,7 @@ Generate a url that I can use to create a pull request to merge the dev branch i
 
  ![looking at a change](./images/cdd158.png?raw=true "Looking at a change") 
 
-10. This will open up the change comparison screen. Let's ask Copilot for some more information about the highlighted change. In the lower right, will be a small GitHub icon. Click on that and select the *Explain* option. After this runs, you'll see an explanation of the highlighted section.
+10. This will open up the change comparison screen. Let's ask Copilot for some more information about the highlighted change. On the right of the screen will be a small, floating Copilot icon with a drop-down arrow. Click on that and select the *Explain* option. After this runs, you'll see an explanation of the highlighted section.
 
  ![request explanation](./images/cdd159.png?raw=true "Request explanation") 
  ![section explanation](./images/cdd160.png?raw=true "Section explanation")
@@ -625,12 +625,13 @@ Generate a url that I can use to create a pull request to merge the dev branch i
 ![add file for context](./images/cdd161.png?raw=true "Add file for context")
 ![file added to context](./images/cdd162.png?raw=true "File added to context")
 
-12. Now, let's prompt Copilot about why the changes need to be made. In the Chat input area, enter the prompt *Why do these changes need to be made?* It will use this file as context and respond accordingly. Notice in the screenshot below, the indicator for *1 reference - models.go*.
+12. Finally, we'll prompt Copilot about why the changes need to be made. In the Chat input area, enter the prompt *Why do these changes need to be made?* It will use this file as context and respond accordingly. Notice in the screenshot below, the indicator for *1 reference - models.go*.
 ```
 Why do these changes need to be made?
 ```
 ![answer with file as context](./images/cdd163.png?raw=true "Answer with file as context")
 
+We're not going to go through and resolve the pull request, so you are done!
 
 <p align="center">
 **THANKS!**
