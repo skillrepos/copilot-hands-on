@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.5 - 10/13/24
+## Revision 1.6 - 10/14/24
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -470,32 +470,13 @@ create a mapping of all 50 states to area codes where
 the key is the state abbreviation and the value
  is an array of area codes with max 10
 ```
-5. After running this, Copilot will generate the start of a list as shown below. Hover over the output area and click to insert the updates at the cursor in the *phone.js* file. (This assumes the cursor is below the previous function in the file.)
+5. After running this, Copilot will generate the list as shown below. 
 
-![Automatic gen of data](./images/cdd129.png?raw=true "Automatic gen of data") 
+![Automatic gen of data](./images/cdd169.png?raw=true "Automatic gen of data") 
 
-6. Notice that the example mapping was only for the first few states. We want to get the remaining mappings for the other states. Let's craft a prompt to complete the sequence. Enter the following in the main Copilot Chat entry box and then execute it.
+6. Hover over the output area and click to insert the updates at the cursor in the *phone.js* file. (This assumes the cursor is below the previous function in the file.)
 
-```
-create a mapping of the remaining states to area codes where
-the key is the state abbreviation and the value
- is an array of area codes with max 10
-```
-![Completing the mappings](./images/cdd130.png?raw=true "Completing the mappings") 
-
-7. It is likely that the generated text in the chat is still not complete. If that's the case, we may need to find a way to narrow the amount of data that's returned back in one instance by Copilot. Let's try a prompt that limits the max values returned to 5.
-
-```
-create a complete mapping of all 50 states to area codes where
-the key is the state abbreviation and the value
- is an array of area codes with max 5
-```
-![Better prompt for remaining mappings](./images/cdd131.png?raw=true "Better prompt for remaining mappings") 
-
-
-8. You can scroll to the bottom to confirm if you got entries for all the states. If you didn't, you could create additional prompts for specific ranges of states, change the number of values downward, etc. You could then copy these into your file if you want. Notice also the disclaimer at the bottom of the output that these may not be actual values.
-   
-![Disclaimer on actual values](./images/cdd132.png?raw=true "Disclaimer on actual values") 
+![Insert data](./images/cdd170.png?raw=true "Insert data") 
 
 <p align="center">
 **[END OF LAB]**
