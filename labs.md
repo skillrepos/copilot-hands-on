@@ -577,10 +577,10 @@ gh copilot suggest "install terraform"
 
 2. Fork the skillsrepo/demo repository into your own GitHub space via the *Fork* button at the top right. Make sure to **uncheck** the *Copy the main branch only* box on the second screen.
 
-![fork repo](./images/cdd146.png?raw=true "Fork repo")
+![fork repo](./images/cdd172.png?raw=true "Fork repo")
 ![uncheck checkbox](./images/cdd147.png?raw=true "Uncheck checkbox")
 
-3. After the fork is complete, click on the *Chat with Copilot* button at the top right. The chat dialog will open up and then you will have a chat input box and some suggested questions. Click on the *Can you tell me about this repository?* question.  (If you don't see it, you can select one of the others or type in the question.) After this runs, you'll get some basic info about the repository.
+3. After the fork is complete, in your fork, click on the *Chat with Copilot* button at the top right. The chat dialog will open up and then you will have a chat input box and some suggested questions. Click on the *Can you tell me about this repository?* question.  (If you don't see it, you can select one of the others or type in the question.) After this runs, you'll get some basic info about the repository.
 
  ![about the repo query](./images/cdd148.png?raw=true "About the repo query") 
  ![about the repo response](./images/cdd149.png?raw=true "About the repo response") 
