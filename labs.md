@@ -585,7 +585,7 @@ gh copilot suggest "install terraform"
  ![about the repo query](./images/cdd148.png?raw=true "About the repo query") 
  ![about the repo response](./images/cdd149.png?raw=true "About the repo response") 
  
-4. Now, in the list of files in the repo, select the *main.go* file to open it up. The Copilot Chat interface should change to one specific for the file. Click on the *Summarize this file for me* question or type it into the input area. After this runs, you'll see a summarization of the file.
+4. Now, in the list of files in the repo, select the *main.go* file to open it up. The Copilot Chat interface should change to one specific for the file. Click on the *Summarize this file for me* question or type it into the input area. (If you don't see this in the dialog, try starting a new conversation by clicking on the "+" sign in the upper right of the dialog.) After this runs, you'll see a summarization of the file.
 
  ![about the file query](./images/cdd150.png?raw=true "About the file query") 
  ![about the file response](./images/cdd151.png?raw=true "About the file response") 
