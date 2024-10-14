@@ -377,7 +377,7 @@ write a function to seed a random number generator
 **[END OF LAB]**
 </p>
 
-**Lab 7 - Kubernetes, YAML generation and the 2021 problem**
+**Lab 7 - Kubernetes and YAML generation**
 
 **Purpose: Show YAML generation and out of date content.**
 
@@ -485,14 +485,8 @@ the key is the state abbreviation and the value
 
 **Purpose: In this lab, we'll see how to work with GitHub Copilot agents.**
 
-1. Now let's see how Copilot can help with tasks using agents. First, we'll have Copilot help us commit a change.  Let's use the *explore.go* file we created in Lab 6. If you haven't already, make sure that file is saved. You can do this by:
+1. Now let's see how Copilot can help with tasks using agents. First, we'll have Copilot help us commit a change.  Let's use the *explore.go* file we created in Lab 6. If you haven't already, make sure that file is saved.
    
-- Select the *explore.go* file
-- Click on the *three-line menu* in the top left.
-- From the menu that comes up, select *File* and then select *Save* (or use the shortcut).
-
-![Save file](./images/cdd133.png?raw=true "Save file")
-
 2. Now, let's invoke the **@terminal** agent to ask a common question about how to stage your code changes. Go to the *chat* interface and enter the prompt below. Afterwards, the command to do the staging should show up in the chat output.
 
 ```
@@ -502,18 +496,14 @@ the key is the state abbreviation and the value
 
 3. Hover over the window with the commands in it, and then click on the icon that pops up for the terminal. Click on that to insert the command into the terminal. Then hit return.
 
-![insert into terminal](./images/cdd135.png?raw=true "insert into terminal")
+![insert into terminal](./images/cdd171.png?raw=true "insert into terminal")
 
 
 4. Now let's commit our change through the interface and have Copilot suggest a commit message for us. Click on the source control icon in the sidebar (#1 in the figure below). Your *explore.go* file should be selected. In the box titled "Message" above the *Commit bar*, click on the *sparkle icon* at the far right side (#2 in the figure below).
 
 ![insert into terminal](./images/cdd136.png?raw=true "insert into terminal")
 
-5. After this, Copilot should (hopefully) generate an appropriate commit message in that box. You can then copy the message and paste it into a *git commit* command in the terminal. **If you started your codespace from a fork, you can hit return to complete the commit if you want. This is optional. If you started your codespace via the one-click button, you will not have permissions to commit.**
-```
-git commit -m "<contents of generated commit message from Copilot goes here>"
-```
-![commit with generated message](./images/cdd137.png?raw=true "commit with generated message")
+5. After this, Copilot should (hopefully) generate an appropriate commit message in that box. Since we started the codespace via the button in the readme, you won't have direct commit access, so you can just proceed to the next step.
 
 6. Now, let's switch gears and use the **@workspace** agent to help identify where we use certain things in our code. With the *explore.go* file still active in your editor, in the separate *chat* interface , enter the following prompt:
 
@@ -540,7 +530,7 @@ Which files are using SQL?
 
 **Lab 10 - Copilot CLI**
 
-**Purpose: In this lab, we'll finish up with Copilot by using the CLI.**
+**Purpose: In this lab, we'll work with Copilot using the GitHub CLI.**
     
 1. Finally, let's work with the Copilot command line interface. The codespace already has the GitHub CLI installed, so we just need to install the Copilot extension and authenticate. Enter the following in the terminal.
 
