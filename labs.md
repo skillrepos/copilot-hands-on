@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.6 - 10/14/24
+## Revision 1.7 - 10/17/24
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -444,44 +444,8 @@ translate to Go
 **[END OF LAB]**
 </p>
     
-**Lab 8 - Exploring JavaScript, regular expression generation, and auto-generating data**
 
-**Purpose: Show Javascript and regular expression generation, auto-generate routine mappings**
-
-1. Create a new file as **phone.js**
-
-```
-code phone.js
-```
-
-2. Prompt Copilot to create a function with a regular expression to validate a US phone number. You can use the **CMD+I** interface and just *Accept* the results.
-```
-create a function to validate any global phone number using a regular expression
-```
-![Regex function to validate phone #](./images/cdd127.png?raw=true "regex function to validate phone #")
-
-3. Let's tell it to document the function by highlighting the code, invoking **CMD+I** and **/doc**.  You can just Accept the results.
-
-![Automatic doc of function](./images/cdd128.png?raw=true "Automatic doc of function")  
-
-4. Now let's see how Copilot can generate some data and mappings for us automatically. Enter the prompt below in the main/separate chat text entry area.
-```
-create a mapping of all 50 states to area codes where
-the key is the state abbreviation and the value
- is an array of area codes with max 10
-```
-5. After running this, Copilot will generate the list as shown below. 
-
-![Automatic gen of data](./images/cdd169.png?raw=true "Automatic gen of data") 
-
-6. Hover over the output area and click to insert the updates at the cursor in the *phone.js* file. (This assumes the cursor is below the previous function in the file.)
-
-![Insert data](./images/cdd170.png?raw=true "Insert data") 
-
-<p align="center">
-**[END OF LAB]**
-
-**Lab 9 - Agents**
+**Lab 8 - Agents**
 
 **Purpose: In this lab, we'll see how to work with GitHub Copilot agents.**
 
@@ -528,48 +492,7 @@ Which files are using SQL?
 **[END OF LAB]**
 </p>
 
-**Lab 10 - Copilot CLI**
-
-**Purpose: In this lab, we'll work with Copilot using the GitHub CLI.**
-    
-1. Finally, let's work with the Copilot command line interface. The codespace already has the GitHub CLI installed, so we just need to install the Copilot extension and authenticate. Enter the following in the terminal.
-
-```
-gh extension install github/gh-copilot
-```
-
-2. After this, you can invoke the copilot command line to see the options available.
-
-```
-gh copilot
-```
-![Copilot CLI help](./images/cdd94.png?raw=true "Copilot CLI help")
-
-3. To authenticate, use the command below in the terminal.
-
-```
-gh auth login --web
-```
-
-4. Follow the prompts. You'll get a one-time activation code that you should copy and then paste in the browser when prompted. (If you happen to get a message about an issue with GITHUB_TOKEN, you can use the command *export GITHUB_TOKEN=* to clear that.) You'll need to click on the "Authorize GitHub" button on the next screen and then confirm your signin after this to complete the process.
-```   
-export GITHUB_TOKEN=
-```
-![Copilot CLI auth](./images/cdd95.png?raw=true "Copilot CLI auth")
-
-5. Once you have authenticate, you can try a couple of *gh copilot* commands like the ones below to see an example of how the CLI works.
-
-```
-gh copilot explain "ps -aux"
-gh copilot suggest "install terraform"
-```
- 
-<p align="center">
-**[END OF LAB]**
-</p>
-
-
-**Lab 11 - Copilot in GitHub**
+**Lab 9 - Copilot in GitHub**
 
 **Purpose: In this lab, we'll see how to use the integrated chat interface in GitHub.**
 
