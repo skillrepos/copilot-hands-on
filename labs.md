@@ -288,14 +288,7 @@ code create-tables.sql
 
 ![status values](./images/cdd99.png?raw=true "status values") 
 
-10. Copilot can also create stored procedures. Let's ask it to create a new stored procedure for getting a list of enrolled students at a particular location. Let's use the **CMD+I** shortcut. Go to the bottom of the *dev.sql* file, invoke Copilot Chat via the shortcut and then enter the line below in the dialog. You can choose to **Accept** or **Discard** the result.
-
-```
-define a stored procedure to get course enrollment by location
-```
-![prompt for stored procedure](./images/cdd100.png?raw=true "prompt for stored procedure") 
-  
-11. We can be more prescriptive with our stored procedure definition.  Let's add a more complex request. Go to the Chat interface and enter the prompt below.
+10. Copilot can also create stored procedures. Let's ask it to create a complex stored procedure for getting some instructor details. Let's use the **CMD+I** shortcut. Go to the bottom of the *dev.sql* file, invoke Copilot Chat via the shortcut and then enter/copy+paste the prompt below in the dialog. You can choose to **Accept** or **Discard** the result.
 
 ```
 define a stored procedure to get instructor details associated with a location
@@ -303,20 +296,6 @@ include instructor details, location details, and courses associated with the in
 use instructor_id as the input parameter
 ```
 ![More extensive stored procedure definition](./images/cdd51.png?raw=true "More extensive stored procedure definition") 
-
-12. Finally, let's see Copilot optimize a query for us. Suppose we want to get all the course registrations for September, 2023.  Enter the following query in the file.
-
-```
-select * from courses.registrations where year(registration_date) = 2023 and month(registration_date) = 9;
-```
-
-13. Ask Copilot to optimize the previous query. You can do this via highlighting the query (make sure to highlight the *entire* query), and in a chat interface enter "/optimize" in the dialog. You can Accept or Discard the suggested optimization after that.
-
-```
-/optimize
-```
-![Optimizing a query](./images/cdd116.png?raw=true "Optimizing a query") 
-
     
 <p align="center">
 **[END OF LAB]**
@@ -435,50 +414,20 @@ translate to Go
 **[END OF LAB]**
 </p>
     
-**Lab 8 - Exploring JavaScript, regular expression generation, and auto-generating data**
 
-**Purpose: Show Javascript and regular expression generation, auto-generate routine mappings**
+**Lab 8 - Chat Participants**
 
-1. Create a new file as **phone.js**
+**Purpose: In this lab, we'll see how to work with GitHub Copilot chat participants.**
 
-```
-code phone.js
-```
-
-2. Prompt Copilot to create a function with a regular expression to validate a US phone number. You can use the **CMD+I** interface and just *Accept* the results.
-```
-create a function to validate any global phone number using a regular expression
-```
-![Regex function to validate phone #](./images/cdd127.png?raw=true "regex function to validate phone #")
-
-3. Let's tell it to document the function by highlighting the code, invoking **CMD+I** and **/doc**.  You can just Accept the results.
-
-![Automatic doc of function](./images/cdd128.png?raw=true "Automatic doc of function")  
-
-4. Now let's see how Copilot can generate some data and mappings for us automatically. Enter the prompt below in the main/separate chat text entry area.
-```
-create a mapping of all 50 states to area codes where
-the key is the state abbreviation and the value
- is an array of area codes with max 10
-```
-5. After running this, Copilot will generate the list as shown below. 
-
-![Automatic gen of data](./images/cdd169.png?raw=true "Automatic gen of data") 
-
-6. Hover over the output area and click to insert the updates at the cursor in the *phone.js* file. (This assumes the cursor is below the previous function in the file.)
-
-![Insert data](./images/cdd170.png?raw=true "Insert data") 
-
-<p align="center">
-**[END OF LAB]**
-
-**Lab 9 - Agents**
-
-**Purpose: In this lab, we'll see how to work with GitHub Copilot agents.**
-
-1. Now let's see how Copilot can help with tasks using agents. First, we'll have Copilot help us commit a change.  Let's use the *explore.go* file we created in Lab 6. If you haven't already, make sure that file is saved.
+1. Now let's see how Copilot can help with tasks using participants. First, we'll have Copilot help us commit a change.  Let's use the *explore.go* file we created in Lab 6. If you haven't already, make sure that file is saved. You can do this by:
    
-2. Now, let's invoke the **@terminal** agent to ask a common question about how to stage your code changes. Go to the *chat* interface and enter the prompt below. Afterwards, the command to do the staging should show up in the chat output.
+- Select the *explore.go* file
+- Click on the *three-line menu* in the top left.
+- From the menu that comes up, select *File* and then select *Save* (or use the shortcut).
+
+![Save file](./images/cdd133.png?raw=true "Save file")
+
+2. Now, let's invoke the **@terminal** participant to ask a common question about how to stage your code changes. Go to the *chat* interface and enter the prompt below. Afterwards, the command to do the staging should show up in the chat output.
 
 ```
 @terminal how do I stage explore.go?
@@ -487,16 +436,16 @@ the key is the state abbreviation and the value
 
 3. Hover over the window with the commands in it, and then click on the icon that pops up for the terminal. Click on that to insert the command into the terminal. Then hit return.
 
-![insert into terminal](./images/cdd171.png?raw=true "insert into terminal")
+![insert into terminal](./images/cdd135.png?raw=true "insert into terminal")
 
 
 4. Now let's commit our change through the interface and have Copilot suggest a commit message for us. Click on the source control icon in the sidebar (#1 in the figure below). Your *explore.go* file should be selected. In the box titled "Message" above the *Commit bar*, click on the *sparkle icon* at the far right side (#2 in the figure below).
 
 ![insert into terminal](./images/cdd136.png?raw=true "insert into terminal")
 
-5. After this, Copilot should (hopefully) generate an appropriate commit message in that box. Since we started the codespace via the button in the readme, you won't have direct commit access, so you can just proceed to the next step.
+5. After this, Copilot should (hopefully) generate an appropriate commit message in that box. Normally, you could copy the message and paste it into a *git commit* command in the terminal. However, since you started your codespace via the one-click button from the original repository, you will not have permissions to commit. So, we won't do that right now.
 
-6. Now, let's switch gears and use the **@workspace** agent to help identify where we use certain things in our code. With the *explore.go* file still active in your editor, in the separate *chat* interface , enter the following prompt:
+6. Now, let's switch gears and use the **@workspace** participant to help identify where we use certain things in our code. With the *explore.go* file still active in your editor, in the separate *chat* interface , enter the following prompt:
 
 ```
 Which files are using SQL?
@@ -506,7 +455,7 @@ Which files are using SQL?
    
 ![initial query response](./images/cdd138.png?raw=true "initial query response")   
 
-8. This is not the kind of answer we were looking for. Let's repeat the query with the *@workspace* agent.
+8. This is not the kind of answer we were looking for. Let's repeat the query with the *@workspace* participant.
 ```
 @workspace Which files are using SQL?
 ```
@@ -515,52 +464,13 @@ Which files are using SQL?
     
 ![more specific response](./images/cdd139.png?raw=true "more specific response")
 
-<p align="center">
-**[END OF LAB]**
-</p>
 
-**Lab 10 - Copilot CLI**
-
-**Purpose: In this lab, we'll work with Copilot using the GitHub CLI.**
-    
-1. Finally, let's work with the Copilot command line interface. The codespace already has the GitHub CLI installed, so we just need to install the Copilot extension and authenticate. Enter the following in the terminal.
-
-```
-gh extension install github/gh-copilot
-```
-
-2. After this, you can invoke the copilot command line to see the options available.
-
-```
-gh copilot
-```
-![Copilot CLI help](./images/cdd94.png?raw=true "Copilot CLI help")
-
-3. To authenticate, use the command below in the terminal.
-
-```
-gh auth login --web
-```
-
-4. Follow the prompts. You'll get a one-time activation code that you should copy and then paste in the browser when prompted. (If you happen to get a message about an issue with GITHUB_TOKEN, you can use the command *export GITHUB_TOKEN=* to clear that.) You'll need to click on the "Authorize GitHub" button on the next screen and then confirm your signin after this to complete the process.
-```   
-export GITHUB_TOKEN=
-```
-![Copilot CLI auth](./images/cdd95.png?raw=true "Copilot CLI auth")
-
-5. Once you have authenticate, you can try a couple of *gh copilot* commands like the ones below to see an example of how the CLI works.
-
-```
-gh copilot explain "ps -aux"
-gh copilot suggest "install terraform"
-```
- 
 <p align="center">
 **[END OF LAB]**
 </p>
 
 
-**Lab 11 - Copilot in GitHub**
+**Lab 9 - Copilot in GitHub**
 
 **Purpose: In this lab, we'll see how to use the integrated chat interface in GitHub.**
 
