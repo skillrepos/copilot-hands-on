@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.6 - 10/14/24
+## Revision 1.7 - 10/22/24
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
