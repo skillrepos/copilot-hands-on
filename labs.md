@@ -377,9 +377,9 @@ write a function to seed a random number generator
 **[END OF LAB]**
 </p>
 
-**Lab 7 - Kubernetes and YAML generation**
+**Lab 7 - YAML generation, API use, translating code and the 2023 problem**
 
-**Purpose: Show YAML generation and out of date content.**
+**Purpose: In this lab, we’ll learn about how to have Copilot help with YAML generation, API usage, translating code and explore the 2023 problem.**
 
 1. Create a new file - **deployment.yaml**
 
@@ -416,7 +416,7 @@ How do I execute this?
 what is the latest Kubernetes version?
 ```
 
-7. Notice that it identifies the latest version as 1.22 as of September 2021. This highlights the out-of-date issue with the LLM.
+7. Notice that it identifies the latest version as as of October 2023. This highlights the out-of-date issue with the LLM.
 
 ![Answer to latest K8s version](./images/cdd122.png?raw=true "Answer to latest K8s version")
 
@@ -444,50 +444,14 @@ translate to Go
 **[END OF LAB]**
 </p>
     
-**Lab 8 - Exploring JavaScript, regular expression generation, and auto-generating data**
 
-**Purpose: Show Javascript and regular expression generation, auto-generate routine mappings**
+**Lab 8 - Chat Participants**
 
-1. Create a new file as **phone.js**
+**Purpose: In this lab, we'll see how to work with GitHub Copilot Chat Participants.**
 
-```
-code phone.js
-```
-
-2. Prompt Copilot to create a function with a regular expression to validate a US phone number. You can use the **CMD+I** interface and just *Accept* the results.
-```
-create a function to validate any global phone number using a regular expression
-```
-![Regex function to validate phone #](./images/cdd127.png?raw=true "regex function to validate phone #")
-
-3. Let's tell it to document the function by highlighting the code, invoking **CMD+I** and **/doc**.  You can just Accept the results.
-
-![Automatic doc of function](./images/cdd128.png?raw=true "Automatic doc of function")  
-
-4. Now let's see how Copilot can generate some data and mappings for us automatically. Enter the prompt below in the main/separate chat text entry area.
-```
-create a mapping of all 50 states to area codes where
-the key is the state abbreviation and the value
- is an array of area codes with max 10
-```
-5. After running this, Copilot will generate the list as shown below. 
-
-![Automatic gen of data](./images/cdd169.png?raw=true "Automatic gen of data") 
-
-6. Hover over the output area and click to insert the updates at the cursor in the *phone.js* file. (This assumes the cursor is below the previous function in the file.)
-
-![Insert data](./images/cdd170.png?raw=true "Insert data") 
-
-<p align="center">
-**[END OF LAB]**
-
-**Lab 9 - Agents**
-
-**Purpose: In this lab, we'll see how to work with GitHub Copilot agents.**
-
-1. Now let's see how Copilot can help with tasks using agents. First, we'll have Copilot help us commit a change.  Let's use the *explore.go* file we created in Lab 6. If you haven't already, make sure that file is saved.
+1. Now let's see how Copilot can help with tasks using chat participants. First, we'll have Copilot help us commit a change.  Let's use the *explore.go* file we created in Lab 6. If you haven't already, make sure that file is saved.
    
-2. Now, let's invoke the **@terminal** agent to ask a common question about how to stage your code changes. Go to the *chat* interface and enter the prompt below. Afterwards, the command to do the staging should show up in the chat output.
+2. Now, let's invoke the **@terminal** chat participant to ask a common question about how to stage your code changes. Go to the *chat* interface and enter the prompt below. Afterwards, the command to do the staging should show up in the chat output.
 
 ```
 @terminal how do I stage explore.go?
@@ -505,7 +469,7 @@ the key is the state abbreviation and the value
 
 5. After this, Copilot should (hopefully) generate an appropriate commit message in that box. Since we started the codespace via the button in the readme, you won't have direct commit access, so you can just proceed to the next step.
 
-6. Now, let's switch gears and use the **@workspace** agent to help identify where we use certain things in our code. With the *explore.go* file still active in your editor, in the separate *chat* interface , enter the following prompt:
+6. Now, let's switch gears and use the **@workspace** chat participant to help identify where we use certain things in our code. With the *explore.go* file still active in your editor, in the separate *chat* interface , enter the following prompt:
 
 ```
 Which files are using SQL?
@@ -515,7 +479,7 @@ Which files are using SQL?
    
 ![initial query response](./images/cdd138.png?raw=true "initial query response")   
 
-8. This is not the kind of answer we were looking for. Let's repeat the query with the *@workspace* agent.
+8. This is not the kind of answer we were looking for. Let's repeat the query with the *@workspace* chat participant.
 ```
 @workspace Which files are using SQL?
 ```
@@ -528,48 +492,8 @@ Which files are using SQL?
 **[END OF LAB]**
 </p>
 
-**Lab 10 - Copilot CLI**
 
-**Purpose: In this lab, we'll work with Copilot using the GitHub CLI.**
-    
-1. Finally, let's work with the Copilot command line interface. The codespace already has the GitHub CLI installed, so we just need to install the Copilot extension and authenticate. Enter the following in the terminal.
-
-```
-gh extension install github/gh-copilot
-```
-
-2. After this, you can invoke the copilot command line to see the options available.
-
-```
-gh copilot
-```
-![Copilot CLI help](./images/cdd94.png?raw=true "Copilot CLI help")
-
-3. To authenticate, use the command below in the terminal.
-
-```
-gh auth login --web
-```
-
-4. Follow the prompts. You'll get a one-time activation code that you should copy and then paste in the browser when prompted. (If you happen to get a message about an issue with GITHUB_TOKEN, you can use the command *export GITHUB_TOKEN=* to clear that.) You'll need to click on the "Authorize GitHub" button on the next screen and then confirm your signin after this to complete the process.
-```   
-export GITHUB_TOKEN=
-```
-![Copilot CLI auth](./images/cdd95.png?raw=true "Copilot CLI auth")
-
-5. Once you have authenticate, you can try a couple of *gh copilot* commands like the ones below to see an example of how the CLI works.
-
-```
-gh copilot explain "ps -aux"
-gh copilot suggest "install terraform"
-```
- 
-<p align="center">
-**[END OF LAB]**
-</p>
-
-
-**Lab 11 - Copilot in GitHub**
+**Lab 9 - Copilot in GitHub**
 
 **Purpose: In this lab, we'll see how to use the integrated chat interface in GitHub.**
 
