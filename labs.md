@@ -7,7 +7,14 @@
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
-**NOTE: To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.**
+**NOTES:**
+1. We will be working in the public GitHub.com, not a private instance.
+2. Chrome may work better than Firefox for some tasks.
+3. The default environment will be a GitHub Codespace (with Copilot already installed). If you prefer to use your own IDE, you are responsible for installing Copilot in it. Some things in the lab may be different if you use your own environment.
+4. To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.**
+5. VPNs may interfere with the ability to run the codespace. It is recommended to not use a VPN if you run into problems.
+6. If you use the new free Copilot plan (no signup), some advanced functionality may not be available.
+</br></br></br>
 
 **Lab 1 - Learning how to create good prompts for Copilot**
 
@@ -79,6 +86,7 @@ function splitURLandReturnComponents
  <p align="center">
 **[END OF LAB]**
 </p>
+</br></br></br>
 
 **Lab 2 - Using Copilot to simplify code**
 
@@ -132,6 +140,7 @@ simplify
 <p align="center">
 **[END OF LAB]**
 </p>
+</br></br></br>
 
 **Lab 3 - Using Copilot after the coding**
 
@@ -149,13 +158,13 @@ simplify
 ```
 
 ![Output of interactively telling Copilot to explain code in dialog](./images/cdd144.png?raw=true "Output of interactively telling Copilot to explain code in dialog")
-![Output of interactively telling Copilot to explain code](./images/cdd41b.png?raw=true "Output of interactively telling Copilot to explain code")
+![Output of interactively telling Copilot to explain code](./images/cdd177.png?raw=true "Output of interactively telling Copilot to explain code")
 
 3. Now, let's do the same request but through a comment. In the *prime.py* file, below the code, enter the following comment and hit Enter.
 ```
 # explain the code above line-by-line
 ```
-4. After this, Copilot should start showing the explanation in comments. Just hit tab to accept each line and then Enter to move to the next one.
+4. After this, Copilot should start showing the explanation in comments. Just hit tab to accept each line and then Enter to move to the next one. ((Note that it might start repeating if you continue after it is done explaining the function the first time.)
 
 ![Output of telling Copilot to explain code via comment](./images/cdd42b.png?raw=true "Output of telling Copilot to explain code via comment")
 
@@ -180,6 +189,7 @@ simplify
 <p align="center">
 **[END OF LAB]**
 </p>
+</br></br></br>
 
 **Lab 4 - Using Copilot to generate tests**
 
@@ -208,13 +218,15 @@ def test_is_prime():
 ```
 #selection: How do I test this code?
 ```
-![prompting on how to test](./images/cdd112.png?raw=true "prompting on how to test") 
+![prompting on how to test](./images/cdd178.png?raw=true "prompting on how to test") 
+
+(If you happen to encounter a dialog about confirming your testing environment, just hit *Accept* and run the query again.)
 
 6. After entering this, you should see an explanation of how to test the code along with suggested testing code. If you expand the reference in the chat output, you can see that it only used the selected lines.
 
-![testing explanation](./images/cdd113.png?raw=true "testing explanation") 
+![testing explanation](./images/cdd179.png?raw=true "testing explanation") 
 
-7. Let's see what the shortcut command would do. In the main chat interface, enter "/tests" and then Enter. Copilot will want to add the *@workspace* agent onto the command. Just remove the *@workspace* from the beginning of the command. **Do not hit enter yet**.
+7. Let's see what the shortcut command would do. In the main chat interface, enter "/tests" and then Enter. Copilot will want to add the *@workspace* chat participant onto the command. Just remove the *@workspace* from the beginning of the command. **Do not hit enter yet**.
 ```
 /tests
 ```
@@ -233,14 +245,29 @@ def test_is_prime():
 
 ![Select to insert](./images/cdd167.png?raw=true "select to insert")
 
-11. We can put this into a new file selecting the checkmark symbol in the chat output. Go ahead and click on the checkmark and then you'll have a new file in your editor with the code that you can save as needed.
+11. If you have a checkmark symbol in the chat output, select that. If you don't, hover over the code block, and in the popup menu, select the *...* entry and then the "Insert into New File" opton. 
 
-![After insert](./images/cdd168.png?raw=true "after insert") 
+![After insert](./images/cdd180.png?raw=true "after insert") 
+
+12. After that, you'll have a new file in your editor with the code that you can save as needed (using the "3 bar" menu or the shortcut Ctrl/Cmd+S).
+
+![Saving file](./images/cdd181.png?raw=true "saving file") 
+
+13. We can also ask Copilot for other cases to test. Select the code in the testing file you just saved and, in the chat interface, prompt Copilot with
+
+```
+What other conditions should I test?
+```
+
+14. Copilot should respond with a list of other conditions to test and example code that you can add if you want.
+
+![Additional conditions to test](./images/cdd186.png?raw=true "additional conditions to test") 
 
 
 <p align="center">
 **[END OF LAB]**
 </p>
+</br></br></br>
 
 **Lab 5 - Using Copilot to help with SQL**
 
