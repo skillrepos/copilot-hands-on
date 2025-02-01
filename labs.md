@@ -286,6 +286,7 @@ Enter the following comment below and press Tab to accept suggestions. Remember 
 ```
 -- define a select statement to get all students enrolled in a course
 ```
+
 3. Go ahead and save this file as part of the project.  You can do this from the "3-line" menu under File->Save, or just use the keyboard shortcut (Cmd + S | Ctrl + S)     
 
 4. Let's see if we get any different results if we provide Copilot additional context. Open the file create-tables.sql in the editor from the GitHub repository. (You can either select and open it from the file list or use the command below from the terminal.) Scroll through it and take a quick look at the contents.
@@ -324,12 +325,12 @@ code create-tables.sql
 
 ![status values](./images/cdd99.png?raw=true "status values") 
 
-10. Copilot can also create stored procedures. Let's ask it to create a new stored procedure for getting a list of enrolled students at a particular location. Let's use the **CMD+I** shortcut. Go to the bottom of the *dev.sql* file, invoke Copilot Chat via the shortcut and then enter the line below in the dialog. You can choose to **Accept** or **Discard** the result.
+10. Copilot can also create stored procedures. Let's ask it to create a new stored procedure for getting a list of enrolled students at a particular location. Let's use the **CMD+I** shortcut. Go to the bottom of the *dev.sql* file, invoke Copilot Chat via the shortcut and then enter the line below in the dialog. You can also choose to change the model to Claude 3.5 Sonnet if you want. If you want to change the model, select it in the model drop-down, then you will probably need to select the *Enable* button and re-enter the prompt.  After the prompt is executed, you can choose to **Accept** or **Discard** the result.
 
 ```
 define a stored procedure to get course enrollment by location
 ```
-![prompt for stored procedure](./images/cdd100.png?raw=true "prompt for stored procedure") 
+![prompt for stored procedure](./images/cdd182.png?raw=true "prompt for stored procedure") 
   
 11. We can be more prescriptive with our stored procedure definition.  Let's add a more complex request. Go to the Chat interface and enter the prompt below.
 
@@ -338,7 +339,7 @@ define a stored procedure to get instructor details associated with a location
 include instructor details, location details, and courses associated with the instructor
 use instructor_id as the input parameter
 ```
-![More extensive stored procedure definition](./images/cdd51.png?raw=true "More extensive stored procedure definition") 
+![More extensive stored procedure definition](./images/cdd183.png?raw=true "More extensive stored procedure definition") 
 
 12. Finally, let's see Copilot optimize a query for us. Suppose we want to get all the course registrations for September, 2023.  Enter the following query in the file.
 
@@ -351,12 +352,16 @@ select * from courses.registrations where year(registration_date) = 2023 and mon
 ```
 /optimize
 ```
-![Optimizing a query](./images/cdd116.png?raw=true "Optimizing a query") 
+![Optimizing a query](./images/cdd184.png?raw=true "Optimizing a query") 
 
+14. If you switched to the Claude 3.5 Sonnet model, you can switch back to the GPT 4o one if you want via the dropdown in the dialog.
+
+![Switching models](./images/cdd185.png?raw=true "switching models") 
     
 <p align="center">
 **[END OF LAB]**
 </p>
+</br></br></br>
 
 **Lab 6 - Teaching Copilot about updates**
 
@@ -400,9 +405,14 @@ write a function to seed a random number generator
 
 ![Updated random number gen code after including updated usage](./images/cdd119.png?raw=true "Updated random number gen code after including updated usage")
 
+9. In preparation for the next lab, open a new chat by clicking on the "+" sign in the upper right part of the chat pane.
+
+![New chat](./images/cdd187.png?raw=true "New chat") 
+
 <p align="center">
 **[END OF LAB]**
 </p>
+</br></br></br>
 
 **Lab 7 - YAML generation, API use, translating code and the 2023 problem**
 
@@ -434,7 +444,7 @@ How do I execute this?
 
 5. Copilot should respond with something like the following:
 
-![How to execute deployment](./images/cdd121.png?raw=true "How to execute deployment")
+![How to execute deployment](./images/cdd188.png?raw=true "How to execute deployment")
 
 
 6. While we're in the Chat interface, let's ask it for the latest K8s version. Put the following into the dialog.
@@ -445,7 +455,7 @@ what is the latest Kubernetes version?
 
 7. Notice that it identifies the latest version as as of October 2023. This highlights the out-of-date issue with the LLM.
 
-![Answer to latest K8s version](./images/cdd122.png?raw=true "Answer to latest K8s version")
+![Answer to latest K8s version](./images/cdd189.png?raw=true "Answer to latest K8s version")
 
 
 8. Let's have Copilot generate some code to work with Kubernetes through the API. In the chat interface, enter the following.
@@ -455,7 +465,7 @@ How do I call the K8s API for scaling a deployment to 5 replicas with Python?
 ```
 9. The results may tell us that we first need to make sure something like PIP is installed. If so, we don't need to worry about this at the moment. Go to the actual generated code in the chat output. Click in that output area and paste the code into a new file via clicking on the "..." and then the *Insert into new file* menu option.
 
-![Add code to new file](./images/cdd124.png?raw=true "Add code to new file")
+![Add code to new file](./images/cdd190.png?raw=true "Add code to new file")
 
 
 10. Suppose we change our mind and want to convert this code to Go. Click in the new file, and highlight the new code. Then, in the Chat interface tell it to translate to Go. Then, look in the separate chat output and you should see the equivalent Go code available.
@@ -465,11 +475,16 @@ translate to Go
 ```
 ![Go translation](./images/cdd125.png?raw=true "Go translation")
 
+11. Optional - try changing the model in the chat interface to *Claude 3.5 Sonnet (Preview)* and ask the "latest version" question again with that model. (Don't forget to change it back if you want afterwards.)
 
+```
+what is the latest Kubernetes version?
+```
 
 <p align="center">
 **[END OF LAB]**
 </p>
+</br></br></br>
     
 
 **Lab 8 - Chat Participants**
@@ -504,7 +519,7 @@ Which files are using SQL?
 
 7. After executing this, you'll likely have some suggested information on how to search for files that use SQL in your project with search functionality for Visual Studio Code.
    
-![initial query response](./images/cdd138.png?raw=true "initial query response")   
+![initial query response](./images/cdd191.png?raw=true "initial query response")   
 
 8. This is not the kind of answer we were looking for. Let's repeat the query with the *@workspace* chat participant.
 ```
@@ -513,12 +528,12 @@ Which files are using SQL?
 
 9. After executing this, you should see Copilot assessing all of the files in the workspace and then returning a more specific and expected answer.
     
-![more specific response](./images/cdd139.png?raw=true "more specific response")
+![more specific response](./images/cdd192.png?raw=true "more specific response")
 
 <p align="center">
 **[END OF LAB]**
 </p>
-
+</br></br></br>
 
 **Lab 9 - Copilot in GitHub**
 
@@ -555,6 +570,8 @@ Generate a url that I can use to create a pull request to merge the dev branch i
   
 7. In the pull request, update the title if you want. Then, we'll have Copilot automatically generate a description of our pull request. To do this, click on the *Copilot actions* button in the row under the *Add a description*. In the pop-up, select *Summary*. This will run for a few moments and then generate a draft summmary.
 
+(Note: *If you are on the free (not trial) plan, you won't see the Copilot icon in the pull request area. If that's the case, you can just create the pull request, open up the "Files changed" tab, pick a change and go to step 10.*)
+
  ![generate summary](./images/cdd155.png?raw=true "Generate summary")  
  ![summary](./images/cdd156.png?raw=true "Summary")  
   
@@ -587,5 +604,79 @@ We're not going to go through and resolve the pull request, so you are done!
 <p align="center">
 **THANKS!**
 </p>
+</br></br></br>
  
+# Appendix 1
+## Alternate ways to "fork" repo if not allowed to use actual *Fork* button.
+
+**Option 1 - Using Import**
+
+1. Sign into GitHub if not already signed in.
+   
+2. Go to [**https://github.com/new/import**](https://github.com/new/import)
+   
+3. On that page, fill out the form as follows:
+   
+In "Your source repository details", in the "The URL for your source repository *" field, enter
+
+```
+https://github.com/skillrepos/sec-demo
+```
+
+Under "Your new repository details", make sure your userid shows up in the "Owner *" field and enter
+
+```
+sec-demo
+```
+
+in the "Repository name *" field.
+
+The visibility field should be set to "Public".
+
+![filling out form](./images/cdd195.png?raw=true "Filling out form")
+
+4. If you haven't already, click on the green "Begin import" button.
+
+5. After this, you should see the import processing... 
+
+![import processing](./images/cdd196.png?raw=true "Import processing")
+
+6. This will take several minutes to run. When done, you should see a "complete" message and your new
+repo will be available. (There is a link in the complete message to click on to directly access it.)
+
+![processing finished](./images/cdd197.png?raw=true "Processing finished")
+
+
+**Option 2 - Using clone and push**
+
+1. Sign into GitHub if not already signed in.
+
+2. If you don't already have one, create a GitHub token or SSH key. If you are familiar with SSH keys, you can add your public key at
+[**https://github.com/settings/keys**](https://github.com/settings/keys). Otherwise, you can just create a "classic" token by following the
+instructions at [**https://docs.github.com/en/authentication/keeping-your-account-and-datasecure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic**](https://docs.github.com/en/authentication/keeping-your-account-and-datasecure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic). If you use a GitHub token, make sure to save a copy of it to use in the push step.
+
+3. Clone down the [**skillrepos/greetings-ci**](https://github.com/skillrepos/greetings-ci) repository.
+
+```
+git clone https://github.com/skillrepos/greetings-ci (if using token)
+```
+
+or 
+
+```
+git clone git@github.com:skillrepos/greetings-ci (if using ssh)
+```
+4. Create a new repository in your GitHub space named *sec-demo*. Go to [**https://github.com/new**](https://github.com/new). Fill in
+the "repo name" field with "sec-demo" and then click on the "Create repository" button.
+   
+![create new repo](./images/cdd198.png?raw=true "Create new repo")
+
+
+5. On the page that comes up after that, select the appropriate protocol (https or ssh) and then follow
+the instructions for "...or push an existing repository from the command line" to push your content
+back to the GitHub repository. If you're using https you will be prompted for a password at push
+time. Just paste in the classic token. (Note that for security reasons, you will not see the token
+displayed.)
+
+![push to repo](./images/cdd199.png?raw=true "Push to repo")
 
