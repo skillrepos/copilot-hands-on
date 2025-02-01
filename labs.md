@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.7 - 10/22/24
+## Revision 1.8 - 02/01/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -104,14 +104,14 @@ def is_prime(n):
 
 6. Highlight the code and select the Chat extension icon to open the chat window.  Tell Copilot to simplify the code by typing in the chat window.
 ```
-/simplify
+simplify
 ```
 
-![simplifying via chat box](./images/cdd164.png?raw=true "simplifying via chat box") 
+![simplifying via chat box](./images/cdd174.png?raw=true "simplifying via chat box") 
 
 7. Hover over the simplified text and tell Copilot to insert the suggestion at the cursor to replace the text that's currently there. 
 
-![replace from chat suggestion](./images/cdd143.png?raw=true "replace from chat suggestion")    
+![replace from chat suggestion](./images/cdd175.png?raw=true "replace from chat suggestion")    
 
 8. Now, let's introduce an error into the code to see how Copilot can fix it. Pick an instance of a variable name and change it to one that doesn't exist. For example, change an instance of "n" to "x". 
 
@@ -125,7 +125,7 @@ def is_prime(n):
 
 11. After a few moments, it should propose a fix that you can just accept (via the Accept button). You can also click on the *Show Changes* icon to see before/after for the proposed changes. (If it doesn't propose a fix in the dialog, you can skip to step 12 and use the /fix command in chat instead.)
 
-![Fixing with Copilot](./images/cdd166.png?raw=true "Fixing with Copilot")       
+![Fixing with Copilot](./images/cdd176.png?raw=true "Fixing with Copilot")       
 
 12. (Optional) If you'd like, you can go back and make the error again, highlight the code, and then use the /fix command in the chat window to get the same results.
 
