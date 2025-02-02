@@ -383,11 +383,12 @@ write a function to seed a random number generator
 ```
 Is the Seed function deprecated in Go?
 ```
-![Is Seed function deprecated?](./images/cdd118.png?raw=true "Is Seed function deprecated?") 
 
-5. Copilot probably responded with no and some info about the function. So one way we can help Copilot understand language updates is by providing the context in our file. So let's start again. Delete the current content in the explore.go file.
+5. Copilot probably responded with a yes answer and info about how to fix the code. This shows the disparity we may sometimes see between generated code suggestions and what the model actually *understands*. For our purposes here, we're going to use a different approach to help Copilot understand how to fix this. So don't update the current code from the chat output.
 
-6. Now,let's provide Copilot some more direct context by copying in updated code examples. After deleting the code block from step 3, copy and paste in the following example of the replacement for the Seed deprecation into your explore.go file.  This is taken from pkg.go.dev/math/rand.
+![Is Seed function deprecated?](./images/cdd202.png?raw=true "Is Seed function deprecated?") 
+
+6. One way we can help Copilot understand language updates is by providing the context in our file. So let's start again. Delete the current content in the explore.go file. Now,let's provide Copilot some more direct context by copying in updated code examples. After deleting the code block from step 3, copy and paste in the following example of the replacement for the Seed deprecation into your explore.go file.  This is taken from pkg.go.dev/math/rand.
 
 ```
 	// Create and seed the generator.
@@ -405,7 +406,7 @@ write a function to seed a random number generator
 
 ![Updated random number gen code after including updated usage](./images/cdd119.png?raw=true "Updated random number gen code after including updated usage")
 
-9. In preparation for the next lab, open a new chat by clicking on the "+" sign in the upper right part of the chat pane.
+9. In preparation for the next lab, open a new chat by clicking on the "+" sign in the upper right part of the chat pane. (Make sure you have clicked in the chat panel first.)
 
 ![New chat](./images/cdd187.png?raw=true "New chat") 
 
