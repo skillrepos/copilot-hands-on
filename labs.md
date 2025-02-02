@@ -350,7 +350,7 @@ select * from courses.registrations where year(registration_date) = 2023 and mon
 13. Ask Copilot to optimize the previous query. You can do this via highlighting the query (make sure to highlight the *entire* query), and in a chat interface enter "/optimize" in the dialog. You can Accept or Discard the suggested optimization after that.
 
 ```
-/optimize
+optimize
 ```
 ![Optimizing a query](./images/cdd184.png?raw=true "Optimizing a query") 
 
