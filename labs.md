@@ -22,9 +22,9 @@
 
 1. Create a new file. In the terminal, enter
 
-   ```
-   code index.js
-   ```
+```
+code index.js
+```
 
 2. Afterwards this file should be open in a tab in the editor.
 
@@ -110,7 +110,7 @@ def is_prime(n):
 
 ![alternative suggestions](./images/cdd34b.png?raw=true "alternative suggestions") 
 
-6. Highlight the code and select the Chat extension icon to open the chat window.  Tell Copilot to simplify the code by typing in the chat window.
+6. Highlight the code and switch to the Copilot Chat panel. (If you don't see the panel, select the Chat extension icon in the top bar to open the chat window.) Tell Copilot to simplify the code by typing *simplify* in the chat window.
 ```
 simplify
 ```
@@ -125,7 +125,7 @@ simplify
 
 ![introduce error](./images/cdd37b.png?raw=true "introduce error")   
 
-9. Notice the light bulb icon that has popped up. Click on that, scroll to the bottom (if needed), and you'll have additional options to fix or explain with Copilot.
+9. Notice the light bulb icon that has popped up. Click on that, scroll to the bottom (if needed), and you'll have additional options to fix or explain with Copilot. (If you don't see the light bulb icon, you can right-click, select *Copilot* and then select *Fix*.)
 
 ![Copilot options inline](./images/cdd165.png?raw=true "Copilot options inline")   
 
@@ -151,7 +151,7 @@ simplify
 ![Interactively telling Copilot to explain code](./images/cdd40b.png?raw=true "Interactively telling Copilot to explain code")
 
 
-2. Tell Copilot to explain the code by typing the command below in the dialog. Hit Enter. Then, you should see the output in the dialog. Click on the *View in Chat* button to see the output in the separate chat window.
+2. Tell Copilot to explain the code by typing the command below in the dialog. Hit Enter. Then, you should see the output in the dialog. Click on the *View in Chat* button to see the output in the separate chat panel.
 
 ```
 /explain
@@ -251,7 +251,7 @@ def test_is_prime():
 
 12. After that, you'll have a new file in your editor with the code that you can save as needed (using the "3 bar" menu or the shortcut Ctrl/Cmd+S).
 
-![Saving file](./images/cdd181.png?raw=true "saving file") 
+![Saving file](./images/cdd201.png?raw=true "saving file") 
 
 13. We can also ask Copilot for other cases to test. Select the code in the testing file you just saved and, in the chat interface, prompt Copilot with
 
