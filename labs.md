@@ -104,21 +104,21 @@ simplify
 
 4. Go ahead and use the arrows in the floating bar to navigate through the proposed changes. Each change has its own checkmark to accept it and left curved arrow to reject if you wanted to accept/reject them one at a time. When done reviewing them, just click on one of the *Keep* buttons to persist the changes.
    
-8. Now, let's introduce an error into the code to see how Copilot can fix it. Pick an instance of a variable name and change it to one that doesn't exist. For example, change an instance of "n" to "x". 
+5. Now, let's introduce an error into the code to see how Copilot can fix it. Pick an instance of a variable name and change it to one that doesn't exist. For example, change an instance of "n" to "x". 
 
 ![introduce error](./images/cdd206.png?raw=true "introduce error")   
 
-9. Notice the light bulb icon that has popped up. Click on that, scroll to the bottom (if needed), and you'll have additional options to fix or explain with Copilot. (If you don't see the light bulb icon, you can right-click, select *Copilot* and then select *Fix*.)
+6. Notice the light bulb icon that has popped up. Click on that, scroll to the bottom (if needed), and you'll have additional options to fix or explain with Copilot. (If you don't see the light bulb icon, you can right-click, select *Copilot* and then select *Fix*.)
 
 ![Copilot options inline](./images/cdd205.png?raw=true "Copilot options inline")   
 
-10. Go ahead and click on the "Fix using Copilot" option.
+7. Go ahead and click on the "Fix using Copilot" option.
 
-11. After a few moments, it should propose a fix that you can just accept (via the Accept button). You can also click on the *Show Changes* icon to see before/after for the proposed changes. (If it doesn't propose a fix in the dialog, you can skip to step 12 and use the fix command in chat instead.)
+8. After a few moments, it should propose a fix that you can just accept (via the Accept button). You can also click on the *Show Changes* icon to see before/after for the proposed changes. (If it doesn't propose a fix in the dialog, you can skip to step 12 and use the fix command in chat instead.)
 
 ![Fixing with Copilot](./images/cdd207.png?raw=true "Fixing with Copilot")       
 
-12. (Optional) If you'd like, you can go back and make the error again, highlight the code, and then use the fix command in the chat window to get similar results.
+9. (Optional) If you'd like, you can go back and make the error again, highlight the code, and then use the fix command in the chat window to get similar results.
 
 <p align="center">
 **[END OF LAB]**
@@ -188,33 +188,33 @@ simplify
 
 3. *If you don't get a suggestion*, enter code below to start nudging. Otherwise you can just accept the suggestion.
 
-```
+```  
 def test_is_prime():
 ```
-![generating tests via comment](./images/cdd46a.png?raw=true "generating tests via comment") 
+![generating tests via comment](./images/cdd215.png?raw=true "generating tests via comment") 
 
 4. What if we didn't know how to test the code at all? Let's ask Copilot. Highlight the *is_prime()* function.
 
-![selecting code](./images/cdd111.png?raw=true "selecting code") 
+![selecting code](./images/cdd216.png?raw=true "selecting code") 
 
 5. Now, switch to the chat interface and ask Copilot using the following prompt:
 
 ```
-#selection: How do I test this code?
+How do I test this code?
 ```
-![prompting on how to test](./images/cdd178.png?raw=true "prompting on how to test") 
+![prompting on how to test](./images/cdd217.png?raw=true "prompting on how to test") 
 
 (If you happen to encounter a dialog about confirming your testing environment, just hit *Accept* and run the query again.)
 
-6. After entering this, you should see an explanation of how to test the code along with suggested testing code. If you expand the reference in the chat output, you can see that it only used the selected lines.
+6. After entering this, you should see an explanation of how to test the code along with suggested testing code. 
 
-![testing explanation](./images/cdd179.png?raw=true "testing explanation") 
+![testing explanation](./images/cdd218.png?raw=true "testing explanation") 
 
 7. Let's see what the shortcut command would do. In the main chat interface, enter "/tests" and then Enter. Copilot will want to add the *@workspace* chat participant onto the command. Just remove the *@workspace* from the beginning of the command. **Do not hit enter yet**.
 ```
 /tests
 ```
-8. Type a hash/sharp sign after /tests. At this point, Copilot should present a selection dialog. Choose #file from the menu.
+8. Type a hash/sharp sign after /tests. At this point, Copilot should present a selection dialog. Choose #file from the menu. (If you don't see the #file option, go to step 10.)
 ```
 /tests #
 ```
@@ -225,11 +225,15 @@ def test_is_prime():
 
 ![file choice dialog](./images/cdd141.png?raw=true "file choice dialog")
 
-10. Once the command looks like */tests #file:prime.py*, go ahead and hit enter to see the suggested test results.
+10. Only if you didn't have the *#file* option in step 8, scroll down in the menu until you find the *prime.py* file in the pop-up dialog and select the file from the list. Once selected, go ahead and hit *Enter* to submit the query.
+
+![Alternate approach](./images/cdd219.png?raw=true "Alternate approach")
+
+11. Once the command looks like */tests #file:prime.py*, go ahead and hit enter to see the suggested test results.
 
 ![Select to insert](./images/cdd167.png?raw=true "select to insert")
 
-11. If you have a checkmark symbol in the chat output, select that. If you don't, hover over the code block, and in the popup menu, select the *...* entry and then the "Insert into New File" opton. 
+12. If you have a checkmark symbol in the chat output, select that. If you don't, hover over the code block, and in the popup menu, select the *...* entry and then the "Insert into New File" opton. 
 
 ![After insert](./images/cdd180.png?raw=true "after insert") 
 
