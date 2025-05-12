@@ -65,23 +65,18 @@ function parseURL(url) {
 
 ![reset for altenate choices](./images/cdd105.png?raw=true "reset for alternate choices")   
    
-12. Hit **Ctrl + Enter**. A second window will open up with other suggestions.
-Be patient - it takes a bit of time for Copilot to generate alternative suggestions. After a moment though, you will have up to 10 alternatives to pick from. These will be of varying quality and completeness. You can scan through these and then pick one if suitable by clicking on the **Accept suggestion #** button under the alternative suggestion.  Note that this will add the code to the existing set, so you may need to do some minor editing afterwards.
-
-![alternative suggestions](./images/cdd106.png?raw=true "alternative suggestions")   
-
-13. Let's do one more pass at getting a specific prompt for Copilot. Delete all the code currently in index.js. This time we will not enter a comment, but will enter a specific function name.
+12. Let's do one more pass at getting a specific prompt for Copilot. Delete all the code currently in index.js. This time we will not enter a comment, but will enter a specific function name.
 Type the following in the empty file. (There are no parentheses after the *splitURLandReturnComponents* text.)  Do not hit tab or return yet.
 
 ```
 function splitURLandReturnComponents
 ```
 
-14.  With this function name, Copilot should suggest a full function definition - in fact it may suggest several.  To see the options, hover over the first line and a small window should appear. This window will not how many options there are (probably 2 or 3) and provide "<" and ">" links to toggle between them.  Click on the "<" and ">" buttons to see the differences in the available suggestions.
+13.  With this function name, Copilot should suggest a full function definition - in fact it may suggest several.  To see the options, hover over the first line and a small window should appear. This window will show many options there are and provide "<" and ">" links to toggle between them.  If there is more than one, click on the "<" and ">" buttons to see the differences in the available suggestions.
 
 ![alternative suggestions inline](./images/cdd5b.png?raw=true "alternative suggestions inline")   
 
-15. When you find an alternative you like, go ahead and tab to select it.
+14. When you find an alternative you like, go ahead and tab to select it.
 
  <p align="center">
 **[END OF LAB]**
@@ -90,27 +85,13 @@ function splitURLandReturnComponents
 
 **Lab 2 - Using Copilot to simplify code**
 
-1. Create a new file named prime.py. Create it via the same process as we used in Lab 1 by entering the line below in the terminal.
+1. Open an existing file we have in the project named prime.py. You can click on it in the codespace or open it via the command below.
 
 ```
 code prime.py
 ```
 
-2. Start typing a function definition as below
-```
-def is_prime(n):
-```
-3. Leave the cursor at the end of the line.
-
-![starting point](./images/cdd104.png?raw=true "starting point") 
-
-4. Hit **Ctrl+Enter** to see options
-
-5. Pick one of the options that is longer and/or more complex (if there is one) and **Accept suggestion #**. If there's not one that's longer/more complex, just pick an alternative one and **Accept suggestion #**.
-
-![alternative suggestions](./images/cdd34b.png?raw=true "alternative suggestions") 
-
-6. Highlight the code and switch to the Copilot Chat panel. (If you don't see the panel, select the Chat extension icon in the top bar to open the chat window.) Tell Copilot to simplify the code by typing *simplify* in the chat window.
+2. Highlight the code and switch to the Copilot Chat panel. (If you don't see the panel, select the Chat extension icon in the top bar to open the chat window.) Tell Copilot to simplify the code by typing *simplify* in the chat window.
 ```
 simplify
 ```
