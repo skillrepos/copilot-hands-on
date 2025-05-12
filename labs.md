@@ -85,38 +85,40 @@ function splitURLandReturnComponents
 
 **Lab 2 - Using Copilot to simplify code**
 
-1. Open an existing file we have in the project named prime.py. You can click on it in the codespace or open it via the command below.
+1. Open an existing file we have in the project named prime.py. You can click on [**prime.py**](./prime.py) in the codespace or open it via the command below.
 
 ```
 code prime.py
 ```
 
-2. Highlight the code and switch to the Copilot Chat panel. (If you don't see the panel, select the Chat extension icon in the top bar to open the chat window.) Tell Copilot to simplify the code by typing *simplify* in the chat window.
+2. Highlight the code and switch to the Copilot Chat panel. (If you don't see the panel, select the Chat extension icon in the top bar to open the chat window.) Tell Copilot to simplify the code by typing *simplify* in the chat window and hitting *Enter* or the *Submit* arrow.
 ```
 simplify
 ```
 
 ![simplifying via chat box](./images/cdd174.png?raw=true "simplifying via chat box") 
 
-7. Hover over the simplified text and tell Copilot to insert the suggestion at the cursor to replace the text that's currently there. 
+3. Copilot will likely provide an explanation of how it simplified things in the Chat panel. In the actual file will be suggested changes in green. A floating bar will be hovering with arrows to navigate the changes. There will also be a separate section above the text entry part of the chat dialog that notes *prime.py* as a changed file. The floating bar and the separate section will have *Keep* and *Undo* the changes to accept or reject them.  
 
-![replace from chat suggestion](./images/cdd175.png?raw=true "replace from chat suggestion")    
+![replace from chat suggestion](./images/cdd204.png?raw=true "replace from chat suggestion")    
 
+4. Go ahead and use the arrows in the floating bar to navigate through the proposed changes. Each change has its own checkmark to accept it and left curved arrow to reject if you wanted to accept/reject them one at a time. When done reviewing them, just click on one of the *Keep* buttons to persist the changes.
+   
 8. Now, let's introduce an error into the code to see how Copilot can fix it. Pick an instance of a variable name and change it to one that doesn't exist. For example, change an instance of "n" to "x". 
 
-![introduce error](./images/cdd37b.png?raw=true "introduce error")   
+![introduce error](./images/cdd206.png?raw=true "introduce error")   
 
 9. Notice the light bulb icon that has popped up. Click on that, scroll to the bottom (if needed), and you'll have additional options to fix or explain with Copilot. (If you don't see the light bulb icon, you can right-click, select *Copilot* and then select *Fix*.)
 
-![Copilot options inline](./images/cdd165.png?raw=true "Copilot options inline")   
+![Copilot options inline](./images/cdd205.png?raw=true "Copilot options inline")   
 
 10. Go ahead and click on the "Fix using Copilot" option.
 
-11. After a few moments, it should propose a fix that you can just accept (via the Accept button). You can also click on the *Show Changes* icon to see before/after for the proposed changes. (If it doesn't propose a fix in the dialog, you can skip to step 12 and use the /fix command in chat instead.)
+11. After a few moments, it should propose a fix that you can just accept (via the Accept button). You can also click on the *Show Changes* icon to see before/after for the proposed changes. (If it doesn't propose a fix in the dialog, you can skip to step 12 and use the fix command in chat instead.)
 
-![Fixing with Copilot](./images/cdd176.png?raw=true "Fixing with Copilot")       
+![Fixing with Copilot](./images/cdd207.png?raw=true "Fixing with Copilot")       
 
-12. (Optional) If you'd like, you can go back and make the error again, highlight the code, and then use the /fix command in the chat window to get the same results.
+12. (Optional) If you'd like, you can go back and make the error again, highlight the code, and then use the fix command in the chat window to get similar results.
 
 <p align="center">
 **[END OF LAB]**
