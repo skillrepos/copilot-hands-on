@@ -12,16 +12,16 @@
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
+		     "extensions": [
+				"GitHub.copilot-chat",
+				"GitHub.copilot"
+		     ],
 		     "settings": {
 			 // Open Markdown files in preview mode by default
             		 "workbench.editorAssociations": {
               		     "*.md": "vscode.markdown.preview.editor"
             		}
-			},
-			"extensions": [
-				"GitHub.copilot-chat",
-				"GitHub.copilot"
-			]
+		     }
 		}
 	}
 }
