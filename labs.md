@@ -275,7 +275,7 @@ code create-tables.sql
 -- define a select statement to get all students enrolled in a course
 ```
 
-7. If all goes well, this second pass should generate a query with many more specific references to the names and identifiers used in *create-tables.sql*.  (If not, delete the result and try again.) Take a look at the query and then compare the names/identifiers used to the ones in the *create-tables.sql* file. This will show that Copilot picks up on context from other files available to it to make better suggestions.
+7. If all goes well, this second pass should generate a query with many more specific references to the names and identifiers used in *create-tables.sql*.  (**If not, delete the result and try nudging it by typing "select s.".**) Take a look at the query and then compare the names/identifiers used to the ones in the *create-tables.sql* file. This will show that Copilot picks up on context from other files available to it to make better suggestions.
 
 ![New query](./images/cdd97.png?raw=true "New query") 
 
@@ -313,13 +313,13 @@ use instructor_id as the input parameter
 ```
 ![More extensive stored procedure definition](./images/cdd183.png?raw=true "More extensive stored procedure definition") 
 
-12. Finally, let's see Copilot optimize a query for us. Suppose we want to get all the course registrations for September, 2023.  Enter the following query in the file.
+12. Finally, let's see Copilot optimize a query for us. Suppose we want to get all the course registrations for September, 2023.  Enter the following query in the *dev.sql* file.
 
 ```
 select * from courses.registrations where year(registration_date) = 2023 and month(registration_date) = 9;
 ```
 
-13. Ask Copilot to optimize the previous query. You can do this via highlighting the query (make sure to highlight the *entire* query), and in a chat interface enter "/optimize" in the dialog. You can Accept or Discard the suggested optimization after that.
+13. Ask Copilot to optimize the previous query. You can do this via highlighting the query (make sure to highlight the *entire* query), and in a chat interface enter "optimize" in the dialog. You can Accept or Discard the suggested optimization after that.
 
 ```
 optimize
