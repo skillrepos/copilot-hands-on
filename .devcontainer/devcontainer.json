@@ -18,6 +18,7 @@
 		     ],
 		     "settings": {
 			 // Open Markdown files in preview mode by default
+			 "github.copilot.chat.setupTests.enabled": false,
             		 "workbench.editorAssociations": {
               		     "*.md": "vscode.markdown.preview.editor"
             		}
