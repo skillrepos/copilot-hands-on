@@ -200,50 +200,40 @@ How do I test this code?
 
 (If you happen to encounter a dialog about confirming your testing environment, just hit *Accept* and run the query again.)
 
-6. After entering this, you should see an explanation of how to test the code along with suggested testing code. 
+6. After entering this, you should see a plan for testing the code in the Chat interface. Copilot will also populate a file for you with the proposed test code, and then want you to *Save As* a valid filename. You can just enter *test_prime.py* in the dialog and hit *OK*.
 
-![testing explanation](./images/cdd218.png?raw=true "testing explanation") 
+![testing explanation](./images/cdd236.png?raw=true "testing explanation") 
 
-7. Let's see what the shortcut command would do. In the main chat interface, enter "/tests" and then Enter. Copilot will want to add the *@workspace* chat participant onto the command. Just remove the *@workspace* from the beginning of the command. **Do not hit enter yet**.
-```
-/tests
-```
-8. Type a hash/sharp sign after /tests. At this point, Copilot should present a selection dialog. Choose #file from the menu. (If you don't see the #file option, go to step 10.)
-```
-/tests #
-```
-   
-![shortcut test command](./images/cdd140.png?raw=true "shortcut test command")
+7. You can then click on the new *test_prime.py* file in the list on the left and open it up to see the contents.
 
-9. A dialog will pop up near the top of the codespace with a selection of files. Select the *prime.py* file to complete the command. 
+![testing contents](./images/cdd237.png?raw=true "testing contents") 
 
-![file choice dialog](./images/cdd141.png?raw=true "file choice dialog")
+8. To see what it would have done without running the shortcut */tests* command directly, scroll back up through the chat panel and find the *used /tests (rerun without)* section and then click on the *rerun without* link.
 
-10. Only if you didn't have the *#file* option in step 8, scroll down in the menu until you find the *prime.py* file in the pop-up dialog and select the file from the list. Once selected, go ahead and hit *Enter* to submit the query.
+![rerun without option](./images/cdd238.png?raw=true "rerun without option")
 
-![Alternate approach](./images/cdd219.png?raw=true "Alternate approach")
+9. The output of this should look mostly like the results from the original run except that the code for the new testing file will be displayed in the chat area and you'd have to hover and use one of the icons to transfer it.  Also, you'll see some terminal commands to run the test probably.
 
-11. Once the command looks like */tests #file:prime.py*, go ahead and hit enter to see the suggested test results.
+![rerun without option](./images/cdd239.png?raw=true "rerun without option")
 
-![Select to insert](./images/cdd167.png?raw=true "select to insert")
+10. Since we're here, let's run the testing command in the terminal. Hover over the the window in the chat panel with the command to run the tests. Click on the first control that looks like a terminal.
 
-12. If you have a checkmark symbol in the chat output, select that. If you don't, hover over the code block, and in the popup menu, select the *...* entry and then the "Insert into New File" opton. 
+![insert into terminal](./images/cdd240.png?raw=true "insert into terminal")
 
-![After insert](./images/cdd180.png?raw=true "after insert") 
+11. You should see the command automatically put into the terminal in your codespace. Click in the terminal area and hit *Enter*. The commands should then execute and tests should hopefully pass.
 
-12. After that, you'll have a new file in your editor with the code that you can save as needed (using the "3 bar" menu or the shortcut Ctrl/Cmd+S).
+![Tests running in terminal](./images/cdd241.png?raw=true "Tests running in terminal")
 
-![Saving file](./images/cdd201.png?raw=true "saving file") 
 
-13. We can also ask Copilot for other cases to test. Select the code in the testing file you just saved and, in the chat interface, prompt Copilot with
+12. We can also ask Copilot for other cases to test. Select the code in the testing file you just saved and, in the chat interface, prompt Copilot with
 
 ```
 What other conditions should I test?
 ```
 
-14. Copilot should respond with a list of other conditions to test and example code that you can add if you want.
+13. Copilot should respond with a list of other conditions to test and example code that you can add if you want.
 
-![Additional conditions to test](./images/cdd186.png?raw=true "additional conditions to test") 
+![Additional conditions to test](./images/cdd242.png?raw=true "additional conditions to test") 
 
 
 <p align="center">
