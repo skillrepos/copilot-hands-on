@@ -107,19 +107,19 @@ simplify
    
 5. Now, let's introduce an error into the code to see how Copilot can fix it. Pick an instance of a variable name and change it to one that doesn't exist. For example, change an instance of "n" to "x". 
 
-![introduce error](./images/cdd206.png?raw=true "introduce error")   
+![introduce error](./images/cdd226.png?raw=true "introduce error")   
 
 6. Notice the light bulb icon that has popped up. Click on that, scroll to the bottom (if needed), and you'll have additional options to fix or explain with Copilot. (If you don't see the light bulb icon, you can right-click, select *Copilot* and then select *Fix*.)
 
-![Copilot options inline](./images/cdd205.png?raw=true "Copilot options inline")   
+![Copilot options inline](./images/cdd225.png?raw=true "Copilot options inline")   
 
 7. Go ahead and click on the "Fix using Copilot" option.
 
-8. After a few moments, it should propose a fix that you can just accept (via the Accept button). You can also click on the *Show Changes* icon to see before/after for the proposed changes. (If it doesn't propose a fix in the dialog, you can skip to step 12 and use the fix command in chat instead.)
+8. After a few moments, it should propose a fix that you can just accept (via the Accept button). You can also click on the *Show Changes* icon to see before/after for the proposed changes. (If it doesn't propose a fix in the dialog, you can skip to step 12 and use the /fix command in chat instead.)
 
-![Fixing with Copilot](./images/cdd207.png?raw=true "Fixing with Copilot")       
+![Fixing with Copilot](./images/cdd227.png?raw=true "Fixing with Copilot")       
 
-9. (Optional) If you'd like, you can go back and make the error again, highlight the code, and then use the fix command in the chat window to get similar results.
+9. (Optional) If you'd like, you can go back and make the error again, highlight the code, and then use the /fix command in the chat window to get similar results.
 
 <p align="center">
 **[END OF LAB]**
@@ -130,20 +130,19 @@ simplify
 
 **Purpose: In this lab, we’ll see a few other ways to leverage Copilot after the initial coding is done**
 
-1. Now that we have some code to work with, let's see what else Copilot can do for us. Let's have it explain the current code in our *prime.py* file.  Select the code. Then, use the **Cmd+I** keys to bring up the Copilot interactive chat dialog.
-
-![Interactively telling Copilot to explain code](./images/cdd208.png?raw=true "Interactively telling Copilot to explain code")
-
-
-2. Tell Copilot to explain the code by typing the command below in the dialog. Hit Enter. Then, you should see the output in the dialog. Click on the *View in Chat* button to see the output in the separate chat panel.
+1. Now that we have some code to work with, let's see what else Copilot can do for us. Let's have it explain the current code in our *prime.py* file.  Select the code. Then, use the **Cmd+I** keys to bring up the Copilot interactive chat dialog. Tell Copilot to explain the code by typing the command below in the dialog. Hit Enter.
 
 ```
 /explain
 ```
 
-![Output of interactively telling Copilot to explain code in dialog](./images/cdd209.png?raw=true "Output of interactively telling Copilot to explain code in dialog")
+![Interactively telling Copilot to explain code](./images/cdd229.png?raw=true "Interactively telling Copilot to explain code")
 
-![Output of interactively telling Copilot to explain code](./images/cdd210.png?raw=true "Output of interactively telling Copilot to explain code")
+2. Then, you should see the output in the dialog. Click on the *View in Chat* button to see the output in the separate chat panel.
+
+![Output of interactively telling Copilot to explain code in dialog](./images/cdd230.png?raw=true "Output of interactively telling Copilot to explain code in dialog")
+
+![Output of interactively telling Copilot to explain code](./images/cdd231.png?raw=true "Output of interactively telling Copilot to explain code")
 
 3. Now, let's do the same request but through a comment. In the *prime.py* file, below the code, enter the following comment and hit Enter.
 ```
@@ -151,7 +150,7 @@ simplify
 ```
 4. After this, Copilot should start showing the explanation in comments. Just hit tab to accept each line and then Enter to move to the next one. ((Note that it might start repeating if you continue after it is done explaining the function the first time.)
 
-![Output of telling Copilot to explain code via comment](./images/cdd211.png?raw=true "Output of telling Copilot to explain code via comment")
+![Output of telling Copilot to explain code via comment](./images/cdd232.png?raw=true "Output of telling Copilot to explain code via comment")
 
 5. We can also query Copilot inline via asking a question in a comment. Delete the commented explanation and try out the question below. To be clear you can prefix it with :q but that is not required with the chat feature installed.
 
@@ -165,11 +164,11 @@ simplify
 
 7. Now, enter **Cmd+I** and enter the **/doc** command. After a few moments, Copilot should generate some documentation for the code. You can go ahead and *Accept* the changes.
 
-![Generated doc for the code](./images/cdd213.png?raw=true "Generated doc for the code")  
+![Generated doc for the code](./images/cdd233.png?raw=true "Generated doc for the code")  
 
 8. While this is useful documentation for the start of the function, we'd like to have more extensive comments in the function body. So,let's get Copilot's help with that. **Highlight the function code.** Bring up the chat dialog again with **Cmd+I** and enter the text "verbosely comment this code". After Copilot completes its suggestions, if you're happy with them, you can just click *Accept*. 
 
-![Regenerating doc](./images/cdd214.png?raw=true "Regenerating doc")  
+![Regenerating doc](./images/cdd234.png?raw=true "Regenerating doc")  
 
 <p align="center">
 **[END OF LAB]**
@@ -185,12 +184,6 @@ simplify
 2. Enter a comment to create unit tests
 ```
 # create a function to do 5 unit tests of the code above
-```
-
-3. *If you don't get a suggestion*, enter code below to start nudging. Otherwise you can just accept the suggestion.
-
-```  
-def test_is_prime():
 ```
 ![generating tests via comment](./images/cdd215.png?raw=true "generating tests via comment") 
 
