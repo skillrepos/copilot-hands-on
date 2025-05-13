@@ -10,10 +10,11 @@
 **NOTES:**
 1. We will be working in the public GitHub.com, not a private instance.
 2. Chrome may work better than Firefox for some tasks.
-3. The default environment will be a GitHub Codespace (with Copilot already installed). If you prefer to use your own IDE, you are responsible for installing Copilot in it. Some things in the lab may be different if you use your own environment.
-4. To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.**
-5. VPNs may interfere with the ability to run the codespace. It is recommended to not use a VPN if you run into problems.
-6. If you use the new free Copilot plan (no signup), some advanced functionality may not be available.
+3. Substitute the appropriate key combinations for your operating system where needed.
+4. The default environment will be a GitHub Codespace (with Copilot already installed). If you prefer to use your own IDE, you are responsible for installing Copilot in it. Some things in the lab may be different if you use your own environment.
+5. To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.**
+6. VPNs may interfere with the ability to run the codespace. It is recommended to not use a VPN if you run into problems.
+7. If you use the new free Copilot plan (no signup), some advanced functionality may not be available.
 </br></br></br>
 
 **Lab 1 - Learning how to create good prompts for Copilot**
@@ -52,14 +53,14 @@ code index.js
 function parseURL(url) {
 ```
 
-9. Just hit Tab to accept it and Enter again. Pause. After that Copilot may or may not offer a suggestion.  If it does, great - you can just hit Tab and accept it.  If not, it may be necessary to further "nudge" Copilot by giving more prompts. Only if you're not getting responses from Copilot, hit return and type the comment below to nudge Copilot.
+9. Just hit Tab to accept it and Enter again. Copilot should continue to respond with another suggestion. *Only if you're not getting responses from Copilot, hit return and type the comment below to nudge Copilot.*
 
 ```
 // parse url
 ```
 ![nudge comment](./images/cdd3.png?raw=true "nudge comment")   
 
-10. Only if needed, hit return and Copilot should start generating suggestions again. Pause after each return to give Copilot a chance to suggest code. Then you can just hit tab to accept each line and then return to get the next part of the code until the function is complete. You may get some blank lines along the way or for some lines you might need to hit Tab twice to accept the code if it is indented more. But just hit return until you get to the end of a function. (You will be at the end when the indentation is done.  Also Copilot may start to suggest another function in comments like // test...)
+10. Continue to iterate with Copilot suggesting lines and you hitting *Tab* to accept each line and then *Enter* until the function is complete. You may get some blank lines along the way or for some lines you might need to hit Tab twice to accept the code if it is indented more. But just hit return until you get to the end of a function. (You will be at the end when the indentation is done.  Also Copilot may start to suggest another function in comments like // test...)
 
 11. Suppose you're not happy with that suggestion. Copilot can provide other options for the code. To see those, make sure you are in the editor for the file, then delete all but the first line of the function **and** put the cursor at the end of the first line.
 
@@ -69,14 +70,14 @@ function parseURL(url) {
 Type the following in the empty file. (There are no parentheses after the *splitURLandReturnComponents* text.)  Do not hit tab or return yet.
 
 ```
-function splitURLandReturnComponents
+function splitURLandReturn
 ```
 
 13.  With this function name, Copilot should suggest a full function definition - in fact it may suggest several.  To see the options, hover over the first line and a small window should appear. This window will show many options there are and provide "<" and ">" links to toggle between them.  If there is more than one, click on the "<" and ">" buttons to see the differences in the available suggestions.
 
-![alternative suggestions inline](./images/cdd5b.png?raw=true "alternative suggestions inline")   
+![alternative suggestions inline](./images/cdd221.png?raw=true "alternative suggestions inline")   
 
-14. When you find an alternative you like, go ahead and tab to select it.
+14. When you find an alternative you like, go ahead and tab to select it. Note that some may be incomplete.
 
  <p align="center">
 **[END OF LAB]**
@@ -96,13 +97,13 @@ code prime.py
 simplify
 ```
 
-![simplifying via chat box](./images/cdd174.png?raw=true "simplifying via chat box") 
+![simplifying via chat box](./images/cdd222.png?raw=true "simplifying via chat box") 
 
-3. Copilot will likely provide an explanation of how it simplified things in the Chat panel. In the actual file will be suggested changes in green. A floating bar will be hovering with arrows to navigate the changes. There will also be a separate section above the text entry part of the chat dialog that notes *prime.py* as a changed file. The floating bar and the separate section will have *Keep* and *Undo* the changes to accept or reject them.  
+3. Copilot will likely provide an explanation of how it simplified things in the Chat panel. It will also create a new code block in the Chat panel with the simplified text. 
 
-![replace from chat suggestion](./images/cdd204.png?raw=true "replace from chat suggestion")    
+4. Hover over the simplified text in the Chat panel. A bar of controls will pop up. Use the second control to tell Copilot to insert the suggestion at the cursor to replace the text that's currently there. (Click on the control that's labeled as *Insert at cursor*. This should replace the highlighted text.)
 
-4. Go ahead and use the arrows in the floating bar to navigate through the proposed changes. Each change has its own checkmark to accept it and left curved arrow to reject if you wanted to accept/reject them one at a time. When done reviewing them, just click on one of the *Keep* buttons to persist the changes.
+![insert simplified text](./images/cdd223.png?raw=true "insert simplified text") 
    
 5. Now, let's introduce an error into the code to see how Copilot can fix it. Pick an instance of a variable name and change it to one that doesn't exist. For example, change an instance of "n" to "x". 
 
