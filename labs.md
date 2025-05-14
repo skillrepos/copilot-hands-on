@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.11 - 05/13/25
+## Revision 1.12 - 05/14/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -515,27 +515,28 @@ Which files are using SQL?
 ![fork repo](./images/cdd172.png?raw=true "Fork repo")
 ![uncheck checkbox](./images/cdd147.png?raw=true "Uncheck checkbox")
 
-3. After the fork is complete, in your fork, click on the *Chat with Copilot* button at the top right. The chat dialog will open up and then you will have a chat input box and some suggested questions. Click on the *Can you tell me about this repository?* question.  (If you don't see it, you can select one of the others or type in the question.) After this runs, you'll get some basic info about the repository.
+3. After the fork is complete, in your fork, click on the *Chat with Copilot* button at the top right. The chat dialog will open up and then you will have a chat input box and some suggested questions. Click on the *Tell me about this repository* question.  (If you don't see it, you can select one of the others or type in the question.) After this runs, you'll get some basic info about the repository.
 
- ![about the repo query](./images/cdd148.png?raw=true "About the repo query") 
- ![about the repo response](./images/cdd149.png?raw=true "About the repo response") 
+ ![about the repo query](./images/cdd247.png?raw=true "About the repo query") 
+ </br></br>
+ ![about the repo response](./images/cdd248.png?raw=true "About the repo response") 
  
-4. Now, in the list of files in the repo, select the *main.go* file to open it up. The Copilot Chat interface should change to one specific for the file. Click on the *Summarize this file for me* question or type it into the input area. (If you don't see this in the dialog, try starting a new conversation by clicking on the "+" sign in the upper right of the dialog.) After this runs, you'll see a summarization of the file.
+4. Now, in the list of files in the repo, select the *main.go* file to open it up. Start a new conversation in the Copilot Chat interface by clicking on the "+" sign. Click on the *Summarize this file for me* question or type it into the input area.  After this runs, you'll see a summarization of the file.
 
- ![about the file query](./images/cdd150.png?raw=true "About the file query") 
- ![about the file response](./images/cdd151.png?raw=true "About the file response") 
+ ![about the file query](./images/cdd249.png?raw=true "About the file query") 
+ </br></br>
+ ![about the file response](./images/cdd250.png?raw=true "About the file response") 
  
 5. In this repo, we have a *dev* branch with some fixes for security vulnerabilities in the *main* branch. Let's create a pull request to merge the *dev* branch into the *main* branch. We could initiate the pull request manually, but since we have the Copilot Chat available, let's have it expedite the process by creating a simple link for us to use to start the pull request. In the Chat input area, tell Copilot to generate an appropriate URL via the prompt below and then submit it. After Copilot is done, you should see a link displayed.
 ```
 Generate a url that I can use to create a pull request to merge the dev branch into the main branch
 ```
 
- ![generate pr link](./images/cdd152.png?raw=true "Generate pr link") 
- ![generated link](./images/cdd153.png?raw=true "Generated link") 
+ ![generate pr link](./images/cdd251.png?raw=true "Generate pr link") 
  
-6. Click on the link in the chat dialog. This should open up a screen with a pull request initiated for merging the dev branch into the main branch. Close the Chat interface by clicking on the **^** symbol in the upper right corner of the dialog.
+6. Click on the link in the chat dialog. This should open up a screen with either a pull request already initiated or a file comparison screen with a button to create the pull request. If it's the latter, go ahead and click the button to create the pull reuqest for merging the dev branch into the main branch. (Close the Chat interface by clicking on the **^** symbol in the upper right corner of the dialog.)
 
- ![collapse chat](./images/cdd154.png?raw=true "Collapse chat")  
+ ![pull request initiation](./images/cdd252.png?raw=true "Pull request initiation")  
   
 7. In the pull request, update the title if you want. Then, we'll have Copilot automatically generate a description of our pull request. To do this, click on the *Copilot actions* button in the row under the *Add a description*. In the pop-up, select *Summary*. This will run for a few moments and then generate a draft summmary.
 
@@ -548,7 +549,7 @@ Generate a url that I can use to create a pull request to merge the dev branch i
 
  ![summary](./images/cdd157.png?raw=true "Summary") 
 
-9. Notice that in the *Security Improvements* section, Copilot has generated links for each of the changes in the *models/models.go* file. Let's click on the 2nd link to look at those changes.
+9. Notice that in the *Security Improvements* section, Copilot has generated links for each of the changes in the *models/models.go* file. Let's click on the 2nd link to look at those changes. (**If you do not have the links, you can click on the *Files changed* tab in the pull request to see the changes.**)
 
  ![looking at a change](./images/cdd158.png?raw=true "Looking at a change") 
 
