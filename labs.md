@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.10 - 05/12/25
+## Revision 1.11 - 05/13/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -428,9 +428,9 @@ How do I execute this?
 what is the latest Kubernetes version?
 ```
 
-7. Notice that it identifies the latest version as as of October 2023. This highlights the out-of-date issue with the LLM.
+7. Depending on the current model selected, you may get varying answers. In the case shown, the AI suggests that as of the current date, the current version is 1.28. The challenge with this is that the current version is actually 1.33 (as of 5/13/25). This highlights the out-of-date issue with the LLM.
 
-![Answer to latest K8s version](./images/cdd189.png?raw=true "Answer to latest K8s version")
+![Answer to latest K8s version](./images/cdd244.png?raw=true "Answer to latest K8s version")
 
 
 8. Let's have Copilot generate some code to work with Kubernetes through the API. In the chat interface, enter the following.
@@ -449,12 +449,6 @@ How do I call the K8s API for scaling a deployment to 5 replicas with Python?
 translate to Go 
 ```
 ![Go translation](./images/cdd125.png?raw=true "Go translation")
-
-11. Optional - try changing the model in the chat interface to *Claude 3.5 Sonnet (Preview)* and ask the "latest version" question again with that model. (Don't forget to change it back if you want afterwards.)
-
-```
-what is the latest Kubernetes version?
-```
 
 <p align="center">
 **[END OF LAB]**
