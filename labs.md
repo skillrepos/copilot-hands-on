@@ -471,12 +471,12 @@ translate to Go
 
 3. Hover over the window with the commands in it, and then click on the icon that pops up for the terminal. Click on that to insert the command into the terminal. Then hit return.
 
-![insert into terminal](./images/cdd171.png?raw=true "insert into terminal")
+![insert into terminal](./images/cdd245.png?raw=true "insert into terminal")
 
 
 4. Now let's commit our change through the interface and have Copilot suggest a commit message for us. Click on the source control icon in the sidebar (#1 in the figure below). Your *explore.go* file should be selected. In the box titled "Message" above the *Commit bar*, click on the *sparkle icon* at the far right side (#2 in the figure below).
 
-![insert into terminal](./images/cdd136.png?raw=true "insert into terminal")
+![insert into terminal](./images/cdd246.png?raw=true "insert into terminal")
 
 5. After this, Copilot should (hopefully) generate an appropriate commit message in that box. Since we started the codespace via the button in the readme, you won't have direct commit access, so you can just proceed to the next step.
 
