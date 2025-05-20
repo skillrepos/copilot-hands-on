@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.14 - 05/20/25
+## Revision 1.15 - 05/20/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -162,7 +162,7 @@ simplify
 
 ![Generated doc for the code](./images/cdd233.png?raw=true "Generated doc for the code")  
 
-8. While this is useful documentation for the start of the function, we'd like to have more extensive comments in the function body. So,let's get Copilot's help with that. **Highlight the function code.** Bring up the chat dialog again with **Cmd+I** and enter the text "verbosely comment this code". After Copilot completes its suggestions, if you're happy with them, you can just click *Accept*. 
+8. While this is useful documentation for the start of the function, we'd like to have more extensive comments in the function body. So,let's get Copilot's help with that. **Highlight the function code.** Bring up the chat dialog again and enter the text "verbosely comment this code". After Copilot completes its suggestions, if you're happy with them, you can just click *Accept*. 
 
 ![Regenerating doc](./images/cdd234.png?raw=true "Regenerating doc")  
 
