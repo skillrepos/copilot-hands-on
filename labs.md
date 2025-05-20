@@ -158,7 +158,7 @@ simplify
 
 6. Finally, let's see how to use the doc feature to automatically document our code. Highlight the actual code.
 
-7. Now, enter **Cmd+I** and enter the **/doc** command. After a few moments, Copilot should generate some documentation for the code. You can go ahead and *Accept* the changes.
+7. Now, enter the shortcut key to bring up the inline chat dialog and enter the **/doc** command. After a few moments, Copilot should generate some documentation for the code. You can go ahead and *Accept* the changes.
 
 ![Generated doc for the code](./images/cdd233.png?raw=true "Generated doc for the code")  
 
