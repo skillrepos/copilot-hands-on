@@ -64,7 +64,7 @@ function parseURL(url) {
 
 11. Suppose you're not happy with that suggestion. Copilot can provide other options for the code. To see those, make sure you are in the editor for the file, then delete all but the first line of the function **and** put the cursor at the end of the first line.
 
-![reset for altenate choices](./images/cdd105.png?raw=true "reset for alternate choices")   
+![reset for alternate choices](./images/cdd105.png?raw=true "reset for alternate choices")   
    
 12. Let's do one more pass at getting a specific prompt for Copilot. Delete all the code currently in index.js. This time we will not enter a comment, but will enter a specific function name.
 Type the following in the empty file. (There are no parentheses after the *splitURLandReturnComponents* text.)  Do not hit tab or return yet.
