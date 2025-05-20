@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.15 - 05/20/25
+## Revision 1.16 - 05/20/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -293,7 +293,7 @@ code create-tables.sql
 
 ![status values](./images/cdd99.png?raw=true "status values") 
 
-10. Copilot can also create stored procedures. Let's ask it to create a new stored procedure for getting a list of enrolled students at a particular location. Let's use the **CMD+I** shortcut. Go to the bottom of the *dev.sql* file, invoke Copilot Chat via the shortcut and then enter the line below in the dialog. You can also choose to change the model to Claude 3.5 Sonnet if you want. If you want to change the model, select it in the model drop-down, then you will probably need to select the *Enable* button and re-enter the prompt.  After the prompt is executed, you can choose to **Accept** or **Discard** the result.
+10. Copilot can also create stored procedures. Let's ask it to create a new stored procedure for getting a list of enrolled students at a particular location. Let's use the shortcut to open the inline chat dialog. Go to the bottom of the *dev.sql* file, invoke Copilot Chat via the shortcut and then enter the line below in the dialog. You can also choose to change the model to Claude 3.5 Sonnet if you want. If you want to change the model, select it in the model drop-down, then you will probably need to select the *Enable* button and re-enter the prompt.  After the prompt is executed, you can choose to **Accept** or **Discard** the result.
 
 ```
 define a stored procedure to get course enrollment by location
@@ -337,7 +337,7 @@ optimize
 
 1. Create a new file called *explore.go* via the same approach as you used to create other files.
 
-2. This file should now be open in an editor tab. Let's say we want to seed a random number generator with Go. Let's ask Copilot to write a function to do that. Prompt it through the **CMD+I** interface using the statement below. Then you can accept the suggested code.
+2. This file should now be open in an editor tab. Let's say we want to seed a random number generator with Go. Let's ask Copilot to write a function to do that. Prompt it through the inline chat dialog interface using the statement below. Then you can accept the suggested code.
 
 ```
 write a function to seed a random number generator
@@ -367,7 +367,7 @@ Is the Seed function deprecated in Go?
 	// r := rand.New(rand.NewSource(99))
 ```
 
-7. Now, let's try the creation of the function again. Underneath the comments and code you just pasted, invoke the dialog via **CMD+I** and enter the statement below again.
+7. Now, let's try the creation of the function again. Underneath the comments and code you just pasted, invoke the dialog via your keyboard shortcut and enter the statement below again.
 ```
 write a function to seed a random number generator
 ```
@@ -395,7 +395,7 @@ write a function to seed a random number generator
 code deployment.yaml
 ```
 
-2. Bring up the Copilot Chat dialog via **CMD+I** and enter in the following request.
+2. Bring up the Copilot Chat dialog via your keyboard shortcut and enter in the following request.
 
 ```
 write spec for deployment in Kubernetes with 2 replicas and image from busybox
