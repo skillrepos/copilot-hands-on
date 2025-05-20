@@ -14,7 +14,7 @@ If you prefer and if you know one of the other IDEs supported by Copilot, you ca
 
 These steps **must** be completed prior to starting the actual labs.
 
-## 1. To be able to use all features, sign up for Pro trial - if you don't have access already. (If you prefer, you can use the new free version but some features will be missing. If you want to use the free version of Copilot, you can skip this step.)
+## 1. You can use the free version of Copilot for all but one or two items in the labs. If you want to signup for the Pro version, info on that is below.
 
 When signed into GitHub, click on your profile picture/icon in the upper right and either select [Copilot](https://github.com/github-copilot/signup) 
 
@@ -41,7 +41,7 @@ Then click on the option to create a new codespace.
   
 ## 3. Open the labs
 
-After the codespace has started, open the labs document by going to the file tree on the left, find the file named **labs.md**, right-click on it, and open it with the **Preview** option.) *Alternatively, you can open it up in a separate browser tab directly from the GitHub site.*
+After the codespace has started, open the labs document by going to the file tree on the left, find the file named **labs.md** and clicking on it. *Alternatively, you can open it up in a separate browser tab directly from the GitHub site.*
 
 ![Labs doc preview in codespace](./images/cpho4.png?raw=true "Labs doc preview in codespace")
 
