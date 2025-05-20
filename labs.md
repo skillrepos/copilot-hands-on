@@ -126,7 +126,7 @@ simplify
 
 **Purpose: In this lab, we’ll see a few other ways to leverage Copilot after the initial coding is done**
 
-1. Now that we have some code to work with, let's see what else Copilot can do for us. Let's have it explain the current code in our *prime.py* file.  Select the code. Then, use the **Cmd+I** keys to bring up the Copilot interactive chat dialog. Tell Copilot to explain the code by typing the command below in the dialog. Hit Enter.
+1. Now that we have some code to work with, let's see what else Copilot can do for us. Let's have it explain the current code in our *prime.py* file.  Select the code. Then, use the appropriate shortcut key for your keyboard/platform to bring up the Copilot interactive chat dialog. (*This should be Ctrl+I on Windows, Option+I on Mac, or Cmd+I if you are using a Mac but don't have an Option key on your keyboard.*) Tell Copilot to explain the code by typing the command below in the dialog. Hit Enter.
 
 ```
 /explain
