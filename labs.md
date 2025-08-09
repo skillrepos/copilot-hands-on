@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.16 - 05/20/25
+## Revision 1.17 - 08/09/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -88,34 +88,41 @@ When you find an alternative you like, go ahead and tab to select it. Note that 
 code prime.py
 ```
 
-2. Highlight the code and switch to the Copilot Chat panel. (If you don't see the panel, select the Chat extension icon in the top bar to open the chat window.) Tell Copilot to simplify the code by typing *simplify* in the chat window and hitting *Enter* or the *Submit* arrow.
+2. Highlight the code and switch to the Copilot Chat panel. (If you don't see the panel, select the Chat extension icon in the top bar to open the chat window.) Make sure the mode is set to "Ask". If you don't see the full Copilot panel or have access to the "Chat" area, check in the bottom bar of the codespace and see if there's a "Finish Setup" option. If so, click on that and then click the "Set up Copilot" blue button.
+
+   
+![finish setup](./images/ext85.png?raw=true "finish setup")
+<br><br>  
+  
+3. Tell Copilot to simplify the code by typing *simplify* in the chat window and hitting *Enter* or the *Submit* arrow.
+
 ```
 simplify
 ```
 
 ![simplifying via chat box](./images/cdd222.png?raw=true "simplifying via chat box") 
 
-3. Copilot will likely provide an explanation of how it simplified things in the Chat panel. It will also create a new code block in the Chat panel with the simplified text. 
+4. Copilot will likely provide an explanation of how it simplified things in the Chat panel. It will also create a new code block in the Chat panel with the simplified text. 
 
-4. Hover over the simplified text in the Chat panel. A bar of controls will pop up. Use the second control to tell Copilot to insert the suggestion at the cursor to replace the text that's currently there. (Click on the control that's labeled as *Insert at cursor*. This should replace the highlighted text.)
+5. Hover over the simplified text in the Chat panel. A bar of controls will pop up. Use the second control to tell Copilot to insert the suggestion at the cursor to replace the text that's currently there. (Click on the control that's labeled as *Insert at cursor*. This should replace the highlighted text.)
 
 ![insert simplified text](./images/cdd223.png?raw=true "insert simplified text") 
    
-5. Now, let's introduce an error into the code to see how Copilot can fix it. Pick an instance of a variable name and change it to one that doesn't exist. For example, change an instance of "n" to "x". 
+6. Now, let's introduce an error into the code to see how Copilot can fix it. Pick an instance of a variable name and change it to one that doesn't exist. For example, change an instance of "n" to "x". 
 
 ![introduce error](./images/cdd226.png?raw=true "introduce error")   
 
-6. Notice the light bulb icon that has popped up. Click on that, scroll to the bottom (if needed), and you'll have additional options to fix or explain with Copilot. (If you don't see the light bulb icon, you can right-click, select *Copilot* and then select *Fix*.)
+7. Notice the light bulb icon that has popped up. Click on that, scroll to the bottom (if needed), and you'll have additional options to fix or explain with Copilot. (If you don't see the light bulb icon, you can right-click, select *Copilot* and then select *Fix*.)
 
 ![Copilot options inline](./images/cdd225.png?raw=true "Copilot options inline")   
 
-7. Go ahead and click on the "Fix using Copilot" option.
+8. Go ahead and click on the "Fix using Copilot" option.
 
-8. After a few moments, it should propose a fix that you can just accept (via the Accept button). You can also click on the *Show Changes* icon to see before/after for the proposed changes. (If it doesn't propose a fix in the dialog, you can skip to step 12 and use the /fix command in chat instead.)
+9. After a few moments, it should propose a fix that you can just accept (via the Accept button). You can also click on the *Show Changes* icon to see before/after for the proposed changes. (If it doesn't propose a fix in the dialog, you can skip to step 12 and use the /fix command in chat instead.)
 
 ![Fixing with Copilot](./images/cdd227.png?raw=true "Fixing with Copilot")       
 
-9. (Optional) If you'd like, you can go back and make the error again, highlight the code, and then use the /fix command in the chat window to get similar results.
+10. (Optional) If you'd like, you can go back and make the error again, highlight the code, and then use the /fix command in the chat window to get similar results.
 
 <p align="center">
 **[END OF LAB]**
