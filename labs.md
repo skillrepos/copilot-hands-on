@@ -69,7 +69,7 @@ Type the following in the empty file. (There are no parentheses after the *split
 function splitURLandReturn
 ```
 
-12.  With this function name, Copilot should suggest a full function definition - in fact it may suggest several.  To see the options, hover over the first line and a small window should appear. This window will show many options there are and provide "<" and ">" links to toggle between them.  If there is more than one, click on the "<" and ">" buttons to see the differences in the available suggestions.
+12.  With this function name, Copilot should suggest a full function definition - in fact it may suggest several.  To see the options, hover over the first line and a small window should appear. This window will show many options there are and provide "<" and ">" links to toggle between them.  If there is only one, you might try typing a space. Then click on the "<" and ">" buttons to see the differences in the available suggestions.
 
 ![alternative suggestions inline](./images/cdd221.png?raw=true "alternative suggestions inline")   
 
