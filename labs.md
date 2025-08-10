@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.17 - 08/09/25
+## Revision 1.18 - 08/10/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -26,55 +26,64 @@
 ```
 code index.js
 ```
-
+<br><br>
 2. Afterwards this file should be open in a tab in the editor.
+<br><br>
 
 3. Let's see how Copilot responds to a generic request. Go to that tab and type in a comment that says
 
 ```
 // function to parse data
 ```
+<br><br>
 4. Hit return and notice the code that Copilot suggested. This is likely more generic than we want, but hit tab to select that line. (Note that you should give Copilot a second to provide code suggestions before moving on to the next line.)
-   
+<br><br>
+
 5. After hitting tab, Copilot will generate another part of the function. (If not, you may need to hit return.) Hit tab to accept it. Continue until you get a complete function (or Copilot stops generating additional code suggestions). One example of what code may look like is below.
 
 ![Copilot generated function](./images/cpho5.png?raw=true "Copilot generated function")
-   
+<br><br>
+
 6. This prompt is not specific enough for Copilot to interpret what we want to do.  Highlight the code and delete it, so we can try again.
+<br><br>
 
 7. Now type a comment at the top that says
 
 ```
 // function to parse url
 ```
+<br><br>
+
 8. Hit enter and you will probably see a similar line to
 
 ```
 function parseURL(url) {
 ```
-
+<br><br>
 9. Just hit Tab to accept it and Enter again. Copilot should continue to respond with another suggestion. *Only if you're not getting responses from Copilot, hit return and type the comment below to nudge Copilot.*
 
 ```
 // parse url
 ```
 ![nudge comment](./images/cdd3.png?raw=true "nudge comment")   
-
+<br><br>
 10. Continue to iterate with Copilot suggesting lines and you hitting *Tab* to accept each line and then *Enter* until the function is complete. You may get some blank lines along the way or for some lines you might need to hit Tab twice to accept the code if it is indented more. But just hit return until you get to the end of a function. (You will be at the end when the indentation is done.  Also Copilot may start to suggest another function in comments like // test...)
- 
+
+<br><br> 
 11. Let's do one more pass at getting a specific prompt for Copilot. Delete all the code currently in index.js. This time we will not enter a comment, but will enter a specific function name.
 Type the following in the empty file. (There are no parentheses after the *splitURLandReturnComponents* text.)  Do not hit tab or return yet.
 
 ```
 function splitURLandReturn
 ```
+<br><br>
 
 12.  With this function name, Copilot should suggest a full function definition - in fact it may suggest several.  To see the options, hover over the first line and a small window should appear. This window will show many options there are and provide "<" and ">" links to toggle between them.  If there is only one, you might try typing a space. Then click on the "<" and ">" buttons to see the differences in the available suggestions.
 
 ![alternative suggestions inline](./images/cdd221.png?raw=true "alternative suggestions inline")   
 
 When you find an alternative you like, go ahead and tab to select it. Note that some may be incomplete.
-
+<br><br>
  <p align="center">
 **[END OF LAB]**
 </p>
@@ -87,7 +96,7 @@ When you find an alternative you like, go ahead and tab to select it. Note that 
 ```
 code prime.py
 ```
-
+<br><br>
 2. Highlight the code and switch to the Copilot Chat panel. (If you don't see the panel, select the Chat extension icon in the top bar to open the chat window.) Make sure the mode is set to "Ask". If you don't see the full Copilot panel or have access to the "Chat" area, check in the bottom bar of the codespace and see if there's a "Finish Setup" option. If so, click on that and then click the "Set up Copilot" blue button.
 
    
@@ -101,27 +110,34 @@ simplify
 ```
 
 ![simplifying via chat box](./images/cdd222.png?raw=true "simplifying via chat box") 
+<br><br>
 
 4. Copilot will likely provide an explanation of how it simplified things in the Chat panel. It will also create a new code block in the Chat panel with the simplified text. 
+
+<br><br>
 
 5. Hover over the simplified text in the Chat panel. A bar of controls will pop up. Use the second control to tell Copilot to insert the suggestion at the cursor to replace the text that's currently there. (Click on the control that's labeled as *Insert at cursor*. This should replace the highlighted text.)
 
 ![insert simplified text](./images/cdd223.png?raw=true "insert simplified text") 
+<br><br>
+
    
 6. Now, let's introduce an error into the code to see how Copilot can fix it. Pick an instance of a variable name and change it to one that doesn't exist. For example, change an instance of "n" to "x". 
 
 ![introduce error](./images/cdd226.png?raw=true "introduce error")   
+<br><br>
 
 7. Notice the light bulb icon that has popped up. Click on that, scroll to the bottom (if needed), and you'll have additional options to fix or explain with Copilot. (If you don't see the light bulb icon, you can right-click, select *Copilot* and then select *Fix*.)
 
 ![Copilot options inline](./images/cdd225.png?raw=true "Copilot options inline")   
+<br><br>
 
 8. Go ahead and click on the "Fix using Copilot" option.
-
+<br><br>
 9. After a few moments, it should propose a fix that you can just accept (via the Accept button). You can also click on the *Show Changes* icon to see before/after for the proposed changes. (If it doesn't propose a fix in the dialog, you can skip to step 12 and use the /fix command in chat instead.)
 
 ![Fixing with Copilot](./images/cdd227.png?raw=true "Fixing with Copilot")       
-
+<br><br>
 10. (Optional) If you'd like, you can go back and make the error again, highlight the code, and then use the /fix command in the chat window to get similar results.
 
 <p align="center">
@@ -140,21 +156,22 @@ simplify
 ```
 
 ![Interactively telling Copilot to explain code](./images/cdd229.png?raw=true "Interactively telling Copilot to explain code")
-
+<br><br>
 2. Then, you should see the output in the dialog. Click on the *View in Chat* button to see the output in the separate chat panel.
 
 ![Output of interactively telling Copilot to explain code in dialog](./images/cdd230.png?raw=true "Output of interactively telling Copilot to explain code in dialog")
 
 ![Output of interactively telling Copilot to explain code](./images/cdd231.png?raw=true "Output of interactively telling Copilot to explain code")
-
+<br><br>
 3. Now, let's do the same request but through a comment. In the *prime.py* file, below the code, enter the following comment and hit Enter.
 ```
 # explain the code above line-by-line
 ```
+<br><br>
 4. After this, Copilot should start showing the explanation in comments. Just hit tab to accept each line and then Enter to move to the next one. ((Note that it might start repeating if you continue after it is done explaining the function the first time.)
 
 ![Output of telling Copilot to explain code via comment](./images/cdd232.png?raw=true "Output of telling Copilot to explain code via comment")
-
+<br><br>
 5. We can also query Copilot inline via asking a question in a comment. Delete the commented explanation and try out the question below. To be clear you can prefix it with :q but that is not required with the chat feature installed.
 
 ```
@@ -162,17 +179,18 @@ simplify
 ```
 
 ![Prompting for what code does with q:](./images/cdd212.png?raw=true "Prompting for what code does with q:")
-
+<br><br>
 6. Finally, let's see how to use the doc feature to automatically document our code. Highlight the actual code.
-
+<br><br>
 7. Now, enter the shortcut key to bring up the inline chat dialog and enter the **/doc** command. After a few moments, Copilot should generate some documentation for the code. You can go ahead and *Accept* the changes.
 
 ![Generated doc for the code](./images/cdd233.png?raw=true "Generated doc for the code")  
+<br><br>
 
 8. While this is useful documentation for the start of the function, we'd like to have more extensive comments in the function body. So,let's get Copilot's help with that. **Highlight the function code.** Bring up the chat dialog again and enter the text "verbosely comment this code". After Copilot completes its suggestions, if you're happy with them, you can just click *Accept*. 
 
 ![Regenerating doc](./images/cdd234.png?raw=true "Regenerating doc")  
-
+<br><br>
 <p align="center">
 **[END OF LAB]**
 </p>
@@ -183,18 +201,18 @@ simplify
 **Purpose: In this lab, we'll see some examples of having Copilot generate tests**
 
 1. Start out in the *prime.py* file we've been using. Position the cursor below the code.
-
+<br><br>
 2. Enter a comment to create unit tests
 ```
 # create a function to do 5 unit tests of the code above
 ```
 ![generating tests via comment](./images/cdd215.png?raw=true "generating tests via comment") 
-
-4. What if we didn't know how to test the code at all? Let's ask Copilot. Highlight the *is_prime()* function.
+<br><br>
+3. What if we didn't know how to test the code at all? Let's ask Copilot. Highlight the *is_prime()* function.
 
 ![selecting code](./images/cdd216.png?raw=true "selecting code") 
-
-5. Now, switch to the chat interface and ask Copilot using the following prompt:
+<br><br>
+4. Now, switch to the chat interface and ask Copilot using the following prompt:
 
 ```
 How do I test this code?
@@ -202,42 +220,42 @@ How do I test this code?
 ![prompting on how to test](./images/cdd217.png?raw=true "prompting on how to test") 
 
 (If you happen to encounter a dialog about confirming your testing environment, just hit *Accept* and run the query again.)
-
-6. After entering this, you should see a plan for testing the code in the Chat interface. Copilot will also populate a file for you with the proposed test code, and then want you to *Save As* a valid filename. You can just enter *test_prime.py* in the dialog and hit *OK*.
+<br><br>
+5. After entering this, you should see a plan for testing the code in the Chat interface. Copilot will also populate a file for you with the proposed test code, and then want you to *Save As* a valid filename. You can just enter *test_prime.py* in the dialog and hit *OK*.
 
 ![testing explanation](./images/cdd236.png?raw=true "testing explanation") 
-
-7. You can then click on the new *test_prime.py* file in the list on the left and open it up to see the contents.
+<br><br>
+6. You can then click on the new *test_prime.py* file in the list on the left and open it up to see the contents.
 
 ![testing contents](./images/cdd237.png?raw=true "testing contents") 
-
-8. To see what it would have done without running the shortcut */tests* command directly, scroll back up through the chat panel and find the *used /tests (rerun without)* section and then click on the *rerun without* link.
+<br><br>
+7. To see what it would have done without running the shortcut */tests* command directly, scroll back up through the chat panel and find the *used /tests (rerun without)* section and then click on the *rerun without* link.
 
 ![rerun without option](./images/cdd238.png?raw=true "rerun without option")
-
-9. The output of this should look mostly like the results from the original run except that the code for the new testing file will be displayed in the chat area and you'd have to hover and use one of the icons to transfer it.  Also, you'll see some terminal commands to run the test probably.
+<br><br>
+8. The output of this should look mostly like the results from the original run except that the code for the new testing file will be displayed in the chat area and you'd have to hover and use one of the icons to transfer it.  Also, you'll see some terminal commands to run the test probably.
 
 ![rerun without option](./images/cdd239.png?raw=true "rerun without option")
-
-10. Since we're here, let's run the testing command in the terminal. Hover over the the window in the chat panel with the command to run the tests. Click on the first control that looks like a terminal.
+<br><br>
+9. Since we're here, let's run the testing command in the terminal. Hover over the the window in the chat panel with the command to run the tests. Click on the first control that looks like a terminal.
 
 ![insert into terminal](./images/cdd240.png?raw=true "insert into terminal")
-
-11. You should see the command automatically put into the terminal in your codespace. Click in the terminal area and hit *Enter*. The commands should then execute and tests should hopefully pass.
+<br><br>
+10. You should see the command automatically put into the terminal in your codespace. Click in the terminal area and hit *Enter*. The commands should then execute and tests should hopefully pass.
 
 ![Tests running in terminal](./images/cdd241.png?raw=true "Tests running in terminal")
+<br><br>
 
-
-12. We can also ask Copilot for other cases to test. Select the code in the testing file you just saved and, in the chat interface, prompt Copilot with
+11. We can also ask Copilot for other cases to test. Select the code in the testing file you just saved and, in the chat interface, prompt Copilot with
 
 ```
 What other conditions should I test?
 ```
-
-13. Copilot should respond with a list of other conditions to test and example code that you can add if you want.
+<br><br>
+12. Copilot should respond with a list of other conditions to test and example code that you can add if you want.
 
 ![Additional conditions to test](./images/cdd242.png?raw=true "additional conditions to test") 
-
+<br><br>
 
 <p align="center">
 **[END OF LAB]**
@@ -253,7 +271,7 @@ What other conditions should I test?
 ```
 code dev.sql
 ```
-   
+<br><br>   
 2. Afterwards this file should be open in a tab in the editor. Assume we want to work with a database or database definition that defines a dataset for students, staff, curriculums, courses, schools of study, locations, and registrations for a university system. Let's see what Copilot would generate for a query to get all students in a course - without any other context.
 
 Enter the following comment below and press Tab to accept suggestions. Remember that you may have to hit Enter multiple times to get Copilot to prompt. Or if you don't get a suggestion or only get a comment, try "nudging" Copilot via typing "select". 
@@ -262,26 +280,27 @@ Enter the following comment below and press Tab to accept suggestions. Remember 
 -- define a select statement to get all students enrolled in a course
 ```
 
-3. Go ahead and save this file as part of the project.  You can do this from the "3-line" menu under File->Save, or just use the keyboard shortcut (Cmd + S | Ctrl + S)     
+![New query](./images/cdd253.png?raw=true "New query") 
+<br><br>
+3. Go ahead and save this file as part of the project.  You can do this from the "3-line" menu under File->Save, or just use the keyboard shortcut (Cmd + S | Ctrl + S)  <br><br>   
+4. Let's see if we get any different results if we provide Copilot additional context. Delete the current contents of the dev.sql file.
+<br><br>
+5. Now, let's grab the content from a file with database schemas and definitions and paste it into this file. Copy and paste the content from [https://gist.github.com/techupskills/2ff6bcdee0915df27b007c073b019001](https://gist.github.com/techupskills/2ff6bcdee0915df27b007c073b019001) into the new file. 
 
-4. Let's see if we get any different results if we provide Copilot additional context. Delete the current contents of the dev.sql file. Now, let's grab the content from a file with database schemas and definitions and paste it into this file. Copy and paste the content from https://gist.github.com/techupskills/2ff6bcdee0915df27b007c073b019001 into the new file. 
-
-```
-
-```
-
-5. With the new content pasted and saved, go to the top of the file and try the same comment again. This time you should see a more detailed query suggested by Copilot.
-
- 
+![Additional context](./images/cdd254.png?raw=true "Additional context")
+<br><br>
+6. With the new content pasted and saved, go to the top of the file and try the same comment again. This time you should see a more detailed query suggested by Copilot.
 
 ```
 -- define a select statement to get all students enrolled in a course
 ```
 
+![Additional context](./images/cdd256.png?raw=true "Additional context")
+<br><br>
 7. If all goes well, this second pass should generate a query with many more specific references to the names and identifiers used in *create-tables.sql*.  (**If not, delete the result and try nudging it by typing "select s.".**) Take a look at the query and then compare the names/identifiers used to the ones in the *create-tables.sql* file. This will show that Copilot picks up on context from other files available to it to make better suggestions.
 
 ![New query](./images/cdd97.png?raw=true "New query") 
-
+<br><br>
    
 8. In some cases, we might be able to use a separate index to speed up operations.  Let's ask Copilot to create a new index based on the last query. Add the following line after the current query in the file *dev.sql*.
 
@@ -289,7 +308,7 @@ Enter the following comment below and press Tab to accept suggestions. Remember 
 -- write an index to improve the performance of the query
 ```
 ![index](./images/cdd98.png?raw=true "index") 
-
+<br><br>
 9. Let's suppose we also want to have a table to capture student attendance. We can ask Copilot to create the table definition for us.
 
 ```
@@ -299,14 +318,14 @@ Enter the following comment below and press Tab to accept suggestions. Remember 
 (Here again, if you don't get a meaningful response from Copilot, you may need to nudge it by typing *CREATE*.) In the definition Copilot provided, it may have added a comment for the status in the same format as the comment in the courses.registration table definition in the create-tables.sql file.
 
 ![status values](./images/cdd99.png?raw=true "status values") 
-
+<br><br>
 10. Copilot can also create stored procedures. Let's ask it to create a new stored procedure for getting a list of enrolled students at a particular location. Let's use the shortcut to open the inline chat dialog. Go to the bottom of the *dev.sql* file, invoke Copilot Chat via the shortcut and then enter the line below in the dialog. You can also choose to change the model to Claude 3.5 Sonnet if you want. If you want to change the model, select it in the model drop-down, then you will probably need to select the *Enable* button and re-enter the prompt.  After the prompt is executed, you can choose to **Accept** or **Discard** the result.
 
 ```
 define a stored procedure to get course enrollment by location
 ```
 ![prompt for stored procedure](./images/cdd182.png?raw=true "prompt for stored procedure") 
-  
+<br><br>  
 11. We can be more prescriptive with our stored procedure definition.  Let's add a more complex request. Go to the Chat interface and enter the prompt below.
 
 ```
@@ -315,24 +334,24 @@ include instructor details, location details, and courses associated with the in
 use instructor_id as the input parameter
 ```
 ![More extensive stored procedure definition](./images/cdd183.png?raw=true "More extensive stored procedure definition") 
-
+<br><br>
 12. Finally, let's see Copilot optimize a query for us. Suppose we want to get all the course registrations for September, 2023.  Enter the following query in the *dev.sql* file.
 
 ```
 select * from courses.registrations where year(registration_date) = 2023 and month(registration_date) = 9;
 ```
-
+<br><br>
 13. Ask Copilot to optimize the previous query. You can do this via highlighting the query (make sure to highlight the *entire* query), and in a chat interface enter "optimize" in the dialog. You can Accept or Discard the suggested optimization after that.
 
 ```
 optimize
 ```
 ![Optimizing a query](./images/cdd184.png?raw=true "Optimizing a query") 
-
+<br><br>
 14. If you switched to the Claude 3.5 Sonnet model, you can switch back to the GPT 4o one if you want via the dropdown in the dialog.
 
 ![Switching models](./images/cdd185.png?raw=true "switching models") 
-    
+<br><br>    
 <p align="center">
 **[END OF LAB]**
 </p>
