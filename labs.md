@@ -264,15 +264,15 @@ Enter the following comment below and press Tab to accept suggestions. Remember 
 
 3. Go ahead and save this file as part of the project.  You can do this from the "3-line" menu under File->Save, or just use the keyboard shortcut (Cmd + S | Ctrl + S)     
 
-4. Let's see if we get any different results if we provide Copilot additional context. Open the file create-tables.sql in the editor from the GitHub repository. (You can either select and open it from the file list or use the command below from the terminal.) Scroll through it and take a quick look at the contents.
+4. Let's see if we get any different results if we provide Copilot additional context. Delete the current contents of the dev.sql file. Now, let's grab the content from a file with database schemas and definitions and paste it into this file. Copy and paste the content from https://gist.github.com/techupskills/2ff6bcdee0915df27b007c073b019001 into the new file. 
 
 ```
-code create-tables.sql
+
 ```
 
-5. Now with that file open, go back up to the top of the dev.sql file.  Highlight and delete the comment and resulting query from step 2.
-  
-6. Enter the same comment as before to request the query. (Basically, repeat step 2.) See what Copilot suggests this time. You can accept the suggestions or cycle through options. (If you first get a duplicate line as the query, just hit Enter and Copilot should start making more meaningful suggestions.)
+5. With the new content pasted and saved, go to the top of the file and try the same comment again. This time you should see a more detailed query suggested by Copilot.
+
+ 
 
 ```
 -- define a select statement to get all students enrolled in a course
