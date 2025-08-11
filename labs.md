@@ -163,57 +163,54 @@ cd app
 ```
 
 ![cd](./images/ac4.png?raw=true "cd")
+<br><br>
 
-2. If the Copilot Chat panel is not visible on the right side of the codespace, open it by clicking on the small Copilot icon at the top. We need to be in "Ask" mode, so if the chat panel comes up with either "Edit" or "Agent" mode, click on the dropdown at the bottom and select "Ask". (See screenshot.) 
-
-![open chat](./images/ac5.png?raw=true "open chat")
-
-(**NOTE**: If you don't see the option to switch modes, you may need to complete a setup step first. Look at the bottom bar for the Copilot icon. If you see "Finish Setup" next to it, click on that and then click on the "Set up Copilot" button.)
-
-
-![Finish Setup](./images/ac38.png?raw=true "Finish Setup")
-
-
-3. Since this is a new project to us, let's have Copilot produce some "onboarding" documentation for us. We'll use the #codebase chat variable to indicate it should do this against the contents of the current project. Enter the following prompt in the Copilot Chat dialog box and then submit it or hit *Enter*. (If you see a momentary flash about "Sign in to access Copilot", just wait till the dialog returns and enter the prompt again.)
+2. Since this is a new project to us, let's have Copilot produce some "onboarding" documentation for us. We'll use the #codebase chat variable to indicate it should do this against the contents of the current project. Enter the following prompt in the Copilot Chat dialog box and then submit it or hit *Enter*. (If you see a momentary flash about "Sign in to access Copilot", just wait till the dialog returns and enter the prompt again.)
 
 ```
 Create an onboarding guide for #codebase. Do not create a separate block for it.
 ```
 ![Onboarding prompt](./images/ac11.png?raw=true "Onboarding prompt")
+<br><br>
 
-4. After Copilot completes its processing, you should the onboarding documentation displayed in the Chat output area. You can scroll through it to learn more about the project if you want. (You could also copy and paste the contents into a .md (markdown) file if you wanted to save it separately.)
+3. After Copilot completes its processing, you should the onboarding documentation displayed in the Chat output area. You can scroll through it to learn more about the project if you want. (You could also copy and paste the contents into a .md (markdown) file if you wanted to save it separately.)
 
 ![Viewing the onboarding guide](./images/ac12.png?raw=true "Viewing the onboarding guide")
+<br><br>
 
-
-5. Next, let's ask Copilot to explain how to demo the code. Enter the following prompt in the Chat dialog.
+4. Next, let's ask Copilot to explain how to demo the code. Enter the following prompt in the Chat dialog.
 
 ```
 Explain how I can run and see the functionality of #codebase.
 ```
 
 ![Asking how to run](./images/ac35.png?raw=true "Asking how to run")
+<br><br>
 
-6. In the Chat output, you'll see it reference a command to start the server and one to run an example usage script. Hover over the command to start the server. If you see a popup icon that looks like a terminal, click on that to insert it into the terminal. If you don't see a terminal icon when you hover over it, click on the "..." at the end of the popup and select "Insert into terminal".
+5. In the Chat output, you'll see it reference a command to start the server and one to run an example usage script. Hover over the command to start the server. If you see a popup icon that looks like a terminal, click on that to insert it into the terminal. If you don't see a terminal icon when you hover over it, click on the "..." at the end of the popup and select "Insert into terminal".
 
 ![Enter command to start server](./images/ac36.png?raw=true "Enter command to start server")
+<br><br>
 
-7. In the terminal, hit Enter to actually start the server.
+6. In the terminal, hit Enter to actually start the server.
 
 ![Enter command to start server](./images/ac15.png?raw=true "Enter command to start server")
+<br><br>
 
-8. Because the running server is using this terminal, we need to open a second terminal to run the script. Do this by right-clicking in the terminal and select "Split Terminal".
+7. Because the running server is using this terminal, we need to open a second terminal to run the script. Do this by right-clicking in the terminal and select "Split Terminal".
 
 ![Split terminal](./images/ac16.png?raw=true "Split terminal") 
+<br><br>
 
-9. Back in the chat interface, find the output section with the command to run the usage script. Hover over that command and click the popup icon that looks like a terminal or use the "..." and "Insert into terminal" sequence to insert it into the terminal.
+8. Back in the chat interface, find the output section with the command to run the usage script. Hover over that command and click the popup icon that looks like a terminal or use the "..." and "Insert into terminal" sequence to insert it into the terminal.
 
 ![Enter command to run script](./images/ac37.png?raw=true "Enter command to run script")
+<br><br>
 
-
-10. Hit *Enter* and you can see the script executing running commands against the server. If you want to look more at what the script is doing, you can [view use-app.sh](scripts/use-app.sh)
+9. Hit *Enter* and you can see the script executing running commands against the server. If you want to look more at what the script is doing, you can [view use-app.sh](scripts/use-app.sh)
 
 ![Script output](./images/ac18.png?raw=true "Script output")
+<br><br>
 
 **Lab 4 - Using Copilot to generate tests**
 
