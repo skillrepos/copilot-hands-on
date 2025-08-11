@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.18 - 08/10/25
+## Revision 1.19 - 08/11/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -202,7 +202,7 @@ Explain how I can run and see the functionality of #codebase.
 ![Split terminal](./images/ac16.png?raw=true "Split terminal") 
 <br><br>
 
-8. Back in the chat interface, find the output section with the command to run the usage script. Hover over that command and click the popup icon that looks like a terminal or use the "..." and "Insert into terminal" sequence to insert it into the terminal.
+8. Back in the chat interface, find the output section with the command to run the usage script. Hover over that command and click the popup icon that looks like a terminal or use the "..." and "Insert into terminal" sequence to insert it into the terminal. (If you don't see that entry in the onboarding guide, you can try using the prompt "**Tell me about the example script to see functionality**" or just enter the command.)
 
 ![Enter command to run script](./images/ac37.png?raw=true "Enter command to run script")
 <br><br>
