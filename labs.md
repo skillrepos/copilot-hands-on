@@ -216,19 +216,24 @@ Explain how I can run and see the functionality of #codebase.
 
 **Purpose: In this lab, we'll see some examples of having Copilot generate tests**
 
-1. Start out in the *prime.py* file we've been using. Position the cursor below the code.
+1. Switch back to the *prime.py* file we were using in Lab 2. Position the cursor below the code.
 <br><br>
+
 2. Enter a comment to create unit tests
 ```
 # create a function to do 5 unit tests of the code above
 ```
 ![generating tests via comment](./images/cdd215.png?raw=true "generating tests via comment") 
 <br><br>
+
 3. What if we didn't know how to test the code at all? Let's ask Copilot. Highlight the *is_prime()* function.
 
 ![selecting code](./images/cdd216.png?raw=true "selecting code") 
 <br><br>
-4. Now, switch to the chat interface and ask Copilot using the following prompt:
+
+4. **Open a new chat** using the "+" sign in the uppper right and ask Copilot using the following prompt:
+
+![Opening a new chat](./images/cdd258.png?raw=true "Opening a new chat") 
 
 ```
 How do I test this code?
@@ -237,6 +242,7 @@ How do I test this code?
 
 (If you happen to encounter a dialog about confirming your testing environment, just hit *Accept* and run the query again.)
 <br><br>
+
 5. After entering this, you should see a plan for testing the code in the Chat interface. Copilot will also populate a file for you with the proposed test code, and then want you to *Save As* a valid filename. You can just enter *test_prime.py* in the dialog and hit *OK*.
 
 ![testing explanation](./images/cdd236.png?raw=true "testing explanation") 
