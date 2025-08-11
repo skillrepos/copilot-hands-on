@@ -102,6 +102,7 @@ When you find an alternative you like, go ahead and tab to select it. Note that 
 code prime.py
 ```
 <br><br>
+
 2. **Highlight the code** and switch to the Copilot Chat panel. (If you don't see the panel, select the Chat extension icon in the top bar to open the chat window.) Make sure the mode is set to "Ask". If you don't see the full Copilot panel or have access to the "Chat" area, check in the bottom bar of the codespace and see if there's a "Finish Setup" option. If so, click on that and then click the "Set up Copilot" blue button.
 
    
@@ -143,6 +144,7 @@ simplify
 
 ![Fixing with Copilot](./images/cdd227.png?raw=true "Fixing with Copilot")       
 <br><br>
+
 10. (Optional) If you'd like, you can go back and make the error again, highlight the code, and then use the /fix command in the chat window to get similar results.
 
 <p align="center">
