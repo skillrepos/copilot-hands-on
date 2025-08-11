@@ -24,5 +24,6 @@
             		}
 		     }
 		}
-	}
+	},
+	"postCreateCommand": "bash -i scripts/pysetup.sh py_env"
 }
