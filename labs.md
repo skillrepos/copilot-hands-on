@@ -27,6 +27,7 @@
 code index.js
 ```
 <br><br>
+
 2. Afterwards this file should be open in a tab in the editor.
 <br><br>
 
@@ -36,10 +37,11 @@ code index.js
 // function to parse data
 ```
 <br><br>
+
 4. Hit return and notice the code that Copilot suggested. This is likely more generic than we want, but hit tab to select that line. (Note that you should give Copilot a second to provide code suggestions before moving on to the next line.)
 <br><br>
 
-5. After hitting tab, Copilot will generate another part of the function. (If not, you may need to hit return.) Hit tab to accept it. Continue until you get a complete function (or Copilot stops generating additional code suggestions). One example of what code may look like is below.
+5. After hitting tab, Copilot will generate another part of the function. (If not, you may need to hit return.) Hit tab to accept it. Continue until you get a complete function, function skeleton, or Copilot stops generating additional code suggestions. One example of what code may look like is below.
 
 ![Copilot generated function](./images/cpho5.png?raw=true "Copilot generated function")
 <br><br>
@@ -59,7 +61,10 @@ code index.js
 ```
 function parseURL(url) {
 ```
+
+or you might see an entire function definition.
 <br><br>
+
 9. Just hit Tab to accept it and Enter again. Copilot should continue to respond with another suggestion. *Only if you're not getting responses from Copilot, hit return and type the comment below to nudge Copilot.*
 
 ```
@@ -97,7 +102,7 @@ When you find an alternative you like, go ahead and tab to select it. Note that 
 code prime.py
 ```
 <br><br>
-2. Highlight the code and switch to the Copilot Chat panel. (If you don't see the panel, select the Chat extension icon in the top bar to open the chat window.) Make sure the mode is set to "Ask". If you don't see the full Copilot panel or have access to the "Chat" area, check in the bottom bar of the codespace and see if there's a "Finish Setup" option. If so, click on that and then click the "Set up Copilot" blue button.
+2. **Highlight the code** and switch to the Copilot Chat panel. (If you don't see the panel, select the Chat extension icon in the top bar to open the chat window.) Make sure the mode is set to "Ask". If you don't see the full Copilot panel or have access to the "Chat" area, check in the bottom bar of the codespace and see if there's a "Finish Setup" option. If so, click on that and then click the "Set up Copilot" blue button.
 
    
 ![finish setup](./images/ext85.png?raw=true "finish setup")
