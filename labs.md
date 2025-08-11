@@ -175,7 +175,7 @@ Create an onboarding guide for #codebase. Do not create a separate block for it.
 
 3. After Copilot completes its processing, you should the onboarding documentation displayed in the Chat output area. You can scroll through it to learn more about the project if you want. (You could also copy and paste the contents into a .md (markdown) file if you wanted to save it separately.)
 
-![Viewing the onboarding guide](./images/ac12.png?raw=true "Viewing the onboarding guide")
+![Viewing the onboarding guide](./images/cdd257.png?raw=true "Viewing the onboarding guide")
 <br><br>
 
 4. Next, let's ask Copilot to explain how to demo the code. Enter the following prompt in the Chat dialog.
