@@ -287,7 +287,8 @@ Enter the following comment below and press Tab to accept suggestions. Remember 
 <br><br>
 5. Now, let's grab the content from a file with database schemas and definitions and paste it into this file. Copy and paste the content from [https://gist.github.com/techupskills/2ff6bcdee0915df27b007c073b019001](https://gist.github.com/techupskills/2ff6bcdee0915df27b007c073b019001) into the new file. 
 
-![Additional context](./images/cdd254.png?raw=true "Additional context")
+![Additional context](./images/cdd256.png?raw=true "Additional context")
+
 <br><br>
 6. With the new content pasted and saved, go to the top of the file and try the same comment again. This time you should see a more detailed query suggested by Copilot.
 
@@ -295,7 +296,7 @@ Enter the following comment below and press Tab to accept suggestions. Remember 
 -- define a select statement to get all students enrolled in a course
 ```
 
-![Additional context](./images/cdd256.png?raw=true "Additional context")
+![Additional context](./images/cdd254.png?raw=true "Additional context")
 <br><br>
 7. If all goes well, this second pass should generate a query with many more specific references to the names and identifiers used in *create-tables.sql*.  (**If not, delete the result and try nudging it by typing "select s.".**) Take a look at the query and then compare the names/identifiers used to the ones in the *create-tables.sql* file. This will show that Copilot picks up on context from other files available to it to make better suggestions.
 
