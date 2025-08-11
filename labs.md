@@ -412,7 +412,13 @@ write a function to seed a random number generator
 
 **Purpose: In this lab, we'll see how to use Copilot to automatically implement a feature request to our codebase.**
 
-1. Our code is missing a *search* feature currently. Try the following command in the second terminal.
+1. We need to make sure our app is running. If not still running from lab 3, go ahead and run the command below in one of the terminals.
+
+```
+python app/app.py
+```
+
+2.Our code is missing a *search* feature currently. Try the following command in the second terminal.
 
 ```
 # Search items:
@@ -442,11 +448,11 @@ Referencing the issue at https://github.com/skillrepos/copilot-adv/issues/1, pro
 ```
 ![Context and prompt](./images/ac22.png?raw=true "Context and prompt")
 
-6. After Copilot processes the prompt, it should show two files changed - *app.py* and *datastore.py* - in a box above the Chat text entry area. Click on the "+ -"  icon on the right of the "2 files changed" area in the dialog. (See figure below).  
+6. After Copilot processes the prompt, it may show one or two files changed - *app.py* and perhaps *datastore.py* - in a box above the Chat text entry area. Click on the "+ -"  icon on the right of the "2 files changed" area in the dialog. (See figure below).  
 
 ![View all edits](./images/ac24.png?raw=true "View all edits")
 
-7. Take a look at the diffs (#1 and #2 in screenshot). When you are satisfied with the proposed changes, click on the *Keep* button in the *Files changed* dialog (#3 in screenshot). Then you can close the tab that was opened to show the comparisons.(#4 in screenshot)
+7. Take a look at the single or multiple diffs (#1 and #2 in screenshot). When you are satisfied with the proposed changes, click on the *Keep* button in the *Files changed* dialog (#3 in screenshot). Then you can close the tab that was opened to show the comparisons.(#4 in screenshot)
 
 ![Review edits](./images/ac25.png?raw=true "Review edits")
 
@@ -508,7 +514,7 @@ Add logging for all endpoints.
 ![Reviewing suggestions](./images/ac30.png?raw=true "Reviewing suggestions")
 
 
-8. (Optional) To show that the logging works, you can use the script we used previously in the "scripts" directory named use-app.sh. Running it now should cause INFO messages to be output to stderr. (Don't forget to make sure the app is running first in a separate terminal via *python app.py* If you hit errors running the app, it's possible that some edits could have affected the app code. If you hit errors, you can ask Copilot to /fix the code or compare against the original app code at https://github.com/skillrepos/ai-sdlc/blob/main/app/app.py. Alternatively, you can do a "git stash pop" to get back to the code before review.)
+8. (Optional) To show that the logging works, you can use the script we used previously in the "scripts" directory named use-app.sh. Running it now should cause INFO messages to be output to stderr. (Don't forget to make sure the app is running first in a separate terminal via *python app.py* If you hit errors running the app, it's possible that some edits could have affected the app code. If you hit errors, you can copy the error message, switch Chat to Agent mode, and paste the error and let Copilot try to fix it. 
 
 ```
 ../scripts/use-app.sh
