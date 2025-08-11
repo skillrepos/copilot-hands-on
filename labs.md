@@ -145,56 +145,68 @@ simplify
 </p>
 </br></br></br>
 
-**Lab 3 - Using Copilot after the coding**
+**Lab 3: Using Copilot For Onboarding, Explaining and Running Projects**
 
-**Purpose: In this lab, we’ll see a few other ways to leverage Copilot after the initial coding is done**
+**Purpose: In this lab, we'll look at how to use Copilot to help quickly get up to speed on any project**
 
-1. Now that we have some code to work with, let's see what else Copilot can do for us. Let's have it explain the current code in our *prime.py* file.  Select the code. Then, use the appropriate shortcut key for your keyboard/platform to bring up the Copilot interactive chat dialog. (*This should be Ctrl+I on Windows, Option+I on Mac, or Cmd+I if you are using a Mac but don't have an Option key on your keyboard.*) Tell Copilot to explain the code by typing the command below in the dialog. Hit Enter.
-
-```
-/explain
-```
-
-![Interactively telling Copilot to explain code](./images/cdd229.png?raw=true "Interactively telling Copilot to explain code")
-<br><br>
-2. Then, you should see the output in the dialog. Click on the *View in Chat* button to see the output in the separate chat panel.
-
-![Output of interactively telling Copilot to explain code in dialog](./images/cdd230.png?raw=true "Output of interactively telling Copilot to explain code in dialog")
-
-![Output of interactively telling Copilot to explain code](./images/cdd231.png?raw=true "Output of interactively telling Copilot to explain code")
-<br><br>
-3. Now, let's do the same request but through a comment. In the *prime.py* file, below the code, enter the following comment and hit Enter.
-```
-# explain the code above line-by-line
-```
-<br><br>
-4. After this, Copilot should start showing the explanation in comments. Just hit tab to accept each line and then Enter to move to the next one. ((Note that it might start repeating if you continue after it is done explaining the function the first time.)
-
-![Output of telling Copilot to explain code via comment](./images/cdd232.png?raw=true "Output of telling Copilot to explain code via comment")
-<br><br>
-5. We can also query Copilot inline via asking a question in a comment. Delete the commented explanation and try out the question below. To be clear you can prefix it with :q but that is not required with the chat feature installed.
+1. For our labs in this workshop, we have a set of code that implements a simple to-do app, written in Python with a toolkit called *Flask*. We interact with it via curl commands for simplicity. The files for this app are in a subdirectory named app. Change into that directory in the terminal.
 
 ```
-# q: what does the function above do?
+cd app
 ```
 
-![Prompting for what code does with q:](./images/cdd212.png?raw=true "Prompting for what code does with q:")
-<br><br>
-6. Finally, let's see how to use the doc feature to automatically document our code. Highlight the actual code.
-<br><br>
-7. Now, enter the shortcut key to bring up the inline chat dialog and enter the **/doc** command. After a few moments, Copilot should generate some documentation for the code. You can go ahead and *Accept* the changes.
+![cd](./images/ac4.png?raw=true "cd")
 
-![Generated doc for the code](./images/cdd233.png?raw=true "Generated doc for the code")  
-<br><br>
+2. If the Copilot Chat panel is not visible on the right side of the codespace, open it by clicking on the small Copilot icon at the top. We need to be in "Ask" mode, so if the chat panel comes up with either "Edit" or "Agent" mode, click on the dropdown at the bottom and select "Ask". (See screenshot.) 
 
-8. While this is useful documentation for the start of the function, we'd like to have more extensive comments in the function body. So,let's get Copilot's help with that. **Highlight the function code.** Bring up the chat dialog again and enter the text "verbosely comment this code". After Copilot completes its suggestions, if you're happy with them, you can just click *Accept*. 
+![open chat](./images/ac5.png?raw=true "open chat")
 
-![Regenerating doc](./images/cdd234.png?raw=true "Regenerating doc")  
-<br><br>
-<p align="center">
-**[END OF LAB]**
-</p>
-</br></br></br>
+(**NOTE**: If you don't see the option to switch modes, you may need to complete a setup step first. Look at the bottom bar for the Copilot icon. If you see "Finish Setup" next to it, click on that and then click on the "Set up Copilot" button.)
+
+
+![Finish Setup](./images/ac38.png?raw=true "Finish Setup")
+
+
+3. Since this is a new project to us, let's have Copilot produce some "onboarding" documentation for us. We'll use the #codebase chat variable to indicate it should do this against the contents of the current project. Enter the following prompt in the Copilot Chat dialog box and then submit it or hit *Enter*. (If you see a momentary flash about "Sign in to access Copilot", just wait till the dialog returns and enter the prompt again.)
+
+```
+Create an onboarding guide for #codebase. Do not create a separate block for it.
+```
+![Onboarding prompt](./images/ac11.png?raw=true "Onboarding prompt")
+
+4. After Copilot completes its processing, you should the onboarding documentation displayed in the Chat output area. You can scroll through it to learn more about the project if you want. (You could also copy and paste the contents into a .md (markdown) file if you wanted to save it separately.)
+
+![Viewing the onboarding guide](./images/ac12.png?raw=true "Viewing the onboarding guide")
+
+
+5. Next, let's ask Copilot to explain how to demo the code. Enter the following prompt in the Chat dialog.
+
+```
+Explain how I can run and see the functionality of #codebase.
+```
+
+![Asking how to run](./images/ac35.png?raw=true "Asking how to run")
+
+6. In the Chat output, you'll see it reference a command to start the server and one to run an example usage script. Hover over the command to start the server. If you see a popup icon that looks like a terminal, click on that to insert it into the terminal. If you don't see a terminal icon when you hover over it, click on the "..." at the end of the popup and select "Insert into terminal".
+
+![Enter command to start server](./images/ac36.png?raw=true "Enter command to start server")
+
+7. In the terminal, hit Enter to actually start the server.
+
+![Enter command to start server](./images/ac15.png?raw=true "Enter command to start server")
+
+8. Because the running server is using this terminal, we need to open a second terminal to run the script. Do this by right-clicking in the terminal and select "Split Terminal".
+
+![Split terminal](./images/ac16.png?raw=true "Split terminal") 
+
+9. Back in the chat interface, find the output section with the command to run the usage script. Hover over that command and click the popup icon that looks like a terminal or use the "..." and "Insert into terminal" sequence to insert it into the terminal.
+
+![Enter command to run script](./images/ac37.png?raw=true "Enter command to run script")
+
+
+10. Hit *Enter* and you can see the script executing running commands against the server. If you want to look more at what the script is doing, you can [view use-app.sh](scripts/use-app.sh)
+
+![Script output](./images/ac18.png?raw=true "Script output")
 
 **Lab 4 - Using Copilot to generate tests**
 
@@ -262,157 +274,8 @@ What other conditions should I test?
 </p>
 </br></br></br>
 
-**Lab 5 - Using Copilot to help with SQL**
 
-**Purpose: In this lab, we’ll see some examples of how to have Copilot help with writing SQL**
-
-1. Create a new file named dev.sql. You can create it via entering the line below in the terminal.
-
-```
-code dev.sql
-```
-<br><br>   
-2. Afterwards this file should be open in a tab in the editor. Assume we want to work with a database or database definition that defines a dataset for students, staff, curriculums, courses, schools of study, locations, and registrations for a university system. Let's see what Copilot would generate for a query to get all students in a course - without any other context.
-
-Enter the following comment below and press Tab to accept suggestions. Remember that you may have to hit Enter multiple times to get Copilot to prompt. Or if you don't get a suggestion or only get a comment, try "nudging" Copilot via typing "select". 
-
-```
--- define a select statement to get all students enrolled in a course
-```
-
-![New query](./images/cdd253.png?raw=true "New query") 
-<br><br>
-3. Go ahead and save this file as part of the project.  You can do this from the "3-line" menu under File->Save, or just use the keyboard shortcut (Cmd + S | Ctrl + S)  <br><br>   
-4. Let's see if we get any different results if we provide Copilot additional context. Delete the current contents of the dev.sql file.
-<br><br>
-5. Now, let's grab the content from a file with database schemas and definitions and paste it into this file. Copy and paste the content from [https://gist.github.com/techupskills/2ff6bcdee0915df27b007c073b019001](https://gist.github.com/techupskills/2ff6bcdee0915df27b007c073b019001) into the new file. 
-
-![Additional context](./images/cdd256.png?raw=true "Additional context")
-
-<br><br>
-6. With the new content pasted and saved, go to the top of the file and try the same comment again. This time you should see a more detailed query suggested by Copilot.
-
-```
--- define a select statement to get all students enrolled in a course
-```
-
-![Additional context](./images/cdd254.png?raw=true "Additional context")
-<br><br>
-7. If all goes well, this second pass should generate a query with many more specific references to the names and identifiers used in *create-tables.sql*.  (**If not, delete the result and try nudging it by typing "select s.".**) Take a look at the query and then compare the names/identifiers used to the ones in the *create-tables.sql* file. This will show that Copilot picks up on context from other files available to it to make better suggestions.
-
-![New query](./images/cdd97.png?raw=true "New query") 
-<br><br>
-   
-8. In some cases, we might be able to use a separate index to speed up operations.  Let's ask Copilot to create a new index based on the last query. Add the following line after the current query in the file *dev.sql*.
-
-```
--- write an index to improve the performance of the query
-```
-![index](./images/cdd98.png?raw=true "index") 
-<br><br>
-9. Let's suppose we also want to have a table to capture student attendance. We can ask Copilot to create the table definition for us.
-
-```
--- define a table for student attendance to capture attendance by class
-```
-
-(Here again, if you don't get a meaningful response from Copilot, you may need to nudge it by typing *CREATE*.) In the definition Copilot provided, it may have added a comment for the status in the same format as the comment in the courses.registration table definition in the create-tables.sql file.
-
-![status values](./images/cdd99.png?raw=true "status values") 
-<br><br>
-10. Copilot can also create stored procedures. Let's ask it to create a new stored procedure for getting a list of enrolled students at a particular location. Let's use the shortcut to open the inline chat dialog. Go to the bottom of the *dev.sql* file, invoke Copilot Chat via the shortcut and then enter the line below in the dialog. You can also choose to change the model to Claude 3.5 Sonnet if you want. If you want to change the model, select it in the model drop-down, then you will probably need to select the *Enable* button and re-enter the prompt.  After the prompt is executed, you can choose to **Accept** or **Discard** the result.
-
-```
-define a stored procedure to get course enrollment by location
-```
-![prompt for stored procedure](./images/cdd182.png?raw=true "prompt for stored procedure") 
-<br><br>  
-11. We can be more prescriptive with our stored procedure definition.  Let's add a more complex request. Go to the Chat interface and enter the prompt below.
-
-```
-define a stored procedure to get instructor details associated with a location
-include instructor details, location details, and courses associated with the instructor
-use instructor_id as the input parameter
-```
-![More extensive stored procedure definition](./images/cdd183.png?raw=true "More extensive stored procedure definition") 
-<br><br>
-12. Finally, let's see Copilot optimize a query for us. Suppose we want to get all the course registrations for September, 2023.  Enter the following query in the *dev.sql* file.
-
-```
-select * from courses.registrations where year(registration_date) = 2023 and month(registration_date) = 9;
-```
-<br><br>
-13. Ask Copilot to optimize the previous query. You can do this via highlighting the query (make sure to highlight the *entire* query), and in a chat interface enter "optimize" in the dialog. You can Accept or Discard the suggested optimization after that.
-
-```
-optimize
-```
-![Optimizing a query](./images/cdd184.png?raw=true "Optimizing a query") 
-<br><br>
-14. If you switched to the Claude 3.5 Sonnet model, you can switch back to the GPT 4o one if you want via the dropdown in the dialog.
-
-![Switching models](./images/cdd185.png?raw=true "switching models") 
-<br><br>    
-<p align="center">
-**[END OF LAB]**
-</p>
-</br></br></br>
-
-**Lab 6 - Teaching Copilot about updates**
-
-**Purpose: In this lab, we’ll see an example of what to do when Copilot does not have the most up-to-date information**
-
-1. Create a new file called *explore.go* via the same approach as you used to create other files.
-
-2. This file should now be open in an editor tab. Let's say we want to seed a random number generator with Go. Let's ask Copilot to write a function to do that. Prompt it through the inline chat dialog interface using the statement below. Then you can accept the suggested code.
-
-```
-write a function to seed a random number generator
-```
-![Asking Copilot to write function to seed a random number generator](./images/cdd117.png?raw=true "Asking Copilot to write function to seed a random number generator") 
-
-3. Copilot has probably generated code using the rand.Seed function. The challenge is that as of Go 1.20, the Seed function is deprecated.  Ref: https://cs.opensource.google/go/go/+/refs/tags/go1.21.0:src/math/rand/rand.go;l=394
-
-4. Let's see if Copilot understands that this is deprecrated. We'll ask it via a query. Switch to the separate chat inferface and enter the query below.
-
-```
-Is the Seed function deprecated in Go?
-```
-
-5. Depending on various factors (model, etc.) Copilot may respond *no* or *yes* to this. If Copilot responded *no*, you'll see chat output like the first figure below. If Copilot responded with a *yes* answer, it would also include about how to fix the code as shown in the second figure below. This shows the disparity we may sometimes see between generated code suggestions and what the model actually *understands*. For our purposes here, we're going to use a different approach to help Copilot understand how to fix this. So don't update the current code from the chat output.
-
-![Is Seed function deprecated? no](./images/cdd243.png?raw=true "Is Seed function deprecated? no") 
-</br></br>
-![Is Seed function deprecated? yes](./images/cdd202.png?raw=true "Is Seed function deprecated? yes") 
-
-6. One way we can help Copilot understand language updates is by providing the context in our file. So let's start again. Delete the current content in the explore.go file. Now,let's provide Copilot some more direct context by copying in updated code examples. After deleting the code block from step 3, copy and paste in the following example of the replacement for the Seed deprecation into your explore.go file.  This is taken from pkg.go.dev/math/rand.
-
-```
-	// Create and seed the generator.
-	// Typically a non-fixed seed should be used, such as time.Now().UnixNano().
-	// Using a fixed seed will produce the same output on every run.
-	// r := rand.New(rand.NewSource(99))
-```
-
-7. Now, let's try the creation of the function again. Underneath the comments and code you just pasted, invoke the dialog via your keyboard shortcut and enter the statement below again.
-```
-write a function to seed a random number generator
-```
-
-8. This time, the code should be using the same format and NewSource function as you put in the file in step 6. You can just Accept the change. (If you don't see a complete function, but just a single line, try changing the prompt to be "write a complete function to seed a random number generator".
-
-![Updated random number gen code after including updated usage](./images/cdd119.png?raw=true "Updated random number gen code after including updated usage")
-
-9. After accepting the change, go ahead and save this file. In preparation for the next lab, open a new chat by clicking on the "+" sign in the upper right part of the chat pane. (Make sure you have clicked in the chat panel first.)
-
-![New chat](./images/cdd187.png?raw=true "New chat") 
-
-<p align="center">
-**[END OF LAB]**
-</p>
-</br></br></br>
-
-**Lab 7 - YAML generation, API use, translating code and the 2023 problem**
+**Lab 5 - YAML generation, API use, translating code and the 2023 problem**
 
 **Purpose: In this lab, we’ll learn about how to have Copilot help with YAML generation, API usage, translating code and explore the 2023 problem.**
 
@@ -478,54 +341,176 @@ translate to Go
 </p>
 </br></br></br>
     
+**Lab 6 - Teaching Copilot about updates**
 
-**Lab 8 - Chat Participants**
+**Purpose: In this lab, we’ll see an example of what to do when Copilot does not have the most up-to-date information**
 
-**Purpose: In this lab, we'll see how to work with GitHub Copilot Chat Participants.**
+1. Create a new file called *explore.go* via the same approach as you used to create other files.
 
-1. Now let's see how Copilot can help with tasks using chat participants. First, we'll have Copilot help us commit a change.  Let's use the *explore.go* file we created in Lab 6. If you haven't already, make sure that file is saved.
-   
-2. Now, let's invoke the **@terminal** chat participant to ask a common question about how to stage your code changes. Go to the *chat* interface and enter the prompt below. Afterwards, the command to do the staging should show up in the chat output.
-
-```
-@terminal how do I stage explore.go?
-```
-![query output](./images/cdd134.png?raw=true "query output") 
-
-3. Hover over the window with the commands in it, and then click on the icon that pops up for the terminal. Click on that to insert the command into the terminal. Then hit return.
-
-![insert into terminal](./images/cdd245.png?raw=true "insert into terminal")
-
-
-4. Now let's commit our change through the interface and have Copilot suggest a commit message for us. Click on the source control icon in the sidebar (#1 in the figure below). Your *explore.go* file should be selected. In the box titled "Message" above the *Commit bar*, click on the *sparkle icon* at the far right side (#2 in the figure below).
-
-![insert into terminal](./images/cdd246.png?raw=true "insert into terminal")
-
-5. After this, Copilot should (hopefully) generate an appropriate commit message in that box. Since we started the codespace via the button in the readme, you won't have direct commit access, so you can just proceed to the next step.
-
-6. Now, let's switch gears and use the **@workspace** chat participant to help identify where we use certain things in our code. With the *explore.go* file still active in your editor, in the separate *chat* interface , enter the following prompt:
+2. This file should now be open in an editor tab. Let's say we want to seed a random number generator with Go. Let's ask Copilot to write a function to do that. Prompt it through the inline chat dialog interface using the statement below. Then you can accept the suggested code.
 
 ```
-Which files are using SQL?
+write a function to seed a random number generator
+```
+![Asking Copilot to write function to seed a random number generator](./images/cdd117.png?raw=true "Asking Copilot to write function to seed a random number generator") 
+
+3. Copilot has probably generated code using the rand.Seed function. The challenge is that as of Go 1.20, the Seed function is deprecated.  Ref: https://cs.opensource.google/go/go/+/refs/tags/go1.21.0:src/math/rand/rand.go;l=394
+
+4. Let's see if Copilot understands that this is deprecrated. We'll ask it via a query. Switch to the separate chat inferface and enter the query below.
+
+```
+Is the Seed function deprecated in Go?
 ```
 
-7. After executing this, you'll likely have some suggested information on how to search for files that use SQL in your project with search functionality for Visual Studio Code.
-   
-![initial query response](./images/cdd191.png?raw=true "initial query response")   
+5. Depending on various factors (model, etc.) Copilot may respond *no* or *yes* to this. If Copilot responded *no*, you'll see chat output like the first figure below. If Copilot responded with a *yes* answer, it would also include about how to fix the code as shown in the second figure below. This shows the disparity we may sometimes see between generated code suggestions and what the model actually *understands*. For our purposes here, we're going to use a different approach to help Copilot understand how to fix this. So don't update the current code from the chat output.
 
-8. This is not the kind of answer we were looking for. Let's repeat the query with the *@workspace* chat participant.
+![Is Seed function deprecated? no](./images/cdd243.png?raw=true "Is Seed function deprecated? no") 
+</br></br>
+![Is Seed function deprecated? yes](./images/cdd202.png?raw=true "Is Seed function deprecated? yes") 
+
+6. One way we can help Copilot understand language updates is by providing the context in our file. So let's start again. Delete the current content in the explore.go file. Now,let's provide Copilot some more direct context by copying in updated code examples. After deleting the code block from step 3, copy and paste in the following example of the replacement for the Seed deprecation into your explore.go file.  This is taken from pkg.go.dev/math/rand.
+
 ```
-@workspace Which files are using SQL?
+	// Create and seed the generator.
+	// Typically a non-fixed seed should be used, such as time.Now().UnixNano().
+	// Using a fixed seed will produce the same output on every run.
+	// r := rand.New(rand.NewSource(99))
 ```
 
-9. After executing this, you should see Copilot assessing all of the files in the workspace and then returning a more specific and expected answer.
-    
-![more specific response](./images/cdd192.png?raw=true "more specific response")
+7. Now, let's try the creation of the function again. Underneath the comments and code you just pasted, invoke the dialog via your keyboard shortcut and enter the statement below again.
+```
+write a function to seed a random number generator
+```
+
+8. This time, the code should be using the same format and NewSource function as you put in the file in step 6. You can just Accept the change. (If you don't see a complete function, but just a single line, try changing the prompt to be "write a complete function to seed a random number generator".
+
+![Updated random number gen code after including updated usage](./images/cdd119.png?raw=true "Updated random number gen code after including updated usage")
+
+9. After accepting the change, go ahead and save this file. In preparation for the next lab, open a new chat by clicking on the "+" sign in the upper right part of the chat pane. (Make sure you have clicked in the chat panel first.)
+
+![New chat](./images/cdd187.png?raw=true "New chat") 
 
 <p align="center">
 **[END OF LAB]**
 </p>
 </br></br></br>
+
+
+**Lab 7: Using Copilot's Agent Functionality to Implement a New Feature**
+
+**Purpose: In this lab, we'll see how to use Copilot to automatically implement a feature request to our codebase.**
+
+1. Our code is missing a *search* feature currently. Try the following command in the second terminal.
+
+```
+# Search items:
+curl -i \
+  -H "Authorization: Bearer secret-token" \
+  http://127.0.0.1:5000/items/search?q=milk
+```
+
+2. Notice that we get a 404 response and a message indicating that the URL was not found on the server.
+
+![404 response](./images/ac19.png?raw=true "404 response")
+
+3. In our repository, we already have a GitHub Issue for this feature. Take a look at it by clicking on this link: [GitHub Issue #1](https://github.com/skillrepos/copilot-adv/issues/1)
+
+![Open issue](./images/ac20.png?raw=true "Open issue")
+
+4. Let's let Copilot's Agent mode have a shot at implementing the feature. Open a new chat by clicking on the large "+" symbol in the top row of the Chat interface. Then, in Copilot's Chat entry area, change the mode to "Agent" by clicking on the drop-down labeled "Ask" at the bottom.
+
+![Start new chat](./images/ac23.png?raw=true "Start new chat")
+
+![Switch to Agent mode](./images/ac21.png?raw=true "Switch to Agent mode")
+
+5. Once in Agent mode, enter the following prompt in the chat area and then submit it.
+
+```
+Referencing the issue at https://github.com/skillrepos/copilot-adv/issues/1, propose a diff to our Python codebase that implements the requested feature. Do not create or add any tests.
+```
+![Context and prompt](./images/ac22.png?raw=true "Context and prompt")
+
+6. After Copilot processes the prompt, it should show two files changed - *app.py* and *datastore.py* - in a box above the Chat text entry area. Click on the "+ -"  icon on the right of the "2 files changed" area in the dialog. (See figure below).  
+
+![View all edits](./images/ac24.png?raw=true "View all edits")
+
+7. Take a look at the diffs (#1 and #2 in screenshot). When you are satisfied with the proposed changes, click on the *Keep* button in the *Files changed* dialog (#3 in screenshot). Then you can close the tab that was opened to show the comparisons.(#4 in screenshot)
+
+![Review edits](./images/ac25.png?raw=true "Review edits")
+
+
+8. Now, let's try the *search* operation again. If your app was running when you made the changes in step 7, it should have automatically reloaded. If you see a message in its output of the sort "Detected change ... reloading", you should be good to go. But if you don't have that you can kill the process (CTRL+C) and then run the app again.
+
+9. You can try the search operation with the same curl command as before. This time, it should run and return a 200 code rather than 404 since the search endpoint is implemented. If the item is found, it will return the found item. If not, it returns the empty set "[]".
+
+```
+# Search items:
+curl -i \
+  -H "Authorization: Bearer secret-token" \
+  http://127.0.0.1:5000/items/search?q=milk
+```
+
+![Review edits](./images/ac26.png?raw=true "Review edits")
+
+<p align="center">
+**[END OF LAB]**
+</p>
+</br></br></br>
+
+
+**Lab 8: Refactoring and Updating Code via Copilot Edits**
+
+**Purpose: In this lab, we'll see how to use Copilot Edits functionality to refactor targeted sets of code, both for efficiency and improvements.**
+
+1.  Open a new chat and change Copilot's mode to "Edit".
+
+![Change to Edit](./images/sdlc75.png?raw=true "Change to Edit")
+
+2. Now let's give the AI a targeted set of context to work with.  Add the 3 files from our app in the "app" directory (app/app.py, app/auth.py, and app/datastore.py) as context. You can do this in a couple of ways. You can drag and drop the files from the explorer file list on the left into the dialog area or you can use the "Add Context" button and select the files. (You may need to click on "Files and Folders" in the context picker dialog.) **If other files show up as context, you can click on them in the dialog and an "X" should show up to remove them. (Or you can close them if they're open in the current tab in the IDE.)**
+
+![Selecting files for context](./images/sdlc76.png?raw=true "Selecting files for context")
+![Add context](./images/sdlc45.png?raw=true "Add context")
+   
+3. Let's ask Copilot to refactor our selected files to be more efficient and add logging. Enter the prompt below and submit it.
+
+```
+Refactor the files to make them more efficient.
+Add logging for all endpoints. 
+```
+
+![Refactor prompts](./images/ac27.png?raw=true "Refactor prompts")
+
+4. After this runs, you will likely see output like the screenshot below. Copilot will analyze the targeted files and suggest changes for efficiency and to add logging.
+
+![Change suggestions](./images/ac28.png?raw=true "Change suggestions")
+
+5. You can go ahead and review the changes if you want, and then Keep or Undo. To do the final step (where we show the logging, you need to Keep those changes at least.) 
+
+6. Now, let's have Copilot review our current app code. Click on the *app.py* file and select all the code (either highlight it all or use CTRL+A). Then right-click and select *Copilot -> Review and Comment* from the menu.
+
+![Having Copilot review](./images/ac29.png?raw=true "Having Copilot review")
+   
+
+7. After this runs, if Copilot has items worth noting, it will add them inline. You can scroll through the code to find the items that Copilot identified, along with any suggested changes.  If you want to apply the change you can select the "Apply and Go to Next" button. If you want to skip the change, you can click on the "Discard and Go to Next" button. If you look in the *COMMENTS* panel at the bottom (next to *TERMINAL*), you'll see all the comments listed. **If there are several, for the sake of time, it's suggested you pick just a couple to really inspect and discard the others**.
+
+![Reviewing suggestions](./images/ac30.png?raw=true "Reviewing suggestions")
+
+
+8. (Optional) To show that the logging works, you can use the script we used previously in the "scripts" directory named use-app.sh. Running it now should cause INFO messages to be output to stderr. (Don't forget to make sure the app is running first in a separate terminal via *python app.py* If you hit errors running the app, it's possible that some edits could have affected the app code. If you hit errors, you can ask Copilot to /fix the code or compare against the original app code at https://github.com/skillrepos/ai-sdlc/blob/main/app/app.py. Alternatively, you can do a "git stash pop" to get back to the code before review.)
+
+```
+../scripts/use-app.sh
+```
+
+![Logging events](./images/ac32.png?raw=true "Logging events")
+
+9. You can stop the server via CTRL-C.
+
+ <p align="center">
+**[END OF LAB]**
+</p>
+</br></br></br>
+
 
 **Lab 9 - Copilot in GitHub**
 
