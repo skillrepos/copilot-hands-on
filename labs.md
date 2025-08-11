@@ -543,7 +543,7 @@ Add logging for all endpoints.
 
 3. After the fork is complete, in your fork, click on the *Chat with Copilot* button at the top right. The chat dialog will open up and then you will have a chat input box and some suggested questions. Click on the *Tell me about this repository* question.  (If you don't see it, you can select one of the others or type in the question.) After this runs, you'll get some basic info about the repository.
 
- ![about the repo query](./images/cdd247.png?raw=true "About the repo query") 
+ ![about the repo query](./images/cdd261.png?raw=true "About the repo query") 
  </br></br>
  ![about the repo response](./images/cdd248.png?raw=true "About the repo response") 
  
