@@ -305,7 +305,9 @@ add label type: front-end
 ```
 
 3. After a few moments, you should see it respond with the code. You can just Accept this.
-![Kubernetes manifest](./images/cdd120.png?raw=true "Kubernetes manifest")
+   
+![Kubernetes manifest](./images/cdd259.png?raw=true "Kubernetes manifest")
+<br><br>
 
 4. Suppose we don't know how to execute this code. Let's ask Copilot. Highlight the generated YAML in the deployment.yaml file.  Then go to the larger Chat interface and ask it. Put the following in the Chat interface.
 
@@ -344,7 +346,7 @@ How do I call the K8s API for scaling a deployment to 5 replicas with Python?
 ```
 translate to Go 
 ```
-![Go translation](./images/cdd125.png?raw=true "Go translation")
+![Go translation](./images/cdd260.png?raw=true "Go translation")
 
 <p align="center">
 **[END OF LAB]**
