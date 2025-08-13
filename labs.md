@@ -495,7 +495,10 @@ curl -i \
 2. Now let's give the AI a targeted set of context to work with.  Add the 3 files from our app in the "app" directory (app/app.py, app/auth.py, and app/datastore.py) as context. You can do this in a couple of ways. You can drag and drop the files from the explorer file list on the left into the dialog area or you can use the "Add Context" button and select the files. (You may need to click on "Files and Folders" in the context picker dialog.) **If other files show up as context, you can click on them in the dialog and an "X" should show up to remove them. (Or you can close them if they're open in the current tab in the IDE.)**
 
 ![Selecting files for context](./images/sdlc76.png?raw=true "Selecting files for context")
+<br><br>
+
 ![Add context](./images/sdlc45.png?raw=true "Add context")
+<br><br>
    
 3. Let's ask Copilot to refactor our selected files to be more efficient and add logging. Enter the prompt below and submit it.
 
@@ -505,22 +508,28 @@ Add logging for all endpoints.
 ```
 
 ![Refactor prompts](./images/ac27.png?raw=true "Refactor prompts")
+<br><br>
 
 4. After this runs, you will likely see output like the screenshot below. Copilot will analyze the targeted files and suggest changes for efficiency and to add logging.
 
 ![Change suggestions](./images/ac28.png?raw=true "Change suggestions")
+<br><br>
 
-5. You can go ahead and review the changes if you want, and then Keep or Undo. To do the final step (where we show the logging, you need to Keep those changes at least.) 
+5. You can go ahead and review the changes if you want, and then Keep or Undo. To do the final step (where we show the logging, you need to Keep those changes at least.)
+
+![View all edits](./images/cdd265.png?raw=true "View all edits")
+<br><br>
+
 
 6. Now, let's have Copilot review our current app code. Click on the *app.py* file and select all the code (either highlight it all or use CTRL+A). Then right-click and select *Copilot -> Review and Comment* from the menu.
 
 ![Having Copilot review](./images/ac29.png?raw=true "Having Copilot review")
-   
+<br><br>   
 
 7. After this runs, if Copilot has items worth noting, it will add them inline. You can scroll through the code to find the items that Copilot identified, along with any suggested changes.  If you want to apply the change you can select the "Apply and Go to Next" button. If you want to skip the change, you can click on the "Discard and Go to Next" button. If you look in the *COMMENTS* panel at the bottom (next to *TERMINAL*), you'll see all the comments listed. **If there are several, for the sake of time, it's suggested you pick just a couple to really inspect and discard the others**.
 
 ![Reviewing suggestions](./images/ac30.png?raw=true "Reviewing suggestions")
-
+<br><br>
 
 8. (Optional) To show that the logging works, you can use the script we used previously in the "scripts" directory named use-app.sh. Running it now should cause INFO messages to be output to stderr. (Don't forget to make sure the app is running first in a separate terminal via *python app.py* If you hit errors running the app, it's possible that some edits could have affected the app code. If you hit errors, you can copy the error message, switch Chat to Agent mode, and paste the error and let Copilot try to fix it. 
 
