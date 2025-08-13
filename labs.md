@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.19 - 08/11/25
+## Revision 1.20 - 08/13/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -100,17 +100,20 @@ When you find an alternative you like, go ahead and tab to select it. Note that 
 
 **Lab 2 - Using Copilot to simplify code**
 
-1. Open an existing file we have in the project named prime.py. You can click on [**prime.py**](./prime.py) in the codespace or open it via the command below.
+1. Open an existing file we have in the project named prime.py. You can click on [**prime.py**](./prime.py) **in the codespace** or open it via the command below.
 
 ```
 code prime.py
 ```
 <br><br>
 
-2. **Highlight the code** and switch to the Copilot Chat panel. (If you don't see the panel, select the Chat extension icon in the top bar to open the chat window.) Make sure the mode is set to "Ask". If you don't see the full Copilot panel or have access to the "Chat" area, check in the bottom bar of the codespace and see if there's a "Finish Setup" option. If so, click on that and then click the "Set up Copilot" blue button.
+2. **Highlight the code** and switch to the Copilot Chat panel. (If you don't see the panel, select the Chat extension icon in the top bar to open the chat window.) Make sure the mode is set to "Ask". If you don't see the full Copilot panel or have access to the "Chat" area, check in the bottom bar of the codespace and see if there's a "Finish Setup" option. If so, click on that and then click the "Set up Copilot" blue button. If you need to change the mode in the Chat dialog, click on the down arrow next to "Ask/Edit/Agent" and select "Ask" (see second screenshot below).
 
    
 ![finish setup](./images/ext85.png?raw=true "finish setup")
+<br><br>  
+
+![change mode](./images/cdd264.png?raw=true "change mode")
 <br><br>  
   
 3. Tell Copilot to simplify the code by typing *simplify* in the chat window and hitting *Enter* or the *Submit* arrow.
@@ -142,9 +145,10 @@ simplify
 ![Copilot options inline](./images/cdd225.png?raw=true "Copilot options inline")   
 <br><br>
 
-8. Go ahead and click on the "Fix using Copilot" option.
+8. Go ahead and click on the "Fix using Copilot" or "Fix" option.
 <br><br>
-9. After a few moments, it should propose a fix that you can just accept (via the Accept button). You can also click on the *Show Changes* icon to see before/after for the proposed changes. (If it doesn't propose a fix in the dialog, you can skip to step 12 and use the /fix command in chat instead.)
+
+9. After a few moments, it should propose a fix that you can just accept (via the *Accept* button). (If it doesn't propose a fix in the dialog, you can skip to step 12 and use the /fix command in chat instead.)
 
 ![Fixing with Copilot](./images/cdd227.png?raw=true "Fixing with Copilot")       
 <br><br>
