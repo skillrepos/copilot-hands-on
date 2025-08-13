@@ -164,10 +164,10 @@ simplify
 
 **Purpose: In this lab, we'll look at how to use Copilot to help quickly get up to speed on any project**
 
-1. For our labs in this workshop, we have a set of code that implements a simple to-do app, written in Python with a toolkit called *Flask*. We interact with it via curl commands for simplicity. The files for this app are in a subdirectory named app. Change into that directory in the terminal.
+1. For our labs in this workshop, we have a set of code that implements a simple to-do app, written in Python with a toolkit called *Flask*. We interact with it via curl commands for simplicity. The files for this app are in a subdirectory named app. You can look at the files that make up the simple app if you want.
 
 ```
-cd app
+cat app/<filename>
 ```
 
 ![cd](./images/ac4.png?raw=true "cd")
