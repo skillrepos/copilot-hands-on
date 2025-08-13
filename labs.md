@@ -29,13 +29,17 @@ code index.js
 <br><br>
 
 2. Afterwards this file should be open in a tab in the editor.
+
+![New file](./images/cdd262.png?raw=true "New file")
 <br><br>
+
 
 3. Let's see how Copilot responds to a generic request. Go to that tab and type in a comment that says
 
 ```
 // function to parse data
 ```
+![Copilot generated function](./images/cdd263.png?raw=true "Copilot generated function")
 <br><br>
 
 4. Hit return and notice the code that Copilot suggested. This is likely more generic than we want, but hit tab to select that line. (Note that you should give Copilot a second to provide code suggestions before moving on to the next line.)
