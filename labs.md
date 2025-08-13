@@ -282,7 +282,7 @@ How do I test this code?
 What other conditions should I test?
 ```
 <br><br>
-12. Copilot should respond with a list of other conditions to test and example code that you can add if you want.
+12. Copilot should respond with a list of other conditions to test and example code that you can add if you want. (If you don't see generated code for this, try opening a new chat with the "+" sign in the upper right and posing the question there. This may then add new test cases directly into the *test_prime.py* file.)
 
 ![Additional conditions to test](./images/cdd242.png?raw=true "additional conditions to test") 
 <br><br>
