@@ -194,7 +194,7 @@ Explain how I can run and see the functionality of #codebase.
 ![Asking how to run](./images/ac35.png?raw=true "Asking how to run")
 <br><br>
 
-5. In the Chat output, you'll see it reference a command to start the server and one to run an example usage script. Hover over the command to start the server. If you see a popup icon that looks like a terminal, click on that to insert it into the terminal. If you don't see a terminal icon when you hover over it, click on the "..." at the end of the popup and select "Insert into terminal". (If you see additional "[" "]" or other characters in the command, just ignore them and enter the "python app" command.)
+5. In the Chat output, you'll see it reference one or two commands to start the server and one to run an example usage script. Hover over the command(s) to start the server. If you see a popup icon that looks like a terminal, click on that to insert it into the terminal. If you don't see a terminal icon when you hover over it, click on the "..." at the end of the popup and select "Insert into terminal". (If you see additional "[" "]" or other characters in the command, just ignore them and enter the "python app" command.)
 
 ![Enter command to start server](./images/ac36.png?raw=true "Enter command to start server")
 <br><br>
