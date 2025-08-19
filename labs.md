@@ -270,6 +270,7 @@ How do I test this code?
 
 ![insert into terminal](./images/cdd240.png?raw=true "insert into terminal")
 <br><br>
+
 10. You should see the command automatically put into the terminal in your codespace. Click in the terminal area and hit *Enter*. The commands should then execute and tests should hopefully pass.
 
 ![Tests running in terminal](./images/cdd241.png?raw=true "Tests running in terminal")
@@ -281,6 +282,7 @@ How do I test this code?
 What other conditions should I test?
 ```
 <br><br>
+
 12. Copilot should respond with a list of other conditions to test and example code that you can add if you want. (If you don't see generated code for this, try opening a new chat with the "+" sign in the upper right and posing the question there. This may then add new test cases directly into the *test_prime.py* file.)
 
 ![Additional conditions to test](./images/cdd242.png?raw=true "additional conditions to test") 
@@ -302,6 +304,8 @@ What other conditions should I test?
 code deployment.yaml
 ```
 
+<br><br>
+
 2. Bring up the Copilot Chat dialog via your keyboard shortcut and enter in the following request.
 
 ```
@@ -311,10 +315,13 @@ add label app: myapp
 add label type: front-end
 ```
 
+<br><br>
+
 3. After a few moments, you should see it respond with the code. You can just Accept this.
    
 ![Kubernetes manifest](./images/cdd259.png?raw=true "Kubernetes manifest")
 <br><br>
+
 
 4. Suppose we don't know how to execute this code. Let's ask Copilot. Highlight the generated YAML in the deployment.yaml file.  Then go to the larger Chat interface and ask it. Put the following in the Chat interface.
 
@@ -322,10 +329,13 @@ add label type: front-end
 How do I execute this?
 ```
 
+<br><br>
+
 5. Copilot should respond with something like the following:
 
 ![How to execute deployment](./images/cdd188.png?raw=true "How to execute deployment")
 
+<br><br>
 
 6. While we're in the Chat interface, let's ask it for the latest K8s version. Put the following into the dialog.
 
@@ -333,20 +343,28 @@ How do I execute this?
 what is the latest Kubernetes version?
 ```
 
+<br><br>
+
 7. Depending on the current model selected, you may get varying answers. In the case shown, the AI suggests that as of the current date, the current version is 1.28. The challenge with this is that the current version is actually 1.33 (as of 5/13/25). This highlights the out-of-date issue with the LLM.
 
 ![Answer to latest K8s version](./images/cdd244.png?raw=true "Answer to latest K8s version")
 
+<br><br>
 
 8. Let's have Copilot generate some code to work with Kubernetes through the API. In the chat interface, enter the following.
 
 ```
 How do I call the K8s API for scaling a deployment to 5 replicas with Python?
 ```
+
+<br><br>
+
 9. The results may tell us that we first need to make sure something like PIP is installed. If so, we don't need to worry about this at the moment. Go to the actual generated code in the chat output. Click in that output area and paste the code into a new file via clicking on the "..." and then the *Insert into new file* menu option.
 
 ![Add code to new file](./images/cdd190.png?raw=true "Add code to new file")
 
+
+<br><br>
 
 10. Suppose we change our mind and want to convert this code to Go. Click in the new file, and highlight the new code. Then, in the Chat interface tell it to translate to Go. Then, look in the separate chat output and you should see the equivalent Go code available.
 
@@ -366,14 +384,22 @@ translate to Go
 
 1. Create a new file called *explore.go* via the same approach as you used to create other files.
 
+
+<br><br>
+
 2. This file should now be open in an editor tab. Let's say we want to seed a random number generator with Go. Let's ask Copilot to write a function to do that. Prompt it through the inline chat dialog interface using the statement below. Then you can accept the suggested code.
 
 ```
 write a function to seed a random number generator
 ```
+
 ![Asking Copilot to write function to seed a random number generator](./images/cdd117.png?raw=true "Asking Copilot to write function to seed a random number generator") 
 
+<br><br>
+
 3. Copilot has probably generated code using the rand.Seed function. The challenge is that as of Go 1.20, the Seed function is deprecated.  Ref: https://cs.opensource.google/go/go/+/refs/tags/go1.21.0:src/math/rand/rand.go;l=394
+
+<br><br>
 
 4. Let's see if Copilot understands that this is deprecrated. We'll ask it via a query. Switch to the separate chat inferface and enter the query below.
 
@@ -381,11 +407,15 @@ write a function to seed a random number generator
 Is the Seed function deprecated in Go?
 ```
 
+<br><br>
+
 5. Depending on various factors (model, etc.) Copilot may respond *no* or *yes* to this. If Copilot responded *no*, you'll see chat output like the first figure below. If Copilot responded with a *yes* answer, it would also include about how to fix the code as shown in the second figure below. This shows the disparity we may sometimes see between generated code suggestions and what the model actually *understands*. For our purposes here, we're going to use a different approach to help Copilot understand how to fix this. So don't update the current code from the chat output.
 
 ![Is Seed function deprecated? no](./images/cdd243.png?raw=true "Is Seed function deprecated? no") 
 </br></br>
 ![Is Seed function deprecated? yes](./images/cdd202.png?raw=true "Is Seed function deprecated? yes") 
+
+<br><br>
 
 6. One way we can help Copilot understand language updates is by providing the context in our file. So let's start again. Delete the current content in the explore.go file. Now,let's provide Copilot some more direct context by copying in updated code examples. After deleting the code block from step 3, copy and paste in the following example of the replacement for the Seed deprecation into your explore.go file.  This is taken from pkg.go.dev/math/rand.
 
@@ -396,14 +426,20 @@ Is the Seed function deprecated in Go?
 	// r := rand.New(rand.NewSource(99))
 ```
 
+<br><br>
+
 7. Now, let's try the creation of the function again. Underneath the comments and code you just pasted, invoke the dialog via your keyboard shortcut and enter the statement below again.
 ```
 write a function to seed a random number generator
 ```
 
+<br><br>
+
 8. This time, the code should be using the same format and NewSource function as you put in the file in step 6. You can just Accept the change. (If you don't see a complete function, but just a single line, try changing the prompt to be "write a complete function to seed a random number generator".
 
 ![Updated random number gen code after including updated usage](./images/cdd119.png?raw=true "Updated random number gen code after including updated usage")
+
+<br><br>
 
 9. After accepting the change, go ahead and save this file. In preparation for the next lab, open a new chat by clicking on the "+" sign in the upper right part of the chat pane. (Make sure you have clicked in the chat panel first.)
 
