@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.23 - 08/19/25
+## Revision 1.24 - 08/19/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -223,7 +223,7 @@ Explain how I can run and see the functionality of #codebase.
 
 **Purpose: In this lab, we'll see some examples of having Copilot generate tests**
 
-1. Switch back to the *prime.py* file we were using in Lab 2. Position the cursor below the code.
+1. Back in the codespace editor panes, switch to the *prime.py* file we were using in Lab 2. Position the cursor below the code.
 <br><br>
 
 2. Enter a comment to create unit tests
