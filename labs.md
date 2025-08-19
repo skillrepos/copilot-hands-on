@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.26 - 08/19/25
+## Revision 1.31 - 08/19/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -555,6 +555,8 @@ curl -i \
 
 ![Change to Edit](./images/sdlc75.png?raw=true "Change to Edit")
 
+<br><br>
+
 2. Now let's give the AI a targeted set of context to work with.  Add the 3 files from our app in the "app" directory (app/app.py, app/auth.py, and app/datastore.py) as context. You can do this in a couple of ways. You can drag and drop the files from the explorer file list on the left into the dialog area or you can use the "Add Context" button and select the files. (You may need to click on "Files and Folders" in the context picker dialog.) **If other files show up as context, you can click on them in the dialog and an "X" should show up to remove them. (Or you can close them if they're open in the current tab in the IDE.)**
 
 ![Selecting files for context](./images/sdlc76.png?raw=true "Selecting files for context")
@@ -584,7 +586,7 @@ Add logging for all endpoints.
 <br><br>
 
 
-6. Now, let's have Copilot review our current app code. Click on the *app.py* file and select all the code (either highlight it all or use CTRL+A). Then right-click and select *Copilot -> Review and Comment* from the menu.
+6. Now, let's have Copilot review our current app code. Click on the *app.py* file and select all the code (either highlight it all or use keyboard shortcut. Then right-click and select *Copilot -> Review and Comment* from the menu.
 
 ![Having Copilot review](./images/ac29.png?raw=true "Having Copilot review")
 <br><br>   
@@ -597,12 +599,12 @@ Add logging for all endpoints.
 8. (Optional) To show that the logging works, you can use the script we used previously in the "scripts" directory named use-app.sh. Running it now should cause INFO messages to be output to stderr. (Don't forget to make sure the app is running first in a separate terminal via *python app.py* If you hit errors running the app, it's possible that some edits could have affected the app code. If you hit errors, you can copy the error message, switch Chat to Agent mode, and paste the error and let Copilot try to fix it. 
 
 ```
-../scripts/use-app.sh
+scripts/use-app.sh (or ../scripts.use-app.sh depending on what directory you're in)
 ```
 
 ![Logging events](./images/ac32.png?raw=true "Logging events")
 
-9. You can stop the server via CTRL-C.
+9. You can stop the server in the terminal where it's running via CTRL-C.
 
  <p align="center">
 **[END OF LAB]**
@@ -616,22 +618,30 @@ Add logging for all endpoints.
 
 1. To give us a project to work with, we'll fork a repository from my GitHub area. Switch back to GitHub in the browser and go to https://github.com/skillrepos/sec-demo. (Make sure you are logged in as your GitHub userid that has Copilot access.)
 
-2. Fork the skillsrepo/demo repository into your own GitHub space via the *Fork* button at the top right. Make sure to **uncheck** the *Copy the main branch only* box on the second screen.
+<br><br>
+
+2. Fork the skillsrepo/demo repository into your own GitHub space via the *Fork* button at the top right. Make sure to **uncheck** the *Copy the main branch only* box on the second screen. Then you can click on the *Create fork* button at the bottom to actually create the fork.
 
 ![fork repo](./images/cdd172.png?raw=true "Fork repo")
 ![uncheck checkbox](./images/cdd147.png?raw=true "Uncheck checkbox")
 
-3. After the fork is complete, in your fork, click on the *Chat with Copilot* button at the top right. The chat dialog will open up and then you will have a chat input box and some suggested questions. Click on the *Tell me about this repository* question.  (If you don't see it, you can select one of the others or type in the question.) After this runs, you'll get some basic info about the repository.
+<br><br>
+
+3. After the fork is complete, in your fork, click on the down arrow next to the Copilot button at the top right and select *Assistive* from the menu. The chat dialog will open up and then you will have a chat input box and some suggested questions. Click on the *Tell me about this repository* question.  (If you don't see it, you can select one of the others or type in the question.) After this runs, you'll get some basic info about the repository.
 
  ![about the repo query](./images/cdd261.png?raw=true "About the repo query") 
  </br></br>
  ![about the repo response](./images/cdd248.png?raw=true "About the repo response") 
+
+<br><br>
  
 4. Now, in the list of files in the repo, select the *main.go* file to open it up. Start a new conversation in the Copilot Chat interface by clicking on the "+" sign. Click on the *Summarize this file for me* question or type it into the input area.  After this runs, you'll see a summarization of the file.
 
  ![about the file query](./images/cdd249.png?raw=true "About the file query") 
  </br></br>
  ![about the file response](./images/cdd250.png?raw=true "About the file response") 
+
+<br><br>
  
 5. In this repo, we have a *dev* branch with some fixes for security vulnerabilities in the *main* branch. Let's create a pull request to merge the *dev* branch into the *main* branch. We could initiate the pull request manually, but since we have the Copilot Chat available, let's have it expedite the process by creating a simple link for us to use to start the pull request. In the Chat input area, tell Copilot to generate an appropriate URL via the prompt below and then submit it. After Copilot is done, you should see a link displayed.
 ```
@@ -639,35 +649,49 @@ Generate a url that I can use to create a pull request to merge the dev branch i
 ```
 
  ![generate pr link](./images/cdd251.png?raw=true "Generate pr link") 
+
+<br><br>
  
-6. Click on the link in the chat dialog. This should open up a screen with either a pull request already initiated or a file comparison screen with a button to create the pull request. If it's the latter, go ahead and click the button to create the pull reuqest for merging the dev branch into the main branch. (Close the Chat interface by clicking on the **^** symbol in the upper right corner of the dialog.)
+6. Click on the link in the chat dialog. This should open up a screen with either a pull request already initiated or a file comparison screen with a button to create the pull request. If it's the latter, go ahead and click the button to create the pull reuqest for merging the dev branch into the main branch. (Close the Chat interface by clicking on the **x** symbol in the upper right corner of the dialog.)
 
  ![pull request initiation](./images/cdd252.png?raw=true "Pull request initiation")  
+
+<br><br> 
   
 7. In the pull request, update the title if you want. Then, we'll have Copilot automatically generate a description of our pull request. To do this, click on the *Copilot actions* button in the row under the *Add a description*. In the pop-up, select *Summary*. This will run for a few moments and then generate a draft summmary.
 
-(Note: *If you are on the free (not trial) plan, you won't see the Copilot icon in the pull request area. If that's the case, you can just create the pull request, open up the "Files changed" tab, pick a change and go to step 10.*)
+(**NOTE: *If you are on the free (not trial) plan, you won't see the Copilot icon in the pull request area. If that's the case, you can just create the pull request, open up the "Files changed" tab, pick a change and go to step 10*.**)
 
  ![generate summary](./images/cdd155.png?raw=true "Generate summary")  
  ![summary](./images/cdd156.png?raw=true "Summary")  
+
+<br><br>
   
 8. The summary will be in *markdown* format. You can click on the *Preview* button to see a readable presentation. When ready, click the *Create pull request* button to finish the creation.
 
  ![summary](./images/cdd157.png?raw=true "Summary") 
 
+<br><br>
+
 9. Notice that in the *Security Improvements* section, Copilot has generated links for each of the changes in the *models/models.go* file. Let's click on the 2nd link to look at those changes. (**If you do not have the links, you can click on the *Files changed* tab in the pull request to see the changes.**)
 
  ![looking at a change](./images/cdd158.png?raw=true "Looking at a change") 
+
+<br><br> 
 
 10. This will open up the change comparison screen. Let's ask Copilot for some more information about the highlighted change. On the right of the screen will be a small, floating Copilot icon with a drop-down arrow. Click on that and select the *Explain* option. After this runs, you'll see an explanation of the highlighted section.
 
  ![request explanation](./images/cdd159.png?raw=true "Request explanation") 
  ![section explanation](./images/cdd160.png?raw=true "Section explanation")
 
-11. Now, let's add a file to the context for the chat. Click on the *Ask Copilot* button at the top of the screen. In the *Select files to discuss* dialog, select *models/models.go*, check the box and then *Save*. You'll then see the file attached as context in the Chat dialog.
+<br><br>
+
+11. Now, let's add a file to the context for the chat. Click on the *Ask Copilot* button at the top of the screen. In the *Select files to discuss* dialog, select *models/models.go*, check the box and then *Save* or *Start Chat*. You'll then see the file attached as context in the Chat dialog.
     
 ![add file for context](./images/cdd161.png?raw=true "Add file for context")
 ![file added to context](./images/cdd162.png?raw=true "File added to context")
+
+<br><br>
 
 12. Finally, we'll prompt Copilot about why the changes need to be made. In the Chat input area, enter the prompt *Why do these changes need to be made?* It will use this file as context and respond accordingly. Notice in the screenshot below, the indicator for *1 reference - models.go*.
 ```
@@ -676,6 +700,11 @@ Why do these changes need to be made?
 ![answer with file as context](./images/cdd163.png?raw=true "Answer with file as context")
 
 We're not going to go through and resolve the pull request, so you are done!
+
+<p align="center">
+**[END OF LAB]**
+</p>
+</br></br></br>
 
 <p align="center">
 **THANKS!**
