@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.24 - 08/19/25
+## Revision 1.25 - 08/19/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -292,7 +292,7 @@ What other conditions should I test?
 </br></br></br>
 
 
-**Lab 5 - YAML generation, API use, translating code and the 2023 problem**
+**Lab 5 - YAML generation, API use, translating code and the 202x problem**
 
 **Purpose: In this lab, we’ll learn about how to have Copilot help with YAML generation, API usage, translating code and explore the 2023 problem.**
 
