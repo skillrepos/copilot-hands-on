@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.25 - 08/19/25
+## Revision 1.26 - 08/19/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -455,13 +455,16 @@ write a function to seed a random number generator
 
 **Purpose: In this lab, we'll see how to use Copilot to automatically implement a feature request to our codebase.**
 
+
 1. We need to make sure our app is running. If not still running from lab 3, go ahead and run the command below in one of the terminals.
 
 ```
 python app/app.py
 ```
 
-2.Our code is missing a *search* feature currently. Try the following command in the second terminal.
+<br><br>
+
+2. Our code is missing a *search* feature currently. Try the following command in the second terminal.
 
 ```
 # Search items:
@@ -470,39 +473,64 @@ curl -i \
   http://127.0.0.1:5000/items/search?q=milk
 ```
 
-2. Notice that we get a 404 response and a message indicating that the URL was not found on the server.
+<br><br>
+
+3. Notice that we get a 404 response and a message indicating that the URL was not found on the server.
 
 ![404 response](./images/ac19.png?raw=true "404 response")
 
-3. In our repository, we already have a GitHub Issue for this feature. Take a look at it by clicking on this link: [GitHub Issue #1](https://github.com/skillrepos/copilot-adv/issues/1)
+<br><br>
+
+
+4. In our repository, we already have a GitHub Issue for this feature. Take a look at it by clicking on this link: [GitHub Issue #1](https://github.com/skillrepos/copilot-adv/issues/1)
 
 ![Open issue](./images/ac20.png?raw=true "Open issue")
 
-4. Let's let Copilot's Agent mode have a shot at implementing the feature. Open a new chat by clicking on the large "+" symbol in the top row of the Chat interface. Then, in Copilot's Chat entry area, change the mode to "Agent" by clicking on the drop-down labeled "Ask" at the bottom.
+<br><br>
+
+5. Let's let Copilot's Agent mode have a shot at implementing the feature. Open a new chat by clicking on the large "+" symbol in the top row of the Chat interface. Then, in Copilot's Chat entry area, change the mode to "Agent" by clicking on the drop-down labeled "Ask" at the bottom.
 
 ![Start new chat](./images/ac23.png?raw=true "Start new chat")
 
 ![Switch to Agent mode](./images/ac21.png?raw=true "Switch to Agent mode")
 
-5. Once in Agent mode, enter the following prompt in the chat area and then submit it.
+<br><br>
+
+6. Once in Agent mode, open the *app.py* file to make sure we have it set as the default context. Either select it from the list on the side or use the command below to open it.
 
 ```
-Referencing the issue at https://github.com/skillrepos/copilot-adv/issues/1, propose a diff to our Python codebase that implements the requested feature. Do not create or add any tests.
+code app/app.py
 ```
-![Context and prompt](./images/ac22.png?raw=true "Context and prompt")
 
-6. After Copilot processes the prompt, it may show one or two files changed - *app.py* and perhaps *datastore.py* - in a box above the Chat text entry area. Click on the "+ -"  icon on the right of the "2 files changed" area in the dialog. (See figure below).  
+<br><br>
+  
+7. Now, enter the following prompt in the chat area and then submit it.
+
+```
+Referencing the issue at https://github.com/skillrepos/copilot-adv/issues/1, propose a diff to our Python #codebase in /app that implements the requested feature. Do not create or add any tests.
+```
+![Context and prompt](./images/cdd266.png?raw=true "Context and prompt")
+
+<br><br>
+
+8. After Copilot processes the prompt, it may show one or two files changed - *app.py* and perhaps *datastore.py* - in a box above the Chat text entry area. Click on the "+ -"  icon on the right of the "2 files changed" area in the dialog. (See figure below).  
 
 ![View all edits](./images/ac24.png?raw=true "View all edits")
 
-7. Take a look at the single or multiple diffs (#1 and #2 in screenshot). When you are satisfied with the proposed changes, click on the *Keep* button in the *Files changed* dialog (#3 in screenshot). Then you can close the tab that was opened to show the comparisons.(#4 in screenshot)
+<br><br>
+
+9. Take a look at the single or multiple diffs (#1 and #2 in screenshot). When you are satisfied with the proposed changes, click on the *Keep* button in the *Files changed* dialog (#3 in screenshot). Then you can close the tab that was opened to show the comparisons.(#4 in screenshot)
 
 ![Review edits](./images/ac25.png?raw=true "Review edits")
 
+<br><br>
 
-8. Now, let's try the *search* operation again. If your app was running when you made the changes in step 7, it should have automatically reloaded. If you see a message in its output of the sort "Detected change ... reloading", you should be good to go. But if you don't have that you can kill the process (CTRL+C) and then run the app again.
 
-9. You can try the search operation with the same curl command as before. This time, it should run and return a 200 code rather than 404 since the search endpoint is implemented. If the item is found, it will return the found item. If not, it returns the empty set "[]".
+10. Now, let's try the *search* operation again. If your app was running when you made the changes in step 7, it should have automatically reloaded. If you see a message in its output of the sort "Detected change ... reloading", you should be good to go. But if you don't have that you can kill the process (CTRL+C) and then run the app again.
+
+<br><br>
+
+11. You can try the search operation with the same curl command as before. This time, it should run and return a 200 code rather than 404 since the search endpoint is implemented. If the item is found, it will return the found item. If not, it returns the empty set "[]".
 
 ```
 # Search items:
