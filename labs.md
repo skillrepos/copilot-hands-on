@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.22 - 08/19/25
+## Revision 1.23 - 08/19/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -115,7 +115,7 @@ code prime.py
 ![change mode](./images/cdd264.png?raw=true "change mode")
 <br><br>  
   
-3. Tell Copilot to simplify the code by typing *simplify* in the chat window and hitting *Enter* or the *Submit* arrow.
+3. After highlighting all the code in the *prime.py* file, tell Copilot to simplify the code by typing *simplify* in the chat window and hitting *Enter* or the *Submit* arrow.
 
 ```
 simplify
