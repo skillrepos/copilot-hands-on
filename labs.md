@@ -86,11 +86,11 @@ function splitURLandReturn(url) {
 ```
 <br><br>
 
-12.  With this function name, Copilot should suggest a full function definition - in fact it may suggest several.  To see the options, hover over the first line and a small window should appear. This window will show many options there are and provide "<" and ">" links to toggle between them.  If there is only one, you might try typing a space. Then click on the "<" and ">" buttons to see the differences in the available suggestions.
+12.  With this function name, Copilot should suggest a reasonable next line - in fact it may suggest several.  To see the options, hover over the first line and a small window should appear. This window will show many options there are and provide "<" and ">" links to toggle between them.  If there is only one, you might try typing a space. Then click on the "<" and ">" buttons to see the differences in the available suggestions.
 
-![alternative suggestions inline](./images/cdd221.png?raw=true "alternative suggestions inline")   
+![alternative suggestions inline](./images/cdd269.png?raw=true "alternative suggestions inline")   
 
-When you find an alternative you like, go ahead and tab to select it. Note that some may be incomplete.
+When you find an alternative you like, go ahead and tab to select it. 
 <br><br>
  <p align="center">
 **[END OF LAB]**
