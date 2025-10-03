@@ -139,9 +139,9 @@ simplify
 ![introduce error](./images/cdd226.png?raw=true "introduce error")   
 <br><br>
 
-7. Notice the light bulb icon that has popped up. Click on that, scroll to the bottom (if needed), and you'll have additional options to fix or explain with Copilot. (If you don't see the light bulb icon, you can right-click, select *Copilot* and then select *Fix*.)
+7. Notice the light bulb icon that has popped up. Click on that, scroll to the bottom (if needed), and you'll have additional options to fix or explain with Copilot.  Select "Fix". (If you don't see the light bulb icon, you can right-click, select *Generate Code* and then select *Fix*.)
 
-![Copilot options inline](./images/cdd225.png?raw=true "Copilot options inline")   
+![Copilot options inline](./images/cdd270.png?raw=true "Copilot options inline")   
 <br><br>
 
 8. Go ahead and click on the "Fix using Copilot" or "Fix" option.
