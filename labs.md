@@ -383,80 +383,8 @@ translate to Go
 </p>
 </br></br></br>
     
-**Lab 6 - Teaching Copilot about updates**
 
-**Purpose: In this lab, we’ll see an example of what to do when Copilot does not have the most up-to-date information**
-
-1. Create a new file called *explore.go* via the same approach as you used to create other files.
-
-
-<br><br>
-
-2. This file should now be open in an editor tab. Let's say we want to seed a random number generator with Go. Let's ask Copilot to write a function to do that. Prompt it through the inline chat dialog interface using the statement below. Then you can accept the suggested code.
-
-```
-write a function to seed a random number generator
-```
-
-![Asking Copilot to write function to seed a random number generator](./images/cdd117.png?raw=true "Asking Copilot to write function to seed a random number generator") 
-
-<br><br>
-
-3. Copilot has probably generated code using the rand.Seed function. The challenge is that as of Go 1.20, the Seed function is deprecated.  Ref: https://cs.opensource.google/go/go/+/refs/tags/go1.21.0:src/math/rand/rand.go;l=394
-
-<br><br>
-
-4. Let's see if Copilot understands that this is deprecrated. We'll ask it via a query. Switch to the separate chat inferface and enter the query below.
-
-```
-Is the Seed function deprecated in Go?
-```
-
-<br><br>
-
-5. Depending on various factors (model, etc.) Copilot may respond *no* or *yes* to this. If Copilot responded *no*, you'll see chat output like the first figure below. If Copilot responded with a *yes* answer, it would also include about how to fix the code as shown in the second figure below. This shows the disparity we may sometimes see between generated code suggestions and what the model actually *understands*. For our purposes here, we're going to use a different approach to help Copilot understand how to fix this. So don't update the current code from the chat output.
-
-![Is Seed function deprecated? no](./images/cdd243.png?raw=true "Is Seed function deprecated? no") 
-</br></br>
-![Is Seed function deprecated? yes](./images/cdd202.png?raw=true "Is Seed function deprecated? yes") 
-
-<br><br>
-
-6. One way we can help Copilot understand language updates is by providing the context in our file. So let's start again. Delete the current content in the explore.go file. Now,let's provide Copilot some more direct context by copying in updated code examples. After deleting the code block from step 3, copy and paste in the following example of the replacement for the Seed deprecation into your explore.go file.  This is taken from pkg.go.dev/math/rand.
-
-```
-	// Create and seed the generator.
-	// Typically a non-fixed seed should be used, such as time.Now().UnixNano().
-	// Using a fixed seed will produce the same output on every run.
-	// r := rand.New(rand.NewSource(99))
-```
-
-<br><br>
-
-7. Now, let's try the creation of the function again. Underneath the comments and code you just pasted, invoke the dialog via your keyboard shortcut and enter the statement below again.
-```
-write a function to seed a random number generator
-```
-
-<br><br>
-
-8. This time, the code should be using the same format and NewSource function as you put in the file in step 6. You can just Accept the change. (If you don't see a complete function, but just a single line, try changing the prompt to be "write a complete function to seed a random number generator".
-
-![Updated random number gen code after including updated usage](./images/cdd119.png?raw=true "Updated random number gen code after including updated usage")
-
-<br><br>
-
-9. After accepting the change, go ahead and save this file. In preparation for the next lab, open a new chat by clicking on the "+" sign in the upper right part of the chat pane. (Make sure you have clicked in the chat panel first.)
-
-![New chat](./images/cdd187.png?raw=true "New chat") 
-
-<p align="center">
-**[END OF LAB]**
-</p>
-</br></br></br>
-
-
-**Lab 7: Using Copilot's Agent Functionality to Implement a New Feature**
+**Lab 6: Using Copilot's Agent Functionality to Implement a New Feature**
 
 **Purpose: In this lab, we'll see how to use Copilot to automatically implement a feature request to our codebase.**
 
@@ -551,65 +479,82 @@ curl -i \
 </p>
 </br></br></br>
 
+**Lab 7 - Extending Copilot with MCP Servers**
 
-**Lab 8: Refactoring and Updating Code via Copilot Edits**
+**Purpose: In this lab, we'll see how to connect GitHub Copilot to the GitHub MCP Server.**
 
-**Purpose: In this lab, we'll see how to use Copilot Edits functionality to refactor targeted sets of code, both for efficiency and improvements.**
+1. For authentication to GitHub, we will need a GitHub personal access token (PAT). When logged into GitHub, click on the link below, provide a note and click the green "Generate token" button at the bottom.
 
-1.  Open a new chat and change Copilot's mode to "Edit".
+Link:  Generate classic personal access token (repo & workflow scopes) https://github.com/settings/tokens/new?scopes=repo,workflow
 
-![Change to Edit](./images/sdlc75.png?raw=true "Change to Edit")
+![Creating token](./images/mcp10.png?raw=true "Creating token")
 
-<br><br>
+![Creating token](./images/mcp87.png?raw=true "Creating token")
 
-2. Now let's give the AI a targeted set of context to work with.  Add the 3 files from our app in the "app" directory (app/app.py, app/auth.py, and app/datastore.py) as context. You can do this in a couple of ways. You can drag and drop the files from the explorer file list on the left into the dialog area or you can use the "Add Context" button and select the files. (You may need to click on "Files and Folders" in the context picker dialog.) **If other files show up as context, you can click on them in the dialog and an "X" should show up to remove them. (Or you can close them if they're open in the current tab in the IDE.)**
-
-![Selecting files for context](./images/sdlc76.png?raw=true "Selecting files for context")
-<br><br>
-
-![Add context](./images/sdlc45.png?raw=true "Add context")
 <br><br>
    
-3. Let's ask Copilot to refactor our selected files to be more efficient and add logging. Enter the prompt below and submit it.
+2. On the next screen, make sure to copy the generated token and save it for use later in the lab. You will not be able to see the actual token again!
 
-```
-Refactor the files to make them more efficient.
-Add logging for all endpoints. 
-```
-
-![Refactor prompts](./images/ac27.png?raw=true "Refactor prompts")
+![Copying token](./images/mcp11.png?raw=true "Copying token")
 <br><br>
 
-4. After this runs, you will likely see output like the screenshot below. Copilot will analyze the targeted files and suggest changes for efficiency and to add logging.
-
-![Change suggestions](./images/ac28.png?raw=true "Change suggestions")
-<br><br>
-
-5. You can go ahead and review the changes if you want, and then Keep or Undo. To do the final step (where we show the logging, you need to Keep those changes at least.)
-
-![View all edits](./images/cdd265.png?raw=true "View all edits")
-<br><br>
-
-
-6. Now, let's have Copilot review our current app code. Click on the *app.py* file and select all the code (either highlight it all or use keyboard shortcut. Then right-click and select *Copilot -> Review and Comment* from the menu.
-
-![Having Copilot review](./images/ac29.png?raw=true "Having Copilot review")
-<br><br>   
-
-7. After this runs, if Copilot has items worth noting, it will add them inline. You can scroll through the code to find the items that Copilot identified, along with any suggested changes.  If you want to apply the change you can select the "Apply and Go to Next" button. If you want to skip the change, you can click on the "Discard and Go to Next" button. If you look in the *COMMENTS* panel at the bottom (next to *TERMINAL*), you'll see all the comments listed. **If there are several, for the sake of time, it's suggested you pick just a couple to really inspect and discard the others**.
-
-![Reviewing suggestions](./images/ac30.png?raw=true "Reviewing suggestions")
-<br><br>
-
-8. (Optional) To show that the logging works, you can use the script we used previously in the "scripts" directory named use-app.sh. Running it now should cause INFO messages to be output to stderr. (Don't forget to make sure the app is running first in a separate terminal via *python app.py* If you hit errors running the app, it's possible that some edits could have affected the app code. If you hit errors, you can copy the error message, switch Chat to Agent mode, and paste the error and let Copilot try to fix it. 
+3. Now we need to add the GitHub MCP Server configuration in our IDE. You could fill most of this out via IDE prompts, but for simplicity, we already have a sample configuration file that we can just copy in. Run the commands below in the terminal. The last one will open the file in the editor.
 
 ```
-scripts/use-app.sh (or ../scripts.use-app.sh depending on what directory you're in)
+cd /workspaces/copilot-testing
+mkdir .vscode
+cp extra/mcp_github_settings.json  .vscode/mcp.json
+code .vscode/mcp.json
 ```
 
-![Logging events](./images/ac32.png?raw=true "Logging events")
+<br><br>
 
-9. You can stop the server in the terminal where it's running via CTRL-C.
+4. Next, we can start the local MCP server. In the *mcp.json* file, above the name of the server, click on the small *Start* link (see figure below). A dialog will pop up for you to paste in your PAT. Paste the token in there and hit *Enter*. (Note that the token will be masked out.)
+
+![Starting the server](./images/mcp23.png?raw=true "Starting the server")
+
+After this, you should see the text above the server name change to "√Running | Stop | Restart | ## tools | More...".
+
+![Starting the server](./images/mcp24.png?raw=true "Starting the server")
+
+<br><br>
+
+5. To see the tools that are available, in the Copilot Chat dialog, make sure are in *Agent* mode, click on the small *tool* icon (see figure) and then scroll down to the *MCP Server: GitHub MCP Server* section. You'll see the available tools we picked up under that.
+
+![Viewing available tools](./images/mcp25.png?raw=true "Viewing available tools")
+
+<br><br>
+
+
+6. Now that we have these tools available, we can use them in Copilot's Chat interface. (Again, you must be in *Agent* mode.) Here an example prompt to list out open issues in the GitHub repository the codespace is based on:
+
+```
+What are the latest changes in <repo name>?
+Give me a list of the open issues for the current GitHub repo
+```
+</br></br>
+
+7. Notice the mention of "Ran <tool name> - GitHub MCP Server (MCP Server) early in the output.
+
+![Example usage](./images/ct162.png?raw=true "Example usage")
+
+8. Now we can use the MCP tools to help answer questions in conjunction with our local changes. For example, assuming the first issue it listed was the one about "Add unit tests for existing Python modules", we can ask if our local changes resolve this. Try this prompt in the chat area.
+
+```
+Is the first issue in the GitHub repository already solved by my local code?
+```
+
+9. After you run this, Copilot will likely tell you that yes, the issue is resolved by your local changes. (If you need to *Allow/Approve* operations from the agent to complete this, go ahead.)
+
+![Example usage](./images/ct163.png?raw=true "Example usage")
+
+10. If you click on the *Extensions* icon on the left (#1 in the screenshot below), you'll see a category for *MCP SERVERS - INSTALLED*. This should show the GitHub MCP Server since we just connected to that.   
+
+![Extensions and browser](./images/mcp97.png?raw=true "Extensions and browser")
+
+11. If you then click on the globe icon (#2 in the screenshot above), you can get to another page that shows a list of available MCP servers to use.
+
+![MCP Servers](./images/mcp98.png?raw=true "MCP Servers")
 
  <p align="center">
 **[END OF LAB]**
@@ -617,7 +562,7 @@ scripts/use-app.sh (or ../scripts.use-app.sh depending on what directory you're 
 </br></br></br>
 
 
-**Lab 9 - Copilot in GitHub**
+**Lab 8 - Copilot in GitHub**
 
 **Purpose: In this lab, we'll see how to use the integrated chat interface in GitHub.**
 
