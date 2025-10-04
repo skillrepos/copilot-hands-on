@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 2.0 - 10/04/25
+## Revision 2.5 - 10/04/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -655,6 +655,11 @@ Why do these changes need to be made?
 ![answer with file as context](./images/cdd163.png?raw=true "Answer with file as context")
 
 We're not going to go through and resolve the pull request, so you are done!
+
+<p align="center">
+**[END OF LAB]**
+</p>
+</br></br></br>
 
 
 **Alternate Lab 8 for paid Copilot plans - Copilot in GitHub**
