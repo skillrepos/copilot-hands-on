@@ -468,6 +468,18 @@ curl -i \
 
 ![Review edits](./images/ac26.png?raw=true "Review edits")
 
+<br><br>
+
+12. (Optional) If you have extra time, you can tell the agent to create tests for the change and follow through that process with the prompt below. Be prepared to select *Allow* as needed or tell it to continue/proceed in the chat dialog.
+
+```
+Create and run tests for the new feature.
+```
+
+![Running tests with agent](./images/cdd284.png?raw=true "Running tests with agent")
+
+<br><br>
+
 <p align="center">
 **[END OF LAB]**
 </p>
