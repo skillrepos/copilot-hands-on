@@ -334,17 +334,19 @@ How do I execute this?
 
 <br><br>
 
-6. While we're in the Chat interface, let's ask it for the latest K8s version. Put the following into the dialog.
+6. While we're in the Chat interface, let's ask it for the latest K8s version. You can try both of the following.
 
 ```
-what is the latest Kubernetes version?
+What is the latest Kubernetes version?
+
+What is the latest Kubernetes version that you were trained on?
 ```
 
 <br><br>
 
-7. Depending on the current model selected, you may get varying answers. In the case shown, the AI suggests that as of the current date, the current version is 1.28. The challenge with this is that the current version is actually 1.33 (as of 5/13/25). This highlights the out-of-date issue with the LLM.
+7. Depending on the current model selected, you may get varying answers. In the case shown, the AI suggests that as of the current date, the current stable version is 1.31. The challenge with this is that the current version is actually 1.34.1 (as of 10/04/25).  Also, in this case, the latest version the model was trained on was 1.30. This highlights the out-of-date issue with the LLM.
 
-![Answer to latest K8s version](./images/cdd244.png?raw=true "Answer to latest K8s version")
+![Answer to latest K8s version](./images/cdd283.png?raw=true "Answer to latest K8s version")
 
 <br><br>
 
