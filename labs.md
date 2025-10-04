@@ -507,7 +507,7 @@ Link:  Generate classic personal access token (repo & workflow scopes) https://g
 3. Now we need to add the GitHub MCP Server configuration in our IDE. You could fill most of this out via IDE prompts, but for simplicity, we already have a sample configuration file that we can just copy in. Run the commands below in the terminal. The last one will open the file in the editor.
 
 ```
-cd /workspaces/copilot-testing
+cd /workspaces/copilot-hands-on
 mkdir .vscode
 cp extra/mcp_github_settings.json  .vscode/mcp.json
 code .vscode/mcp.json
@@ -567,8 +567,7 @@ Is the first issue in the GitHub repository already solved by my local code?
 </p>
 </br></br></br>
 
-
-**Lab 8 - Copilot in GitHub**
+**Lab 8 for free Copilot plan only - Copilot in GitHub**
 
 **Purpose: In this lab, we'll see how to use the integrated chat interface in GitHub.**
 
@@ -650,6 +649,97 @@ Generate a url that I can use to create a pull request to merge the dev branch i
 <br><br>
 
 12. Finally, we'll prompt Copilot about why the changes need to be made. In the Chat input area, enter the prompt *Why do these changes need to be made?* It will use this file as context and respond accordingly. Notice in the screenshot below, the indicator for *1 reference - models.go*.
+```
+Why do these changes need to be made?
+```
+![answer with file as context](./images/cdd163.png?raw=true "Answer with file as context")
+
+We're not going to go through and resolve the pull request, so you are done!
+
+
+**Alternate Lab 8 for paid Copilot plans - Copilot in GitHub**
+
+**Purpose: In this lab, we'll see how to use the integrated chat interface in GitHub.**
+
+1. To give us a project to work with, we'll fork a repository from my GitHub area. Switch back to GitHub in the browser and go to https://github.com/skillrepos/sec-demo. (Make sure you are logged in as your GitHub userid that has Copilot access.)
+
+<br><br>
+
+2. Fork the skillsrepo/demo repository into your own GitHub space via the *Fork* button at the top right. Make sure to **uncheck** the *Copy the main branch only* box on the second screen. Then you can click on the *Create fork* button at the bottom to actually create the fork.
+
+![fork repo](./images/cdd172.png?raw=true "Fork repo")
+![uncheck checkbox](./images/cdd147.png?raw=true "Uncheck checkbox")
+
+<br><br>
+
+3. After the fork is complete, in your fork, click on the Copilot button at the top right. The chat dialog will open up and then you will have a chat input box. Let's get some information about this repo. In the input area, enter the prompt below and submit it. After this runs, you'll get some basic info about the repository.
+
+```
+Tell me about this repository.
+```
+
+ ![about the repo query](./images/cdd285.png?raw=true "About the repo query") 
+ </br></br>
+ ![about the repo response](./images/cdd286.png?raw=true "About the repo response") 
+
+<br><br>
+ 
+4. Now, go back to the list of files in the repo. (You can use the back arrow or go back to the URL.) Select the *main.go* file to open it up. Click on the Copilot icon at the top of the file so we can get information about this file.
+
+ ![Querying about the file](./images/cdd287.png?raw=true "Querying about the file") 
+ </br></br>
+
+5. Let's ask Copilot for some more information about thie file. In the input area, enter the prompt below. After processing, Copilolt will provide the requested information.
+
+```
+Explain how this file works and what its purpose is.
+```
+
+ ![Querying about the file](./images/cdd288.png?raw=true "Querying about the file") 
+ </br></br> 
+ ![about the file response](./images/cdd289.png?raw=true "About the file response") 
+
+<br><br>
+ 
+6. Go back to the main page for the repo. In this repo, we have a *dev* branch with some fixes for security vulnerabilities in the *main* branch. Let's create a pull request to merge the *dev* branch into the *main* branch. We'll use the coding agent to do this. Click on the "Open agents panel" next to the GitHub Copilot icon at the top of the screen. In the dialog that comes up, enter the prompt below. After you submit the prompt, the agent will start a task in the background to create the pull request.
+   
+```
+Merge dev branch into main branch
+```
+
+![generate pr](./images/cdd290.png?raw=true "Generate pr") 
+
+![generate pr](./images/cdd291.png?raw=true "Generate pr") 
+
+<br><br>
+ 
+7. After a minute or two, you should see that there is now a Pull request avaiable as indicated at the top of the repo. Click on the "Pull request" link at the top and then open the pull request. This should open up a screen with either a pull request already initiated or a file comparison screen with a button to create the pull request. If it's the latter, go ahead and click the button to create the pull reuqest for merging the dev branch into the main branch. (Close the Chat interface by clicking on the **x** symbol in the upper right corner of the dialog.)
+
+ ![pull request initiation](./images/cdd292.png?raw=true "Pull request initiation")  
+
+<br><br> 
+  
+7. In the pull request, it should have a row that says "Ready for review". Click on that and then you can review any comments added by Copilot. Then, we'll have Copilot automatically generate a description of our pull request. 
+
+ ![reviewing comments](./images/cd293.png?raw=true "Reviewing comments")  
+ 
+<br><br>
+  
+8. Click on the *Files changed* link at the top of the pull request. This will open up the change comparison screen. Let's ask Copilot for some more information about a change. As you scroll through the change, on the right of the screen will be a small, floating Copilot icon with a drop-down arrow. Click on that and select the *Explain* option. After this runs, you'll see an explanation of the highlighted section.
+
+ ![request explanation](./images/cdd159.png?raw=true "Request explanation") 
+ ![section explanation](./images/cdd160.png?raw=true "Section explanation")
+
+<br><br>
+
+9. Now, let's add a file to the context for the chat. Click on the *Ask Copilot* button at the top of the screen. In the *Select files to discuss* dialog, select *models/models.go*, check the box and then *Save* or *Start Chat*. You'll then see the file attached as context in the Chat dialog.
+    
+![add file for context](./images/cdd161.png?raw=true "Add file for context")
+![file added to context](./images/cdd162.png?raw=true "File added to context")
+
+<br><br>
+
+10. Finally, we'll prompt Copilot about why the changes need to be made. In the Chat input area, enter the prompt *Why do these changes need to be made?* It will use this file as context and respond accordingly. Notice in the screenshot below, the indicator for *1 reference - models.go*.
 ```
 Why do these changes need to be made?
 ```
