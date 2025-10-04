@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 1.4 - 10/03/25
+## Revision 2.0 - 10/04/25
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -204,9 +204,9 @@ Explain how I can run and see the functionality of #codebase.
 ![Enter command to start server](./images/ac15.png?raw=true "Enter command to start server")
 <br><br>
 
-7. Because the running server is using this terminal, we need to open a second terminal to run the script. Do this by right-clicking in the terminal and select "Split Terminal".
+7. Because the running server is using this terminal, we need to open a second terminal to run the script. Do this by clicking on the "Split Terminal" icon that looks like a 2-column page in the upper right of the terminal area (see screenshot).
 
-![Split terminal](./images/ac16.png?raw=true "Split terminal") 
+![Split terminal](./images/cdd271.png?raw=true "Split terminal") 
 <br><br>
 
 8. Back in the chat interface, find the output section with the command to run the usage script. Hover over that command and click the popup icon that looks like a terminal or use the "..." and "Insert into terminal" sequence to insert it into the terminal. (If you don't see that entry in the onboarding guide, you can try using the prompt "**Tell me about the example script to see functionality**" or just enter the command.)
