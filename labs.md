@@ -275,22 +275,14 @@ What other conditions should be tested?
 ![Select region](./images/cdd278.png?raw=true "select region") 
 <br><br>
 
-9. Finally, let's use Copilot to tell us how to run the tests. Enter the following prompt in the chat interface.
+9. Now, let's have Copilot review our implementation code in *prime.py*. In the *prime.py* file, select all the code (either highlight it all or use keyboard shortcut. Then right-click and select *Generate Code -> Review* from the menu.
 
-```
-How do I run these tests?
-```
+![Having Copilot review](./images/cdd281.png?raw=true "Having Copilot review")
+<br><br>   
 
-<br><br>
+10. After this runs, if Copilot has items worth noting, it will show the first one inline. You can scroll through the code to find the items that Copilot identified, along with any suggested changes.  If you want to apply the change you can select the "Apply and Go to Next" button. If you want to skip the change, you can click on the "Discard and Go to Next" button. If you look in the *COMMENTS* panel at the bottom (next to *TERMINAL*), you'll see all the comments listed and can navigate among them by clicking on the appropriate row. 
 
-10. Hover over the first entry in the chat output and select "...", then "Insert into Terminal".
-
-![Select region](./images/cdd278.png?raw=true "select region") 
-<br><br>
-
-11. Once the command has been put into the terminal, you can hit *Enter* to run it and hopefully the tests will pass.
-
-![Select region](./images/cdd280.png?raw=true "select region") 
+![Reviewing suggestions](./images/cdd282.png?raw=true "Reviewing suggestions")
 <br><br>
 
 <p align="center">
@@ -299,9 +291,9 @@ How do I run these tests?
 </br></br></br>
 
 
-**Lab 5 - YAML generation, API use, translating code and the 202x problem**
+**Lab 5 - YAML generation, API use, and translating code**
 
-**Purpose: In this lab, we’ll learn about how to have Copilot help with YAML generation, API usage, translating code and explore the 2023 problem.**
+**Purpose: In this lab, we’ll learn about how to have Copilot help with YAML generation, API usage, and translating code.**
 
 1. Create a new file - **deployment.yaml**
 
@@ -481,7 +473,7 @@ curl -i \
 
 **Lab 7 - Extending Copilot with MCP Servers**
 
-**Purpose: In this lab, we'll see how to connect GitHub Copilot to the GitHub MCP Server.**
+**Purpose: In this lab, we'll see how to use GitHub Copilot with the GitHub MCP Server.**
 
 1. For authentication to GitHub, we will need a GitHub personal access token (PAT). When logged into GitHub, click on the link below, provide a note and click the green "Generate token" button at the bottom.
 
