@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 2.5 - 10/04/25
+## Revision 3.0 - 02/16/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -12,14 +12,15 @@
 2. Chrome may work better than Firefox for some tasks.
 3. Substitute the appropriate key combinations for your operating system where needed.
 4. The default environment will be a GitHub Codespace (with Copilot already installed). If you prefer to use your own IDE, you are responsible for installing Copilot in it. Some things in the lab may be different if you use your own environment.
-5. To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.**
+5. To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.
 6. VPNs may interfere with the ability to run the codespace. It is recommended to not use a VPN if you run into problems.
-7. If you use the new free Copilot plan (no signup), some advanced functionality may not be available.
+7. If you use the free Copilot plan (no signup), some advanced functionality (Agent mode, model selection, etc.) may not be available.
+8. Copilot's responses are non-deterministic — your results may differ slightly from what is shown in screenshots or described in steps. This is expected.
 </br></br></br>
 
-**Lab 1 - Learning how to create good prompts for Copilot**
+**Lab 1 - Code Completions and Next Edit Suggestions**
 
-**Purpose: In this lab, we’ll start to learn about Copilot and how it generates code based on the prompts we provide**
+**Purpose: In this lab, we'll learn how Copilot generates code from prompts and how Next Edit Suggestions (NES) can predict your next edit across a file.**
 
 1. Create a new file. In the terminal, enter
 
@@ -28,261 +29,231 @@ code index.js
 ```
 <br><br>
 
-2. Afterwards this file should be open in a tab in the editor.
-
-![New file](./images/cdd262.png?raw=true "New file")
-<br><br>
-
-
-3. Let's see how Copilot responds to a generic request. Go to that tab and type in a comment that says
+2. Afterwards this file should be open in a tab in the editor. Let's see how Copilot responds to a generic request. Type in a comment that says
 
 ```
 // function to parse data
 ```
-![Copilot generated function](./images/cdd263.png?raw=true "Copilot generated function")
 <br><br>
 
-4. Hit return and notice the code that Copilot suggested. This is likely more generic than we want, but hit tab to select that line. (Note that you should give Copilot a second to provide code suggestions before moving on to the next line.)
+3. Hit *Enter* and notice the grayed-out code that Copilot suggests. This is likely more generic than we want, but hit *Tab* to accept the suggestion. Continue hitting *Tab* and *Enter* to accept additional lines until you get a complete function or Copilot stops suggesting. (Give Copilot a second to provide suggestions before moving on.)
 <br><br>
 
-5. After hitting tab, Copilot will generate another part of the function. (If not, you may need to hit return.) Hit tab to accept it. Continue until you get a complete function, function skeleton, or Copilot stops generating additional code suggestions. One example of what code may look like is below.
-
-![Copilot generated function](./images/cpho5.png?raw=true "Copilot generated function")
+4. This prompt wasn't specific enough for Copilot to know what we actually wanted. **Select all the code and delete it** so we can try a more specific prompt.
 <br><br>
 
-6. This prompt is not specific enough for Copilot to interpret what we want to do.  Highlight the code and delete it, so we can try again.
-<br><br>
-
-7. Now type a comment at the top that says
+5. Now type a more specific comment at the top:
 
 ```
-// function to parse url
+// function to parse a URL and return its protocol, host, path, and query parameters as an object
 ```
 <br><br>
 
-8. Hit enter and you will probably see a similar line to
-
-```
-function parseURL(url) {
-```
-
-or you might see an entire function definition.
+6. Hit *Enter*. You should see Copilot suggest a much more relevant function — likely named something like `parseURL`. Hit *Tab* to accept each line and *Enter* to continue until the function is complete. Notice how the more descriptive prompt led to more useful code.
 <br><br>
 
-9. Just hit Tab to accept it and Enter again. Copilot should continue to respond with another suggestion. *Only if you're not getting responses from Copilot, hit return and type the comment below to nudge Copilot.*
-
-```
-// parse url
-```
-![nudge comment](./images/cdd3.png?raw=true "nudge comment")   
+7. To see alternative suggestions, you can hover over any grayed-out suggestion. A small toolbar will appear with **"<"** and **">"** arrows to cycle through alternatives. Try this on a suggestion to see the differences. Select the one you prefer with *Tab*.
 <br><br>
-10. Continue to iterate with Copilot suggesting lines and you hitting *Tab* to accept each line and then *Enter* until the function is complete. You may get some blank lines along the way or for some lines you might need to hit Tab twice to accept the code if it is indented more. But just hit return until you get to the end of a function or Copilot stops generating code. (You will be at the end when the indentation is done.  Also Copilot may start to suggest another function in comments like // test...)
 
-<br><br> 
-11. Let's do one more pass at getting a specific prompt for Copilot. Delete all the code currently in index.js. This time we will not enter a comment, but will enter a specific function name and parameter followed by an open left bracket and hit *Enter*. 
+8. Now let's experience **Next Edit Suggestions (NES)**. NES predicts your next edit based on changes you just made — even in a different part of the file. Delete the current contents of the file and paste in the following code:
 
-```
-function splitURLandReturn(url) {
+```javascript
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+
+function farewell(name) {
+  return "Goodbye, " + name + "!";
+}
+
+function welcome(name) {
+  return "Welcome, " + name + "!";
+}
 ```
 <br><br>
 
-12.  With this function name, Copilot should suggest a reasonable next line - in fact it may suggest several.  To see the options, hover over the first line and a small window should appear. This window will show many options there are and provide "<" and ">" links to toggle between them.  If there is only one, you might try typing a space. Then click on the "<" and ">" buttons to see the differences in the available suggestions.
+9. Let's modernize these functions. In the `greet` function, change the return statement to use a template literal:
 
-![alternative suggestions inline](./images/cdd269.png?raw=true "alternative suggestions inline")   
+```javascript
+  return `Hello, ${name}!`;
+```
 
-When you find an alternative you like, go ahead and tab to select it. 
+After making this change, look at the `farewell` function below. You should see Copilot's NES automatically suggest the same template literal update there — highlighted with a dimmed/ghost text preview or a decorating indicator in the gutter.
 <br><br>
+
+10. Press *Tab* to accept the NES suggestion in `farewell`. Now look at the `welcome` function — NES should suggest the same pattern there too. Press *Tab* again to accept it. You've just updated three functions by only typing one change manually. This is the power of Next Edit Suggestions.
+<br><br>
+
  <p align="center">
 **[END OF LAB]**
 </p>
 </br></br></br>
 
-**Lab 2 - Using Copilot to simplify code**
+**Lab 2 - Understanding Chat Modes: Ask, Edit, and Agent**
 
-1. Open an existing file we have in the project named prime.py. You can click on [**prime.py**](./prime.py) **in the codespace** or open it via the command below.
+**Purpose: In this lab, we'll explore the three Copilot Chat modes and learn when to use each one.**
+
+1. Open the file *prime.py*. You can click on [**prime.py**](./prime.py) **in the codespace** or open it via the terminal:
 
 ```
 code prime.py
 ```
 <br><br>
 
-2. **Highlight the code** and switch to the Copilot Chat panel. (If you don't see the panel, select the Chat extension icon in the top bar to open the chat window.) Make sure the mode is set to "Ask". If you don't see the full Copilot panel or have access to the "Chat" area, check in the bottom bar of the codespace and see if there's a "Finish Setup" option. If so, click on that and then click the "Set up Copilot" blue button. If you need to change the mode in the Chat dialog, click on the down arrow next to "Ask/Edit/Agent" and select "Ask" (see second screenshot below).
+2. Open the Copilot Chat panel by clicking the Chat icon in the top bar (or side bar). Make sure the mode is set to **"Ask"**. If you need to change the mode, click on the mode selector dropdown at the bottom of the Chat input area and select **"Ask"**. (If you see a "Finish Setup" option in the bottom bar of the codespace, click that first and then "Set up Copilot".)
+<br><br>
 
-   
-![finish setup](./images/ext85.png?raw=true "finish setup")
-<br><br>  
-
-![change mode](./images/cdd264.png?raw=true "change mode")
-<br><br>  
-  
-3. After highlighting all the code in the *prime.py* file, tell Copilot to simplify the code by typing *simplify* in the chat window and hitting *Enter* or the *Submit* arrow.
+3. **Highlight all the code** in *prime.py*. In the Chat input, type the following and hit *Enter*:
 
 ```
 simplify
 ```
 
-![simplifying via chat box](./images/cdd222.png?raw=true "simplifying via chat box") 
+Copilot will respond with an explanation of how it simplified the code and provide a new code block in the Chat panel. This is **Ask mode** — it answers questions and provides suggestions in the chat, but doesn't directly change your files.
 <br><br>
 
-4. Copilot will likely provide an explanation of how it simplified things in the Chat panel. It will also create a new code block in the Chat panel with the simplified text. 
-
+4. Hover over the code block in the Chat output. You'll see a toolbar appear. Click the **"Insert at Cursor"** button to replace the highlighted code with the simplified version. (In Ask mode, *you* control when and how suggestions are applied.)
 <br><br>
 
-5. Hover over the simplified text in the Chat panel. A bar of controls will pop up. Use the second control to tell Copilot to insert the suggestion at the cursor to replace the text that's currently there. (Click on the control that's labeled as *Insert at cursor*. This should replace the highlighted text.)
-
-![insert simplified text](./images/cdd223.png?raw=true "insert simplified text") 
+5. Now let's try **Edit mode**. Click the mode selector dropdown and switch to **"Edit"**. Notice the interface changes — you'll see an area to add files to your "working set." The *prime.py* file should already be listed. If not, click **"Add Files"** and select it.
 <br><br>
 
-   
-6. Now, let's introduce an error into the code to see how Copilot can fix it. Pick an instance of a variable name and change it to one that doesn't exist. For example, change an instance of "n" to "x". 
+6. In the Edit mode input area, type the following and submit:
 
-![introduce error](./images/cdd226.png?raw=true "introduce error")   
+```
+Add detailed docstrings to each function explaining parameters, return values, and examples
+```
+
+Copilot will generate inline diffs directly in the editor — you'll see proposed additions highlighted. Review the changes, then click **"Accept"** to apply them or **"Discard"** to reject. This is the key difference: **Edit mode applies changes directly in your files** for you to review.
 <br><br>
 
-7. Notice the light bulb icon that has popped up. Click on that, scroll to the bottom (if needed), and you'll have additional options to fix or explain with Copilot.  Select "Fix". (If you don't see the light bulb icon, you can right-click, select *Generate Code* and then select *Fix*.)
-
-![Copilot options inline](./images/cdd270.png?raw=true "Copilot options inline")   
+7. Now let's use Ask mode to fix an error. Switch back to **"Ask"** mode. In the *prime.py* file, intentionally break the code by changing a variable name — for example, change an instance of `n` to `x`.
 <br><br>
 
-8. Go ahead and click on the "Fix using Copilot" or "Fix" option.
+8. Highlight the broken code. In the Chat input, type:
+
+```
+/fix
+```
+
+Copilot will analyze the error and propose a fix in the Chat panel. You can apply the fix using the same controls as before. The `/fix` command is a built-in **slash command** — a shortcut for common tasks.
 <br><br>
 
-9. After a few moments, it should propose a fix that you can just accept (via the *Accept* button). (If it doesn't propose a fix in the dialog, you can skip to step 12 and use the /fix command in chat instead.)
+9. Let's see one more useful slash command. Highlight a function in the file and type:
 
-![Fixing with Copilot](./images/cdd227.png?raw=true "Fixing with Copilot")       
+```
+/explain
+```
+
+Copilot will provide a detailed explanation of what the code does, line by line. Other useful slash commands include `/tests`, `/doc`, and `/new`.
 <br><br>
 
-10. (Optional) If you'd like, you can go back and make the error again, highlight the code, and then use the /fix command in the chat window to get similar results.
+10. **Quick reference — when to use each mode:**
+    - **Ask**: Learning, Q&A, exploring ideas. You control what gets applied.
+    - **Edit**: Targeted changes to specific files. Copilot proposes inline diffs for your review.
+    - **Agent**: Autonomous, multi-step tasks. Copilot reasons, edits files, runs commands, and iterates. (We'll cover Agent mode in depth in Lab 5.)
 
 <p align="center">
 **[END OF LAB]**
 </p>
 </br></br></br>
 
-**Lab 3: Using Copilot For Onboarding, Explaining and Running Projects**
+**Lab 3 - Using Copilot to Understand and Onboard to a Codebase**
 
-**Purpose: In this lab, we'll look at how to use Copilot to help quickly get up to speed on any project**
+**Purpose: In this lab, we'll use Copilot to quickly get up to speed on any project.**
 
-1. For our labs in this workshop, we have a set of code that implements a simple to-do app, written in Python with a toolkit called *Flask*. We interact with it via curl commands for simplicity. The files for this app are in a subdirectory named app. You can look at the files that make up the simple app if you want.
+1. For our labs in this workshop, we have a set of code that implements a simple to-do app, written in Python with a toolkit called *Flask*. We interact with it via curl commands for simplicity. The files for this app are in a subdirectory named *app*. You can look at the files if you want:
 
 ```
-cat app/<filename>
+ls app/
 ```
-
-![cd](./images/ac4.png?raw=true "cd")
 <br><br>
 
-2. Since this is a new project to us, let's have Copilot produce some "onboarding" documentation for us. We'll use the #codebase chat variable to indicate it should do this against the contents of the current project. Enter the following prompt in the Copilot Chat dialog box and then submit it or hit *Enter*. (If you see a momentary flash about "Sign in to access Copilot", just wait till the dialog returns and enter the prompt again.)
+2. Since this is a new project to us, let's have Copilot produce some onboarding documentation. In the Copilot Chat dialog (in **Ask** mode), enter the following prompt. The `#codebase` reference tells Copilot to consider the entire project. (If you see a momentary flash about "Sign in to access Copilot", wait until the dialog returns and enter the prompt again.)
 
 ```
 Create an onboarding guide for #codebase. Do not create a separate block for it.
 ```
-![Onboarding prompt](./images/ac11.png?raw=true "Onboarding prompt")
 <br><br>
 
-3. After Copilot completes its processing, you should the onboarding documentation displayed in the Chat output area. You can scroll through it to learn more about the project if you want. (You could also copy and paste the contents into a .md (markdown) file if you wanted to save it separately.)
-
-![Viewing the onboarding guide](./images/cdd257.png?raw=true "Viewing the onboarding guide")
+3. After Copilot completes processing, you should see the onboarding documentation displayed in the Chat output area. Scroll through it to learn about the project structure, key files, and how things fit together.
 <br><br>
 
-4. Next, let's ask Copilot to explain how to demo the code. Enter the following prompt in the Chat dialog.
+4. Next, let's ask Copilot how to run the project:
 
 ```
 Explain how I can run and see the functionality of #codebase.
 ```
-
-![Asking how to run](./images/ac35.png?raw=true "Asking how to run")
 <br><br>
 
-5. In the Chat output, you'll see it reference one or two commands to start the server and one to run an example usage script. Hover over the command(s) to start the server. If you see a popup icon that looks like a terminal, click on that to insert it into the terminal. If you don't see a terminal icon when you hover over it, click on the "..." at the end of the popup and select "Insert into terminal". (If you see additional "[" "]" or other characters in the command, just ignore them and enter the "python app" command.)
-
-![Enter command to start server](./images/ac36.png?raw=true "Enter command to start server")
+5. In the Chat output, you'll see commands to start the server and run a demo script. Hover over the server start command — if you see a terminal icon, click it to insert the command into the terminal. If not, click **"..."** and select **"Insert into terminal"**.
 <br><br>
 
-6. In the terminal, hit Enter to actually start the server.
-
-![Enter command to start server](./images/ac15.png?raw=true "Enter command to start server")
+6. In the terminal, hit *Enter* to start the server.
 <br><br>
 
-7. Because the running server is using this terminal, we need to open a second terminal to run the script. Do this by clicking on the "Split Terminal" icon that looks like a 2-column page in the upper right of the terminal area (see screenshot).
-
-![Split terminal](./images/cdd271.png?raw=true "Split terminal") 
+7. Because the running server is using this terminal, open a second terminal by clicking the **"Split Terminal"** icon (looks like a two-column page) in the upper right of the terminal area.
 <br><br>
 
-8. Back in the chat interface, find the output section with the command to run the usage script. Hover over that command and click the popup icon that looks like a terminal or use the "..." and "Insert into terminal" sequence to insert it into the terminal. (If you don't see that entry in the onboarding guide, you can try using the prompt "**Tell me about the example script to see functionality**" or just enter the command.)
-
-![Enter command to run script](./images/ac37.png?raw=true "Enter command to run script")
+8. Back in the Chat output, find the command to run the example usage script. Insert it into the new terminal using the same method as step 5. Hit *Enter* and watch the script execute commands against the server.
 <br><br>
 
-9. Hit *Enter* and you can see the script executing running commands against the server. If you want to look more at what the script is doing, you can [view use-app.sh](scripts/use-app.sh)
+9. Now let's ask Copilot about a specific file. Open *app/app.py* in the editor, highlight all the code, and ask:
 
-![Script output](./images/ac18.png?raw=true "Script output")
+```
+Explain the main routes and error handling in this file.
+```
+
+Copilot will break down the endpoints, their purposes, and how errors are handled — giving you a deep understanding of the file without reading every line yourself.
 <br><br>
 
-**Lab 4 - Using Copilot to generate tests**
+<p align="center">
+**[END OF LAB]**
+</p>
+</br></br></br>
 
-**Purpose: In this lab, we'll see some examples of having Copilot generate tests**
+**Lab 4 - Generating and Improving Tests with Copilot**
 
-1. Back in the codespace editor panes, switch to the *prime.py* file we were using in Lab 2. 
+**Purpose: In this lab, we'll use Copilot to generate tests, suggest edge cases, and review implementation code.**
 
+1. In the editor, switch to the *prime.py* file we used in Lab 2.
 <br><br>
 
-2. What if we didn't know how to test the code at all? Let's ask Copilot. Highlight the *is_prime()* function.
-
-![selecting code](./images/cdd272.png?raw=true "selecting code") 
+2. **Highlight the `is_prime()` function.** Open a new chat by clicking the **"+"** icon in the upper right of the Chat panel.
 <br><br>
 
-3. **Open a new chat** using the "+" sign in the uppper right and ask Copilot using the following prompt:
-
-![Opening a new chat](./images/cdd258.png?raw=true "Opening a new chat") 
+3. With the code highlighted, ask Copilot:
 
 ```
 How do I test this code?
 ```
-![prompting on how to test](./images/cdd217.png?raw=true "prompting on how to test") 
 
+You should see a plan for testing along with a proposed test code block in the Chat output.
 <br><br>
 
-4. After entering this, you should see a plan for testing the code in the Chat interface. Copilot will also probably populate a block for you with the proposed test code. As we've done before, hover over the code block, select "..." and then "Insert into New File".
- 
-![insert code](./images/cdd274.png?raw=true "insert code") 
-
+4. Hover over the generated code block, click **"..."** and then **"Insert into New File"** to create a new file with the test code.
 <br><br>
 
-5. Save the file as *test_prime.py*. 
-
-![save file](./images/cdd275.png?raw=true "save file") 
-
+5. Save the file as **test_prime.py** (File > Save As, or Ctrl+S / Cmd+S and enter the filename).
 <br><br>
 
-6. We can also ask Copilot for other cases to test. Select the code in the testing file you just saved and, in the chat interface, prompt Copilot with
+6. We can also ask Copilot for additional edge cases. Select the code in *test_prime.py* and in the Chat, ask:
 
 ```
 What other conditions should be tested?
 ```
 <br><br>
 
-7. Copilot should respond with a list of other conditions to test and example code that you can add if you want and generate a block of code for them. Hover over that block of code and click the "Apply in Editor" icon (leftmost one). If prompted at the top of the codespace to select where to apply the code block, select the "Active editor 'test_prime.py'.
-
-![Additional conditions to test](./images/cdd276.png?raw=true "additional conditions to test") 
+7. Copilot will suggest additional test conditions (negative numbers, boundary values, large primes, etc.) and generate a code block. Hover over that block and click the **"Apply in Editor"** icon (leftmost control). If prompted to select a target, choose **"Active editor 'test_prime.py'"**.
 <br><br>
 
-![Select region](./images/cdd277.png?raw=true "select region") 
+8. You should see the additional test cases added to the file. Review the changes and click **"Keep"** to persist them.
 <br><br>
 
-8. After this operation, you should see the additional test cases added to the file. You can review the changes if you want and just click the *Keep* button to persist them.
-
-![Select region](./images/cdd278.png?raw=true "select region") 
+9. Now let's have Copilot **review** our implementation code. Go back to the *prime.py* file and select all the code. Right-click and select **Copilot > Review and Comment** from the context menu. (Depending on your version, this may be under *Generate Code > Review* or accessible via a keyboard shortcut.)
 <br><br>
 
-9. Now, let's have Copilot review our implementation code in *prime.py*. In the *prime.py* file, select all the code (either highlight it all or use keyboard shortcut. Then right-click and select *Generate Code -> Review* from the menu.
-
-![Having Copilot review](./images/cdd281.png?raw=true "Having Copilot review")
-<br><br>   
-
-10. After this runs, if Copilot has items worth noting, it will show the first one inline. You can scroll through the code to find the items that Copilot identified, along with any suggested changes.  If you want to apply the change you can select the "Apply and Go to Next" button. If you want to skip the change, you can click on the "Discard and Go to Next" button. If you look in the *COMMENTS* panel at the bottom (next to *TERMINAL*), you'll see all the comments listed and can navigate among them by clicking on the appropriate row. 
-
-![Reviewing suggestions](./images/cdd282.png?raw=true "Reviewing suggestions")
+10. After a few moments, Copilot will add inline review comments identifying potential issues, improvements, or suggestions. If you look in the **COMMENTS** panel at the bottom (next to TERMINAL), you'll see all comments listed. Click any row to navigate to that suggestion. For each comment, you can click **"Apply and Go to Next"** to accept or **"Discard and Go to Next"** to skip.
 <br><br>
 
 <p align="center">
@@ -290,195 +261,143 @@ What other conditions should be tested?
 </p>
 </br></br></br>
 
+**Lab 5 - Agent Mode: Implementing a Feature Autonomously**
 
-**Lab 5 - YAML generation, API use, and translating code**
+**Purpose: In this lab, we'll use Copilot's Agent mode to autonomously implement a feature from a GitHub Issue.**
 
-**Purpose: In this lab, we’ll learn about how to have Copilot help with YAML generation, API usage, and translating code.**
-
-1. Create a new file - **deployment.yaml**
-
-```
-code deployment.yaml
-```
-
-<br><br>
-
-2. Bring up the Copilot Chat dialog via your keyboard shortcut and enter in the following request.
-
-```
-write spec for deployment in Kubernetes with 2 replicas and image from busybox
-add command to run in containers: sleep 3600
-add label app: myapp
-add label type: front-end
-```
-
-<br><br>
-
-3. After a few moments, you should see it respond with the code. You can just Accept this.
-   
-![Kubernetes manifest](./images/cdd259.png?raw=true "Kubernetes manifest")
-<br><br>
-
-
-4. Suppose we don't know how to execute this code. Let's ask Copilot. Highlight the generated YAML in the deployment.yaml file.  Then go to the larger Chat interface and ask it. Put the following in the Chat interface.
-
-```
-How do I execute this?
-```
-
-<br><br>
-
-5. Copilot should respond with something like the following:
-
-![How to execute deployment](./images/cdd188.png?raw=true "How to execute deployment")
-
-<br><br>
-
-6. While we're in the Chat interface, let's ask it for the latest K8s version. You can try both of the following.
-
-```
-What is the latest Kubernetes version?
-
-What is the latest Kubernetes version that you were trained on?
-```
-
-<br><br>
-
-7. Depending on the current model selected, you may get varying answers. In the case shown, the AI suggests that as of the current date, the current stable version is 1.31. The challenge with this is that the current version is actually 1.34.1 (as of 10/04/25).  Also, in this case, the latest version the model was trained on was 1.30. This highlights the out-of-date issue with the LLM.
-
-![Answer to latest K8s version](./images/cdd283.png?raw=true "Answer to latest K8s version")
-
-<br><br>
-
-8. Let's have Copilot generate some code to work with Kubernetes through the API. In the chat interface, enter the following.
-
-```
-How do I call the K8s API for scaling a deployment to 5 replicas with Python?
-```
-
-<br><br>
-
-9. The results may tell us that we first need to make sure something like PIP is installed. If so, we don't need to worry about this at the moment. Go to the actual generated code in the chat output. Click in that output area and paste the code into a new file via clicking on the "..." and then the *Insert into new file* menu option.
-
-![Add code to new file](./images/cdd190.png?raw=true "Add code to new file")
-
-
-<br><br>
-
-10. Suppose we change our mind and want to convert this code to Go. Click in the new file, and highlight the new code. Then, in the Chat interface tell it to translate to Go. Then, look in the separate chat output and you should see the equivalent Go code available.
-
-```
-translate to Go 
-```
-![Go translation](./images/cdd260.png?raw=true "Go translation")
-
-<p align="center">
-**[END OF LAB]**
-</p>
-</br></br></br>
-    
-
-**Lab 6: Using Copilot's Agent Functionality to Implement a New Feature**
-
-**Purpose: In this lab, we'll see how to use Copilot to automatically implement a feature request to our codebase.**
-
-
-1. We need to make sure our app is running. If not still running from lab 3, go ahead and run the command below in one of the terminals.
+1. Make sure the sample app is running. If it's not still running from Lab 3, start it in one of the terminals. If you need a second terminal, click the **Split Terminal** icon in the upper right of the terminal area.
 
 ```
 python app/app.py
 ```
-
 <br><br>
 
-2. Our code is missing a *search* feature currently. Try the following command in the second terminal.
+2. Our app is missing a *search* feature. Verify this by running the following command in the other terminal:
 
 ```
-# Search items:
 curl -i \
   -H "Authorization: Bearer secret-token" \
   http://127.0.0.1:5000/items/search?q=milk
 ```
 
+You should get a **404** response — the search endpoint doesn't exist yet.
 <br><br>
 
-3. Notice that we get a 404 response and a message indicating that the URL was not found on the server.
-
-![404 response](./images/ac19.png?raw=true "404 response")
-
+3. We have a GitHub Issue describing this feature request. Take a look at it: [GitHub Issue #1](https://github.com/skillrepos/copilot-adv/issues/1)
 <br><br>
 
-
-4. In our repository, we already have a GitHub Issue for this feature. Take a look at it by clicking on this link: [GitHub Issue #1](https://github.com/skillrepos/copilot-adv/issues/1)
-
-![Open issue](./images/ac20.png?raw=true "Open issue")
-
+4. Let's have **Agent mode** implement this feature. Open a new chat (click the **"+"** icon) and switch to **"Agent"** mode using the mode selector dropdown at the bottom of the Chat input. Also open *app/app.py* in the editor to set it as active context.
 <br><br>
 
-5. Let's let Copilot's Agent mode have a shot at implementing the feature. Open a new chat by clicking on the large "+" symbol in the top row of the Chat interface. Then, in Copilot's Chat entry area, change the mode to "Agent" by clicking on the drop-down labeled "Ask" at the bottom.
-
-![Start new chat](./images/ac23.png?raw=true "Start new chat")
-
-![Switch to Agent mode](./images/ac21.png?raw=true "Switch to Agent mode")
-
-<br><br>
-
-6. Once in Agent mode, open the *app.py* file to make sure we have it set as the default context. Either select it from the list on the side or use the command below to open it.
+5. Enter the following prompt in Agent mode:
 
 ```
-code app/app.py
+Referencing the issue at https://github.com/skillrepos/copilot-adv/issues/1, implement the requested search feature in our Python #codebase in /app. Do not create or add any tests.
 ```
-
-<br><br>
-  
-7. Now, enter the following prompt in the chat area and then submit it.
-
-```
-Referencing the issue at https://github.com/skillrepos/copilot-adv/issues/1, propose a diff to our Python #codebase in /app that implements the requested feature. Do not create or add any tests.
-```
-![Context and prompt](./images/cdd266.png?raw=true "Context and prompt")
-
 <br><br>
 
-8. After Copilot processes the prompt, it may show one or two files changed - *app.py* and perhaps *datastore.py* - in a box above the Chat text entry area. Click on the "+ -"  icon on the right of the "2 files changed" area in the dialog. (See figure below).  
-
-![View all edits](./images/ac24.png?raw=true "View all edits")
-
+6. Watch Agent mode work. Unlike Ask or Edit mode, the Agent will **autonomously**: analyze the codebase, reason about what changes are needed, edit one or more files, and possibly run terminal commands to verify its work. You may see it update *app.py* and potentially *datastore.py*. If Agent requests permission to run a terminal command, click **"Allow"** to let it proceed.
 <br><br>
 
-9. Take a look at the single or multiple diffs (#1 and #2 in screenshot). When you are satisfied with the proposed changes, click on the *Keep* button in the *Files changed* dialog (#3 in screenshot). Then you can close the tab that was opened to show the comparisons.(#4 in screenshot)
-
-![Review edits](./images/ac25.png?raw=true "Review edits")
-
+7. When the Agent finishes, you'll see a summary of files changed above the Chat input (e.g., "2 files changed"). Click the **"+ -"** icon on the right to view the diffs.
 <br><br>
 
-
-10. Now, let's try the *search* operation again. If your app was running when you made the changes in step 7, it should have automatically reloaded. If you see a message in its output of the sort "Detected change ... reloading", you should be good to go. But if you don't have that you can kill the process (CTRL+C) and then run the app again.
-
+8. Review the diffs for each changed file. When satisfied, click the **"Keep"** button to apply the changes. Close any diff comparison tabs.
 <br><br>
 
-11. You can try the search operation with the same curl command as before. This time, it should run and return a 200 code rather than 404 since the search endpoint is implemented. If the item is found, it will return the found item. If not, it returns the empty set "[]".
+9. Now test the search feature. Check the server terminal — if you see a "Detected change... reloading" message, the app has auto-reloaded. If not, kill the server (Ctrl+C) and restart with `python app/app.py`. Then run the search command again:
 
 ```
-# Search items:
 curl -i \
   -H "Authorization: Bearer secret-token" \
   http://127.0.0.1:5000/items/search?q=milk
 ```
 
-![Review edits](./images/ac26.png?raw=true "Review edits")
-
+This time you should get a **200** response instead of 404, confirming the search endpoint is now implemented.
 <br><br>
 
-12. (Optional) If you have extra time, you can tell the agent to create tests for the change and follow through that process with the prompt below. Be prepared to select *Allow* as needed or tell it to continue/proceed in the chat dialog.
+10. (Optional) If you have extra time, ask the Agent to create and run tests for the new feature. Be prepared to click **"Allow"** for any terminal commands the Agent needs to run.
 
 ```
-Create and run tests for the new feature.
+Create and run tests for the new search feature.
 ```
-
-![Running tests with agent](./images/cdd284.png?raw=true "Running tests with agent")
-
 <br><br>
+
+<p align="center">
+**[END OF LAB]**
+</p>
+</br></br></br>
+
+**Lab 6 - Custom Instructions and Model Selection**
+
+**Purpose: In this lab, we'll configure Copilot with project-specific instructions and explore how to select different AI models.**
+
+1. Custom instructions let you tell Copilot about your team's coding standards, conventions, and preferences. These instructions are stored in a file that Copilot reads automatically. Let's create one. In the terminal, run:
+
+```
+mkdir -p .github
+code .github/copilot-instructions.md
+```
+<br><br>
+
+2. In the new file, add the following custom instructions and save:
+
+```markdown
+# Copilot Custom Instructions
+
+- Always use Python type hints for all function parameters and return values
+- Follow PEP 8 naming conventions strictly
+- Use f-strings for string formatting instead of .format() or concatenation
+- Add a brief docstring to every function
+- Prefer list comprehensions over manual loops where readability is maintained
+- Use pathlib instead of os.path for file path operations
+```
+<br><br>
+
+3. Now let's see these instructions in action. Open a new file:
+
+```
+code utils.py
+```
+<br><br>
+
+4. In the Copilot Chat (Ask mode), enter the following prompt:
+
+```
+Write a function that reads a CSV file and returns a list of dictionaries where each dictionary represents a row.
+```
+<br><br>
+
+5. Examine the generated code. It should follow your custom instructions: type hints on parameters and return values, a docstring, f-strings if any strings are formatted, and pathlib for file paths. If you check the **References** section in the Chat output (click to expand it), you should see `.github/copilot-instructions.md` listed — confirming Copilot used your instructions.
+<br><br>
+
+6. Insert the generated code into the *utils.py* file. Now let's test it further. In the Chat, ask:
+
+```
+Add a function to write a list of dictionaries to a CSV file.
+```
+
+Again, verify that the output follows your custom instructions (type hints, docstrings, pathlib, etc.).
+<br><br>
+
+7. Now let's explore **model selection**. In the Chat panel, look for the model name displayed near the mode selector or at the top of the Chat area. Click on it to open the model picker. You'll see available models such as **GPT-4.1**, **Claude Sonnet**, and others depending on your plan.
+<br><br>
+
+8. Select a different model than the current one (for example, switch to **Claude Sonnet** if you were on GPT-4.1, or vice versa). Now ask the same question again:
+
+```
+Write a function to validate an email address and return a detailed breakdown of its parts.
+```
+<br><br>
+
+9. Compare the output with what you might expect from the other model. You may notice differences in coding style, verbosity, and approach. Both should follow your custom instructions since those are applied regardless of which model is selected. Different models may excel at different tasks — Claude models tend to be preferred for complex multi-file reasoning, while GPT models may be faster for simple completions.
+<br><br>
+
+10. **Key takeaways:**
+    - Custom instructions in `.github/copilot-instructions.md` apply automatically to all Chat interactions and are shared via your repo (great for teams)
+    - You can also create path-specific instructions using `.instructions.md` files in subdirectories
+    - Model selection is available on Pro plans and above — experiment to find which models work best for your tasks
+    - Premium models consume "premium requests" from your monthly allocation
 
 <p align="center">
 **[END OF LAB]**
@@ -487,270 +406,166 @@ Create and run tests for the new feature.
 
 **Lab 7 - Extending Copilot with MCP Servers**
 
-**Purpose: In this lab, we'll see how to use GitHub Copilot with the GitHub MCP Server.**
+**Purpose: In this lab, we'll set up and use the GitHub MCP Server to give Copilot access to external tools.**
 
-1. For authentication to GitHub, we will need a GitHub personal access token (PAT). When logged into GitHub, click on the link below, provide a note and click the green "Generate token" button at the bottom.
+1. MCP (Model Context Protocol) servers extend Copilot's Agent mode with external tool integrations. For authentication to the GitHub MCP Server, we need a personal access token (PAT). Click the link below, provide a note, and click the green **"Generate token"** button at the bottom:
 
-Link:  Generate classic personal access token (repo & workflow scopes) https://github.com/settings/tokens/new?scopes=repo,workflow
-
-![Creating token](./images/mcp10.png?raw=true "Creating token")
-
-![Creating token](./images/mcp87.png?raw=true "Creating token")
-
-<br><br>
-   
-2. On the next screen, make sure to copy the generated token and save it for use later in the lab. You will not be able to see the actual token again!
-
-![Copying token](./images/mcp11.png?raw=true "Copying token")
+Link: [Generate classic personal access token (repo & workflow scopes)](https://github.com/settings/tokens/new?scopes=repo,workflow)
 <br><br>
 
-3. Now we need to add the GitHub MCP Server configuration in our IDE. You could fill most of this out via IDE prompts, but for simplicity, we already have a sample configuration file that we can just copy in. Run the commands below in the terminal. The last one will open the file in the editor.
+2. On the next screen, **copy the generated token and save it** — you won't be able to see it again! (**Important:** Never commit PATs to a repository. This token is for local use only.)
+<br><br>
+
+3. Now we'll add the MCP Server configuration. We already have a sample config file we can use. Run these commands in the terminal:
 
 ```
 cd /workspaces/copilot-hands-on
-mkdir .vscode
-cp extra/mcp_github_settings.json  .vscode/mcp.json
+mkdir -p .vscode
+cp extra/mcp_github_settings.json .vscode/mcp.json
 code .vscode/mcp.json
 ```
-
 <br><br>
 
-4. Next, we can start the local MCP server. In the *mcp.json* file, above the name of the server, click on the small *Start* link (see figure below). A dialog will pop up for you to paste in your PAT. Paste the token in there and hit *Enter*. (Note that the token will be masked out.)
-
-![Starting the server](./images/mcp23.png?raw=true "Starting the server")
-
-After this, you should see the text above the server name change to "√Running | Stop | Restart | ## tools | More...".
-
-![Starting the server](./images/mcp24.png?raw=true "Starting the server")
-
+4. In the *mcp.json* file, click the small **"Start"** link that appears above the server name. A dialog will prompt you to paste your PAT. Paste it and hit *Enter*. (The token will be masked.) After a moment, you should see the text change to **"Running | Stop | Restart | ## tools | More..."**.
 <br><br>
 
-5. To see the tools that are available, in the Copilot Chat dialog, make sure are in *Agent* mode, click on the small *tool* icon (see figure) and then scroll down to the *MCP Server: GitHub MCP Server* section. You'll see the available tools we picked up under that.
-
-![Viewing available tools](./images/mcp25.png?raw=true "Viewing available tools")
-
+5. To see the available tools, make sure you're in **Agent** mode in the Chat panel. Click the small **tool icon** (wrench/hammer) in the Chat input area. Scroll down to the **MCP Server: GitHub MCP Server** section. You'll see all the tools Copilot can now use — things like searching issues, reading file contents from repos, listing PRs, and more.
 <br><br>
 
-
-6. Now that we have these tools available, we can use them in Copilot's Chat interface. (Again, you must be in *Agent* mode.) Here an example prompt to list out open issues in the GitHub repository the codespace is based on:
+6. Let's use these tools. In Agent mode, enter one of the following prompts:
 
 ```
-What are the latest changes in <repo name>?
 Give me a list of the open issues for the current GitHub repo
 ```
-</br></br>
 
-7. Notice the mention of "Ran <tool name> - GitHub MCP Server (MCP Server) early in the output.
+or
 
-![Example usage](./images/ct162.png?raw=true "Example usage")
+```
+What are the latest changes in <your-repo-name>?
+```
+<br><br>
 
-8. Now we can use the MCP tools to help answer questions in conjunction with our local changes. For example, assuming the first issue it listed was the one about "Add unit tests for existing Python modules", we can ask if our local changes resolve this. Try this prompt in the chat area.
+7. Watch the output — you'll see a note like **"Ran <tool_name> - GitHub MCP Server"** early in the response. This confirms Copilot is using the MCP tools to access GitHub data directly rather than guessing from its training data.
+<br><br>
+
+8. Now let's combine MCP-sourced GitHub context with our local code. Enter the following prompt:
 
 ```
 Is the first issue in the GitHub repository already solved by my local code?
 ```
 
-9. After you run this, Copilot will likely tell you that yes, the issue is resolved by your local changes. (If you need to *Allow/Approve* operations from the agent to complete this, go ahead.)
-
-![Example usage](./images/ct163.png?raw=true "Example usage")
-
-10. If you click on the *Extensions* icon on the left (#1 in the screenshot below), you'll see a category for *MCP SERVERS - INSTALLED*. This should show the GitHub MCP Server since we just connected to that.   
-
-![Extensions and browser](./images/mcp97.png?raw=true "Extensions and browser")
-
-11. If you then click on the globe icon (#2 in the screenshot above), you can get to another page that shows a list of available MCP servers to use.
-
-![MCP Servers](./images/mcp98.png?raw=true "MCP Servers")
-
- <p align="center">
-**[END OF LAB]**
-</p>
-</br></br></br>
-
-**Lab 8 for free Copilot plan only - Copilot in GitHub**
-
-**Purpose: In this lab, we'll see how to use the integrated chat interface in GitHub.**
-
-1. To give us a project to work with, we'll fork a repository from my GitHub area. Switch back to GitHub in the browser and go to https://github.com/skillrepos/sec-demo. (Make sure you are logged in as your GitHub userid that has Copilot access.)
-
+If you need to **Allow** or **Approve** operations from the Agent, go ahead. Copilot will use the MCP server to read the issue, then analyze your local files to determine if the issue is resolved.
 <br><br>
 
-2. Fork the skillsrepo/demo repository into your own GitHub space via the *Fork* button at the top right. Make sure to **uncheck** the *Copy the main branch only* box on the second screen. Then you can click on the *Create fork* button at the bottom to actually create the fork.
-
-![fork repo](./images/cdd172.png?raw=true "Fork repo")
-![uncheck checkbox](./images/cdd147.png?raw=true "Uncheck checkbox")
-
+9. If you click the **Extensions** icon on the left sidebar, you'll see a category for **MCP SERVERS - INSTALLED** showing the GitHub MCP Server. Clicking the globe icon will show you a page listing additional MCP servers you can browse and add.
 <br><br>
 
-3. After the fork is complete, in your fork, click on the down arrow next to the Copilot button at the top right and select *Assistive* from the menu. The chat dialog will open up and then you will have a chat input box and some suggested questions. Click on the *Tell me about this repository* question.  (If you don't see it, you can select one of the others or type in the question.) After this runs, you'll get some basic info about the repository.
-
- ![about the repo query](./images/cdd261.png?raw=true "About the repo query") 
- </br></br>
- ![about the repo response](./images/cdd248.png?raw=true "About the repo response") 
-
-<br><br>
- 
-4. Now, in the list of files in the repo, select the *main.go* file to open it up. Start a new conversation in the Copilot Chat interface by clicking on the "+" sign. Click on the *Summarize this file for me* question or type it into the input area.  After this runs, you'll see a summarization of the file.
-
- ![about the file query](./images/cdd249.png?raw=true "About the file query") 
- </br></br>
- ![about the file response](./images/cdd250.png?raw=true "About the file response") 
-
-<br><br>
- 
-5. In this repo, we have a *dev* branch with some fixes for security vulnerabilities in the *main* branch. Let's create a pull request to merge the *dev* branch into the *main* branch. We could initiate the pull request manually, but since we have the Copilot Chat available, let's have it expedite the process by creating a simple link for us to use to start the pull request. In the Chat input area, tell Copilot to generate an appropriate URL via the prompt below and then submit it. After Copilot is done, you should see a link displayed.
-```
-Generate a url that I can use to create a pull request to merge the dev branch into the main branch
-```
-
- ![generate pr link](./images/cdd251.png?raw=true "Generate pr link") 
-
-<br><br>
- 
-6. Click on the link in the chat dialog. This should open up a screen with either a pull request already initiated or a file comparison screen with a button to create the pull request. If it's the latter, go ahead and click the button to create the pull reuqest for merging the dev branch into the main branch. (Close the Chat interface by clicking on the **x** symbol in the upper right corner of the dialog.)
-
- ![pull request initiation](./images/cdd252.png?raw=true "Pull request initiation")  
-
-<br><br> 
-  
-7. In the pull request, update the title if you want. Then, we'll have Copilot automatically generate a description of our pull request. To do this, click on the *Copilot actions* button in the row under the *Add a description*. In the pop-up, select *Summary*. This will run for a few moments and then generate a draft summmary.
-
-(**NOTE: *If you are on the free (not trial) plan, you won't see the Copilot icon in the pull request area. If that's the case, you can just create the pull request, open up the "Files changed" tab, pick a change and go to step 10*.**)
-
- ![generate summary](./images/cdd155.png?raw=true "Generate summary")  
- ![summary](./images/cdd156.png?raw=true "Summary")  
-
-<br><br>
-  
-8. The summary will be in *markdown* format. You can click on the *Preview* button to see a readable presentation. When ready, click the *Create pull request* button to finish the creation.
-
- ![summary](./images/cdd157.png?raw=true "Summary") 
-
-<br><br>
-
-9. Notice that in the *Security Improvements* section, Copilot has generated links for each of the changes in the *models/models.go* file. Let's click on the 2nd link to look at those changes. (**If you do not have the links, you can click on the *Files changed* tab in the pull request to see the changes.**)
-
- ![looking at a change](./images/cdd158.png?raw=true "Looking at a change") 
-
-<br><br> 
-
-10. This will open up the change comparison screen. Let's ask Copilot for some more information about the highlighted change. On the right of the screen will be a small, floating Copilot icon with a drop-down arrow. Click on that and select the *Explain* option. After this runs, you'll see an explanation of the highlighted section.
-
- ![request explanation](./images/cdd159.png?raw=true "Request explanation") 
- ![section explanation](./images/cdd160.png?raw=true "Section explanation")
-
-<br><br>
-
-11. Now, let's add a file to the context for the chat. Click on the *Ask Copilot* button at the top of the screen. In the *Select files to discuss* dialog, select *models/models.go*, check the box and then *Save* or *Start Chat*. You'll then see the file attached as context in the Chat dialog.
-    
-![add file for context](./images/cdd161.png?raw=true "Add file for context")
-![file added to context](./images/cdd162.png?raw=true "File added to context")
-
-<br><br>
-
-12. Finally, we'll prompt Copilot about why the changes need to be made. In the Chat input area, enter the prompt *Why do these changes need to be made?* It will use this file as context and respond accordingly. Notice in the screenshot below, the indicator for *1 reference - models.go*.
-```
-Why do these changes need to be made?
-```
-![answer with file as context](./images/cdd163.png?raw=true "Answer with file as context")
-
-We're not going to go through and resolve the pull request, so you are done!
+10. **Key takeaways:**
+    - MCP servers give Agent mode access to external tools and data sources
+    - The GitHub MCP Server is just one example — servers exist for Docker, databases, and many other tools
+    - MCP tools only work in **Agent** mode (not Ask or Edit)
+    - MCP configuration lives in `.vscode/mcp.json` and can be shared with your team via the repo
 
 <p align="center">
 **[END OF LAB]**
 </p>
 </br></br></br>
 
+**Lab 8 for free Copilot plan - Copilot in GitHub.com**
 
-**Alternate Lab 8 for paid Copilot plans - Copilot in GitHub**
+**Purpose: In this lab, we'll use the integrated Copilot features available on GitHub.com.**
 
-**Purpose: In this lab, we'll see how to use the integrated chat interface in GitHub.**
-
-1. To give us a project to work with, we'll fork a repository from my GitHub area. Switch back to GitHub in the browser and go to https://github.com/skillrepos/sec-demo. (Make sure you are logged in as your GitHub userid that has Copilot access.)
-
+1. Switch to GitHub in your browser and go to https://github.com/skillrepos/sec-demo. Make sure you are logged in with your GitHub account that has Copilot access.
 <br><br>
 
-2. Fork the skillsrepo/demo repository into your own GitHub space via the *Fork* button at the top right. Make sure to **uncheck** the *Copy the main branch only* box on the second screen. Then you can click on the *Create fork* button at the bottom to actually create the fork.
-
-![fork repo](./images/cdd172.png?raw=true "Fork repo")
-![uncheck checkbox](./images/cdd147.png?raw=true "Uncheck checkbox")
-
+2. Fork the repository into your own GitHub space via the **Fork** button at the top right. Make sure to **uncheck** the *Copy the main branch only* box on the next screen. Then click **Create fork**.
 <br><br>
 
-3. After the fork is complete, in your fork, click on the Copilot button at the top right. The chat dialog will open up and then you will have a chat input box. Let's get some information about this repo. In the input area, enter the prompt below and submit it. After this runs, you'll get some basic info about the repository.
-
-```
-Tell me about this repository.
-```
-
- ![about the repo query](./images/cdd285.png?raw=true "About the repo query") 
- </br></br>
- ![about the repo response](./images/cdd286.png?raw=true "About the repo response") 
-
+3. After the fork is complete, click on the Copilot button (or down arrow next to it) at the top right and select **Assistive** from the menu. The Chat dialog will open with a text input and some suggested questions. Click on **"Tell me about this repository"** (or type it in). Copilot will provide an overview of the project.
 <br><br>
- 
-4. Now, go back to the list of files in the repo. (You can use the back arrow or go back to the URL.) Select the *main.go* file to open it up. Click on the Copilot icon at the top of the file so we can get information about this file.
 
- ![Querying about the file](./images/cdd287.png?raw=true "Querying about the file") 
- </br></br>
-
-5. Let's ask Copilot for some more information about thie file. In the input area, enter the prompt below. After processing, Copilolt will provide the requested information.
-
-```
-Explain how this file works and what its purpose is.
-```
-
- ![Querying about the file](./images/cdd288.png?raw=true "Querying about the file") 
- </br></br> 
- ![about the file response](./images/cdd289.png?raw=true "About the file response") 
-
+4. In the file list, click on **main.go** to open it. Start a new conversation in the Copilot Chat (click the **"+"** sign) and click **"Summarize this file for me"** or type that question.
 <br><br>
- 
-6. Go back to the main page for the repo. In this repo, we have a *dev* branch with some fixes for security vulnerabilities in the *main* branch. Let's create a pull request to merge the *dev* branch into the *main* branch. We'll use the coding agent to do this. Click on the "Open agents panel" next to the GitHub Copilot icon at the top of the screen. In the dialog that comes up, enter the prompt below. After you submit the prompt, the agent will start a task in the background to create the pull request.
-   
+
+5. In this repo, the *dev* branch has security fixes for the *main* branch. Let's create a pull request. In the Chat input, ask Copilot:
+
+```
+Generate a url that I can use to create a pull request to merge the dev branch into the main branch
+```
+
+Click the generated link to start the pull request.
+<br><br>
+
+6. On the pull request creation screen, update the title if you want. Then click the **Copilot actions** button below the description field and select **Summary**. Copilot will generate a detailed PR description in markdown.
+
+(**NOTE:** If you are on the free plan and don't see the Copilot icon in the pull request area, you can skip this step and just create the pull request with a manual description.)
+<br><br>
+
+7. Click **Preview** to see the formatted summary, then click **Create pull request**.
+<br><br>
+
+8. In the PR view, click the **Files changed** tab to see the diffs. On the right side of the screen, look for a small floating Copilot icon with a dropdown arrow. Click it and select **Explain** to get an explanation of the changes in that section.
+<br><br>
+
+9. Let's add more context. Click **Ask Copilot** at the top of the screen. In the file selector dialog, select **models/models.go**, check the box, and click **Save** or **Start Chat**. You'll see the file attached as context.
+<br><br>
+
+10. In the Chat input, ask:
+
+```
+Why do these changes need to be made?
+```
+
+Copilot will use the attached file as context and explain the security rationale. Notice the reference indicator (e.g., "1 reference - models.go") confirming it used the context.
+<br><br>
+
+<p align="center">
+**[END OF LAB]**
+</p>
+</br></br></br>
+
+**Lab 8 for paid Copilot plans - Copilot in GitHub.com**
+
+**Purpose: In this lab, we'll use the integrated Copilot features on GitHub.com, including the Copilot coding agent to create a pull request.**
+
+1. Switch to GitHub in your browser and go to https://github.com/skillrepos/sec-demo. Make sure you are logged in with your GitHub account that has a paid Copilot plan.
+<br><br>
+
+2. Fork the repository into your own GitHub space via the **Fork** button at the top right. Make sure to **uncheck** the *Copy the main branch only* box on the next screen. Then click **Create fork**.
+<br><br>
+
+3. After the fork is complete, click on the Copilot button at the top right. In the Chat dialog, enter `Tell me about this repository.` to get an overview. Then click on **main.go** in the file list and ask Copilot: `Explain how this file works and what its purpose is.` Copilot will provide a detailed breakdown of the file.
+<br><br>
+
+4. Go back to the main page for the repo. This repo has a *dev* branch with security fixes for the *main* branch. Let's use the **coding agent** to create a pull request. Click on the **"Open agents panel"** (next to the Copilot icon at the top of the screen). In the dialog, enter:
+
 ```
 Merge dev branch into main branch
 ```
 
-![generate pr](./images/cdd290.png?raw=true "Generate pr") 
-
-![generate pr](./images/cdd291.png?raw=true "Generate pr") 
-
-<br><br>
- 
-7. After a minute or two, you should see that there is now a Pull request avaiable as indicated at the top of the repo. Click on the "Pull request" link at the top and then open the pull request. This should open up a screen with either a pull request already initiated or a file comparison screen with a button to create the pull request. If it's the latter, go ahead and click the button to create the pull reuqest for merging the dev branch into the main branch. (Close the Chat interface by clicking on the **x** symbol in the upper right corner of the dialog.)
-
- ![pull request initiation](./images/cdd292.png?raw=true "Pull request initiation")  
-
-<br><br> 
-  
-7. In the pull request, it should have a row that says "Ready for review". Click on that and then you can review any comments added by Copilot. Then, we'll have Copilot automatically generate a description of our pull request. 
-
- ![reviewing comments](./images/cd293.png?raw=true "Reviewing comments")  
- 
-<br><br>
-  
-8. Click on the *Files changed* link at the top of the pull request. This will open up the change comparison screen. Let's ask Copilot for some more information about a change. As you scroll through the change, on the right of the screen will be a small, floating Copilot icon with a drop-down arrow. Click on that and select the *Explain* option. After this runs, you'll see an explanation of the highlighted section.
-
- ![request explanation](./images/cdd159.png?raw=true "Request explanation") 
- ![section explanation](./images/cdd160.png?raw=true "Section explanation")
-
+The coding agent will start a background task to create the pull request. (This may take 1-2 minutes — the agent runs in a GitHub Actions environment in the background.)
 <br><br>
 
-9. Now, let's add a file to the context for the chat. Click on the *Ask Copilot* button at the top of the screen. In the *Select files to discuss* dialog, select *models/models.go*, check the box and then *Save* or *Start Chat*. You'll then see the file attached as context in the Chat dialog.
-    
-![add file for context](./images/cdd161.png?raw=true "Add file for context")
-![file added to context](./images/cdd162.png?raw=true "File added to context")
-
+5. When the PR is ready, navigate to the **Pull requests** tab at the top of the repo. Click into the PR to review it. Notice the auto-generated description. If you see a **"Ready for review"** indicator, click it to view any comments the coding agent added.
 <br><br>
 
-10. Finally, we'll prompt Copilot about why the changes need to be made. In the Chat input area, enter the prompt *Why do these changes need to be made?* It will use this file as context and respond accordingly. Notice in the screenshot below, the indicator for *1 reference - models.go*.
+6. Click the **Files changed** tab to review the diffs. Look for the small floating Copilot icon (with a dropdown arrow) on the right side of a change section. Click it and select **Explain** to get an AI-powered explanation of the changes.
+<br><br>
+
+7. Click **Ask Copilot** at the top of the screen. In the file selector dialog, select **models/models.go**, check the box, and click **Save** or **Start Chat**. Then ask:
+
 ```
 Why do these changes need to be made?
 ```
-![answer with file as context](./images/cdd163.png?raw=true "Answer with file as context")
 
-We're not going to go through and resolve the pull request, so you are done!
+Copilot will use the file as context and explain the security reasoning behind the changes.
+<br><br>
+
+8. **Key takeaways:**
+    - The **coding agent** (paid plans) can autonomously create PRs from natural language descriptions
+    - It runs in a secure GitHub Actions environment in the background
+    - Important: the person who asked Copilot to create the PR cannot approve it — this ensures independent code review
+    - Copilot on GitHub.com provides code explanations, PR summaries, and contextual chat across any repository
 
 <p align="center">
 **[END OF LAB]**
@@ -761,18 +576,18 @@ We're not going to go through and resolve the pull request, so you are done!
 **THANKS!**
 </p>
 </br></br></br>
- 
+
 # Appendix 1
 ## Alternate ways to "fork" repo if not allowed to use actual *Fork* button.
 
 **Option 1 - Using Import**
 
 1. Sign into GitHub if not already signed in.
-   
+
 2. Go to [**https://github.com/new/import**](https://github.com/new/import)
-   
+
 3. On that page, fill out the form as follows:
-   
+
 In "Your source repository details", in the "The URL for your source repository *" field, enter
 
 ```
@@ -789,50 +604,31 @@ in the "Repository name *" field.
 
 The visibility field should be set to "Public".
 
-![filling out form](./images/cdd195.png?raw=true "Filling out form")
-
 4. If you haven't already, click on the green "Begin import" button.
 
-5. After this, you should see the import processing... 
+5. After this, you should see the import processing...
 
-![import processing](./images/cdd196.png?raw=true "Import processing")
-
-6. This will take several minutes to run. When done, you should see a "complete" message and your new
-repo will be available. (There is a link in the complete message to click on to directly access it.)
-
-![processing finished](./images/cdd197.png?raw=true "Processing finished")
+6. This will take several minutes to run. When done, you should see a "complete" message and your new repo will be available. (There is a link in the complete message to click on to directly access it.)
 
 
 **Option 2 - Using clone and push**
 
 1. Sign into GitHub if not already signed in.
 
-2. If you don't already have one, create a GitHub token or SSH key. If you are familiar with SSH keys, you can add your public key at
-[**https://github.com/settings/keys**](https://github.com/settings/keys). Otherwise, you can just create a "classic" token by following the
-instructions at [**https://docs.github.com/en/authentication/keeping-your-account-and-datasecure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic**](https://docs.github.com/en/authentication/keeping-your-account-and-datasecure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic). If you use a GitHub token, make sure to save a copy of it to use in the push step.
+2. If you don't already have one, create a GitHub token or SSH key. If you are familiar with SSH keys, you can add your public key at [**https://github.com/settings/keys**](https://github.com/settings/keys). Otherwise, you can create a "classic" token by following the instructions at [**https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic**](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic). If you use a GitHub token, make sure to save a copy of it to use in the push step.
 
-3. Clone down the [**skillrepos/greetings-ci**](https://github.com/skillrepos/greetings-ci) repository.
+3. Clone down the repository:
 
 ```
-git clone https://github.com/skillrepos/greetings-ci (if using token)
+git clone https://github.com/skillrepos/sec-demo (if using token)
 ```
 
-or 
+or
 
 ```
-git clone git@github.com:skillrepos/greetings-ci (if using ssh)
+git clone git@github.com:skillrepos/sec-demo (if using ssh)
 ```
-4. Create a new repository in your GitHub space named *sec-demo*. Go to [**https://github.com/new**](https://github.com/new). Fill in
-the "repo name" field with "sec-demo" and then click on the "Create repository" button.
-   
-![create new repo](./images/cdd198.png?raw=true "Create new repo")
 
+4. Create a new repository in your GitHub space named *sec-demo*. Go to [**https://github.com/new**](https://github.com/new). Fill in the "repo name" field with "sec-demo" and then click on the "Create repository" button.
 
-5. On the page that comes up after that, select the appropriate protocol (https or ssh) and then follow
-the instructions for "...or push an existing repository from the command line" to push your content
-back to the GitHub repository. If you're using https you will be prompted for a password at push
-time. Just paste in the classic token. (Note that for security reasons, you will not see the token
-displayed.)
-
-![push to repo](./images/cdd199.png?raw=true "Push to repo")
-
+5. On the page that comes up after that, select the appropriate protocol (https or ssh) and then follow the instructions for "...or push an existing repository from the command line" to push your content back to the GitHub repository. If you're using https you will be prompted for a password at push time. Just paste in the classic token.
