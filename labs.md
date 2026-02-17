@@ -116,58 +116,97 @@ code prime.py
 ```
 <br><br>
 
-2. Open the Copilot Chat panel by clicking the Chat icon in the top bar (or side bar). Make sure the mode is set to **"Ask"**. If you need to change the mode, click on the mode selector dropdown at the bottom of the Chat input area and select **"Ask"**. (If you see a "Finish Setup" option in the bottom bar of the codespace, click that first and then "Set up Copilot".)
+2. If not already open, open the Copilot Chat panel by clicking the Chat icon in the top bar (or side bar). Make sure the mode is set to **"Ask"**. If you need to change the mode, click on the mode selector dropdown at the bottom of the Chat input area and select **"Ask"**. (If you see a "Finish Setup" option in the bottom bar of the codespace, click that first and then "Set up Copilot".)
+
+![Opening chat](./images/cpho12.png?raw=true "Opening chat")
+
+
+![Ask mode](./images/cpho13.png?raw=true "Ask mode")
+
 <br><br>
 
 3. **Highlight all the code** in *prime.py*. In the Chat input, type the following and hit *Enter*:
 
 ```
-simplify
+simplify this code for clearer logic
 ```
 
 Copilot will respond with an explanation of how it simplified the code and provide a new code block in the Chat panel. This is **Ask mode** — it answers questions and provides suggestions in the chat, but doesn't directly change your files.
+
+![simplify logic](./images/cpho14.png?raw=true "Simplify logic")
+
 <br><br>
 
 4. Hover over the code block in the Chat output. You'll see a toolbar appear. Click the **"Insert at Cursor"** button to replace the highlighted code with the simplified version. (In Ask mode, *you* control when and how suggestions are applied.)
+
+![Insert mode](./images/cpho15.png?raw=true "Insert mode")
+
 <br><br>
 
-5. Now let's try **Edit mode**. Click the mode selector dropdown and switch to **"Edit"**. Notice the interface changes — you'll see an area to add files to your "working set." The *prime.py* file should already be listed. If not, click **"Add Files"** and select it.
+5. Now let's try **Agent mode** for a direct edit. Click the mode selector dropdown and switch to **"Agent"**. 
+
+![Agent mode](./images/cpho16.png?raw=true "Agent mode")
+
 <br><br>
 
-6. In the Edit mode input area, type the following and submit:
+6. In the Chat mode input area, type the following and submit:
 
 ```
-Add detailed docstrings to each function explaining parameters, return values, and examples
+Add detailed docstrings to each function in prime.py explaining parameters, return values, and examples
 ```
 
-Copilot will generate inline diffs directly in the editor — you'll see proposed additions highlighted. Review the changes, then click **"Accept"** to apply them or **"Discard"** to reject. This is the key difference: **Edit mode applies changes directly in your files** for you to review.
+Agent mode will analyze the file, propose edits directly in the editor, and may iterate to ensure completeness. You'll see inline diffs — review the changes, then click "Keep" to apply them or "Undo" to reject. Unlike *Ask* mode, *Agent* mode applies changes directly in your files and can work across multiple files autonomously
+
+![Agent mode](./images/cpho17.png?raw=true "Agent mode")
+
 <br><br>
 
-7. Now let's use Ask mode to fix an error. Switch back to **"Ask"** mode. In the *prime.py* file, intentionally break the code by changing a variable name — for example, change an instance of `n` to `x`.
+7. Now let's introduce an error into the code to see how Copilot can fix it. Switch back to **"Ask"** mode. In the *prime.py* file, intentionally break the code by changing a variable name — for example, change an instance of `n` to `x`.
 <br><br>
 
-8. Highlight the broken code. In the Chat input, type:
+8. Highlight the broken code. Bring up the inline chat interface with Cmd/Ctrl+1. The inline chat dialog will probably already be populated with a command like "Fix the attached problem". If so, you can just hit *Enter*. If not, you can use the */fix* command.
 
-```
-/fix
-```
+![Fix with Copilot](./images/cpho21.png?raw=true "Fix with Copilot")
 
-Copilot will analyze the error and propose a fix in the Chat panel. You can apply the fix using the same controls as before. The `/fix` command is a built-in **slash command** — a shortcut for common tasks.
+(As another alternative to start a fix, you can right-click, select *Generate Code* and then select *Fix*.)
+
+![Fix with Copilot](./images/cpho20.png?raw=true "Fix with Copilot")
+
+9. Copilot will analyze the error and propose a fix inline. You can apply the fix using the same controls as before (the *Keep* button). 
+
+![Keep fix](./images/cpho19.png?raw=true "Keep fix")
+
 <br><br>
 
-9. Let's see one more useful slash command. Highlight a function in the file and type:
+9. Let's see one more useful slash command. Highlight the code in the *prime.py* file and have Copilot explain it by typing */explain* in the chat interface.
 
 ```
 /explain
 ```
 
-Copilot will provide a detailed explanation of what the code does, line by line. Other useful slash commands include `/tests`, `/doc`, and `/new`.
+Copilot will provide a detailed explanation of what the code does, line by line. 
+
+![Explain](./images/cpho22.png?raw=true "Explain")
+
+Other useful slash commands include `/tests`, `/doc`, and `/new`.
 <br><br>
 
-10. **Quick reference — when to use each mode:**
+10. Let's try one more Agent task. Switch back to "Agent" mode and enter:
+
+```
+Refactor the functions in prime.py to use more descriptive variable names and add input validation
+```
+
+Watch how Agent mode reasons about the task, makes changes across the file, and potentially runs commands to verify its work. When finished, review the diffs and click either the "Keep" (all) buttons or go through the "Keep" buttons for the individual changes to apply the changes.
+
+![Agent refactor](./images/cpho23.png?raw=true "Agent refactor")
+
+<br><br>
+
+11. **Quick reference — when to use each mode:**
     - **Ask**: Learning, Q&A, exploring ideas. You control what gets applied.
-    - **Edit**: Targeted changes to specific files. Copilot proposes inline diffs for your review.
     - **Agent**: Autonomous, multi-step tasks. Copilot reasons, edits files, runs commands, and iterates. (We'll cover Agent mode in depth in Lab 5.)
+    - **Note**: Earlier versions of Copilot included a separate "Edit" mode. This has been unified into Agent mode, which now handles both targeted edits and autonomous tasks.
 
 <p align="center">
 **[END OF LAB]**
