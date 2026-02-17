@@ -34,9 +34,13 @@ code index.js
 ```
 // function to parse data
 ```
+![Copilot generated function](./images/cdd263.png?raw=true "Copilot generated function")
 <br><br>
 
 3. Hit *Enter* and notice the grayed-out code that Copilot suggests. This is likely more generic than we want, but hit *Tab* to accept the suggestion. Continue hitting *Tab* and *Enter* to accept additional lines until you get a complete function or Copilot stops suggesting. (Give Copilot a second to provide suggestions before moving on.)
+
+![Copilot generated function](./images/cpho7.png?raw=true "Copilot generated function")
+
 <br><br>
 
 4. This prompt wasn't specific enough for Copilot to know what we actually wanted. **Select all the code and delete it** so we can try a more specific prompt.
@@ -50,9 +54,15 @@ code index.js
 <br><br>
 
 6. Hit *Enter*. You should see Copilot suggest a much more relevant function — likely named something like `parseURL`. Hit *Tab* to accept each line and *Enter* to continue until the function is complete. Notice how the more descriptive prompt led to more useful code.
+
+![Copilot generated function](./images/cpho8.png?raw=true "Copilot generated function")
+
 <br><br>
 
-7. To see alternative suggestions, you can hover over any grayed-out suggestion. A small toolbar will appear with **"<"** and **">"** arrows to cycle through alternatives. Try this on a suggestion to see the differences. Select the one you prefer with *Tab*.
+7. Next, let's see how Copilot presents multiple alternatives. Enter the line of code below and then hit *Enter*. With the cursor on the next line, you should see a grayed-out suggestion. Hover over that suggestion. A small toolbar will appear with **"<"** and **">"** arrows to cycle through alternatives. Select the one you prefer with *Tab*.
+
+![Copilot generated alternatives](./images/cpho9.png?raw=true "Copilot generated alternatives")
+
 <br><br>
 
 8. Now let's experience **Next Edit Suggestions (NES)**. NES predicts your next edit based on changes you just made — even in a different part of the file. Delete the current contents of the file and paste in the following code:
@@ -79,9 +89,15 @@ function welcome(name) {
 ```
 
 After making this change, look at the `farewell` function below. You should see Copilot's NES automatically suggest the same template literal update there — highlighted with a dimmed/ghost text preview or a decorating indicator in the gutter.
+
+![NES 1](./images/cpho10.png?raw=true "NES 1")
+
 <br><br>
 
 10. Press *Tab* to accept the NES suggestion in `farewell`. Now look at the `welcome` function — NES should suggest the same pattern there too. Press *Tab* again to accept it. You've just updated three functions by only typing one change manually. This is the power of Next Edit Suggestions.
+
+![NES 2](./images/cpho11.png?raw=true "NES 2")
+
 <br><br>
 
  <p align="center">
