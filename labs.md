@@ -191,15 +191,31 @@ Copilot will provide a detailed explanation of what the code does, line by line.
 Other useful slash commands include `/tests`, `/doc`, and `/new`.
 <br><br>
 
-10. Let's try one more Agent task. Switch back to "Agent" mode and enter:
+10. Finally, let's try *Plan* mode. Switch back to "Plan" mode using the mode selector dropdown.
+
+![Switch to plan mode](./images/cpho28.png?raw=true "Switch to plan mode")
+
+Plan mode creates a structured implementation plan before any code is written - useful for larger tasks where you want to think through the approach first. Enter the following prompt:
 
 ```
-Refactor the functions in prime.py to use more descriptive variable names and add input validation
+Add input validation and error handling to the functions in prime.py
 ```
 
-Watch how Agent mode reasons about the task, makes changes across the file, and potentially runs commands to verify its work. When finished, review the diffs and click either the "Keep" (all) buttons or go through the "Keep" buttons for the individual changes to apply the changes.
+<br><br>
 
-![Agent refactor](./images/cpho23.png?raw=true "Agent refactor")
+11. As it prepares the plan, Plan mode may ask you clarifying questions (e.g., what types of validation? how to handle errors?). Answer them to refine the plan. If there are multiple, you can use the "<" and ">" keys to move between them. When you've answered all the questions, you can then use the "Submit" option to continue.
+
+![Answering questions](./images/cpho31.png?raw=true "Answering questions")
+
+<br><br>
+
+12. After Copilot processes your answers, it will present a full plan.  You can then click on the "Start Implementation" button to have the plan executed in Agent mode (or use the other button to open the plan in the editor). Watch how Agent mode reasons about the task, makes changes across the file, and potentially runs commands to verify its work. When finished, review the diffs and click either the "Keep" (all) buttons or go through the "Keep" buttons for the individual changes to apply the changes.
+
+![Ready to implement](./images/cpho33.png?raw=true "Ready to implement")
+
+As it is making the changes, Agent mode may stop and ask you if its ok if it runs commands. You can just choose "Allow" and let it run through the changes. Then choose "Keep/Undo" as appropriate to finalize them.
+
+![Implementing](./images/cpho34.png?raw=true "Implementing")
 
 <br><br>
 
