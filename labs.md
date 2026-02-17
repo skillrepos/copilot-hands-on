@@ -39,7 +39,7 @@ code index.js
 
 3. Hit *Enter* and notice the grayed-out code that Copilot suggests. This is likely more generic than we want, but hit *Tab* to accept the suggestion. Continue hitting *Tab* and *Enter* to accept additional lines until you get a complete function or Copilot stops suggesting. (Give Copilot a second to provide suggestions before moving on.)
 
-![Copilot generated function](./images/cpho7.png?raw=true "Copilot generated function")
+![Copilot generated function](./images/cpho07.png?raw=true "Copilot generated function")
 
 <br><br>
 
@@ -55,13 +55,13 @@ code index.js
 
 6. Hit *Enter*. You should see Copilot suggest a much more relevant function — likely named something like `parseURL`. Hit *Tab* to accept each line and *Enter* to continue until the function is complete. Notice how the more descriptive prompt led to more useful code.
 
-![Copilot generated function](./images/cpho8.png?raw=true "Copilot generated function")
+![Copilot generated function](./images/cpho08.png?raw=true "Copilot generated function")
 
 <br><br>
 
 7. Next, let's see how Copilot presents multiple alternatives. Enter the line of code below and then hit *Enter*. With the cursor on the next line, you should see a grayed-out suggestion. Hover over that suggestion. A small toolbar will appear with **"<"** and **">"** arrows to cycle through alternatives. Select the one you prefer with *Tab*.
 
-![Copilot generated alternatives](./images/cpho9.png?raw=true "Copilot generated alternatives")
+![Copilot generated alternatives](./images/cpho09.png?raw=true "Copilot generated alternatives")
 
 <br><br>
 
