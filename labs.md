@@ -587,6 +587,9 @@ Link: [Generate classic personal access token (repo & workflow scopes)](https://
 <br><br>
 
 2. On the next screen, **copy the generated token and save it** — you won't be able to see it again! (**Important:** Never commit PATs to a repository. This token is for local use only.)
+
+![Copying token](./images/mcp11.png?raw=true "Copying token")
+
 <br><br>
 
 3. Now we'll add the MCP Server configuration. We already have a sample config file we can use. Run these commands in the terminal:
@@ -599,10 +602,21 @@ code .vscode/mcp.json
 ```
 <br><br>
 
-4. In the *mcp.json* file, click the small **"Start"** link that appears above the server name. A dialog will prompt you to paste your PAT. Paste it and hit *Enter*. (The token will be masked.) After a moment, you should see the text change to **"Running | Stop | Restart | ## tools | More..."**.
+4. In the *mcp.json* file, click the small **"Start"** link that appears above the server name. A dialog will prompt you to paste your PAT. Paste it and hit *Enter*. (The token will be masked.) 
+
+
+![Starting the server](./images/mcp23.png?raw=true "Starting the server")
+
+After a moment, you should see the text change to **"Running | Stop | Restart | ## tools | More..."**.
+
+![Starting the server](./images/mcp24.png?raw=true "Starting the server")
+
 <br><br>
 
 5. To see the available tools, make sure you're in **Agent** mode in the Chat panel. Click the small **tool icon** (wrench/hammer) in the Chat input area. Scroll down to the **MCP Server: GitHub MCP Server** section. You'll see all the tools Copilot can now use — things like searching issues, reading file contents from repos, listing PRs, and more.
+
+![Viewing available tools](./images/mcp25.png?raw=true "Viewing available tools")
+
 <br><br>
 
 6. Let's use these tools. In Agent mode, enter one of the following prompts:
@@ -619,6 +633,10 @@ What are the latest changes in <your-repo-name>?
 <br><br>
 
 7. Watch the output — you'll see a note like **"Ran <tool_name> - GitHub MCP Server"** early in the response. This confirms Copilot is using the MCP tools to access GitHub data directly rather than guessing from its training data.
+
+
+![Example usage](./images/ct162.png?raw=true "Example usage")
+
 <br><br>
 
 8. Now let's combine MCP-sourced GitHub context with our local code. Enter the following prompt:
@@ -628,12 +646,23 @@ Is the first issue in the GitHub repository already solved by my local code?
 ```
 
 If you need to **Allow** or **Approve** operations from the Agent, go ahead. Copilot will use the MCP server to read the issue, then analyze your local files to determine if the issue is resolved.
+
+![Example usage](./images/ct163.png?raw=true "Example usage")
+
 <br><br>
 
 9. If you click the **Extensions** icon on the left sidebar, you'll see a category for **MCP SERVERS - INSTALLED** showing the GitHub MCP Server. Clicking the globe icon will show you a page listing additional MCP servers you can browse and add.
+
+
+![Extensions and browser](./images/mcp97.png?raw=true "Extensions and browser")
+
 <br><br>
 
-10. **Key takeaways:**
+10. If you then click on the globe icon (#2 in the screenshot above), you can get to another page that shows a list of available MCP servers to use.
+
+![MCP Servers](./images/mcp98.png?raw=true "MCP Servers")
+
+11. **Key takeaways:**
     - MCP servers give Agent mode access to external tools and data sources
     - The GitHub MCP Server is just one example — servers exist for Docker, databases, and many other tools
     - MCP tools only work in **Agent** mode (not Ask or Edit)
