@@ -681,44 +681,62 @@ If you need to **Allow** or **Approve** operations from the Agent, go ahead. Cop
 <br><br>
 
 2. Fork the repository into your own GitHub space via the **Fork** button at the top right. Make sure to **uncheck** the *Copy the main branch only* box on the next screen. Then click **Create fork**.
+
+![Fork](./images/cpho73.png?raw=true "Fork")
 <br><br>
 
 3. After the fork is complete, click on the Copilot button (or down arrow next to it) at the top right and select **Assistive** from the menu. The Chat dialog will open with a text input and some suggested questions. Click on **"Tell me about this repository"** (or type it in). Copilot will provide an overview of the project.
+
+![Chat with Copilot](./images/cpho67.png?raw=true "Chat with Copilot")
+
+![Prompt](./images/cpho68.png?raw=true "Prompt")
+
+![Response](./images/cpho69.png?raw=true "Response")
+
 <br><br>
 
-4. In the file list, click on **main.go** to open it. Start a new conversation in the Copilot Chat (click the **"+"** sign) and click **"Summarize this file for me"** or type that question.
+4. Go back to the repo. In the file list, click on **main.go** to open it. Start a new conversation in the Copilot Chat (click the **Copilot icon at the top of the file listing** ) and prompt it with **"Summarize this file for me"**.
+
+![Chat with Copilot](./images/cpho70.png?raw=true "Chat with Copilot")
+
+![Prompt](./images/cpho71.png?raw=true "Prompt")
+
+![Response](./images/cpho72.png?raw=true "Response")
+
 <br><br>
 
-5. In this repo, the *dev* branch has security fixes for the *main* branch. Let's create a pull request. In the Chat input, ask Copilot:
+5. Go back to the main repo (github.com/*your-github-userid*/sec-demo). In this repo, the *dev* branch has security fixes for the *main* branch. Let's create a pull request. Click on the Copilot icon at the top. In the Chat input, ask Copilot:
 
 ```
-Generate a url that I can use to create a pull request to merge the dev branch into the main branch
+Generate a clickable link that I can use to create a pull request to merge the dev branch into the main branch
 ```
 
 Click the generated link to start the pull request.
+
+![Clickable link](./images/cpho74.png?raw=true "Clickable link")
+
 <br><br>
 
-6. On the pull request creation screen, update the title if you want. Then click the **Copilot actions** button below the description field and select **Summary**. Copilot will generate a detailed PR description in markdown.
+6. On the next screen, click the "Create Pull Request" button. On the pull request creation screen, update the title if you want. Then click the **Copilot actions** button below the description field and select **Summary**. Copilot will generate a detailed PR description in markdown.
 
 (**NOTE:** If you are on the free plan and don't see the Copilot icon in the pull request area, you can skip this step and just create the pull request with a manual description.)
+
+![Generate summary](./images/cpho75.png?raw=true "Generate summary")
+
 <br><br>
 
-7. Click **Preview** to see the formatted summary, then click **Create pull request**.
+8. Click **Preview** to see the formatted summary, then click **Create pull request**.
+
+![Create PR](./images/cpho76.png?raw=true "Create PR")
+
 <br><br>
 
-8. In the PR view, click the **Files changed** tab to see the diffs. On the right side of the screen, look for a small floating Copilot icon with a dropdown arrow. Click it and select **Explain** to get an explanation of the changes in that section.
-<br><br>
+9. In the PR view, click the **Files changed** tab to see the diffs. On the right side of the screen, scroll down and look for a small floating dropdown arrow. Find a line that looks interesting. Click the arrow and select **Copilot** from the menu and then **Explain** to get an explanation of the changes on that line.
 
-9. Let's add more context. Click **Ask Copilot** at the top of the screen. In the file selector dialog, select **models/models.go**, check the box, and click **Save** or **Start Chat**. You'll see the file attached as context.
-<br><br>
+![Explain line](./images/cpho77.png?raw=true "Explain line")
 
-10. In the Chat input, ask:
+![Explain line](./images/cpho78.png?raw=true "Explain line")
 
-```
-Why do these changes need to be made?
-```
-
-Copilot will use the attached file as context and explain the security rationale. Notice the reference indicator (e.g., "1 reference - models.go") confirming it used the context.
 <br><br>
 
 <p align="center">
