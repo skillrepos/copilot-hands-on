@@ -583,7 +583,7 @@ Link: [Generate classic personal access token (repo & workflow scopes)](https://
 
 ![Getting token](./images/cpho63.png?raw=true "Getting token")
 
-[Getting token](./images/mcp87.png?raw=true "Getting token")
+![Getting token](./images/mcp87.png?raw=true "Getting token")
 <br><br>
 
 2. On the next screen, **copy the generated token and save it** — you won't be able to see it again! (**Important:** Never commit PATs to a repository. This token is for local use only.)
