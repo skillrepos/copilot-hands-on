@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 3.1 - 02/17/26
+## Revision 3.2 - 02/18/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -673,7 +673,7 @@ If you need to **Allow** or **Approve** operations from the Agent, go ahead. Cop
 </p>
 </br></br></br>
 
-**Lab 8 for free Copilot plan - Copilot in GitHub.com**
+**Lab 8 - Copilot in GitHub.com**
 
 **Purpose: In this lab, we'll use the integrated Copilot features available on GitHub.com.**
 
@@ -744,48 +744,7 @@ Click the generated link to start the pull request.
 </p>
 </br></br></br>
 
-**Lab 8 for paid Copilot plans - Copilot in GitHub.com**
 
-**Purpose: In this lab, we'll use the integrated Copilot features on GitHub.com, including the Copilot coding agent to create a pull request.**
-
-1. Switch to GitHub in your browser and go to https://github.com/skillrepos/sec-demo. Make sure you are logged in with your GitHub account that has a paid Copilot plan.
-<br><br>
-
-2. Fork the repository into your own GitHub space via the **Fork** button at the top right. Make sure to **uncheck** the *Copy the main branch only* box on the next screen. Then click **Create fork**.
-<br><br>
-
-3. After the fork is complete, click on the Copilot button at the top right. In the Chat dialog, enter `Tell me about this repository.` to get an overview. Then click on **main.go** in the file list and ask Copilot: `Explain how this file works and what its purpose is.` Copilot will provide a detailed breakdown of the file.
-<br><br>
-
-4. Go back to the main page for the repo. This repo has a *dev* branch with security fixes for the *main* branch. Let's use the **coding agent** to create a pull request. Click on the **"Open agents panel"** (next to the Copilot icon at the top of the screen). In the dialog, enter:
-
-```
-Merge dev branch into main branch
-```
-
-The coding agent will start a background task to create the pull request. (This may take 1-2 minutes — the agent runs in a GitHub Actions environment in the background.)
-<br><br>
-
-5. When the PR is ready, navigate to the **Pull requests** tab at the top of the repo. Click into the PR to review it. Notice the auto-generated description. If you see a **"Ready for review"** indicator, click it to view any comments the coding agent added.
-<br><br>
-
-6. Click the **Files changed** tab to review the diffs. Look for the small floating Copilot icon (with a dropdown arrow) on the right side of a change section. Click it and select **Explain** to get an AI-powered explanation of the changes.
-<br><br>
-
-7. Click **Ask Copilot** at the top of the screen. In the file selector dialog, select **models/models.go**, check the box, and click **Save** or **Start Chat**. Then ask:
-
-```
-Why do these changes need to be made?
-```
-
-Copilot will use the file as context and explain the security reasoning behind the changes.
-<br><br>
-
-8. **Key takeaways:**
-    - The **coding agent** (paid plans) can autonomously create PRs from natural language descriptions
-    - It runs in a secure GitHub Actions environment in the background
-    - Important: the person who asked Copilot to create the PR cannot approve it — this ensures independent code review
-    - Copilot on GitHub.com provides code explanations, PR summaries, and contextual chat across any repository
 
 <p align="center">
 **[END OF LAB]**
