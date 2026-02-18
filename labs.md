@@ -580,6 +580,10 @@ Write a function that takes a JSON file path and returns a sorted list of all un
 1. MCP (Model Context Protocol) servers extend Copilot's Agent mode with external tool integrations. For authentication to the GitHub MCP Server, we need a personal access token (PAT). Click the link below, provide a note, and click the green **"Generate token"** button at the bottom:
 
 Link: [Generate classic personal access token (repo & workflow scopes)](https://github.com/settings/tokens/new?scopes=repo,workflow)
+
+![Getting token](./images/cpho63.png?raw=true "Getting token")
+
+[Getting token](./images/mcp87.png?raw=true "Getting token")
 <br><br>
 
 2. On the next screen, **copy the generated token and save it** — you won't be able to see it again! (**Important:** Never commit PATs to a repository. This token is for local use only.)
