@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 3.0 - 02/16/26
+## Revision 3.1 - 02/17/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -219,8 +219,9 @@ As it is making the changes, Agent mode may stop and ask you if its ok if it run
 
 <br><br>
 
-11. **Quick reference — when to use each mode:**
+**Quick reference — when to use each mode:**
     - **Ask**: Learning, Q&A, exploring ideas. You control what gets applied.
+    - **Plan**: Structured planning for larger tasks. Copilot asks clarifying questions, recommends approaches, and produces a step-by-step plan before any code is written. Can hand off to Agent for implementation.
     - **Agent**: Autonomous, multi-step tasks. Copilot reasons, edits files, runs commands, and iterates. (We'll cover Agent mode in depth in Lab 5.)
     - **Note**: Earlier versions of Copilot included a separate "Edit" mode. This has been unified into Agent mode, which now handles both targeted edits and autonomous tasks.
 
@@ -236,37 +237,62 @@ As it is making the changes, Agent mode may stop and ask you if its ok if it run
 1. For our labs in this workshop, we have a set of code that implements a simple to-do app, written in Python with a toolkit called *Flask*. We interact with it via curl commands for simplicity. The files for this app are in a subdirectory named *app*. You can look at the files if you want:
 
 ```
-ls app/
+cd app
+ls
 ```
+
+![Viewing files](./images/cpho35.png?raw=true "Viewing files")
+
 <br><br>
 
-2. Since this is a new project to us, let's have Copilot produce some onboarding documentation. In the Copilot Chat dialog (in **Ask** mode), enter the following prompt. The `#codebase` reference tells Copilot to consider the entire project. (If you see a momentary flash about "Sign in to access Copilot", wait until the dialog returns and enter the prompt again.)
+2. Since this is a new project to us, let's have Copilot produce some onboarding documentation. Set mode back to **Ask** mode. Click on the "+" sign at the top to start a new chat. Then enter the following prompt. The `#codebase` reference tells Copilot to consider the entire project. (If you see a momentary flash about "Sign in to access Copilot", wait until the dialog returns and enter the prompt again.) After inputting the prompt hit *Enter/Submit*.
 
 ```
-Create an onboarding guide for #codebase. Do not create a separate block for it.
+Create an onboarding guide for the app directory in #codebase. Do not create a separate block for it.
 ```
+
+![Prompt to create onboarding guide](./images/cpho36.png?raw=true "Prompt to create onboarding guide")
+
 <br><br>
 
 3. After Copilot completes processing, you should see the onboarding documentation displayed in the Chat output area. Scroll through it to learn about the project structure, key files, and how things fit together.
+
+![Onboarding guide](./images/cpho37.png?raw=true "Onboarding guide")
+
 <br><br>
 
-4. Next, let's ask Copilot how to run the project:
+4. We can also ask Copilot more tightly scoped questions. For example, still in **Ask** mode in the same chat, let's ask it how to run the project:
 
 ```
-Explain how I can run and see the functionality of #codebase.
+Explain how I can run and see the functionality in the app directory.
 ```
+
+![Explain how to run](./images/cpho38.png?raw=true "Explain how to run")
+
 <br><br>
 
-5. In the Chat output, you'll see commands to start the server and run a demo script. Hover over the server start command — if you see a terminal icon, click it to insert the command into the terminal. If not, click **"..."** and select **"Insert into terminal"**.
+5. In the Chat output, you'll see commands to start the server and run a demo script. (Notice if these are meant to be started from the root of the project or the app directory. If they look like `python app/app.py` then, in the terminal, cd to the root of the project.) Then, hover over the server start command — if you see a terminal icon, click it to insert the command into the terminal. If not, click **"..."** and select **"Insert into terminal"**.
+
+![Insert into terminal](./images/cpho39.png?raw=true "Insert into terminal")
+
 <br><br>
 
 6. In the terminal, hit *Enter* to start the server.
+
+![Running the server](./images/cpho40.png?raw=true "Running the server")
+   
 <br><br>
 
-7. Because the running server is using this terminal, open a second terminal by clicking the **"Split Terminal"** icon (looks like a two-column page) in the upper right of the terminal area.
+7. Because the running server is using this terminal, open a second terminal by clicking the dropdown to the right of the "+" in the *TERMINAL* area, then select **"Split Terminal"** from the pop-up menu.
+
+![Splitting the terminal](./images/cpho41.png?raw=true "Splitting the terminal")
+
 <br><br>
 
-8. Back in the Chat output, find the command to run the example usage script. Insert it into the new terminal using the same method as step 5. Hit *Enter* and watch the script execute commands against the server.
+8. Back in the Chat output, find the command to run the example usage script - probably `bash scripts/use-app.sh` under a "Testing" section or similar. Insert it into the new terminal using the same method as step 5. Hit *Enter* and watch the script execute commands against the server.
+
+![Running the usage script](./images/cpho42.png?raw=true "Running the usage script")
+
 <br><br>
 
 9. Now let's ask Copilot about a specific file. Open *app/app.py* in the editor, highlight all the code, and ask:
@@ -274,6 +300,8 @@ Explain how I can run and see the functionality of #codebase.
 ```
 Explain the main routes and error handling in this file.
 ```
+
+![Route and error handling explanation](./images/cpho43.png?raw=true "Route and error handling explanation")
 
 Copilot will break down the endpoints, their purposes, and how errors are handled — giving you a deep understanding of the file without reading every line yourself.
 <br><br>
