@@ -472,71 +472,100 @@ Create and run tests for the new search feature.
 
 **Purpose: In this lab, we'll configure Copilot with project-specific instructions and explore how to select different AI models.**
 
-1. Custom instructions let you tell Copilot about your team's coding standards, conventions, and preferences. These instructions are stored in a file that Copilot reads automatically. Let's create one. In the terminal, run:
+1. Custom instructions let you tell Copilot about your team's coding standards, conventions, and preferences. These instructions are stored in a file that Copilot reads automatically. Let's create one. (Because of limitations in VS Code, we'll have to do this in a roundabout way.) In the terminal, run:
 
 ```
 mkdir -p .github
+code .github/instructions.txt
 code .github/copilot-instructions.md
 ```
 <br><br>
 
-2. In the new file, add the following custom instructions and save:
+2. In the new file, add the following custom instructions and **save** (cmd/ctrl+S):
 
 ```markdown
 # Copilot Custom Instructions
 
-- Always use Python type hints for all function parameters and return values
-- Follow PEP 8 naming conventions strictly
-- Use f-strings for string formatting instead of .format() or concatenation
-- Add a brief docstring to every function
-- Prefer list comprehensions over manual loops where readability is maintained
-- Use pathlib instead of os.path for file path operations
+- Always add a comment at the top of every generated code block that says: "Generated with Copilot"
+- Add a brief comment above every function explaining what it does
+- Use descriptive variable names (no single-letter variables like x, i, n)
+- Always include error handling with clear, user-friendly error messages
+- Add a blank line between each function for readability
+- When generating any code, include at least one example usage in a comment at the end
 ```
+
+![Custom instructions](./images/cpho57.png?raw=true "Custom instructions")
+
 <br><br>
 
-3. Now let's see these instructions in action. Open a new file:
+3.  Now, we need to rename the file to the expected name. Run the command below in the terminal. Afterwards, you may not be able to click and see the file. But you can `cat` it in the terminal if you want.
+
+```
+mv .github/instructions.txt .github/copilot-instructions.md
+```
+
+![Custom instructions](./images/cpho58.png?raw=true "Custom instructions")
+
+<br><br>
+
+4. Now let's explore **model selection** (if your plan allows). In the Chat panel, look for the model name displayed near the mode selector or at the top of the Chat area. If it is "Auto", click on it to open the model picker. You'll see available models such as **GPT-4.1**, **Claude Sonnet**, and others depending on your plan. Pick one of the available ones that has a 0, 1 or <1 multiplier.
+
+![Selecting specific models](./images/cpho61.png?raw=true "Selecting specific models")
+
+<br><br>
+
+5.  Now let's see these instructions in action. Open a new file:
 
 ```
 code utils.py
 ```
 <br><br>
 
-4. In the Copilot Chat (Ask mode), enter the following prompt:
+6. In the Copilot Chat (Ask mode), enter the following prompt:
 
 ```
 Write a function that reads a CSV file and returns a list of dictionaries where each dictionary represents a row.
 ```
 <br><br>
 
-5. Examine the generated code. It should follow your custom instructions: type hints on parameters and return values, a docstring, f-strings if any strings are formatted, and pathlib for file paths. If you check the **References** section in the Chat output (click to expand it), you should see `.github/copilot-instructions.md` listed — confirming Copilot used your instructions.
+7. Examine the generated code. You should be able to spot your custom instructions at work: a "Generated with Copilot" comment at the top, a comment above the function, descriptive variable names, error handling, and an example usage comment at the end. If you check the References section in the Chat output (click to expand it), you should see .github/copilot-instructions.md listed — confirming Copilot used your instructions.
+
+![Generated code](./images/cpho59.png?raw=true "Generated code")
+
 <br><br>
 
-6. Insert the generated code into the *utils.py* file. Now let's test it further. In the Chat, ask:
+8. Insert the generated code into the *utils.py* file and save it. Now let's test it further. Switch to **Agent** mode, then ask in the chat:
 
 ```
 Add a function to write a list of dictionaries to a CSV file.
 ```
 
-Again, verify that the output follows your custom instructions (type hints, docstrings, pathlib, etc.).
+Again, verify that the output follows your custom instructions (descriptive names, error handling, comments, example usage, etc.).
+
+![Generated code](./images/cpho60.png?raw=true "Generated code")
+
 <br><br>
 
-7. Now let's explore **model selection**. In the Chat panel, look for the model name displayed near the mode selector or at the top of the Chat area. Click on it to open the model picker. You'll see available models such as **GPT-4.1**, **Claude Sonnet**, and others depending on your plan.
-<br><br>
+9. You can review the proposed changes and just select to `Keep` them if you're good with them.
+   
 
-8. Select a different model than the current one (for example, switch to **Claude Sonnet** if you were on GPT-4.1, or vice versa). Now ask the same question again:
+10. Now, if your plan allows, select a different model than the current one (for example, switch to **Claude Sonnet** if you were on GPT-4.1, or vice versa). Switch back to **Ask** mode. Now enter this prompt:
 
 ```
-Write a function to validate an email address and return a detailed breakdown of its parts.
+Write a function that takes a JSON file path and returns a sorted list of all unique keys found across all objects in the file.
 ```
 <br><br>
 
-9. Compare the output with what you might expect from the other model. You may notice differences in coding style, verbosity, and approach. Both should follow your custom instructions since those are applied regardless of which model is selected. Different models may excel at different tasks — Claude models tend to be preferred for complex multi-file reasoning, while GPT models may be faster for simple completions.
+11. Compare the output with what you might expect from the other model. You may notice differences in coding style, verbosity, and approach. Both should follow your custom instructions since those are applied regardless of which model is selected. Different models may excel at different tasks — Claude models tend to be preferred for complex multi-file reasoning, while GPT models may be faster for simple completions.
+
+![Generated code with different model](./images/cpho62.png?raw=true "Generated code with different model")
+
 <br><br>
 
-10. **Key takeaways:**
+12. **Key takeaways:**
     - Custom instructions in `.github/copilot-instructions.md` apply automatically to all Chat interactions and are shared via your repo (great for teams)
     - You can also create path-specific instructions using `.instructions.md` files in subdirectories
-    - Model selection is available on Pro plans and above — experiment to find which models work best for your tasks
+    - Model selection is available — experiment to find which models work best for your tasks
     - Premium models consume "premium requests" from your monthly allocation
 
 <p align="center">
