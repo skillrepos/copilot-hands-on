@@ -321,22 +321,31 @@ Copilot will break down the endpoints, their purposes, and how errors are handle
 2. **Highlight the `is_prime()` function.** Open a new chat by clicking the **"+"** icon in the upper right of the Chat panel.
 <br><br>
 
-3. With the code highlighted, ask Copilot:
+3. Let's see the "quick" approach to generating tests. With the code highlighted, ask Copilot:
 
 ```
 How do I test this code?
 ```
 
 You should see a plan for testing along with a proposed test code block in the Chat output.
+
+![Proposed testing plan](./images/cpho44.png?raw=true "Proposed testing plan")
+
 <br><br>
 
 4. Hover over the generated code block, click **"..."** and then **"Insert into New File"** to create a new file with the test code.
+
+![Insert plan into new file](./images/cpho45.png?raw=true "Insert plan into new file")
+
 <br><br>
 
 5. Save the file as **test_prime.py** (File > Save As, or Ctrl+S / Cmd+S and enter the filename).
+
+![Save file](./images/cpho46.png?raw=true "Save file")
+
 <br><br>
 
-6. We can also ask Copilot for additional edge cases. Select the code in *test_prime.py* and in the Chat, ask:
+7. We can also ask Copilot for additional edge cases. Select the code in *test_prime.py* and in the Chat, ask:
 
 ```
 What other conditions should be tested?
@@ -344,15 +353,26 @@ What other conditions should be tested?
 <br><br>
 
 7. Copilot will suggest additional test conditions (negative numbers, boundary values, large primes, etc.) and generate a code block. Hover over that block and click the **"Apply in Editor"** icon (leftmost control). If prompted to select a target, choose **"Active editor 'test_prime.py'"**.
+
+![Apply in editor](./images/cpho47.png?raw=true "Apply in editor")
+
 <br><br>
 
 8. You should see the additional test cases added to the file. Review the changes and click **"Keep"** to persist them.
+
+![Inspecting changes](./images/cpho48.png?raw=true "Inspecting changes  ")
 <br><br>
 
-9. Now let's have Copilot **review** our implementation code. Go back to the *prime.py* file and select all the code. Right-click and select **Copilot > Review and Comment** from the context menu. (Depending on your version, this may be under *Generate Code > Review* or accessible via a keyboard shortcut.)
+10. Now let's have Copilot **review** our implementation code. Go back to the *prime.py* file and select all the code. Right-click and select **Copilot > Review and Comment** from the context menu. (Depending on your version, this may be under *Generate Code > Review* or accessible via a keyboard shortcut.)
+
+![Initiating review](./images/cpho49.png?raw=true "Initiating review")
+
 <br><br>
 
-10. After a few moments, Copilot will add inline review comments identifying potential issues, improvements, or suggestions. If you look in the **COMMENTS** panel at the bottom (next to TERMINAL), you'll see all comments listed. Click any row to navigate to that suggestion. For each comment, you can click **"Apply and Go to Next"** to accept or **"Discard and Go to Next"** to skip.
+11. After a few moments, Copilot will add inline review comments identifying potential issues, improvements, or suggestions. If you look in the **COMMENTS** panel at the bottom (next to TERMINAL), you'll see all comments listed. Click any row to navigate to that suggestion. For each comment, you can click **"Apply and Go to Next"** to accept or **"Discard and Go to Next"** to skip. (If there's only one comment, it will just have **"Apply"** and **"Discard"**.)
+
+![Review comment](./images/cpho50.png?raw=true "Review comment")
+
 <br><br>
 
 <p align="center">
