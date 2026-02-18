@@ -400,28 +400,46 @@ curl -i \
 ```
 
 You should get a **404** response — the search endpoint doesn't exist yet.
+
+![Search endpoint not found](./images/cpho51.png?raw=true "Search endpoint not found")
+
 <br><br>
 
-3. We have a GitHub Issue describing this feature request. Take a look at it: [GitHub Issue #1](https://github.com/skillrepos/copilot-adv/issues/1)
+3. We have a GitHub Issue describing this feature request. Take a look at it: [GitHub Issue #8](https://github.com/skillrepos/copilot-hands-on/issues/8)
+
+
+![Endpoint issue](./images/cpho52.png?raw=true "Endpoint issue")
+
 <br><br>
 
 4. Let's have **Agent mode** implement this feature. Open a new chat (click the **"+"** icon) and switch to **"Agent"** mode using the mode selector dropdown at the bottom of the Chat input. Also open *app/app.py* in the editor to set it as active context.
 <br><br>
 
-5. Enter the following prompt in Agent mode:
+6. Enter the following prompt in Agent mode:
 
 ```
-Referencing the issue at https://github.com/skillrepos/copilot-adv/issues/1, implement the requested search feature in our Python #codebase in /app. Do not create or add any tests.
+Referencing the issue at https://github.com/skillrepos/copilot-hands-on/issues/8, implement the requested search feature in our Python #codebase in /app. Do not create or add any tests.
 ```
+
+![Prompt to resolve issue](./images/cpho53.png?raw=true "Prompt to resolve issue")
+
 <br><br>
 
 6. Watch Agent mode work. Unlike Ask or Edit mode, the Agent will **autonomously**: analyze the codebase, reason about what changes are needed, edit one or more files, and possibly run terminal commands to verify its work. You may see it update *app.py* and potentially *datastore.py*. If Agent requests permission to run a terminal command, click **"Allow"** to let it proceed.
+
+
+![Implementing feature](./images/cpho54.png?raw=true "Implementing feature")
+   
 <br><br>
 
 7. When the Agent finishes, you'll see a summary of files changed above the Chat input (e.g., "2 files changed"). Click the **"+ -"** icon on the right to view the diffs.
+
+![Seeing multiple diffs](./images/cpho55.png?raw=true "Seeing multiple diffs")
+
 <br><br>
 
-8. Review the diffs for each changed file. When satisfied, click the **"Keep"** button to apply the changes. Close any diff comparison tabs.
+8. Review the diffs for each changed file. When satisfied, you can click the **"Keep"** button in the box above the chat input area to apply all the changes. (If you only wanted certain changes, you could "keep/undo" each change in each file. Close any diff comparison tabs.
+
 <br><br>
 
 9. Now test the search feature. Check the server terminal — if you see a "Detected change... reloading" message, the app has auto-reloaded. If not, kill the server (Ctrl+C) and restart with `python app/app.py`. Then run the search command again:
@@ -433,6 +451,9 @@ curl -i \
 ```
 
 This time you should get a **200** response instead of 404, confirming the search endpoint is now implemented.
+
+![Seeing multiple diffs](./images/cpho56.png?raw=true "Seeing multiple diffs")
+
 <br><br>
 
 10. (Optional) If you have extra time, ask the Agent to create and run tests for the new feature. Be prepared to click **"Allow"** for any terminal commands the Agent needs to run.
