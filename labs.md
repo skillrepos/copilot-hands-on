@@ -642,25 +642,25 @@ What are the latest changes in <your-repo-name>?
 8. Now let's combine MCP-sourced GitHub context with our local code. Enter the following prompt:
 
 ```
-Is the first issue in the GitHub repository already solved by my local code?
+Is issue #8 in the GitHub repository already solved by my local code?
 ```
 
 If you need to **Allow** or **Approve** operations from the Agent, go ahead. Copilot will use the MCP server to read the issue, then analyze your local files to determine if the issue is resolved.
 
-![Example usage](./images/ct163.png?raw=true "Example usage")
+![Checking if issue is resolved](./images/cpho64.png?raw=true "Checking if issue is resolved")
 
 <br><br>
 
 9. If you click the **Extensions** icon on the left sidebar, you'll see a category for **MCP SERVERS - INSTALLED** showing the GitHub MCP Server. Clicking the globe icon will show you a page listing additional MCP servers you can browse and add.
 
 
-![Extensions and browser](./images/mcp97.png?raw=true "Extensions and browser")
+![Extensions and browser](./images/cpho65.png?raw=true "Extensions and browser")
 
 <br><br>
 
-10. If you then click on the globe icon (#2 in the screenshot above), you can get to another page that shows a list of available MCP servers to use.
+10. If you then click on the magnifying glass icon (#2 in the screenshot above), you can get to another page that shows a list of available MCP servers to use. (If you don't see the magnifying glass, try clicking on the bar for the MCP extension. You may also need to click a button that says "Enable MCP Servers Marketplace".
 
-![MCP Servers](./images/mcp98.png?raw=true "MCP Servers")
+![MCP Servers](./images/cpho66.png?raw=true "MCP Servers")
 
 11. **Key takeaways:**
     - MCP servers give Agent mode access to external tools and data sources
