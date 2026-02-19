@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 3.2 - 02/18/26
+## Revision 3.4 - 02/19/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -220,10 +220,10 @@ As it is making the changes, Agent mode may stop and ask you if its ok if it run
 <br><br>
 
 **Quick reference — when to use each mode:**
-    - **Ask**: Learning, Q&A, exploring ideas. You control what gets applied.
-    - **Plan**: Structured planning for larger tasks. Copilot asks clarifying questions, recommends approaches, and produces a step-by-step plan before any code is written. Can hand off to Agent for implementation.
-    - **Agent**: Autonomous, multi-step tasks. Copilot reasons, edits files, runs commands, and iterates. (We'll cover Agent mode in depth in Lab 5.)
-    - **Note**: Earlier versions of Copilot included a separate "Edit" mode. This has been unified into Agent mode, which now handles both targeted edits and autonomous tasks.
+- **Ask**: Learning, Q&A, exploring ideas. You control what gets applied.
+- **Plan**: Structured planning for larger tasks. Copilot asks clarifying questions, recommends approaches, and produces a step-by-step plan before any code is written. Can hand off to Agent for implementation.
+- **Agent**: Autonomous, multi-step tasks. Copilot reasons, edits files, runs commands, and iterates. (We'll cover Agent mode in depth in Lab 5.)
+- **Note**: Earlier versions of Copilot included a separate "Edit" mode. This has been unified into Agent mode, which now handles both targeted edits and autonomous tasks.
 
 <p align="center">
 **[END OF LAB]**
@@ -232,7 +232,7 @@ As it is making the changes, Agent mode may stop and ask you if its ok if it run
 
 **Lab 3 - Using Copilot to Understand and Onboard to a Codebase**
 
-**Purpose: In this lab, we'll use Copilot to quickly get up to speed on any project.**
+**Purpose: In this lab, we'll use Copilot to quickly get up to speed on a project.**
 
 1. For our labs in this workshop, we have a set of code that implements a simple to-do app, written in Python with a toolkit called *Flask*. We interact with it via curl commands for simplicity. The files for this app are in a subdirectory named *app*. You can look at the files if you want:
 
@@ -581,7 +581,7 @@ Write a function that takes a JSON file path and returns a sorted list of all un
 
 Link: [Generate classic personal access token (repo & workflow scopes)](https://github.com/settings/tokens/new?scopes=repo,workflow)
 
-![Getting token](./images/cpho63.png?raw=true "Getting token")
+![Getting token](./images/cpho79.png?raw=true "Getting token")
 
 ![Getting token](./images/mcp87.png?raw=true "Getting token")
 <br><br>
