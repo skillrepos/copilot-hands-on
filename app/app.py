@@ -28,6 +28,13 @@ def update_item(item_id):
     item = store.update(item_id, data.get('name'))
     return jsonify(item), 200
 
+@app.route('/items', methods=['DELETE'])
+@requires_auth
+def clear_all_items():
+    """Delete all items and reset the ID counter."""
+    store.clear_all()
+    return '', 204
+
 @app.route('/items/<int:item_id>', methods=['DELETE'])
 @requires_auth
 def delete_item(item_id):
