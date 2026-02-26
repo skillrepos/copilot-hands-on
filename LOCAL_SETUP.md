@@ -105,7 +105,7 @@ code .
 
 <br><br>
 
-**9. When the processing is done, you'll see a message like "Done. Press any key to close the terminal."**
+**9. When the processing is done, depending on the particular repo and setup, you'll likely see a message like "Done. Press any key to close the terminal."**
 
 <br>
 
