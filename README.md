@@ -28,7 +28,20 @@ You can also find help there for using Copilot in other supported IDEs, set the 
 
 ![Using Copilot options](./images/cdd31.png?raw=true "Using Copilot options")
 <br/><br/>
-## 2. Create your own codespace to run the labs by clicking on the button below.
+
+## 2. Set codespace timeout (optional but recommended)
+
+While logged in to GitHub, go to [https://github.com/settings/codespaces](https://github.com/settings/codespaces).
+
+Scroll down and find the section on the page labeled *Default idle timeout*. 
+
+Increase the default timeout value to 60 minutes and then select the *Save* button.
+
+![Increasing default timeout](./images/cdd200.png?raw=true "Increasing default timeout")
+
+(**NOTE**: If your codespace does time out at some point in the course, there should be a button to restart it.)
+
+## 3. Create your own codespace to run the labs by clicking on the button below.
 </br></br>
 Click here -----> [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/skillrepos/copilot-hands-on?quickstart=1)
 </br></br>
@@ -39,7 +52,7 @@ Then click on the option to create a new codespace.
 
 **This will run for several minutes while it gets everything ready.**
   
-## 3. Open the labs
+## 4. Open the labs
 
 After the codespace has started, open the labs document by going to the file tree on the left, find the file named **labs.md** and clicking on it. *Alternatively, you can open it up in a separate browser tab directly from the GitHub site.*
 
@@ -50,14 +63,4 @@ Any command in the gray boxes is either code intended to be run in the console o
 
 Labs doc: [Copilot Hands-on Labs](labs.md)
 
-## 4. Set codespace timeout (optional but recommended)
 
-While logged in to GitHub, go to [https://github.com/settings/codespaces](https://github.com/settings/codespaces).
-
-Scroll down and find the section on the page labeled *Default idle timeout*. 
-
-Increase the default timeout value to 90 minutes and then select the *Save* button.
-
-![Increasing default timeout](./images/cdd200.png?raw=true "Increasing default timeout")
-
-(**NOTE**: If your codespace does time out at some point in the course, there should be a button to restart it.)
