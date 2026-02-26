@@ -195,7 +195,7 @@ Copilot will provide a detailed explanation of what the code does, line by line.
 Other useful slash commands include `/tests`, `/doc`, and `/new`.
 <br><br>
 
-10. Finally, let's try *Plan* mode. Switch back to "Plan" mode using the mode selector dropdown.
+10. Finally, let's try *Plan* mode. Open a new chat session by clicking on the "+" sign in the upper right of the Chat panel. Switch to "Plan" mode using the mode selector dropdown.
 
 ![Switch to plan mode](./images/cpho28.png?raw=true "Switch to plan mode")
 
@@ -204,6 +204,7 @@ Plan mode creates a structured implementation plan before any code is written - 
 ```
 Add input validation and error handling to the functions in prime.py
 ```
+
 
 <br><br>
 
