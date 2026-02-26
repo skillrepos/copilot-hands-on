@@ -59,9 +59,13 @@ code index.js
 
 <br><br>
 
-7. Next, let's see how Copilot presents multiple alternatives. Enter the line of code below and then hit *Enter*. With the cursor on the next line, you should see a grayed-out suggestion. Hover over that suggestion. A small toolbar will appear with **"<"** and **">"** arrows to cycle through alternatives. Select the one you prefer with *Tab*.
+7. Next, let's see how Copilot presents multiple alternatives. Enter the line of code below. Hover over the line and you should see a grayed-out suggestion. Hover over that suggestion. A small toolbar will appear with **"<"** and **">"** arrows to cycle through alternatives. Select the one you prefer with *Tab*.
 
-![Copilot generated alternatives](./images/cpho09.png?raw=true "Copilot generated alternatives")
+```
+const formatData = (input) => {
+```
+
+![Copilot generated alternatives](./images/cpho80.png?raw=true "Copilot generated alternatives")
 
 <br><br>
 
