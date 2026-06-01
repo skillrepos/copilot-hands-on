@@ -52,13 +52,24 @@ Then click on the option to create a new codespace.
 
 **This will run for several minutes while it gets everything ready.**
   
-## 4. Open the labs
+## 4. In the Codespace, sign into GitHub (if needed). 
 
-After the codespace has started, open the labs document by going to the file tree on the left, find the file named **labs.md** and clicking on it. *Alternatively, you can open it up in a separate browser tab directly from the GitHub site.*
+After the codespace has started, look in the lower right of the codespace to see if there is a `Sign in` indicator for Copilot (see figure). If so, click on that and authenticate as needed.
+
+![Sign in to Copilot](./images/cpho81.png?raw=true "Sign in to Copilot")
+
+Then select the Copilot icon again and make sure the options under `Inline suggestions` are enabled.
+
+![Options enabled](./images/cpho82.png?raw=true "Options enabled")
+
+<br><br>
+
+## 5. Open the labs
+
+Open the labs document - either in the codespace or in a browser tab.
 
 ![Labs doc preview in codespace](./images/cpho4.png?raw=true "Labs doc preview in codespace")
 
-This will open it up in a tab above your terminal. Then you can follow along with the steps in the labs. 
 Any command in the gray boxes is either code intended to be run in the console or code to be updated in a file.
 
 Labs doc: [Copilot Hands-on Labs](labs.md)
