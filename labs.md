@@ -276,13 +276,13 @@ Explain how I can run and see the functionality in the app directory.
 
 <br><br>
 
-5. In the Chat output, you'll see commands to start the server and run a demo script. (Notice if these are meant to be started from the root of the project or the app directory. If they look like `python app/app.py` then, in the terminal, cd to the root of the project.) Then, hover over the server start command — if you see a terminal icon, click it to insert the command into the terminal. If not, click **"..."** and select **"Insert into terminal"**.
+5. In the Chat output, you'll see commands to start the server and run a demo script. (Notice if these are meant to be started from the root of the project or the app directory. If they look like `python app/app.py` then, in the terminal, cd to the root of the project.) You can type these commands into the terminal to see the functionality. For example, there's a step in the chat output that says to run `python app/app.py` to start the Flask app. 
 
-![Insert into terminal](./images/cpho39.png?raw=true "Insert into terminal")
+![Insert into terminal](./images/cpho85.png?raw=true "Insert into terminal")
 
 <br><br>
 
-6. In the terminal, hit *Enter* to start the server.
+6. Enter in the command (adjusted for the path) in the terminal and hit `Enter` to start the server. 
 
 ![Running the server](./images/cpho40.png?raw=true "Running the server")
    
@@ -294,9 +294,9 @@ Explain how I can run and see the functionality in the app directory.
 
 <br><br>
 
-8. Back in the Chat output, find the command to run the example usage script - probably `bash scripts/use-app.sh` under a "Testing" section or similar. Insert it into the new terminal using the same method as step 5. Hit *Enter* and watch the script execute commands against the server.
+8. Back in the Chat output, you can look for commands to demo functionality of the app, probably `curl` commands. You can highlight and copy and paste the command into the second terminal and run it to see the functionality. (Note that you may need to use the keyboard copy and paste if the mouse copy and paste doesn't work correctly.) 
 
-![Running the usage script](./images/cpho42.png?raw=true "Running the usage script")
+![Running curl command](./images/cpho86.png?raw=true "Running curl command")
 
 <br><br>
 
@@ -306,7 +306,7 @@ Explain how I can run and see the functionality in the app directory.
 Explain the main routes and error handling in this file.
 ```
 
-![Route and error handling explanation](./images/cpho43.png?raw=true "Route and error handling explanation")
+![Route and error handling explanation](./images/cpho87.png?raw=true "Route and error handling explanation")
 
 Copilot will break down the endpoints, their purposes, and how errors are handled — giving you a deep understanding of the file without reading every line yourself.
 <br><br>
