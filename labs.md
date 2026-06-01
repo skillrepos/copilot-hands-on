@@ -120,7 +120,7 @@ code prime.py
 ```
 <br><br>
 
-2. If not already open, open the Copilot Chat panel by clicking the Chat icon in the top bar (or side bar). Make sure the mode is set to **"Ask"**. If you need to change the mode, click on the mode selector dropdown at the bottom of the Chat input area and select **"Ask"**. (If you see a "Finish Setup" option in the bottom bar of the codespace, click that first and then "Set up Copilot".)
+2. If not already open, open the Copilot Chat panel by clicking the Chat icon in the top bar (or side bar). Make sure the mode is set to **"Ask"**. If you need to change the mode, click on the mode selector dropdown at the bottom of the Chat input area and select **"Ask"**. 
 
 ![Opening chat](./images/cpho12.png?raw=true "Opening chat")
 
@@ -159,7 +159,7 @@ Copilot will respond with an explanation of how it simplified the code and provi
 Add detailed docstrings to each function in prime.py explaining parameters, return values, and examples
 ```
 
-Agent mode will analyze the file, propose edits directly in the editor, and may iterate to ensure completeness. You'll see inline diffs — review the changes, then click "Keep" to apply them or "Undo" to reject. Unlike *Ask* mode, *Agent* mode applies changes directly in your files and can work across multiple files autonomously
+Agent mode will analyze the file, propose edits directly in the editor, and may iterate to ensure completeness. You'll see inline diffs and can review the changes. Click "Keep" to apply them or "Undo" to reject. Unlike *Ask* mode, *Agent* mode applies changes directly in your files and can work across multiple files autonomously
 
 ![Agent mode](./images/cpho17.png?raw=true "Agent mode")
 
@@ -168,13 +168,13 @@ Agent mode will analyze the file, propose edits directly in the editor, and may 
 7. Now let's introduce an error into the code to see how Copilot can fix it. Switch back to **"Ask"** mode. In the *prime.py* file, intentionally break the code by changing a variable name — for example, change an instance of `n` to `x`.
 <br><br>
 
-8. Highlight the broken code. Bring up the inline chat interface with Cmd/Ctrl+1. The inline chat dialog will probably already be populated with a command like "Fix the attached problem". If so, you can just hit *Enter*. If not, you can use the */fix* command.
+8. Highlight the broken code. Bring up the inline chat interface with `Cmd/Ctrl+I`. The inline chat dialog may already be populated with a command like "Fix the attached problem". If so, you can just hit *Enter*. If not, you can type `fix`.
 
-![Fix with Copilot](./images/cpho21.png?raw=true "Fix with Copilot")
+![Fix with Copilot](./images/cpho83.png?raw=true "Fix with Copilot")
 
-(As another alternative to start a fix, you can right-click, select *Generate Code* and then select *Fix*.)
+(As another alternative to start a fix, you can right-click, and select *Fix*.)
 
-![Fix with Copilot](./images/cpho20.png?raw=true "Fix with Copilot")
+![Fix with Copilot](./images/cpho84.png?raw=true "Fix with Copilot")
 
 9. Copilot will analyze the error and propose a fix inline. You can apply the fix using the same controls as before (the *Keep* button). 
 
