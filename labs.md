@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 3.6 - 06/01/26
+## Revision 3.9 - 06/01/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -368,9 +368,9 @@ What other conditions should be tested?
 ![Inspecting changes](./images/cpho48.png?raw=true "Inspecting changes  ")
 <br><br>
 
-10. Now let's have Copilot **review** our implementation code. Go back to the *prime.py* file and select all the code. Right-click and select **Copilot > Review and Comment** from the context menu. (Depending on your version, this may be under *Generate Code > Review* or accessible via a keyboard shortcut.)
+10. Now let's have Copilot **review** our implementation code. Go back to the *prime.py* file and select all the code. Right-click and select **Review** from the context menu. (Depending on your version, this may be under *Generate Code > Review* or accessible via a keyboard shortcut.)
 
-![Initiating review](./images/cpho49.png?raw=true "Initiating review")
+![Initiating review](./images/cpho88.png?raw=true "Initiating review")
 
 <br><br>
 
@@ -420,7 +420,7 @@ You should get a **404** response — the search endpoint doesn't exist yet.
 4. Let's have **Agent mode** implement this feature. Open a new chat (click the **"+"** icon) and switch to **"Agent"** mode using the mode selector dropdown at the bottom of the Chat input. Also open *app/app.py* in the editor to set it as active context.
 <br><br>
 
-6. Enter the following prompt in Agent mode:
+5. Enter the following prompt in Agent mode:
 
 ```
 Referencing the issue at https://github.com/skillrepos/copilot-hands-on/issues/8, implement the requested search feature in our Python #codebase in /app. Do not create or add any tests.
@@ -430,24 +430,26 @@ Referencing the issue at https://github.com/skillrepos/copilot-hands-on/issues/8
 
 <br><br>
 
-6. Watch Agent mode work. Unlike Ask or Edit mode, the Agent will **autonomously**: analyze the codebase, reason about what changes are needed, edit one or more files, and possibly run terminal commands to verify its work. You may see it update *app.py* and potentially *datastore.py*. If Agent requests permission to run a terminal command, click **"Allow"** to let it proceed.
+6. You may be asked to allow Copilot to run a `gh` command to access data in the issue. If so, just select `Allow`.
+   
+7. Watch Agent mode work. Unlike Ask or Edit mode, the Agent will **autonomously**: analyze the codebase, reason about what changes are needed, edit one or more files, and possibly run terminal commands to verify its work. You may see it update *app.py* and potentially *datastore.py*. If Agent requests permission to run a terminal command, click **"Allow"** to let it proceed.
 
 
 ![Implementing feature](./images/cpho54.png?raw=true "Implementing feature")
    
 <br><br>
 
-7. When the Agent finishes, you'll see a summary of files changed above the Chat input (e.g., "2 files changed"). Click the **"+ -"** icon on the right to view the diffs.
+8. When the Agent finishes, you'll see a summary of files changed above the Chat input (e.g., "2 files changed"). Click the **"+ -"** icon on the right to view the diffs.
 
 ![Seeing multiple diffs](./images/cpho55.png?raw=true "Seeing multiple diffs")
 
 <br><br>
 
-8. Review the diffs for each changed file. When satisfied, you can click the **"Keep"** button in the box above the chat input area to apply all the changes. (If you only wanted certain changes, you could "keep/undo" each change in each file. Close any diff comparison tabs.
+9. Review the diffs for each changed file. When satisfied, you can click the **"Keep"** button in the box above the chat input area to apply all the changes. (If you only wanted certain changes, you could "keep/undo" each change in each file. Close any diff comparison tabs.
 
 <br><br>
 
-9. Now test the search feature. Check the server terminal — if you see a "Detected change... reloading" message, the app has auto-reloaded. If not, kill the server (Ctrl+C) and restart with `python app/app.py`. Then run the search command again:
+10. Now test the search feature. Check the server terminal — if you see a "Detected change... reloading" message, the app has auto-reloaded. If not, kill the server (Ctrl+C) and restart with `python app/app.py`. Then run the search command again:
 
 ```
 curl -i \
@@ -461,7 +463,7 @@ This time you should get a **200** response instead of 404, confirming the searc
 
 <br><br>
 
-10. (Optional) If you have extra time, ask the Agent to create and run tests for the new feature. Be prepared to click **"Allow"** for any terminal commands the Agent needs to run.
+11. (Optional) If you have extra time, ask the Agent to create and run tests for the new feature. Be prepared to click **"Allow"** for any terminal commands the Agent needs to run.
 
 ```
 Create and run tests for the new search feature.
@@ -481,8 +483,7 @@ Create and run tests for the new search feature.
 
 ```
 mkdir -p .github
-code .github/instructions.txt
-code .github/copilot-instructions.md
+code .github/copilot-instructions.txt
 ```
 <br><br>
 
@@ -499,47 +500,37 @@ code .github/copilot-instructions.md
 - When generating any code, include at least one example usage in a comment at the end
 ```
 
-![Custom instructions](./images/cpho57.png?raw=true "Custom instructions")
+![Custom instructions](./images/cpho89.png?raw=true "Custom instructions")
 
 <br><br>
 
 3.  Now, we need to rename the file to the expected name. Run the command below in the terminal. Afterwards, you may not be able to click and see the file. But you can `cat` it in the terminal if you want.
 
 ```
-mv .github/instructions.txt .github/copilot-instructions.md
+mv .github/copilot-instructions.txt .github/copilot-instructions.md
 ```
 
-![Custom instructions](./images/cpho58.png?raw=true "Custom instructions")
-
-<br><br>
-
-4. Now let's explore **model selection** (if your plan allows). In the Chat panel, look for the model name displayed near the mode selector or at the top of the Chat area. If it is "Auto", click on it to open the model picker. You'll see available models such as **GPT-4.1**, **Claude Sonnet**, and others depending on your plan. Pick one of the available ones that has a 0, 1 or <1 multiplier.
-
-![Selecting specific models](./images/cpho61.png?raw=true "Selecting specific models")
-
-<br><br>
-
-5.  Now let's see these instructions in action. Open a new file:
+4.  Now let's see these instructions in action. Open a new file:
 
 ```
 code utils.py
 ```
 <br><br>
 
-6. In the Copilot Chat (Ask mode), enter the following prompt:
+5. In the Copilot Chat (Ask mode), enter the following prompt:
 
 ```
 Write a function that reads a CSV file and returns a list of dictionaries where each dictionary represents a row.
 ```
 <br><br>
 
-7. Examine the generated code. You should be able to spot your custom instructions at work: a "Generated with Copilot" comment at the top, a comment above the function, descriptive variable names, error handling, and an example usage comment at the end. If you check the References section in the Chat output (click to expand it), you should see .github/copilot-instructions.md listed — confirming Copilot used your instructions.
+6. Examine the generated code. You should be able to spot your custom instructions at work: a "Generated with Copilot" comment at the top, a comment above the function, descriptive variable names, error handling, and an example usage comment at the end. 
 
 ![Generated code](./images/cpho59.png?raw=true "Generated code")
 
 <br><br>
 
-8. Insert the generated code into the *utils.py* file and save it. Now let's test it further. Switch to **Agent** mode, then ask in the chat:
+7. Insert the generated code into the *utils.py* file and save it. Now let's test it further. Switch to **Agent** mode, then ask in the chat:
 
 ```
 Add a function to write a list of dictionaries to a CSV file.
@@ -551,27 +542,29 @@ Again, verify that the output follows your custom instructions (descriptive name
 
 <br><br>
 
-9. You can review the proposed changes and just select to `Keep` them if you're good with them.
+8. You can review the proposed changes and just select to `Keep` them if you're good with them.
    
 
-10. Now, if your plan allows, select a different model than the current one (for example, switch to **Claude Sonnet** if you were on GPT-4.1, or vice versa). Switch back to **Ask** mode. Now enter this prompt:
+9. Now, if your plan allows, select a different model than the current one (for example, switch to **GPT-5 mini** if you were on Auto and it was **Claude Haiku**). Note you may need to expand the list of models under `Other models`. Switch back to **Ask** mode. Now enter this prompt:
 
 ```
 Write a function that takes a JSON file path and returns a sorted list of all unique keys found across all objects in the file.
 ```
 <br><br>
 
-11. Compare the output with what you might expect from the other model. You may notice differences in coding style, verbosity, and approach. Both should follow your custom instructions since those are applied regardless of which model is selected. Different models may excel at different tasks — Claude models tend to be preferred for complex multi-file reasoning, while GPT models may be faster for simple completions.
+10. Compare the output with what you might expect from the other model. You may notice differences in coding style, verbosity, and approach. Both should follow your custom instructions since those are applied regardless of which model is selected. Different models may excel at different tasks — Claude models tend to be preferred for complex multi-file reasoning, while GPT models may be faster for simple completions.
 
 ![Generated code with different model](./images/cpho62.png?raw=true "Generated code with different model")
 
 <br><br>
 
+11. Since the `Auto` model is likely the best one for the currently available ones, switch back to it.
+
 12. **Key takeaways:**
     - Custom instructions in `.github/copilot-instructions.md` apply automatically to all Chat interactions and are shared via your repo (great for teams)
     - You can also create path-specific instructions using `.instructions.md` files in subdirectories
-    - Model selection is available — experiment to find which models work best for your tasks
-    - Premium models consume "premium requests" from your monthly allocation
+    - Model selection is available but limited — experiment to find which models work best for your tasks
+
 
 <p align="center">
 **[END OF LAB]**
@@ -618,7 +611,7 @@ After a moment, you should see the text change to **"Running | Stop | Restart | 
 
 <br><br>
 
-5. To see the available tools, make sure you're in **Agent** mode in the Chat panel. Click the small **tool icon** (wrench/hammer) in the Chat input area. Scroll down to the **MCP Server: GitHub MCP Server** section. You'll see all the tools Copilot can now use — things like searching issues, reading file contents from repos, listing PRs, and more.
+5. To see the available tools, make sure you're in **Agent** mode in the Chat panel. Click the small **tool icon** (sliders) in the Chat input area. Scroll down to the **MCP Server: GitHub MCP Server** section. You'll see all the tools Copilot can now use — things like searching issues, reading file contents from repos, listing PRs, and more.
 
 ![Viewing available tools](./images/mcp25.png?raw=true "Viewing available tools")
 
@@ -656,16 +649,17 @@ If you need to **Allow** or **Approve** operations from the Agent, go ahead. Cop
 
 <br><br>
 
-9. If you click the **Extensions** icon on the left sidebar, you'll see a category for **MCP SERVERS - INSTALLED** showing the GitHub MCP Server. Clicking the globe icon will show you a page listing additional MCP servers you can browse and add.
+9. If you click the **Extensions** icon on the left sidebar, you'll see a category for **MCP SERVERS - INSTALLED** showing the GitHub MCP Server. Clicking the search icon will bring up a button you can click to `Enable MCP Servers Marketplace`.
 
+![Extensions and browser](./images/cpho92.png?raw=true "Extensions and browser")
 
-![Extensions and browser](./images/cpho65.png?raw=true "Extensions and browser")
+![Extensions and browser](./images/cpho90.png?raw=true "Extensions and browser")
 
 <br><br>
 
-10. If you then click on the magnifying glass icon (#2 in the screenshot above), you can get to another page that shows a list of available MCP servers to use. (If you don't see the magnifying glass, try clicking on the bar for the MCP extension. You may also need to click a button that says "Enable MCP Servers Marketplace".
+10. By enabling this, you can get to another page that shows a list of available MCP servers to use. 
 
-![MCP Servers](./images/cpho66.png?raw=true "MCP Servers")
+![MCP Servers](./images/cpho91.png?raw=true "MCP Servers")
 
 11. **Key takeaways:**
     - MCP servers give Agent mode access to external tools and data sources
