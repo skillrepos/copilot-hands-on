@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 3.9 - 06/01/26
+## Revision 3.10 - 06/02/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -684,23 +684,21 @@ If you need to **Allow** or **Approve** operations from the Agent, go ahead. Cop
 ![Fork](./images/cpho73.png?raw=true "Fork")
 <br><br>
 
-3. After the fork is complete, click on the Copilot button (or down arrow next to it) at the top right and select **Assistive** from the menu. The Chat dialog will open with a text input and some suggested questions. Click on **"Tell me about this repository"** (or type it in). Copilot will provide an overview of the project.
+3. After the fork is complete, click on the Copilot button at the top right. The Chat dialog will open with a text input and some suggested questions. Click on **"Tell me about this repository"** (or type it in). Copilot will provide an overview of the project.
 
-![Chat with Copilot](./images/cpho67.png?raw=true "Chat with Copilot")
+![Chat with Copilot](./images/cpho93.png?raw=true "Chat with Copilot")
 
-![Prompt](./images/cpho68.png?raw=true "Prompt")
+![Prompt](./images/cpho94.png?raw=true "Prompt")
 
-![Response](./images/cpho69.png?raw=true "Response")
+![Response](./images/cpho95.png?raw=true "Response")
 
 <br><br>
 
 4. Go back to the repo. In the file list, click on **main.go** to open it. Start a new conversation in the Copilot Chat (click the **Copilot icon at the top of the file listing** ) and prompt it with **"Summarize this file for me"**.
 
-![Chat with Copilot](./images/cpho70.png?raw=true "Chat with Copilot")
+![Prompt](./images/cpho96.png?raw=true "Prompt")
 
-![Prompt](./images/cpho71.png?raw=true "Prompt")
-
-![Response](./images/cpho72.png?raw=true "Response")
+![Response](./images/cpho97.png?raw=true "Response")
 
 <br><br>
 
@@ -716,9 +714,11 @@ Click the generated link to start the pull request.
 
 <br><br>
 
-6. On the next screen, click the "Create Pull Request" button. On the pull request creation screen, update the title if you want. Then click the **Copilot actions** button below the description field and select **Summary**. Copilot will generate a detailed PR description in markdown.
+6. On the next screen, click the "Create Pull Request" button. On the pull request creation screen, you can use Copilot to generate the title if you want, via clicking on the Copilot icon in the title section. Then click the **Copilot actions** button below the description field and select **Summary**. Copilot will generate a detailed PR description in markdown.
 
 (**NOTE:** If you are on the free plan and don't see the Copilot icon in the pull request area, you can skip this step and just create the pull request with a manual description.)
+
+![Generate title](./images/cpho98.png?raw=true "Generate title")
 
 ![Generate summary](./images/cpho75.png?raw=true "Generate summary")
 
@@ -737,13 +737,6 @@ Click the generated link to start the pull request.
 ![Explain line](./images/cpho78.png?raw=true "Explain line")
 
 <br><br>
-
-<p align="center">
-**[END OF LAB]**
-</p>
-</br></br></br>
-
-
 
 <p align="center">
 **[END OF LAB]**
