@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 3.10 - 06/02/26
+## Revision 3.11 - 06/08/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -59,7 +59,7 @@ code index.js
 
 <br><br>
 
-7. Next, let's see how Copilot presents multiple alternatives. Move to a new line of the file and enter the line of code below. After the last character is typed, you should see a grayed-out suggestion. Hover over that suggestion. A small toolbar will appear with **"<"** and **">"** arrows to cycle through alternatives. Select the one you prefer with *Tab*.
+7. Next, let's see how Copilot presents multiple alternatives. Move to a new line of the file and enter the line of code below. After the last character is typed, hit return and you should see a grayed-out suggestion. Hover over that suggestion. A small toolbar will appear with **"<"** and **">"** arrows to cycle through alternatives. Select the one you prefer with *Tab*.
 
 ```
 const formatData = (input) => {
