@@ -329,12 +329,12 @@ Copilot will break down the endpoints, their purposes, and how errors are handle
 3. Let's see the "quick" approach to generating tests. With the code highlighted, ask Copilot:
 
 ```
-How do I test this code?
+How do I completely test this code?
 ```
 
 You should see a plan for testing along with a proposed test code block in the Chat output.
 
-![Proposed testing plan](./images/cpho44.png?raw=true "Proposed testing plan")
+![Proposed testing plan](./images/cpho99.png?raw=true "Proposed testing plan")
 
 <br><br>
 
@@ -350,10 +350,10 @@ You should see a plan for testing along with a proposed test code block in the C
 
 <br><br>
 
-7. We can also ask Copilot for additional edge cases. Select the code in *test_prime.py* and in the Chat, ask:
+6. We can also ask Copilot for additional edge cases. Select the code in *test_prime.py* and in the Chat, ask:
 
 ```
-What other conditions should be tested?
+What other conditions should be tested? Suggest a single set of code to add the conditions.
 ```
 <br><br>
 
@@ -368,13 +368,13 @@ What other conditions should be tested?
 ![Inspecting changes](./images/cpho48.png?raw=true "Inspecting changes  ")
 <br><br>
 
-10. Now let's have Copilot **review** our implementation code. Go back to the *prime.py* file and select all the code. Right-click and select **Review** from the context menu. (Depending on your version, this may be under *Generate Code > Review* or accessible via a keyboard shortcut.)
+9. Now let's have Copilot **review** our implementation code. Go back to the *prime.py* file and select all the code. Right-click and select **Review** from the context menu. (Depending on your version, this may be under *Generate Code > Review* or accessible via a keyboard shortcut.)
 
 ![Initiating review](./images/cpho88.png?raw=true "Initiating review")
 
 <br><br>
 
-11. After a few moments, Copilot will add inline review comments identifying potential issues, improvements, or suggestions. If you look in the **COMMENTS** panel at the bottom (next to TERMINAL), you'll see all comments listed. Click any row to navigate to that suggestion. For each comment, you can click **"Apply and Go to Next"** to accept or **"Discard and Go to Next"** to skip. (If there's only one comment, it will just have **"Apply"** and **"Discard"**.)
+10. After a few moments, Copilot will add inline review comments identifying potential issues, improvements, or suggestions. If you look in the **COMMENTS** panel at the bottom (next to TERMINAL), you'll see all comments listed. Click any row to navigate to that suggestion. For each comment, you can click **"Apply and Go to Next"** to accept or **"Discard and Go to Next"** to skip. (If there's only one comment, it will just have **"Apply"** and **"Discard"**.)
 
 ![Review comment](./images/cpho50.png?raw=true "Review comment")
 
