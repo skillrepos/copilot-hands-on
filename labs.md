@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 3.11 - 06/08/26
+## Revision 3.11 - 06/10/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -430,7 +430,7 @@ Referencing the issue at https://github.com/skillrepos/copilot-hands-on/issues/8
 
 <br><br>
 
-6. You may be asked to allow Copilot to run a `gh` command to access data in the issue. If so, just select `Allow`.
+6. You may be asked to allow Copilot to run additional commands. If so, just select `Allow`.
    
 7. Watch Agent mode work. Unlike Ask or Edit mode, the Agent will **autonomously**: analyze the codebase, reason about what changes are needed, edit one or more files, and possibly run terminal commands to verify its work. You may see it update *app.py* and potentially *datastore.py*. If Agent requests permission to run a terminal command, click **"Allow"** to let it proceed.
 
