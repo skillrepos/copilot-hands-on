@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 3.11 - 06/10/26
+## Revision 3.12 - 06/12/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -109,7 +109,7 @@ After making this change, look at the `farewell` function below. You should see 
 </p>
 </br></br></br>
 
-**Lab 2 - Understanding Chat Modes: Ask, Edit, and Agent**
+**Lab 2 - Understanding Chat Modes: Ask, Agent, and Plan**
 
 **Purpose: In this lab, we'll explore the three Copilot Chat modes and learn when to use each one.**
 
