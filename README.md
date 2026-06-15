@@ -14,19 +14,15 @@ If you prefer and if you know one of the other IDEs supported by Copilot, you ca
 
 These steps **must** be completed prior to starting the actual labs.
 
-## 1. You can use the free version of Copilot for all but one or two items in the labs. If you want to signup for the Pro version, info on that is below.
+## 1. You can use the free version of Copilot for all but one or two items in the labs. 
 
-When signed into GitHub, click on your profile picture/icon in the upper right and either select [Copilot](https://github.com/github-copilot/signup) 
+When signed into GitHub, you can verify your Copilot settings by clicking on your profile picture/icon in the upper right and seleting [Copilot settings](https://github.com/settings/copilot/features) 
 
-![Signing up for Copilot](./images/cdd70.png?raw=true "Signing up for Copilot")
+![Copilot settings](./images/cpho102.png?raw=true "Copilot settings")
 
-**OR** select [Settings->Copilot](https://github.com/settings/copilot) and sign up.
+![Copilot settings](./images/cpho103.png?raw=true "Copilot settings")
 
-![Signing up for Copilot](./images/cdd32.png?raw=true "Signing up for Copilot")
 
-You can also find help there for using Copilot in other supported IDEs, set the switch for whether or not to allow matching public code suggestions, etc.
-
-![Using Copilot options](./images/cdd31.png?raw=true "Using Copilot options")
 <br/><br/>
 
 ## 2. Set codespace timeout (optional but recommended)
