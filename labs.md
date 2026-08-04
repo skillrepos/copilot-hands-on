@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 3.12 - 06/12/26
+## Revision 3.13 - 08/02/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -14,8 +14,9 @@
 4. The default environment will be a GitHub Codespace (with Copilot already installed). If you prefer to use your own IDE, you are responsible for installing Copilot in it. Some things in the lab may be different if you use your own environment.
 5. To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.
 6. VPNs may interfere with the ability to run the codespace. It is recommended to not use a VPN if you run into problems.
-7. If you use the free Copilot plan (no signup), some advanced functionality (Agent mode, model selection, etc.) may not be available.
+7. On the free Copilot plan, some functionality used in these labs is limited or unavailable — most notably **model selection** (Free gets auto model selection only, so Lab 6 step 9 won't be possible) and the fuller agent/chat allowances. Everything else in the labs works on Free.
 8. Copilot's responses are non-deterministic — your results may differ slightly from what is shown in screenshots or described in steps. This is expected.
+9. When the codespace first starts, Copilot may still be signing in. Until it finishes, the Chat panel's mode selector may show only **Agent**. If *Ask* and *Plan* are missing, click the *Sign in* indicator in the lower-right status bar (see README step 4), wait a few seconds, then re-open the selector.
 </br></br></br>
 
 **Lab 1 - Code Completions and Next Edit Suggestions**
@@ -172,7 +173,7 @@ Agent mode will analyze the file, propose edits directly in the editor, and may 
 
 ![Fix with Copilot](./images/cpho83.png?raw=true "Fix with Copilot")
 
-(As another alternative to start a fix, you can right-click, and select *Fix*.)
+(As another alternative, you can right-click in the editor and select *Open Inline Chat*, then type `fix`. The editor context menu also has *Explain* and *Review* entries that we'll use later.)
 
 ![Fix with Copilot](./images/cpho84.png?raw=true "Fix with Copilot")
 
@@ -182,7 +183,7 @@ Agent mode will analyze the file, propose edits directly in the editor, and may 
 
 <br><br>
 
-9. Let's see one more useful slash command. Highlight the code in the *prime.py* file and have Copilot explain it by typing */explain* in the chat interface.
+10. Let's see one more useful slash command. Highlight the code in the *prime.py* file and have Copilot explain it by typing */explain* in the chat interface.
 
 ```
 /explain
@@ -195,7 +196,7 @@ Copilot will provide a detailed explanation of what the code does, line by line.
 Other useful slash commands include `/tests`, `/doc`, and `/new`.
 <br><br>
 
-10. Finally, let's try *Plan* mode. Open a new chat session by clicking on the "+" sign in the upper right of the Chat panel. Switch to "Plan" mode using the mode selector dropdown.
+11. Finally, let's try *Plan* mode. Open a new chat session by clicking on the "+" sign in the upper right of the Chat panel. Switch to "Plan" mode using the mode selector dropdown.
 
 ![Switch to plan mode](./images/cpho28.png?raw=true "Switch to plan mode")
 
@@ -208,13 +209,13 @@ Add input validation and error handling to the functions in prime.py
 
 <br><br>
 
-11. As it prepares the plan, Plan mode may ask you clarifying questions (e.g., what types of validation? how to handle errors?). Answer them to refine the plan. If there are multiple, you can use the "<" and ">" keys to move between them. When you've answered all the questions, you can then use the "Submit" option to continue.
+12. As it prepares the plan, Plan mode may ask you clarifying questions (e.g., what types of validation? how to handle errors?). Answer them to refine the plan. If there are multiple, you can use the "<" and ">" keys to move between them. When you've answered all the questions, you can then use the "Submit" option to continue.
 
 ![Answering questions](./images/cpho31.png?raw=true "Answering questions")
 
 <br><br>
 
-12. After Copilot processes your answers, it will present a full plan.  You can then click on the "Start Implementation" button to have the plan executed in Agent mode (or use the other button to open the plan in the editor). Watch how Agent mode reasons about the task, makes changes across the file, and potentially runs commands to verify its work. When finished, review the diffs and click either the "Keep" (all) buttons or go through the "Keep" buttons for the individual changes to apply the changes.
+13. After Copilot processes your answers, it will present a full plan.  Under *Proceed from Plan* you'll see three options: **"Start Implementation"** (hands the plan to Agent mode in this session), **"Start with Autopilot"** (runs it with fewer approval stops), and **"Open in Editor"** (opens the plan as a markdown file you can edit first). Click **"Start Implementation"**. Watch how Agent mode reasons about the task, makes changes across the file, and potentially runs commands to verify its work. When finished, review the diffs and click either the "Keep" (all) buttons or go through the "Keep" buttons for the individual changes to apply the changes.
 
 ![Ready to implement](./images/cpho33.png?raw=true "Ready to implement")
 
@@ -368,7 +369,7 @@ What other conditions should be tested? Suggest a single set of code to add the 
 ![Inspecting changes](./images/cpho48.png?raw=true "Inspecting changes  ")
 <br><br>
 
-9. Now let's have Copilot **review** our implementation code. Go back to the *prime.py* file and select all the code. Right-click and select **Review** from the context menu. (Depending on your version, this may be under *Generate Code > Review* or accessible via a keyboard shortcut.)
+9. Now let's have Copilot **review** our implementation code. Go back to the *prime.py* file and select all the code. Right-click and select **Review** from the context menu. (It appears in the same group as *Explain* and *Open Inline Chat*.)
 
 ![Initiating review](./images/cpho88.png?raw=true "Initiating review")
 
@@ -410,7 +411,7 @@ You should get a **404** response — the search endpoint doesn't exist yet.
 
 <br><br>
 
-3. We have a GitHub Issue describing this feature request. Take a look at it: [GitHub Issue #8](https://github.com/skillrepos/copilot-hands-on/issues/8)
+3. We have a GitHub Issue describing this feature request. Take a look at it: [GitHub Issue #8](https://github.com/skillrepos/copilot-hands-on/issues/8) (The issue body says "Lab 2" — that's a leftover from an earlier revision of this course. It is the issue for **this** lab.)
 
 
 ![Endpoint issue](./images/cpho52.png?raw=true "Endpoint issue")
@@ -479,7 +480,7 @@ Create and run tests for the new search feature.
 
 **Purpose: In this lab, we'll configure Copilot with project-specific instructions and explore how to select different AI models.**
 
-1. Custom instructions let you tell Copilot about your team's coding standards, conventions, and preferences. These instructions are stored in a file that Copilot reads automatically. Let's create one. (Because of limitations in VS Code, we'll have to do this in a roundabout way.) In the terminal, run:
+1. Custom instructions let you tell Copilot about your team's coding standards, conventions, and preferences. These instructions are stored in a file that Copilot reads automatically. Let's create one. (We have to do this in a roundabout way: in the browser-based codespace, `code somefile.md` will not create a new markdown file, and this repo opens `.md` files in *preview* mode, which you can't type into. So we create the file with a `.txt` extension, edit it, then rename it.) In the terminal, run:
 
 ```
 mkdir -p .github
@@ -504,7 +505,7 @@ code .github/copilot-instructions.txt
 
 <br><br>
 
-3.  Now, we need to rename the file to the expected name. Run the command below in the terminal. Afterwards, you may not be able to click and see the file. But you can `cat` it in the terminal if you want.
+3.  Now, we need to rename the file to the expected name Copilot looks for. Run the command below in the terminal. Afterwards, clicking the file in the Explorer will open it in read-only markdown preview (that's expected) — you can also `cat` it in the terminal if you want to check the contents.
 
 ```
 mv .github/copilot-instructions.txt .github/copilot-instructions.md
@@ -684,7 +685,7 @@ If you need to **Allow** or **Approve** operations from the Agent, go ahead. Cop
 ![Fork](./images/cpho73.png?raw=true "Fork")
 <br><br>
 
-3. After the fork is complete, click on the Copilot button at the top right. The Chat dialog will open with a text input and some suggested questions. Click on **"Tell me about this repository"** (or type it in). Copilot will provide an overview of the project.
+3. After the fork is complete, click on the Copilot button at the top right. The Chat dialog will open with a text input and some suggested questions. Click on the suggested prompt **"Give me a high level overview of this repo"** (or type your own question, such as "Tell me about this repository"). Copilot will provide an overview of the project. (The set of suggested prompts changes over time — if you don't see that exact one, just type the question in.)
 
 ![Chat with Copilot](./images/cpho93.png?raw=true "Chat with Copilot")
 
@@ -694,7 +695,7 @@ If you need to **Allow** or **Approve** operations from the Agent, go ahead. Cop
 
 <br><br>
 
-4. Go back to the repo. In the file list, click on **main.go** to open it. Start a new conversation in the Copilot Chat (click the **Copilot icon at the top of the file listing** ) and prompt it with **"Summarize this file for me"**.
+4. Go back to the repo. In the file list, click on **main.go** to open it. Start a new conversation in the Copilot Chat (click the **Copilot icon in the toolbar above the file contents**, to the left of the *Raw* button) and prompt it with **"Summarize this file for me"**.
 
 ![Prompt](./images/cpho96.png?raw=true "Prompt")
 
@@ -724,13 +725,13 @@ Click the generated link to start the pull request.
 
 <br><br>
 
-8. Click **Preview** to see the formatted summary, then click **Create pull request**.
+7. Click **Preview** to see the formatted summary, then click **Create pull request**.
 
 ![Create PR](./images/cpho76.png?raw=true "Create PR")
 
 <br><br>
 
-9. In the PR view, click the **Files changed** tab to see the diffs. On the right side of the screen, scroll down and look for a small floating dropdown arrow. Find a line that looks interesting. Click the arrow and select **Copilot** from the menu and then **Explain** to get an explanation of the changes on that line.
+8. In the PR view, click the **Files changed** tab to see the diffs. On the right side of the screen, scroll down and look for a small floating dropdown arrow. Find a line that looks interesting. Click the arrow and select **Copilot** from the menu and then **Explain** to get an explanation of the changes on that line.
 
 ![Explain line](./images/cpho77.png?raw=true "Explain line")
 
