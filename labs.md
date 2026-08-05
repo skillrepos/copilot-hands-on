@@ -175,7 +175,7 @@ Agent mode will analyze the file, propose edits directly in the editor, and may 
 
 At this point, you may see the changes suggested in color-coded lines and you can click to `Keep` the suggested fix.
 
-![Fix with Copilot](./images/cpho104.png?raw=true "Fix with Copilot")
+![Fix with Copilot](./images/cpho105.png?raw=true "Fix with Copilot")
 
 (As another alternative to start a fix, you can right-click, and select *Fix*. Note that *Fix* only appears once the editor has flagged the error — if you don't see it, wait a second for the red squiggle and right-click again.)
 
