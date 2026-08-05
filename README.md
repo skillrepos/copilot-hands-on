@@ -9,7 +9,7 @@ If you prefer and if you know one of the other IDEs supported by Copilot, you ca
 3. The default environment will be a GitHub Codespace (with Copilot already installed). If you prefer to use your own IDE, you are responsible for installing Copilot in it. Some things in the lab may be different if you use your own environment.
 4. To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.
 5. VPNs may interfere with the ability to run the codespace. It is recommended to not use a VPN if you run into problems.
-6. Copilot Free is included with any GitHub account (no separate Copilot signup needed), but it is limited: 2,000 code completions/month, a limited chat & agent allowance, and **auto model selection only** (no model picker). Labs 6 (model selection) and parts of Lab 7 work best on a paid plan. Paid plans as of August 2026: Pro $10/mo, Pro+ $39/mo, Max $100/mo, Business $19/user/mo, Enterprise $39/user/mo. Verify current pricing and any trial offer at [github.com/features/copilot/plans](https://github.com/features/copilot/plans) — GitHub paused and later reopened individual signups during 2026, so check before the workshop.
+6. Copilot Free is included with any GitHub account (no separate Copilot signup needed), but it is limited: 2,000 code completions/month, a limited chat & agent allowance, and **auto model selection only** (no model picker). Labs 6 (model selection) and parts of Lab 7 work best on a paid plan. 
 7. When the codespace starts, Copilot may take up to a minute to finish signing in. Until it does, the Chat mode selector may show only **Agent** (no *Ask* or *Plan*) — see step 4 below.
 </br></br></br>
 
