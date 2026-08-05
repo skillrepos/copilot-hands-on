@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 3.13 - 08/02/26
+## Revision 3.14 - 08/04/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -169,11 +169,11 @@ Agent mode will analyze the file, propose edits directly in the editor, and may 
 7. Now let's introduce an error into the code to see how Copilot can fix it. Switch back to **"Ask"** mode. In the *prime.py* file, intentionally break the code by changing a variable name — for example, change an instance of `n` to `x`.
 <br><br>
 
-8. Highlight the broken code. Bring up the inline chat interface with `Cmd/Ctrl+I`. The inline chat dialog may already be populated with a command like "Fix the attached problem". If so, you can just hit *Enter*. If not, you can type `fix`.
+8. Highlight the broken code and press `Cmd/Ctrl+I` (*Ask in Chat*). Rather than opening a separate inline dialog, this attaches the lines you selected to the Chat input as a context chip — you'll see something like `prime.py:7` above the prompt box. Type `fix` and hit *Enter*.
 
 ![Fix with Copilot](./images/cpho83.png?raw=true "Fix with Copilot")
 
-(As another alternative, you can right-click in the editor and select *Open Inline Chat*, then type `fix`. The editor context menu also has *Explain* and *Review* entries that we'll use later.)
+(As another alternative, right-click in the editor. With code selected the menu shows **Ask in Chat**; with nothing selected the same entry reads *Open Inline Chat*. Either one sends your selection to Chat — then type `fix`. The context menu also has *Add File to Chat*, *Explain* and *Review*, and we'll use *Review* in Lab 4.)
 
 ![Fix with Copilot](./images/cpho84.png?raw=true "Fix with Copilot")
 
@@ -369,7 +369,7 @@ What other conditions should be tested? Suggest a single set of code to add the 
 ![Inspecting changes](./images/cpho48.png?raw=true "Inspecting changes  ")
 <br><br>
 
-9. Now let's have Copilot **review** our implementation code. Go back to the *prime.py* file and select all the code. Right-click and select **Review** from the context menu. (It appears in the same group as *Explain* and *Open Inline Chat*.)
+9. Now let's have Copilot **review** our implementation code. Go back to the *prime.py* file and select all the code. Right-click and select **Review** from the context menu. (It appears in the same group as *Add File to Chat*, *Ask in Chat* and *Explain*.)
 
 ![Initiating review](./images/cpho88.png?raw=true "Initiating review")
 
