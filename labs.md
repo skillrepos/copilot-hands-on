@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 3.15 - 08/05/26
+## Revision 3.16 - 08/06/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -171,7 +171,7 @@ Agent mode will analyze the file, propose edits directly in the editor, and may 
 
 8. Highlight the broken code. Bring up the inline chat interface with `Cmd/Ctrl+I`. The inline chat dialog may already be populated with a command like "Fix the attached problem". If so, you can just hit *Enter*. If not, you can type `fix`. (Give the editor a second to flag the error first — the pre-filled "Fix the attached problem" only appears once the red squiggle/diagnostic is showing.)
 
-![Fix with Copilot](./images/cpho83.png?raw=true "Fix with Copilot")
+![Fix with Copilot](./images/cpho104.png?raw=true "Fix with Copilot")
 
 (As another alternative to start a fix, you can right-click, and select *Fix*. Note that *Fix* only appears once the editor has flagged the error — if you don't see it, wait a second for the red squiggle and right-click again.)
 
