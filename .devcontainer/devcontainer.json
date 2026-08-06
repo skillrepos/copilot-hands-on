@@ -17,6 +17,10 @@
 				"GitHub.copilot"
 		     ],
 		     "settings": {
+			 // Holding Cmd+I/Ctrl+I would otherwise try to start speech-to-text,
+			 // which errors out when the VS Code Speech extension isn't available
+			 "inlineChat.holdToSpeech": false,
+			 "accessibility.voice.keywordActivation": "off",
 			 // Open Markdown files in preview mode by default
 			 "github.copilot.chat.setupTests.enabled": false,
             		 "workbench.editorAssociations": {
@@ -27,3 +31,4 @@
 	},
 	"postCreateCommand": "bash -i scripts/pysetup.sh py_env"
 }
+
