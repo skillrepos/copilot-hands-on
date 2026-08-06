@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 3.20 - 08/06/26
+## Revision 3.21 - 08/06/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -629,16 +629,10 @@ After a moment, you should see the text change to **"Running | Stop | Restart | 
 
 <br><br>
 
-6. Let's use these tools. In Agent mode, enter one of the following prompts:
+6. Let's use these tools. In Agent mode, enter a prompt like the following one:
 
 ```
 Give me a list of the open issues for the current GitHub repo
-```
-
-or
-
-```
-What are the latest changes in <your-repo-name>?
 ```
 <br><br>
 
