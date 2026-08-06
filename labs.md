@@ -1,22 +1,24 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 3.17 - 08/05/26
+## Revision 3.18 - 08/06/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
 **NOTES:**
-1. We will be working in the public GitHub.com, not a private instance.
-2. Chrome may work better than Firefox for some tasks.
-3. Substitute the appropriate key combinations for your operating system where needed.
-4. The default environment will be a GitHub Codespace (with Copilot already installed). If you prefer to use your own IDE, you are responsible for installing Copilot in it. Some things in the lab may be different if you use your own environment.
-5. To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.
-6. VPNs may interfere with the ability to run the codespace. It is recommended to not use a VPN if you run into problems.
-7. On the free Copilot plan, some functionality used in these labs is limited or unavailable — most notably **model selection** (Free gets auto model selection only, so Lab 6 step 9 won't be possible) and the fuller agent/chat allowances. Everything else in the labs works on Free.
-8. Copilot's responses are non-deterministic — your results may differ slightly from what is shown in screenshots or described in steps. This is expected.
-9. When the codespace first starts, Copilot may still be signing in. Until it finishes, the Chat panel's mode selector may show only **Agent**. If *Ask* and *Plan* are missing, click the *Sign in* indicator in the lower-right status bar (see README step 4), wait a few seconds, then re-open the selector.
+> 1. We will be working in the public GitHub.com, not a private instance.
+> 2. Chrome may work better than Firefox for some tasks.
+> 3. Substitute the appropriate key combinations for your operating system where needed.
+> 4. The default environment will be a GitHub Codespace (with Copilot already installed). If you prefer to use your own IDE, you are responsible for installing Copilot in it. Some things in the lab may be different if you use your own environment.
+> 5. To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.
+> 6. VPNs may interfere with the ability to run the codespace. It is recommended to not use a VPN if you run into problems.
+> 7. On the free Copilot plan, some functionality used in these labs is limited or unavailable — including **model selection** (Free and likely **Plan mode** and **Review** functionality. 
+> 8. Copilot's responses are non-deterministic — your results may differ slightly from what is shown in screenshots or described in steps. This is expected.
+> 9. When the codespace first starts, Copilot may still be signing in. Until it finishes, the Chat panel's mode selector may show only **Agent**. If *Ask* and *Plan* are missing, click the *Sign in* indicator in the lower-right status bar (see README step 4), wait a few seconds, then re-open the selector.
+> 10. Unless otherwise noted, pop-up dialogs, when running applications, can be ignored and dismissed.
+
 </br></br></br>
 
 **Lab 1 - Code Completions and Next Edit Suggestions**
@@ -197,6 +199,10 @@ Copilot will provide a detailed explanation of what the code does, line by line.
 Other useful slash commands include `/tests`, `/doc`, and `/new`.
 <br><br>
 
+
+> <span style="color:red">**Note: Because of Copilot's restricted model access, if you're running using the Free plan, you may not be able to do the remaining steps or have them complete in a reasonable time.**</span>
+
+
 11. Finally, let's try *Plan* mode. Open a new chat session by clicking on the "+" sign in the upper right of the Chat panel. Switch to "Plan" mode using the mode selector dropdown.
 
 ![Switch to plan mode](./images/cpho28.png?raw=true "Switch to plan mode")
@@ -369,6 +375,8 @@ What other conditions should be tested? Suggest a single set of code to add the 
 
 ![Inspecting changes](./images/cpho48.png?raw=true "Inspecting changes  ")
 <br><br>
+
+> <span style="color:red">**Note: Because of Copilot's restricted model access, if you're running using the Free plan, you may not be able to do the remaining steps or have them complete in a reasonable time.**</span>
 
 9. Now let's have Copilot **review** our implementation code. Go back to the *prime.py* file and select all the code. Right-click and select **Review** from the context menu. (Depending on your version, this may be under *Generate Code > Review* or accessible via a keyboard shortcut.)
 
