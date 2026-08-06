@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 3.18 - 08/06/26
+## Revision 3.19 - 08/06/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -200,7 +200,8 @@ Other useful slash commands include `/tests`, `/doc`, and `/new`.
 <br><br>
 
 
-> <span style="color:red">**Note: Because of Copilot's restricted model access, if you're running using the Free plan, you may not be able to do the remaining steps or have them complete in a reasonable time.**</span>
+> [!CAUTION]
+> **Note: Because of Copilot's restricted model access, if you're running using the Free plan, you may not be able to do the remaining steps or have them complete in a reasonable time.**
 
 
 11. Finally, let's try *Plan* mode. Open a new chat session by clicking on the "+" sign in the upper right of the Chat panel. Switch to "Plan" mode using the mode selector dropdown.
@@ -376,7 +377,8 @@ What other conditions should be tested? Suggest a single set of code to add the 
 ![Inspecting changes](./images/cpho48.png?raw=true "Inspecting changes  ")
 <br><br>
 
-> <span style="color:red">**Note: Because of Copilot's restricted model access, if you're running using the Free plan, you may not be able to do the remaining steps or have them complete in a reasonable time.**</span>
+> > [!CAUTION]
+> **Note: Because of Copilot's restricted model access, if you're running using the Free plan, you may not be able to do the remaining steps or have them complete in a reasonable time.**
 
 9. Now let's have Copilot **review** our implementation code. Go back to the *prime.py* file and select all the code. Right-click and select **Review** from the context menu. (Depending on your version, this may be under *Generate Code > Review* or accessible via a keyboard shortcut.)
 
@@ -552,8 +554,11 @@ Again, verify that the output follows your custom instructions (descriptive name
 
 <br><br>
 
-8. You can review the proposed changes and just select to `Keep` them if you're good with them.
+8. At this point, you may need to use the `Apply in Editor` or other control to get the newly generated code in your file. You can then review the proposed changes and just select to `Keep` them if you're good with them.
    
+
+> > [!CAUTION]
+> **Note: Because of Copilot's restricted model access, if you're running using the Free plan, you may not be able to do the remaining steps or have them complete in a reasonable time.**
 
 9. Now, if your plan allows, select a different model than the current one (for example, switch to **GPT-5 mini** if you were on Auto and it was **Claude Haiku**). Note you may need to expand the list of models under `Other models`. Switch back to **Ask** mode. Now enter this prompt:
 
