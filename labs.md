@@ -2,7 +2,7 @@
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
 
-## Revision 3.22 - 08/10/26
+## Revision 3.23 - 08/10/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -267,7 +267,7 @@ Create an onboarding guide for the app directory in #codebase. Do not create a s
 
 3. After Copilot completes processing, you should see the onboarding documentation displayed in the Chat output area. Scroll through it to learn about the project structure, key files, and how things fit together.
 
-![Onboarding guide](./images/cpho37.png?raw=true "Onboarding guide")
+![Onboarding guide](./images/cpho108.png?raw=true "Onboarding guide")
 
 <br><br>
 
