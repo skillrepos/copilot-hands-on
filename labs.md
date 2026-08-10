@@ -1,7 +1,7 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 3.21 - 08/06/26
+## Revision 3.22 - 08/10/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -37,7 +37,7 @@ code index.js
 ```
 // function to parse data
 ```
-![Copilot generated function](./images/cdd263.png?raw=true "Copilot generated function")
+![Copilot generated function](./images/cpho107.png?raw=true "Copilot generated function")
 <br><br>
 
 3. Hit *Enter* and notice the grayed-out code that Copilot suggests. This is likely more generic than we want, but hit *Tab* to accept the suggestion. Continue hitting *Tab* to accept additional lines until you get a complete function or Copilot stops suggesting. (Give Copilot a second to provide suggestions before moving on.)
