@@ -337,14 +337,14 @@ Copilot will break down the endpoints, their purposes, and how errors are handle
 How do I completely test this code?
 ```
 
-You should see a plan for testing along with a proposed test code block in the Chat output.
+You should see text explaining how to test along with multiple code blocks and command blocks in the Chat output.
 
 ![Proposed testing plan](./images/cpho99.png?raw=true "Proposed testing plan")
 
 
 <br><br>
 
-4. Hover over the generated code block, click **"..."** and then **"Insert into New File"** to create a new file with the test code.
+4. Hover over the main generated code block to get the popup menu in the upper right corner of the code block. In that popup, click **"..."** and then **"Insert into New File"** to create a new file with the test code.
 
 ![Insert plan into new file](./images/cpho45.png?raw=true "Insert plan into new file")
 
@@ -414,7 +414,6 @@ You should get a **404** response — the search endpoint doesn't exist yet.
 
 ![Search endpoint not found](./images/cpho51.png?raw=true "Search endpoint not found")
 
-**Re-run note:** if you get a **200** here instead of a 404, this lab has already been run in this codespace and the search feature is still in *app/app.py* from that run. There's nothing left for the Agent to implement. Stop the server, run `git checkout -- app/` to restore the original files, then restart the server and try the curl again.
 
 <br><br>
 
