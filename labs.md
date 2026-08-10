@@ -2,7 +2,7 @@
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
 
-## Revision 3.25 - 08/10/26
+## Revision 3.26 - 08/10/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -341,7 +341,6 @@ You should see a plan for testing along with a proposed test code block in the C
 
 ![Proposed testing plan](./images/cpho99.png?raw=true "Proposed testing plan")
 
-**Note:** This step assumes a clean repo with no test file yet. If you've already worked through this lab once in the *same* codespace, *test_prime.py* will still be there from that run, and Copilot may also have saved itself a note about testing this repo (its *memory tool*, stored per-codespace). In that case it will report on the existing tests rather than proposing a new suite. To get the intended result, delete *test_prime.py* first (`rm test_prime.py` in the terminal) — or just start a fresh codespace.
 
 <br><br>
 
