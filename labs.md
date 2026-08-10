@@ -2,7 +2,7 @@
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
 
-## Revision 3.23 - 08/10/26
+## Revision 3.27 - 08/10/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -15,7 +15,7 @@
 > 4. The default environment will be a GitHub Codespace (with Copilot already installed). If you prefer to use your own IDE, you are responsible for installing Copilot in it. Some things in the lab may be different if you use your own environment.
 > 5. To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.
 > 6. VPNs may interfere with the ability to run the codespace. It is recommended to not use a VPN if you run into problems.
-> 7. On the free Copilot plan, some functionality used in these labs is limited or unavailable — including **model selection** (Free and likely **Plan mode** and **Review** functionality. 
+> 7. On the free Copilot plan, some functionality used in these labs is limited or unavailable — including **model selection**  and likely **Plan mode** and **Review** functionality. 
 > 8. Copilot's responses are non-deterministic — your results may differ slightly from what is shown in screenshots or described in steps. This is expected.
 > 9. When the codespace first starts, Copilot may still be signing in. Until it finishes, the Chat panel's mode selector may show only **Agent**. If *Ask* and *Plan* are missing, click the *Sign in* indicator in the lower-right status bar (see README step 4), wait a few seconds, then re-open the selector.
 > 10. Unless otherwise noted, pop-up dialogs, when running applications, can be ignored and dismissed.
@@ -272,23 +272,21 @@ Create an onboarding guide for the app directory in #codebase. Do not create a s
 
 3. After Copilot completes processing, you should see the onboarding documentation displayed in the Chat output area. Scroll through it to learn about the project structure, key files, and how things fit together.
 
-![Onboarding guide](./images/cpho37.png?raw=true "Onboarding guide")
+![Onboarding guide](./images/cpho108.png?raw=true "Onboarding guide")
 
 <br><br>
 
-4. We can also ask Copilot more tightly scoped questions. For example, still in **Ask** mode in the same chat, let's ask it how to run the project:
+4. We can also ask Copilot more tightly scoped questions. For example, still in **Ask** mode in the same chat, **start a new chat**. Then let's ask it how to run the project:
 
 ```
 Explain how I can run and see the functionality in the app directory.
 ```
 
-![Explain how to run](./images/cpho38.png?raw=true "Explain how to run")
-
 <br><br>
 
 5. In the Chat output, you'll see commands to start the server and run a demo script. (Notice if these are meant to be started from the root of the project or the app directory. If they look like `python app/app.py` then, in the terminal, cd to the root of the project.) You can type these commands into the terminal to see the functionality. For example, there's a step in the chat output that says to run `python app/app.py` to start the Flask app. 
 
-![Insert into terminal](./images/cpho85.png?raw=true "Insert into terminal")
+![Insert into terminal](./images/cpho110.png?raw=true "Insert into terminal")
 
 <br><br>
 
@@ -304,7 +302,9 @@ Explain how I can run and see the functionality in the app directory.
 
 <br><br>
 
-8. Back in the Chat output, you can look for commands to demo functionality of the app, probably `curl` commands. You can highlight and copy and paste the command into the second terminal and run it to see the functionality. (Note that you may need to use the keyboard copy and paste if the mouse copy and paste doesn't work correctly.) 
+8. Back in the Chat output, you can look for commands to demo functionality of the app, probably `curl` commands. If they are in separate white code blocks, you can hover over them and select the icon that looks like a terminal from the pop-up menu to insert into the terminal. (See first screenshot below.) Otherwise, you can highlight and copy and paste the command into the second terminal and run it to see the functionality. (Note that you may need to use the keyboard copy and paste if the mouse copy and paste doesn't work correctly.) 
+
+![Inserting curl command into terminal](./images/cpho111.png?raw=true "Inserting curl command into terminal")
 
 ![Running curl command](./images/cpho86.png?raw=true "Running curl command")
 
@@ -342,13 +342,14 @@ Copilot will break down the endpoints, their purposes, and how errors are handle
 How do I completely test this code?
 ```
 
-You should see a plan for testing along with a proposed test code block in the Chat output.
+You should see text explaining how to test along with multiple code blocks and command blocks in the Chat output.
 
 ![Proposed testing plan](./images/cpho99.png?raw=true "Proposed testing plan")
 
+
 <br><br>
 
-4. Hover over the generated code block, click **"..."** and then **"Insert into New File"** to create a new file with the test code.
+4. Hover over the main generated code block to get the popup menu in the upper right corner of the code block. In that popup, click **"..."** and then **"Insert into New File"** to create a new file with the test code.
 
 ![Insert plan into new file](./images/cpho45.png?raw=true "Insert plan into new file")
 
@@ -419,6 +420,7 @@ curl -i \
 You should get a **404** response — the search endpoint doesn't exist yet.
 
 ![Search endpoint not found](./images/cpho51.png?raw=true "Search endpoint not found")
+
 
 <br><br>
 
