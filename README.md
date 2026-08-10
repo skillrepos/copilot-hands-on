@@ -48,6 +48,13 @@ Then click on the option to create a new codespace.
 ![Creating new codespace from button](./images/cpho2.png?raw=true "Creating new codespace from button")
 
 **This will run for several minutes while it gets everything ready.**
+
+If asked about trusting the authors of the files in this folder, just select `Trust folder and continue`.
+
+
+![Trust folder](./images/ollama48.png?raw=true "Trust folder")
+
+</br></br>
   
 ## 4. In the Codespace, sign into GitHub (if needed). 
 
