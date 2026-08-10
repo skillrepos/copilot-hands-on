@@ -62,7 +62,7 @@ After the codespace has started, look in the lower right of the codespace to see
 
 ![Sign in to Copilot](./images/cpho81.png?raw=true "Sign in to Copilot")
 
-Then select the Copilot icon again and make sure the options under `Inline suggestions` are enabled.
+Then select the Copilot icon again and make sure the options under `Inline suggestions` are enabled. (You may need to click on the `>` to the right of `Inline Suggestions` to see the checkboxes.
 
 ![Options enabled](./images/cpho82.png?raw=true "Options enabled")
 
