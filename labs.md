@@ -2,7 +2,7 @@
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
 
-## Revision 3.23 - 08/10/26
+## Revision 3.24 - 08/10/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -271,19 +271,17 @@ Create an onboarding guide for the app directory in #codebase. Do not create a s
 
 <br><br>
 
-4. We can also ask Copilot more tightly scoped questions. For example, still in **Ask** mode in the same chat, let's ask it how to run the project:
+4. We can also ask Copilot more tightly scoped questions. For example, still in **Ask** mode in the same chat, **start a new chat**. Then let's ask it how to run the project:
 
 ```
 Explain how I can run and see the functionality in the app directory.
 ```
 
-![Explain how to run](./images/cpho38.png?raw=true "Explain how to run")
-
 <br><br>
 
 5. In the Chat output, you'll see commands to start the server and run a demo script. (Notice if these are meant to be started from the root of the project or the app directory. If they look like `python app/app.py` then, in the terminal, cd to the root of the project.) You can type these commands into the terminal to see the functionality. For example, there's a step in the chat output that says to run `python app/app.py` to start the Flask app. 
 
-![Insert into terminal](./images/cpho85.png?raw=true "Insert into terminal")
+![Insert into terminal](./images/cpho110.png?raw=true "Insert into terminal")
 
 <br><br>
 
