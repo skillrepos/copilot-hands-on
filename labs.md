@@ -1,24 +1,23 @@
 # Hands-on GitHub Copilot
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
-## Revision 3.21 - 08/06/26
+## Revision 3.20 - 08/05/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
 **NOTES:**
-> 1. We will be working in the public GitHub.com, not a private instance.
-> 2. Chrome may work better than Firefox for some tasks.
-> 3. Substitute the appropriate key combinations for your operating system where needed.
-> 4. The default environment will be a GitHub Codespace (with Copilot already installed). If you prefer to use your own IDE, you are responsible for installing Copilot in it. Some things in the lab may be different if you use your own environment.
-> 5. To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.
-> 6. VPNs may interfere with the ability to run the codespace. It is recommended to not use a VPN if you run into problems.
-> 7. On the free Copilot plan, some functionality used in these labs is limited or unavailable — including **model selection** (Free and likely **Plan mode** and **Review** functionality. 
-> 8. Copilot's responses are non-deterministic — your results may differ slightly from what is shown in screenshots or described in steps. This is expected.
-> 9. When the codespace first starts, Copilot may still be signing in. Until it finishes, the Chat panel's mode selector may show only **Agent**. If *Ask* and *Plan* are missing, click the *Sign in* indicator in the lower-right status bar (see README step 4), wait a few seconds, then re-open the selector.
-> 10. Unless otherwise noted, pop-up dialogs, when running applications, can be ignored and dismissed.
-
+1. We will be working in the public GitHub.com, not a private instance.
+2. Chrome may work better than Firefox for some tasks.
+3. Substitute the appropriate key combinations for your operating system where needed.
+4. The default environment will be a GitHub Codespace (with Copilot already installed). If you prefer to use your own IDE, you are responsible for installing Copilot in it. Some things in the lab may be different if you use your own environment.
+5. To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.
+6. VPNs may interfere with the ability to run the codespace. It is recommended to not use a VPN if you run into problems.
+7. On the free Copilot plan, some functionality used in these labs is limited or unavailable — most notably **model selection** (Free gets auto model selection only, so Lab 6 step 9 won't be possible) and the fuller agent/chat allowances. Everything else in the labs works on Free.
+8. Copilot's responses are non-deterministic — your results may differ slightly from what is shown in screenshots or described in steps. This is expected.
+9. When the codespace first starts, Copilot may still be signing in. Until it finishes, the Chat panel's mode selector may show only **Agent**. If *Ask* and *Plan* are missing, click the *Sign in* indicator in the lower-right status bar (see README step 4), wait a few seconds, then re-open the selector.
+10. **These labs are written to be run once, in order, in a fresh codespace.** They deliberately build on each other (Lab 4 continues from Lab 2's file, Lab 5 continues from Lab 3's running app). If you run a lab a **second** time in the **same** codespace, files and settings left behind by the first run will change what Copilot does — sometimes in ways that quietly break a step's premise. The simplest fix is always to start a new codespace. If you'd rather reuse the one you have, see **Appendix 2 - Resetting the codespace between runs** at the end of this document.
 </br></br></br>
 
 **Lab 1 - Code Completions and Next Edit Suggestions**
@@ -171,10 +170,11 @@ Agent mode will analyze the file, propose edits directly in the editor, and may 
 7. Now let's introduce an error into the code to see how Copilot can fix it. Switch back to **"Ask"** mode. In the *prime.py* file, intentionally break the code by changing a variable name — for example, change an instance of `n` to `x`.
 <br><br>
 
-8. Highlight the broken code. Bring up the inline chat interface with `Cmd/Ctrl+I`. The inline chat dialog may already be populated with a command like "Fix the attached problem". If so, you can just hit *Enter*. If not, you can type `fix`. (Give the editor a second to flag the error first — the pre-filled "Fix the attached problem" only appears once the red squiggle/diagnostic is showing.)
+8. **First, start a new chat** by clicking the **"+"** icon in the upper right of the Chat panel. This matters: while a conversation is still open in the Chat panel (like the one from step 6), `Cmd/Ctrl+I` will not open the inline dialog — it just attaches your selection to the Chat panel instead. Starting a new chat restores it.
 
-![Fix with Copilot](./images/cpho104.png?raw=true "Fix with Copilot")
+   Now highlight the broken code and bring up the inline chat interface with `Cmd/Ctrl+I`. The inline chat dialog may already be populated with a command like "Fix the attached problem". If so, you can just hit *Enter*. If not, you can type `fix`. (Give the editor a second to flag the error first — the pre-filled "Fix the attached problem" only appears once the red squiggle/diagnostic is showing.)
 
+![Fix with Copilot](./images/cpho83.png?raw=true "Fix with Copilot")
 
 (As another alternative to start a fix, you can right-click, and select *Fix*. Note that *Fix* only appears once the editor has flagged the error — if you don't see it, wait a second for the red squiggle and right-click again.)
 
@@ -198,10 +198,6 @@ Copilot will provide a detailed explanation of what the code does, line by line.
 
 Other useful slash commands include `/tests`, `/doc`, and `/new`.
 <br><br>
-
-
-> $${\color{red}NOTE}$$ **Because of Copilot's restricted model access, if you're running using the Free plan, you may not be able to do the remaining steps or have them complete in a reasonable time.**
-
 
 11. Finally, let's try *Plan* mode. Open a new chat session by clicking on the "+" sign in the upper right of the Chat panel. Switch to "Plan" mode using the mode selector dropdown.
 
@@ -344,6 +340,8 @@ You should see a plan for testing along with a proposed test code block in the C
 
 ![Proposed testing plan](./images/cpho99.png?raw=true "Proposed testing plan")
 
+**Note:** This step assumes a clean repo with no test file yet. If you've already worked through this lab once in the *same* codespace, *test_prime.py* will still be there from that run, and Copilot may also have saved itself a note about testing this repo (its *memory tool*, stored per-codespace). In that case it will report on the existing tests rather than proposing a new suite. To get the intended result, delete *test_prime.py* first (`rm test_prime.py` in the terminal) — or just start a fresh codespace.
+
 <br><br>
 
 4. Hover over the generated code block, click **"..."** and then **"Insert into New File"** to create a new file with the test code.
@@ -375,8 +373,6 @@ What other conditions should be tested? Suggest a single set of code to add the 
 
 ![Inspecting changes](./images/cpho48.png?raw=true "Inspecting changes  ")
 <br><br>
-
-> $${\color{red}NOTE}$$ **Because of Copilot's restricted model access, if you're running using the Free plan, you may not be able to do the remaining steps or have them complete in a reasonable time.**
 
 9. Now let's have Copilot **review** our implementation code. Go back to the *prime.py* file and select all the code. Right-click and select **Review** from the context menu. (Depending on your version, this may be under *Generate Code > Review* or accessible via a keyboard shortcut.)
 
@@ -417,6 +413,8 @@ curl -i \
 You should get a **404** response — the search endpoint doesn't exist yet.
 
 ![Search endpoint not found](./images/cpho51.png?raw=true "Search endpoint not found")
+
+**Re-run note:** if you get a **200** here instead of a 404, this lab has already been run in this codespace and the search feature is still in *app/app.py* from that run. There's nothing left for the Agent to implement. Stop the server, run `git checkout -- app/` to restore the original files, then restart the server and try the curl again.
 
 <br><br>
 
@@ -520,6 +518,8 @@ code .github/copilot-instructions.txt
 mv .github/copilot-instructions.txt .github/copilot-instructions.md
 ```
 
+**Heads-up:** from this point on, these instructions apply to **every** Chat interaction in this codespace — not just the rest of this lab. If you go back and repeat any of Labs 1-5 afterward, the generated code will carry the "Generated with Copilot" comments, extra error handling, and so on, and won't match the earlier screenshots. Delete *.github/copilot-instructions.md* to get the original behavior back.
+
 4.  Now let's see these instructions in action. Open a new file:
 
 ```
@@ -552,10 +552,8 @@ Again, verify that the output follows your custom instructions (descriptive name
 
 <br><br>
 
-8. At this point, you may need to use the `Apply in Editor` or other control to get the newly generated code in your file. You can then review the proposed changes and just select to `Keep` them if you're good with them.
+8. You can review the proposed changes and just select to `Keep` them if you're good with them.
    
-
-> $${\color{red}NOTE}$$ **Because of Copilot's restricted model access, if you're running using the Free plan, you may not be able to do the remaining steps or have them complete in a reasonable time.**
 
 9. Now, if your plan allows, select a different model than the current one (for example, switch to **GPT-5 mini** if you were on Auto and it was **Claude Haiku**). Note you may need to expand the list of models under `Other models`. Switch back to **Ask** mode. Now enter this prompt:
 
@@ -629,10 +627,16 @@ After a moment, you should see the text change to **"Running | Stop | Restart | 
 
 <br><br>
 
-6. Let's use these tools. In Agent mode, enter a prompt like the following one:
+6. Let's use these tools. In Agent mode, enter one of the following prompts:
 
 ```
 Give me a list of the open issues for the current GitHub repo
+```
+
+or
+
+```
+What are the latest changes in <your-repo-name>?
 ```
 <br><br>
 
@@ -673,6 +677,8 @@ If you need to **Allow** or **Approve** operations from the Agent, go ahead. Cop
     - MCP tools only work in **Agent** mode (not Ask or Edit)
     - MCP configuration lives in `.vscode/mcp.json` and can be shared with your team via the repo
 
+**Heads-up:** the server config, the stored token, and the running server all persist in this codespace after this lab ends, so Agent mode keeps its GitHub tool access in anything you do afterward. Use **Stop** in *mcp.json* (or delete the file) to turn it back off.
+
 <p align="center">
 **[END OF LAB]**
 </p>
@@ -688,6 +694,8 @@ If you need to **Allow** or **Approve** operations from the Agent, go ahead. Cop
 2. Fork the repository into your own GitHub space via the **Fork** button at the top right. Make sure to **uncheck** the *Copy the main branch only* box on the next screen. Then click **Create fork**.
 
 ![Fork](./images/cpho73.png?raw=true "Fork")
+
+**Re-run note:** this lab changes your GitHub account, not the codespace, so starting a fresh codespace won't reset it. If you've done this lab before, GitHub will send you to your existing *sec-demo* fork instead of offering the fork screen, and the pull request in steps 5-7 may already exist. To run it clean, delete your old *sec-demo* fork (Settings > Danger Zone > Delete this repository) before starting, or close the earlier PR and use a different branch.
 <br><br>
 
 3. After the fork is complete, click on the Copilot button at the top right. The Chat dialog will open with a text input and some suggested questions. Click on the suggested prompt **"Give me a high level overview of this repo"** (or type your own question, such as "Tell me about this repository"). Copilot will provide an overview of the project. (The set of suggested prompts changes over time — if you don't see that exact one, just type the question in.)
@@ -809,3 +817,56 @@ git clone git@github.com:skillrepos/sec-demo (if using ssh)
 4. Create a new repository in your GitHub space named *sec-demo*. Go to [**https://github.com/new**](https://github.com/new). Fill in the "repo name" field with "sec-demo" and then click on the "Create repository" button.
 
 5. On the page that comes up after that, select the appropriate protocol (https or ssh) and then follow the instructions for "...or push an existing repository from the command line" to push your content back to the GitHub repository. If you're using https you will be prompted for a password at push time. Just paste in the classic token.
+
+
+</br></br></br>
+
+# Appendix 2
+## Resetting the codespace between runs
+
+These labs assume a **fresh codespace, run once, in order**. Starting a new codespace is always the cleanest reset and is what we recommend. If you need to re-run the labs in the codespace you already have — for example, you're an instructor rehearsing the material — the commands below put the workspace back to its original state.
+
+**Labs that actually break on a re-run**
+
+| Lab | Leaves behind | Effect on a re-run |
+|---|---|---|
+| 5 | Search feature added to *app/app.py* and *app/datastore.py* | Step 2's curl returns 200 instead of the 404 the step says you'll get — the Agent has nothing left to implement |
+| 4 | *test_prime.py* | Copilot reports on the existing suite instead of proposing one |
+| 3 | Flask server still running on port 5000 | Restarting it gives `Address already in use` |
+
+**Labs that still work, but behave differently**
+
+| Lab | Leaves behind | Effect on a re-run |
+|---|---|---|
+| 1 | *index.js* | Step 3's first completion is shaped by your old code. Steps 4 and 8 clear the file anyway, so the lab recovers on its own |
+| 2 | *prime.py* rewritten (simplified, docstrings, validation) | "simplify this code" has less to simplify, so the response is thinner. Every step still works — and Lab 4 picks up this same file on purpose |
+| 6 | *.github/copilot-instructions.md*, *utils.py*, selected model | Instructions apply to **all** later chats, including re-runs of Labs 1-5, so generated code won't match the earlier screenshots |
+| 7 | *.vscode/mcp.json*, stored PAT, running MCP server | Agent mode keeps GitHub tool access in every later lab |
+| 8 | A *sec-demo* fork and a pull request **in your GitHub account** | Not fixed by a new codespace — see the re-run note in that lab |
+
+Copilot also keeps **memories** per repository, which is why it can open a step by referring to work from a previous run. Two Command Palette commands (Cmd/Ctrl+Shift+P) manage these:
+
+- **Chat: Show Memory Files** — see what Copilot has recorded about this repo
+- **Chat: Clear All Memory Files** — wipe them, so the next run starts with no recollection of the last one
+
+**Reset commands** — run these from a terminal in the codespace:
+
+```
+cd /workspaces/copilot-hands-on
+
+# stop the sample app if it's running
+pkill -f "python app/app.py"
+
+# restore files the labs modified
+git checkout -- prime.py app/
+
+# remove files the labs created
+rm -f index.js test_prime.py utils.py
+rm -f .github/copilot-instructions.md .github/copilot-instructions.txt
+rm -f .vscode/mcp.json
+
+# confirm the workspace is clean
+git status
+```
+
+`git status` should report no changes. Then start a new chat with the **"+"** icon in the Chat panel, and run **Chat: Clear All Memory Files** from the Command Palette so Copilot doesn't carry notes from the previous run into this one.
