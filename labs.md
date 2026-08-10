@@ -2,23 +2,24 @@
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
 
-## Revision 3.26 - 08/10/26
+## Revision 3.23 - 08/10/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
 **NOTES:**
-1. We will be working in the public GitHub.com, not a private instance.
-2. Chrome may work better than Firefox for some tasks.
-3. Substitute the appropriate key combinations for your operating system where needed.
-4. The default environment will be a GitHub Codespace (with Copilot already installed). If you prefer to use your own IDE, you are responsible for installing Copilot in it. Some things in the lab may be different if you use your own environment.
-5. To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.
-6. VPNs may interfere with the ability to run the codespace. It is recommended to not use a VPN if you run into problems.
-7. On the free Copilot plan, some functionality used in these labs is limited or unavailable — most notably **model selection** (Free gets auto model selection only, so Lab 6 step 9 won't be possible) and the fuller agent/chat allowances. Everything else in the labs works on Free.
-8. Copilot's responses are non-deterministic — your results may differ slightly from what is shown in screenshots or described in steps. This is expected.
-9. When the codespace first starts, Copilot may still be signing in. Until it finishes, the Chat panel's mode selector may show only **Agent**. If *Ask* and *Plan* are missing, click the *Sign in* indicator in the lower-right status bar (see README step 4), wait a few seconds, then re-open the selector.
-10. **These labs are written to be run once, in order, in a fresh codespace.** They deliberately build on each other (Lab 4 continues from Lab 2's file, Lab 5 continues from Lab 3's running app). If you run a lab a **second** time in the **same** codespace, files and settings left behind by the first run will change what Copilot does — sometimes in ways that quietly break a step's premise. The simplest fix is always to start a new codespace. If you'd rather reuse the one you have, see **Appendix 2 - Resetting the codespace between runs** at the end of this document.
+> 1. We will be working in the public GitHub.com, not a private instance.
+> 2. Chrome may work better than Firefox for some tasks.
+> 3. Substitute the appropriate key combinations for your operating system where needed.
+> 4. The default environment will be a GitHub Codespace (with Copilot already installed). If you prefer to use your own IDE, you are responsible for installing Copilot in it. Some things in the lab may be different if you use your own environment.
+> 5. To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.
+> 6. VPNs may interfere with the ability to run the codespace. It is recommended to not use a VPN if you run into problems.
+> 7. On the free Copilot plan, some functionality used in these labs is limited or unavailable — including **model selection** (Free and likely **Plan mode** and **Review** functionality. 
+> 8. Copilot's responses are non-deterministic — your results may differ slightly from what is shown in screenshots or described in steps. This is expected.
+> 9. When the codespace first starts, Copilot may still be signing in. Until it finishes, the Chat panel's mode selector may show only **Agent**. If *Ask* and *Plan* are missing, click the *Sign in* indicator in the lower-right status bar (see README step 4), wait a few seconds, then re-open the selector.
+> 10. Unless otherwise noted, pop-up dialogs, when running applications, can be ignored and dismissed.
+
 </br></br></br>
 
 **Lab 1 - Code Completions and Next Edit Suggestions**
@@ -175,7 +176,7 @@ Agent mode will analyze the file, propose edits directly in the editor, and may 
 
    Now highlight the broken code and bring up the inline chat interface with `Cmd/Ctrl+I`. The inline chat dialog may already be populated with a command like "Fix the attached problem". If so, you can just hit *Enter*. If not, you can type `fix`. (Give the editor a second to flag the error first — the pre-filled "Fix the attached problem" only appears once the red squiggle/diagnostic is showing.)
 
-![Fix with Copilot](./images/cpho83.png?raw=true "Fix with Copilot")
+![Fix with Copilot](./images/cpho104.png?raw=true "Fix with Copilot")
 
 (As another alternative to start a fix, you can right-click, and select *Fix*. Note that *Fix* only appears once the editor has flagged the error — if you don't see it, wait a second for the red squiggle and right-click again.)
 
@@ -199,6 +200,10 @@ Copilot will provide a detailed explanation of what the code does, line by line.
 
 Other useful slash commands include `/tests`, `/doc`, and `/new`.
 <br><br>
+
+
+> $${\color{red}NOTE}$$ **Because of Copilot's restricted model access, if you're running using the Free plan, you may not be able to do the remaining steps or have them complete in a reasonable time.**
+
 
 11. Finally, let's try *Plan* mode. Open a new chat session by clicking on the "+" sign in the upper right of the Chat panel. Switch to "Plan" mode using the mode selector dropdown.
 
@@ -267,21 +272,23 @@ Create an onboarding guide for the app directory in #codebase. Do not create a s
 
 3. After Copilot completes processing, you should see the onboarding documentation displayed in the Chat output area. Scroll through it to learn about the project structure, key files, and how things fit together.
 
-![Onboarding guide](./images/cpho108.png?raw=true "Onboarding guide")
+![Onboarding guide](./images/cpho37.png?raw=true "Onboarding guide")
 
 <br><br>
 
-4. We can also ask Copilot more tightly scoped questions. For example, still in **Ask** mode in the same chat, **start a new chat**. Then let's ask it how to run the project:
+4. We can also ask Copilot more tightly scoped questions. For example, still in **Ask** mode in the same chat, let's ask it how to run the project:
 
 ```
 Explain how I can run and see the functionality in the app directory.
 ```
 
+![Explain how to run](./images/cpho38.png?raw=true "Explain how to run")
+
 <br><br>
 
 5. In the Chat output, you'll see commands to start the server and run a demo script. (Notice if these are meant to be started from the root of the project or the app directory. If they look like `python app/app.py` then, in the terminal, cd to the root of the project.) You can type these commands into the terminal to see the functionality. For example, there's a step in the chat output that says to run `python app/app.py` to start the Flask app. 
 
-![Insert into terminal](./images/cpho110.png?raw=true "Insert into terminal")
+![Insert into terminal](./images/cpho85.png?raw=true "Insert into terminal")
 
 <br><br>
 
@@ -297,9 +304,7 @@ Explain how I can run and see the functionality in the app directory.
 
 <br><br>
 
-8. Back in the Chat output, you can look for commands to demo functionality of the app, probably `curl` commands. If they are in separate white code blocks, you can hover over them and select the icon that looks like a terminal from the pop-up menu to insert into the terminal. (See first screenshot below.) Otherwise, you can highlight and copy and paste the command into the second terminal and run it to see the functionality. (Note that you may need to use the keyboard copy and paste if the mouse copy and paste doesn't work correctly.) 
-
-![Inserting curl command into terminal](./images/cpho111.png?raw=true "Inserting curl command into terminal")
+8. Back in the Chat output, you can look for commands to demo functionality of the app, probably `curl` commands. You can highlight and copy and paste the command into the second terminal and run it to see the functionality. (Note that you may need to use the keyboard copy and paste if the mouse copy and paste doesn't work correctly.) 
 
 ![Running curl command](./images/cpho86.png?raw=true "Running curl command")
 
@@ -337,14 +342,13 @@ Copilot will break down the endpoints, their purposes, and how errors are handle
 How do I completely test this code?
 ```
 
-You should see text explaining how to test along with multiple code blocks and command blocks in the Chat output.
+You should see a plan for testing along with a proposed test code block in the Chat output.
 
 ![Proposed testing plan](./images/cpho99.png?raw=true "Proposed testing plan")
 
-
 <br><br>
 
-4. Hover over the main generated code block to get the popup menu in the upper right corner of the code block. In that popup, click **"..."** and then **"Insert into New File"** to create a new file with the test code.
+4. Hover over the generated code block, click **"..."** and then **"Insert into New File"** to create a new file with the test code.
 
 ![Insert plan into new file](./images/cpho45.png?raw=true "Insert plan into new file")
 
@@ -373,6 +377,8 @@ What other conditions should be tested? Suggest a single set of code to add the 
 
 ![Inspecting changes](./images/cpho48.png?raw=true "Inspecting changes  ")
 <br><br>
+
+> $${\color{red}NOTE}$$ **Because of Copilot's restricted model access, if you're running using the Free plan, you may not be able to do the remaining steps or have them complete in a reasonable time.**
 
 9. Now let's have Copilot **review** our implementation code. Go back to the *prime.py* file and select all the code. Right-click and select **Review** from the context menu. (Depending on your version, this may be under *Generate Code > Review* or accessible via a keyboard shortcut.)
 
@@ -413,7 +419,6 @@ curl -i \
 You should get a **404** response — the search endpoint doesn't exist yet.
 
 ![Search endpoint not found](./images/cpho51.png?raw=true "Search endpoint not found")
-
 
 <br><br>
 
@@ -551,8 +556,10 @@ Again, verify that the output follows your custom instructions (descriptive name
 
 <br><br>
 
-8. You can review the proposed changes and just select to `Keep` them if you're good with them.
+8. At this point, you may need to use the `Apply in Editor` or other control to get the newly generated code in your file. You can then review the proposed changes and just select to `Keep` them if you're good with them.
    
+
+> $${\color{red}NOTE}$$ **Because of Copilot's restricted model access, if you're running using the Free plan, you may not be able to do the remaining steps or have them complete in a reasonable time.**
 
 9. Now, if your plan allows, select a different model than the current one (for example, switch to **GPT-5 mini** if you were on Auto and it was **Claude Haiku**). Note you may need to expand the list of models under `Other models`. Switch back to **Ask** mode. Now enter this prompt:
 
@@ -626,16 +633,10 @@ After a moment, you should see the text change to **"Running | Stop | Restart | 
 
 <br><br>
 
-6. Let's use these tools. In Agent mode, enter one of the following prompts:
+6. Let's use these tools. In Agent mode, enter a prompt like the following one:
 
 ```
 Give me a list of the open issues for the current GitHub repo
-```
-
-or
-
-```
-What are the latest changes in <your-repo-name>?
 ```
 <br><br>
 
