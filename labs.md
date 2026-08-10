@@ -2,7 +2,7 @@
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
 
-## Revision 3.24 - 08/10/26
+## Revision 3.25 - 08/10/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -297,7 +297,9 @@ Explain how I can run and see the functionality in the app directory.
 
 <br><br>
 
-8. Back in the Chat output, you can look for commands to demo functionality of the app, probably `curl` commands. You can highlight and copy and paste the command into the second terminal and run it to see the functionality. (Note that you may need to use the keyboard copy and paste if the mouse copy and paste doesn't work correctly.) 
+8. Back in the Chat output, you can look for commands to demo functionality of the app, probably `curl` commands. If they are in separate white code blocks, you can hover over them and select the icon that looks like a terminal from the pop-up menu to insert into the terminal. (See first screenshot below.) Otherwise, you can highlight and copy and paste the command into the second terminal and run it to see the functionality. (Note that you may need to use the keyboard copy and paste if the mouse copy and paste doesn't work correctly.) 
+
+![Inserting curl command into terminal](./images/cpho111.png?raw=true "Inserting curl command into terminal")
 
 ![Running curl command](./images/cpho86.png?raw=true "Running curl command")
 
