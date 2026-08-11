@@ -2,7 +2,7 @@
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
 
-## Revision 3.28 - 08/10/26
+## Revision 3.29 - 08/10/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -22,7 +22,20 @@
 
 </br></br></br>
 
-**Lab 1 - Code Completions and Next Edit Suggestions**
+## Labs
+
+- [Lab 1 - Code Completions and Next Edit Suggestions](#lab-1---code-completions-and-next-edit-suggestions)
+- [Lab 2 - Understanding Chat Modes: Ask, Agent, and Plan](#lab-2---understanding-chat-modes-ask-agent-and-plan)
+- [Lab 3 - Using Copilot to Understand and Onboard to a Codebase](#lab-3---using-copilot-to-understand-and-onboard-to-a-codebase)
+- [Lab 4 - Generating and Improving Tests with Copilot](#lab-4---generating-and-improving-tests-with-copilot)
+- [Lab 5 - Agent Mode: Implementing a Feature Autonomously](#lab-5---agent-mode-implementing-a-feature-autonomously)
+- [Lab 6 - Custom Instructions and Model Selection](#lab-6---custom-instructions-and-model-selection)
+- [Lab 7 - Extending Copilot with MCP Servers](#lab-7---extending-copilot-with-mcp-servers)
+- [Lab 8 - Copilot in GitHub.com](#lab-8---copilot-in-githubcom)
+
+</br></br></br>
+
+## Lab 1 - Code Completions and Next Edit Suggestions
 
 **Purpose: In this lab, we'll learn how Copilot generates code from prompts and how Next Edit Suggestions (NES) can predict your next edit across a file.**
 
@@ -113,7 +126,7 @@ After making this change, look at the `farewell` function below. You should see 
 </p>
 </br></br></br>
 
-**Lab 2 - Understanding Chat Modes: Ask, Agent, and Plan**
+## Lab 2 - Understanding Chat Modes: Ask, Agent, and Plan
 
 **Purpose: In this lab, we'll explore the three Copilot Chat modes and learn when to use each one.**
 
@@ -245,7 +258,7 @@ As it is making the changes, Agent mode may stop and ask you if its ok if it run
 </p>
 </br></br></br>
 
-**Lab 3 - Using Copilot to Understand and Onboard to a Codebase**
+## Lab 3 - Using Copilot to Understand and Onboard to a Codebase
 
 **Purpose: In this lab, we'll use Copilot to quickly get up to speed on a project.**
 
@@ -326,7 +339,7 @@ Copilot will break down the endpoints, their purposes, and how errors are handle
 </p>
 </br></br></br>
 
-**Lab 4 - Generating and Improving Tests with Copilot**
+## Lab 4 - Generating and Improving Tests with Copilot
 
 **Purpose: In this lab, we'll use Copilot to generate tests, suggest edge cases, and review implementation code.**
 
@@ -398,7 +411,7 @@ What other conditions should be tested? Suggest a single set of code to add the 
 </p>
 </br></br></br>
 
-**Lab 5 - Agent Mode: Implementing a Feature Autonomously**
+## Lab 5 - Agent Mode: Implementing a Feature Autonomously
 
 **Purpose: In this lab, we'll use Copilot's Agent mode to autonomously implement a feature from a GitHub Issue.**
 
@@ -491,7 +504,7 @@ Create and run tests for the new search feature.
 </p>
 </br></br></br>
 
-**Lab 6 - Custom Instructions and Model Selection**
+## Lab 6 - Custom Instructions and Model Selection
 
 **Purpose: In this lab, we'll configure Copilot with project-specific instructions and explore how to select different AI models.**
 
@@ -591,7 +604,7 @@ Write a function that takes a JSON file path and returns a sorted list of all un
 </p>
 </br></br></br>
 
-**Lab 7 - Extending Copilot with MCP Servers**
+## Lab 7 - Extending Copilot with MCP Servers
 
 **Purpose: In this lab, we'll set up and use the GitHub MCP Server to give Copilot access to external tools.**
 
@@ -688,7 +701,7 @@ If you need to **Allow** or **Approve** operations from the Agent, go ahead. Cop
 </p>
 </br></br></br>
 
-**Lab 8 - Copilot in GitHub.com**
+## Lab 8 - Copilot in GitHub.com
 
 **Purpose: In this lab, we'll use the integrated Copilot features available on GitHub.com.**
 
