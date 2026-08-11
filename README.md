@@ -15,7 +15,7 @@ If you prefer and if you know one of the other IDEs supported by Copilot, you ca
 
 These steps **must** be completed prior to starting the actual labs.
 
-## 1. You can use the free version of Copilot for all but one or two items in the labs. 
+## 1. You can use the free version of Copilot for *most* items in the labs. Notes in the labs will alert you where the free version may not work or may not perform well.
 
 When signed into GitHub, you can verify your Copilot settings by clicking on your profile picture/icon in the upper right and selecting [Copilot settings](https://github.com/settings/copilot/features) 
 
