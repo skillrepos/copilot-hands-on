@@ -29,3 +29,8 @@ class DataStore:
             # ← this will be caught higher up and turned into a 500
             raise KeyError(f"Item {item_id} not found")
         del self._items[item_id]
+
+    def clear_all(self) -> None:
+        """Remove all items and reset the ID counter."""
+        self._items.clear()
+        self._next = 1
