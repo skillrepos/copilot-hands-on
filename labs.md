@@ -2,7 +2,7 @@
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
 
-## Revision 3.27 - 08/10/26
+## Revision 3.28 - 08/10/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -460,6 +460,8 @@ Referencing the issue at https://github.com/skillrepos/copilot-hands-on/issues/8
 <br><br>
 
 9. Review the diffs for each changed file. When satisfied, you can click the **"Keep"** button in the box above the chat input area to apply all the changes. (If you only wanted certain changes, you could "keep/undo" each change in each file. Close any diff comparison tabs.
+
+![Seeing multiple diffs](./images/cpho112.png?raw=true "Seeing multiple diffs")
 
 <br><br>
 
