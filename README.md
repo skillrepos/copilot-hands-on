@@ -38,6 +38,8 @@ Increase the default timeout value to 60 minutes and then select the *Save* butt
 
 (**NOTE**: If your codespace does time out at some point in the course, there should be a button to restart it.)
 
+</br></br>
+
 ## 3. Create your own codespace to run the labs by clicking on the button below.
 </br></br>
 Click here -----> [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/skillrepos/copilot-hands-on?quickstart=1)
@@ -62,11 +64,11 @@ After the codespace has started, look in the lower right of the codespace to see
 
 ![Sign in to Copilot](./images/cpho81.png?raw=true "Sign in to Copilot")
 
-Then select the Copilot icon again and make sure the options under `Inline suggestions` are enabled. (You may need to click on the `>` to the right of `Inline Suggestions` to see the checkboxes.
+Then select the Copilot icon again and make sure the options under `Inline suggestions` are enabled. (You may need to click on the `>` to the right of `Inline Suggestions` to see the checkboxes.)
 
 ![Options enabled](./images/cpho82.png?raw=true "Options enabled")
 
-<br><br>
+</br></br>
 
 ## 5. Open the labs
 
