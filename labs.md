@@ -2,7 +2,7 @@
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
 
-## Revision 4.2 - 09/30/26
+## Revision 4.3 - 09/30/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -593,7 +593,22 @@ Write a function that takes a JSON file path and returns a sorted list of all un
 
 **Purpose: In this lab, we'll set up and use the GitHub MCP Server to give Copilot access to external tools.**
 
-1. MCP (Model Context Protocol) servers extend Copilot's Agent mode with external tools. GitHub hosts a remote MCP server that signs you in with your GitHub account, so no token is needed. We already have a config file for it. Run these commands in the terminal:
+1. MCP (Model Context Protocol) servers extend Copilot's Agent mode with external tool integrations. For authentication to the GitHub MCP Server, we need a personal access token (PAT). Click the link below, provide a note, and click the green **"Generate token"** button at the bottom:
+
+Link: [Generate classic personal access token (repo & workflow scopes)](https://github.com/settings/tokens/new?scopes=repo,workflow)
+
+![Getting token](./images/cpho79.png?raw=true "Getting token")
+
+![Getting token](./images/mcp87.png?raw=true "Getting token")
+<br><br>
+
+2. On the next screen, **copy the generated token and save it** — you won't be able to see it again! (**Important:** Never commit PATs to a repository. This token is for local use only.)
+
+![Copying token](./images/mcp11.png?raw=true "Copying token")
+
+<br><br>
+
+3. Now we'll add the MCP Server configuration. We already have a sample config file we can use. Run these commands in the terminal:
 
 ```
 cd /workspaces/copilot-hands-on
@@ -601,45 +616,40 @@ mkdir -p .vscode
 cp extra/mcp_github_settings.json .vscode/mcp.json
 code .vscode/mcp.json
 ```
-
-The file declares one server: its `type` (`http`) and its `url` (`https://api.githubcopilot.com/mcp/`). That is all VS Code needs to connect.
 <br><br>
 
-2. In the *mcp.json* file, click the small **"Start"** link that appears above the server name (it can take a few seconds to appear). VS Code asks whether the server may authenticate to GitHub — click **"Allow"**. A browser tab opens for the GitHub sign-in; approve it if asked and return to the codespace.
+4. In the *mcp.json* file, click the small **"Start"** link that appears above the server name. A dialog will prompt you to paste your PAT. Paste it and hit *Enter*. (The token will be masked.) 
 
-![Starting the server](./images/mcp23a.png?raw=true "Starting the server")
 
-![Allow GitHub authentication](./images/cpho115.png?raw=true "Allow GitHub authentication")
+![Starting the server](./images/mcp23.png?raw=true "Starting the server")
 
-If that tab shows *Unauthorized: No valid session for this codespace* instead, close it and follow *Appendix 3* to finish signing in.
-
-After a moment, the text above the server name should change to **"Running | Stop | Restart | ## tools | More..."**.
+After a moment, you should see the text change to **"Running | Stop | Restart | ## tools | More..."**.
 
 ![Starting the server](./images/mcp24.png?raw=true "Starting the server")
 
 <br><br>
 
-3. To see the available tools, make sure you're in **Agent** mode in the Chat panel. Click the small **Configure Tools** icon (sliders) in the Chat input area. In the list that opens, expand the **GitHub MCP Server** group with its arrow. You'll see all the tools Copilot can now use — things like searching issues, reading file contents from repos, listing PRs, and more. Click **OK** to close the list.
+5. To see the available tools, make sure you're in **Agent** mode in the Chat panel. Click the small **Configure Tools** icon (sliders) in the Chat input area. In the list that opens, expand the **GitHub MCP Server** group with its arrow. You'll see all the tools Copilot can now use — things like searching issues, reading file contents from repos, listing PRs, and more. Click **OK** to close the list.
 
 ![Viewing available tools](./images/mcp25.png?raw=true "Viewing available tools")
 
 <br><br>
 
-4. Let's use these tools. In Agent mode, enter a prompt like the following one:
+6. Let's use these tools. In Agent mode, enter a prompt like the following one:
 
 ```
 Give me a list of the open issues for the current GitHub repo
 ```
 <br><br>
 
-5. Watch the output — you'll see a note like **"Ran <tool_name> - GitHub MCP Server"** early in the response. (Click **Allow** if asked to run a `git` command. When the response finishes, these notes collapse under *Completed N steps* — click it to expand.) This confirms Copilot is using the MCP tools to access GitHub data directly rather than guessing from its training data.
+7. Watch the output — you'll see a note like **"Ran <tool_name> - GitHub MCP Server"** early in the response. (Click **Allow** if asked to run a `git` command. When the response finishes, these notes collapse under *Completed N steps* — click it to expand.) This confirms Copilot is using the MCP tools to access GitHub data directly rather than guessing from its training data.
 
 
 ![Example usage](./images/ct162.png?raw=true "Example usage")
 
 <br><br>
 
-6. Now let's combine MCP-sourced GitHub context with our local code. Enter the following prompt:
+8. Now let's combine MCP-sourced GitHub context with our local code. Enter the following prompt:
 
 ```
 Is issue #8 in the GitHub repository already solved by my local code?
@@ -651,7 +661,7 @@ Is issue #8 in the GitHub repository already solved by my local code?
 
 <br><br>
 
-7. If you click the **Extensions** icon on the left sidebar, you'll see a category for **MCP SERVERS - INSTALLED** showing the GitHub MCP Server. Hover over that heading and click the search (magnifier) icon that appears; the view that opens has a button you can click to `Enable MCP Servers Marketplace`.
+9. If you click the **Extensions** icon on the left sidebar, you'll see a category for **MCP SERVERS - INSTALLED** showing the GitHub MCP Server. Hover over that heading and click the search (magnifier) icon that appears; the view that opens has a button you can click to `Enable MCP Servers Marketplace`.
 
 ![Extensions and browser](./images/cpho92.png?raw=true "Extensions and browser")
 
@@ -659,7 +669,7 @@ Is issue #8 in the GitHub repository already solved by my local code?
 
 <br><br>
 
-8. Click that button and confirm with **Enable**. You now get a list of available MCP servers you can install. 
+10. Click that button and confirm with **Enable**. You now get a list of available MCP servers you can install. 
 
 ![MCP Servers](./images/cpho91.png?raw=true "MCP Servers")
 
@@ -687,7 +697,6 @@ Is issue #8 in the GitHub repository already solved by my local code?
 
 ![Fork](./images/cpho73.png?raw=true "Fork")
 
-**Re-run note:** this lab changes your GitHub account, so a fresh codespace won't reset it. If you've done it before, the fork screen lists your account as *fork already exists*, and Copilot's link in step 5 opens your earlier pull request instead of the creation form. To run it clean, delete your old *sec-demo* fork (Settings > Danger Zone > Delete this repository) first, or close the earlier PR and use a different branch.
 <br><br>
 
 3. After the fork is complete, click on the Copilot button at the top right. The Chat dialog will open with a text input and some suggested questions. Click on the suggested prompt **"Give me a high level overview of this repo"** (suggestions vary; if you don't see it, type the question in). Copilot will provide an overview of the project.
@@ -700,9 +709,9 @@ Is issue #8 in the GitHub repository already solved by my local code?
 
 <br><br>
 
-4. Go back to the repo. In the file list, click on **main.go** to open it. In the toolbar above the file contents, click the **Ask Copilot about this file** icon (the Copilot face, two icons left of *Raw*). If the Copilot panel shows your earlier conversation, click its **New chat** (pencil) icon. Then click the suggested prompt **"Summarize this file for me."**
+4. Go back to the repo. In the file list, click on **main.go** to open it. In the toolbar above the file contents, click the **Ask Copilot about this file** icon (the Copilot face, icon left of *Raw*). If the Copilot panel shows your earlier conversation, click its **New chat** (pencil) icon. Then click the suggested prompt **"Summarize this file for me."**
 
-![Prompt](./images/cpho96.png?raw=true "Prompt")
+![Prompt](./images/cpho117.png?raw=true "Prompt")
 
 ![Response](./images/cpho97.png?raw=true "Response")
 
