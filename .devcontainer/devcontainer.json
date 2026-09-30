@@ -2,7 +2,7 @@
 {
 	"name": "Python 3",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+	"image": "mcr.microsoft.com/devcontainers/python:3-3.12-bookworm",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
@@ -12,17 +12,16 @@
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
+		     // Copilot Chat is built into VS Code (1.116+); listing it keeps older builds covered.
+		     // The separate "GitHub.copilot" extension is deprecated and no longer needed.
 		     "extensions": [
-				"GitHub.copilot-chat",
-				"GitHub.copilot"
+				"GitHub.copilot-chat"
 		     ],
 		     "settings": {
-			 // Holding Cmd+I/Ctrl+I would otherwise try to start speech-to-text,
-			 // which errors out when the VS Code Speech extension isn't available
-			 "inlineChat.holdToSpeech": false,
+			 // Keep voice/keyword activation off so Cmd+I/Ctrl+I only opens inline chat
 			 "accessibility.voice.keywordActivation": "off",
-			 // Open Markdown files in preview mode by default
 			 "github.copilot.chat.setupTests.enabled": false,
+			 // Open Markdown files in preview mode by default
             		 "workbench.editorAssociations": {
               		     "*.md": "vscode.markdown.preview.editor"
             		}
@@ -31,4 +30,3 @@
 	},
 	"postCreateCommand": "bash -i scripts/pysetup.sh py_env"
 }
-

@@ -2,7 +2,7 @@
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
 
-## Revision 3.29 - 08/10/26
+## Revision 4.0 - 09/29/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -15,10 +15,11 @@
 > 4. The default environment will be a GitHub Codespace (with Copilot already installed). If you prefer to use your own IDE, you are responsible for installing Copilot in it. Some things in the lab may be different if you use your own environment.
 > 5. To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.
 > 6. VPNs may interfere with the ability to run the codespace. It is recommended to not use a VPN if you run into problems.
-> 7. On the free Copilot plan, some functionality used in these labs is limited or unavailable — including **model selection**  and likely **Plan mode** and **Review** functionality. 
+> 7. On the free Copilot plan, some functionality used in these labs is limited or unavailable — **model selection** (Free uses *Auto* only), **pull request summaries** on GitHub.com, and a small monthly allowance of AI credits that **Plan mode** and **Review** can use up quickly.
 > 8. Copilot's responses are non-deterministic — your results may differ slightly from what is shown in screenshots or described in steps. This is expected.
 > 9. When the codespace first starts, Copilot may still be signing in. Until it finishes, the Chat panel's mode selector may show only **Agent**. If *Ask* and *Plan* are missing, click the *Sign in* indicator in the lower-right status bar (see README step 4), wait a few seconds, then re-open the selector.
 > 10. Unless otherwise noted, pop-up dialogs, when running applications, can be ignored and dismissed.
+> 11. Newer VS Code builds add a **Session Target** control (Local / Copilot / Claude / Codex / Cloud) to the Chat input. These labs use **Local**. If you see that control set to anything else, switch it to **Local** first — the *Ask/Agent/Plan* modes and the *Keep/Undo* review buttons used in the labs are Local-session features.
 
 </br></br></br>
 
@@ -60,7 +61,7 @@ code index.js
 
 <br><br>
 
-4. This prompt wasn't specific enough for Copilot to know what we actually wanted. **Select all the code and delete it** so we can try a more specific prompt.
+4. This prompt wasn't specific enough for Copilot to know what we wanted. **Select all the code and delete it** so we can try a more specific prompt.
 <br><br>
 
 5. Now type a more specific comment at the top:
@@ -109,13 +110,13 @@ function welcome(name) {
   return `Hello, ${name}!`;
 ```
 
-After making this change, look at the `farewell` function below. You should see Copilot's NES automatically suggest the same template literal update there — highlighted with a dimmed/ghost text preview or a decorating indicator in the gutter.
+After making this change, look at the `farewell` function below. You should see Copilot's NES suggest the same template literal update there — shown as ghost text, with an arrow indicator in the gutter marking where the suggestion is.
 
 ![NES 1](./images/cpho10.png?raw=true "NES 1")
 
 <br><br>
 
-10. Press *Tab* to accept the NES suggestion in `farewell`. Now look at the `welcome` function — NES should suggest the same pattern there too. Press *Tab* again to accept it. You've just updated three functions by only typing one change manually. This is the power of Next Edit Suggestions.
+10. Press *Tab* to accept the NES suggestion in `farewell`. Now look at the `welcome` function — NES should suggest the same pattern there too. Press *Tab* again to accept it. You've updated three functions by typing one change. This is the power of Next Edit Suggestions.
 
 ![NES 2](./images/cpho11.png?raw=true "NES 2")
 
@@ -137,7 +138,7 @@ code prime.py
 ```
 <br><br>
 
-2. If not already open, open the Copilot Chat panel by clicking the Chat icon in the top bar (or side bar). Make sure the mode is set to **"Ask"**. If you need to change the mode, click on the mode selector dropdown at the bottom of the Chat input area and select **"Ask"**. 
+2. If not already open, open the Copilot Chat panel by clicking the Chat icon in the top bar (or side bar). Make sure the mode is set to **"Ask"** — if not, click the mode selector dropdown at the bottom of the Chat input area and select **"Ask"**. (If the input area also shows a **Session Target** control, make sure it says **Local** — see note 11 at the top.)
 
 ![Opening chat](./images/cpho12.png?raw=true "Opening chat")
 
@@ -152,13 +153,13 @@ code prime.py
 simplify this code for clearer logic
 ```
 
-Copilot will respond with an explanation of how it simplified the code and provide a new code block in the Chat panel. This is **Ask mode** — it answers questions and provides suggestions in the chat, but doesn't directly change your files.
+Copilot responds with an explanation and a new code block in the Chat panel. This is **Ask mode** — it answers in the chat and doesn't change your files.
 
 ![simplify logic](./images/cpho14.png?raw=true "Simplify logic")
 
 <br><br>
 
-4. Hover over the code block in the Chat output. You'll see a toolbar appear. Click the **"Insert at Cursor"** button to replace the highlighted code with the simplified version. (In Ask mode, *you* control when and how suggestions are applied.)
+4. Hover over the code block in the Chat output and, in the toolbar that appears, click **"Insert at Cursor"** to replace the highlighted code with the simplified version. (In Ask mode, *you* decide when and how suggestions are applied.)
 
 ![Insert mode](./images/cpho15.png?raw=true "Insert mode")
 
@@ -170,88 +171,68 @@ Copilot will respond with an explanation of how it simplified the code and provi
 
 <br><br>
 
-6. In the Chat mode input area, type the following and submit:
+6. In the Chat input area, type the following and submit:
 
 ```
 Add detailed docstrings to each function in prime.py explaining parameters, return values, and examples
 ```
 
-Agent mode will analyze the file, propose edits directly in the editor, and may iterate to ensure completeness. You'll see inline diffs and can review the changes. Click "Keep" to apply them or "Undo" to reject. Unlike *Ask* mode, *Agent* mode applies changes directly in your files and can work across multiple files autonomously
+Agent mode edits the file directly and shows the changes as inline diffs. Click **"Keep"** to apply them or **"Undo"** to reject.
 
 ![Agent mode](./images/cpho17.png?raw=true "Agent mode")
 
 <br><br>
 
-7. Now let's introduce an error into the code to see how Copilot can fix it. Switch back to **"Ask"** mode. In the *prime.py* file, intentionally break the code by changing a variable name — for example, change an instance of `n` to `x`.
+7. Now let's introduce an error to see how Copilot fixes it. Switch back to **"Ask"** mode. In *prime.py*, break the code by changing a variable name — for example, change one instance of `n` to `x`.
 <br><br>
 
-8. **First, start a new chat** by clicking the **"+"** icon in the upper right of the Chat panel. This matters: while a conversation is still open in the Chat panel (like the one from step 6), `Cmd/Ctrl+I` will not open the inline dialog — it just attaches your selection to the Chat panel instead. Starting a new chat restores it.
-
-   Now highlight the broken code and bring up the inline chat interface with `Cmd/Ctrl+I`. The inline chat dialog may already be populated with a command like "Fix the attached problem". If so, you can just hit *Enter*. If not, you can type `fix`. (Give the editor a second to flag the error first — the pre-filled "Fix the attached problem" only appears once the red squiggle/diagnostic is showing.)
+8. **Start a new chat** with the **"+"** icon in the upper right of the Chat panel (while the step 6 conversation is open, `Cmd/Ctrl+I` attaches your selection to it instead of opening inline chat). Then highlight the broken code and press `Cmd/Ctrl+I`. Once the editor shows the red squiggle, the inline chat is pre-filled with "Fix the attached problem" — hit *Enter*. (If it isn't pre-filled, type `fix`.)
 
 ![Fix with Copilot](./images/cpho104.png?raw=true "Fix with Copilot")
 
-(As another alternative to start a fix, you can right-click, and select *Fix*. Note that *Fix* only appears once the editor has flagged the error — if you don't see it, wait a second for the red squiggle and right-click again.)
+(Alternative: right-click the flagged code and select *Fix* — the item only appears once the error is flagged.)
 
 ![Fix with Copilot](./images/cpho84.png?raw=true "Fix with Copilot")
 
-9. Copilot will analyze the error and propose a fix inline. You can apply the fix using the same controls as before (the *Keep* button). 
+9. Copilot proposes a fix inline. Apply it with the *Keep* button. 
 
 ![Keep fix](./images/cpho19.png?raw=true "Keep fix")
 
-<br><br>
-
-10. Let's see one more useful slash command. Highlight the code in the *prime.py* file and have Copilot explain it by typing */explain* in the chat interface.
-
-```
-/explain
-```
-
-Copilot will provide a detailed explanation of what the code does, line by line. 
-
-![Explain](./images/cpho22.png?raw=true "Explain")
-
-Other useful slash commands include `/tests`, `/doc`, and `/new`.
 <br><br>
 
 
 > $${\color{red}NOTE}$$ **Because of Copilot's restricted model access, if you're running using the Free plan, you may not be able to do the remaining steps or have them complete in a reasonable time.**
 
 
-11. Finally, let's try *Plan* mode. Open a new chat session by clicking on the "+" sign in the upper right of the Chat panel. Switch to "Plan" mode using the mode selector dropdown.
-
-![Switch to plan mode](./images/cpho28.png?raw=true "Switch to plan mode")
-
-Plan mode creates a structured implementation plan before any code is written - useful for larger tasks where you want to think through the approach first. Enter the following prompt:
+10. Finally, let's try *Plan* mode, which produces an implementation plan before any code is written. Start a new chat with the **"+"** icon, switch to **"Plan"** in the mode selector, and enter:
 
 ```
 Add input validation and error handling to the functions in prime.py
 ```
 
+![Switch to plan mode](./images/cpho28.png?raw=true "Switch to plan mode")
 
 <br><br>
 
-12. As it prepares the plan, Plan mode may ask you clarifying questions (e.g., what types of validation? how to handle errors?). Answer them to refine the plan. If there are multiple, you can use the "<" and ">" keys to move between them. When you've answered all the questions, you can then use the "Submit" option to continue.
+11. Plan mode may ask clarifying questions (what types of validation? how to handle errors?). Answer them; use the **"<"** and **">"** controls to move between questions, then click **"Submit"**.
 
 ![Answering questions](./images/cpho31.png?raw=true "Answering questions")
 
 <br><br>
 
-13. After Copilot processes your answers, it will present a full plan.  Under *Proceed from Plan* you'll see three options: **"Start Implementation"** (hands the plan to Agent mode in this session), **"Start with Autopilot"** (runs it with fewer approval stops), and **"Open in Editor"** (opens the plan as a markdown file you can edit first). Click **"Start Implementation"**. Watch how Agent mode reasons about the task, makes changes across the file, and potentially runs commands to verify its work. When finished, review the diffs and click either the "Keep" (all) buttons or go through the "Keep" buttons for the individual changes to apply the changes.
+12. Copilot presents the plan. Under *Proceed from Plan*, click **"Start Implementation"** (the other options are *Start with Autopilot* — fewer approval stops — and *Open in Editor* to edit the plan first). If Agent mode asks to run commands, choose **"Allow"**. When it finishes, review the diffs and click **"Keep"**.
 
 ![Ready to implement](./images/cpho33.png?raw=true "Ready to implement")
-
-As it is making the changes, Agent mode may stop and ask you if its ok if it runs commands. You can just choose "Allow" and let it run through the changes. Then choose "Keep/Undo" as appropriate to finalize them.
 
 ![Implementing](./images/cpho34.png?raw=true "Implementing")
 
 <br><br>
 
 **Quick reference — when to use each mode:**
-- **Ask**: Learning, Q&A, exploring ideas. You control what gets applied.
-- **Plan**: Structured planning for larger tasks. Copilot asks clarifying questions, recommends approaches, and produces a step-by-step plan before any code is written. Can hand off to Agent for implementation.
-- **Agent**: Autonomous, multi-step tasks. Copilot reasons, edits files, runs commands, and iterates. (We'll cover Agent mode in depth in Lab 5.)
-- **Note**: Earlier versions of Copilot included a separate "Edit" mode. This has been unified into Agent mode, which now handles both targeted edits and autonomous tasks.
+- **Ask**: Q&A and exploring ideas; you control what gets applied.
+- **Plan**: larger tasks — clarifying questions and a step-by-step plan first, then hand off to Agent.
+- **Agent**: autonomous, multi-step work — edits files, runs commands, iterates (more in Lab 5). The former "Edit" mode is now part of Agent mode.
+- **Slash commands**: type `/` in the Chat input for shortcuts such as `/explain`, `/fix`, `/tests`, and `/new`.
 
 <p align="center">
 **[END OF LAB]**
@@ -315,7 +296,7 @@ Explain how I can run and see the functionality in the app directory.
 
 <br><br>
 
-8. Back in the Chat output, you can look for commands to demo functionality of the app, probably `curl` commands. If they are in separate white code blocks, you can hover over them and select the icon that looks like a terminal from the pop-up menu to insert into the terminal. (See first screenshot below.) Otherwise, you can highlight and copy and paste the command into the second terminal and run it to see the functionality. (Note that you may need to use the keyboard copy and paste if the mouse copy and paste doesn't work correctly.) 
+8. Back in the Chat output, you can look for commands to demo functionality of the app, probably `curl` commands. If they are in separate white code blocks, you can hover over them and select the icon that looks like a terminal from the pop-up menu to insert into the terminal. (See first screenshot below.) Otherwise, you can highlight and copy and paste the command into the second terminal and run it to see the functionality. (Note that you may need to use the keyboard copy and paste if the mouse copy and paste doesn't work correctly. If a POST or PATCH command returns `415 UNSUPPORTED MEDIA TYPE`, it is missing the `-H "Content-Type: application/json"` header — add it and rerun.) 
 
 ![Inserting curl command into terminal](./images/cpho111.png?raw=true "Inserting curl command into terminal")
 
@@ -392,7 +373,7 @@ What other conditions should be tested? Suggest a single set of code to add the 
 ![Inspecting changes](./images/cpho48.png?raw=true "Inspecting changes  ")
 <br><br>
 
-> $${\color{red}NOTE}$$ **Because of Copilot's restricted model access, if you're running using the Free plan, you may not be able to do the remaining steps or have them complete in a reasonable time.**
+> $${\color{red}NOTE}$$ **On the Free plan, code review is limited to reviewing a selection (which is what this step does) and may be slow or unavailable once your AI-credit allowance is used up.**
 
 9. Now let's have Copilot **review** our implementation code. Go back to the *prime.py* file and select all the code. Right-click and select **Review** from the context menu. (Depending on your version, this may be under *Generate Code > Review* or accessible via a keyboard shortcut.)
 
@@ -400,7 +381,7 @@ What other conditions should be tested? Suggest a single set of code to add the 
 
 <br><br>
 
-10. After a few moments, Copilot will add inline review comments identifying potential issues, improvements, or suggestions. If you look in the **COMMENTS** panel at the bottom (next to TERMINAL), you'll see all comments listed. Click any row to navigate to that suggestion. For each comment, you can click **"Apply and Go to Next"** to accept or **"Discard and Go to Next"** to skip. (If there's only one comment, it will just have **"Apply"** and **"Discard"**.)
+10. After a few moments, Copilot will add inline review comments identifying potential issues, improvements, or suggestions. If you look in the **COMMENTS** panel at the bottom (next to TERMINAL), you'll see all comments listed. Click any row to navigate to that suggestion. For each comment, you can click **"Apply and Go to Next"** to accept or **"Discard and Go to Next"** to skip. (If there's only one comment, it will have **"Apply"** and **"Discard"**.)
 
 ![Review comment](./images/cpho50.png?raw=true "Review comment")
 
@@ -457,9 +438,9 @@ Referencing the issue at https://github.com/skillrepos/copilot-hands-on/issues/8
 
 <br><br>
 
-6. You may be asked to allow Copilot to run additional commands. If so, just select `Allow`.
+6. You may be asked to allow Copilot to run additional commands. If so, select `Allow`.
    
-7. Watch Agent mode work. Unlike Ask or Edit mode, the Agent will **autonomously**: analyze the codebase, reason about what changes are needed, edit one or more files, and possibly run terminal commands to verify its work. You may see it update *app.py* and potentially *datastore.py*. If Agent requests permission to run a terminal command, click **"Allow"** to let it proceed.
+7. Watch Agent mode work. Unlike Ask mode, the Agent will **autonomously**: analyze the codebase, reason about what changes are needed, edit one or more files, and possibly run terminal commands to verify its work. You may see it update *app.py* and potentially *datastore.py*. If Agent requests permission to run a terminal command, click **"Allow"** to let it proceed.
 
 
 ![Implementing feature](./images/cpho54.png?raw=true "Implementing feature")
@@ -472,7 +453,7 @@ Referencing the issue at https://github.com/skillrepos/copilot-hands-on/issues/8
 
 <br><br>
 
-9. Review the diffs for each changed file. When satisfied, you can click the **"Keep"** button in the box above the chat input area to apply all the changes. (If you only wanted certain changes, you could "keep/undo" each change in each file. Close any diff comparison tabs.
+9. Review the diffs for each changed file. When satisfied, you can click the **"Keep"** button in the box above the chat input area to apply all the changes. (If you only wanted certain changes, you could "keep/undo" each change in each file.) Close any diff comparison tabs.
 
 ![Seeing multiple diffs](./images/cpho112.png?raw=true "Seeing multiple diffs")
 
@@ -508,7 +489,7 @@ Create and run tests for the new search feature.
 
 **Purpose: In this lab, we'll configure Copilot with project-specific instructions and explore how to select different AI models.**
 
-1. Custom instructions let you tell Copilot about your team's coding standards, conventions, and preferences. These instructions are stored in a file that Copilot reads automatically. Let's create one. (We have to do this in a roundabout way: in the browser-based codespace, `code somefile.md` will not create a new markdown file, and this repo opens `.md` files in *preview* mode, which you can't type into. So we create the file with a `.txt` extension, edit it, then rename it.) In the terminal, run:
+1. Custom instructions tell Copilot about your team's coding standards and conventions, from a file it reads automatically. Let's create one. (In the browser-based codespace, `.md` files open in read-only *preview* mode, so we create the file as `.txt`, edit it, then rename it.) In the terminal, run:
 
 ```
 mkdir -p .github
@@ -533,15 +514,15 @@ code .github/copilot-instructions.txt
 
 <br><br>
 
-3.  Now, we need to rename the file to the expected name Copilot looks for. Run the command below in the terminal. Afterwards, clicking the file in the Explorer will open it in read-only markdown preview (that's expected) — you can also `cat` it in the terminal if you want to check the contents.
+3. Rename the file to the name Copilot looks for. (Clicking it in the Explorer afterwards opens read-only preview — that's expected; `cat` it in the terminal to check the contents.)
 
 ```
 mv .github/copilot-instructions.txt .github/copilot-instructions.md
 ```
 
-**Heads-up:** from this point on, these instructions apply to **every** Chat interaction in this codespace — not just the rest of this lab. If you go back and repeat any of Labs 1-5 afterward, the generated code will carry the "Generated with Copilot" comments, extra error handling, and so on, and won't match the earlier screenshots. Delete *.github/copilot-instructions.md* to get the original behavior back.
+**Heads-up:** from now on these instructions apply to **every** Chat interaction in this codespace. If you repeat any of Labs 1-5 afterward, the generated code will carry the "Generated with Copilot" comments, extra error handling, and so on. Delete *.github/copilot-instructions.md* to get the original behavior back.
 
-4.  Now let's see these instructions in action. Open a new file:
+4. Now let's see the instructions in action. Open a new file:
 
 ```
 code utils.py
@@ -555,48 +536,48 @@ Write a function that reads a CSV file and returns a list of dictionaries where 
 ```
 <br><br>
 
-6. Examine the generated code. You should be able to spot your custom instructions at work: a "Generated with Copilot" comment at the top, a comment above the function, descriptive variable names, error handling, and an example usage comment at the end. 
+6. Examine the generated code. You should spot your custom instructions at work: a "Generated with Copilot" comment at the top, a comment above the function, descriptive variable names, error handling, and an example usage comment at the end. 
 
 ![Generated code](./images/cpho59.png?raw=true "Generated code")
 
 <br><br>
 
-7. Insert the generated code into the *utils.py* file and save it. Now let's test it further. Switch to **Agent** mode, then ask in the chat:
+7. Insert the generated code into *utils.py* and save it. Now switch to **Agent** mode and ask:
 
 ```
 Add a function to write a list of dictionaries to a CSV file.
 ```
 
-Again, verify that the output follows your custom instructions (descriptive names, error handling, comments, example usage, etc.).
+Again, verify that the output follows your custom instructions.
 
 ![Generated code](./images/cpho60.png?raw=true "Generated code")
 
 <br><br>
 
-8. At this point, you may need to use the `Apply in Editor` or other control to get the newly generated code in your file. You can then review the proposed changes and just select to `Keep` them if you're good with them.
+8. If the code isn't already in your file, use `Apply in Editor` on the code block, review the proposed changes, and `Keep` them.
    
 
 > $${\color{red}NOTE}$$ **Because of Copilot's restricted model access, if you're running using the Free plan, you may not be able to do the remaining steps or have them complete in a reasonable time.**
 
-9. Now, if your plan allows, select a different model than the current one (for example, switch to **GPT-5 mini** if you were on Auto and it was **Claude Haiku**). Note you may need to expand the list of models under `Other models`. Switch back to **Ask** mode. Now enter this prompt:
+9. If your plan allows, click the model name at the bottom of the Chat input to open the model picker and select a different model (for example, **GPT-5.6 Luna**, a lightweight, low-cost model, if **Auto** had picked **Claude Haiku 4.5**). You may need to expand the list under `Other models`. Switch back to **Ask** mode and enter:
 
 ```
 Write a function that takes a JSON file path and returns a sorted list of all unique keys found across all objects in the file.
 ```
 <br><br>
 
-10. Compare the output with what you might expect from the other model. You may notice differences in coding style, verbosity, and approach. Both should follow your custom instructions since those are applied regardless of which model is selected. Different models may excel at different tasks — Claude models tend to be preferred for complex multi-file reasoning, while GPT models may be faster for simple completions.
+10. Compare the output with the earlier model's style, verbosity, and approach. Both follow your custom instructions — those apply regardless of model. Lightweight models answer faster and use fewer AI credits; larger models handle complex, multi-file reasoning better.
 
 ![Generated code with different model](./images/cpho62.png?raw=true "Generated code with different model")
 
 <br><br>
 
-11. Since the `Auto` model is likely the best one for the currently available ones, switch back to it.
+11. Switch the model back to **Auto**, which picks a model per request and gets a 10% AI-credit discount on paid plans.
 
-12. **Key takeaways:**
-    - Custom instructions in `.github/copilot-instructions.md` apply automatically to all Chat interactions and are shared via your repo (great for teams)
-    - You can also create path-specific instructions using `.instructions.md` files in subdirectories
-    - Model selection is available but limited — experiment to find which models work best for your tasks
+**Key takeaways:**
+- `.github/copilot-instructions.md` applies to all Chat interactions and is shared via your repo (great for teams)
+- Path-specific instructions go in `.github/instructions/*.instructions.md` (with an `applyTo` glob); `AGENTS.md` at the repo root is the cross-tool alternative
+- Model selection is available on paid plans (Free uses Auto only) — models differ in cost per token, so the pick is also a cost decision
 
 
 <p align="center">
@@ -608,22 +589,7 @@ Write a function that takes a JSON file path and returns a sorted list of all un
 
 **Purpose: In this lab, we'll set up and use the GitHub MCP Server to give Copilot access to external tools.**
 
-1. MCP (Model Context Protocol) servers extend Copilot's Agent mode with external tool integrations. For authentication to the GitHub MCP Server, we need a personal access token (PAT). Click the link below, provide a note, and click the green **"Generate token"** button at the bottom:
-
-Link: [Generate classic personal access token (repo & workflow scopes)](https://github.com/settings/tokens/new?scopes=repo,workflow)
-
-![Getting token](./images/cpho79.png?raw=true "Getting token")
-
-![Getting token](./images/mcp87.png?raw=true "Getting token")
-<br><br>
-
-2. On the next screen, **copy the generated token and save it** — you won't be able to see it again! (**Important:** Never commit PATs to a repository. This token is for local use only.)
-
-![Copying token](./images/mcp11.png?raw=true "Copying token")
-
-<br><br>
-
-3. Now we'll add the MCP Server configuration. We already have a sample config file we can use. Run these commands in the terminal:
+1. MCP (Model Context Protocol) servers extend Copilot's Agent mode with external tools. GitHub hosts a remote MCP server that signs you in with your GitHub account, so no token is needed. We already have a config file for it. Run these commands in the terminal:
 
 ```
 cd /workspaces/copilot-hands-on
@@ -631,40 +597,41 @@ mkdir -p .vscode
 cp extra/mcp_github_settings.json .vscode/mcp.json
 code .vscode/mcp.json
 ```
+
+The file declares one server: its `type` (`http`) and its `url` (`https://api.githubcopilot.com/mcp/`). That is all VS Code needs to connect.
 <br><br>
 
-4. In the *mcp.json* file, click the small **"Start"** link that appears above the server name. A dialog will prompt you to paste your PAT. Paste it and hit *Enter*. (The token will be masked.) 
+2. In the *mcp.json* file, click the small **"Start"** link that appears above the server name. VS Code will ask whether the server may sign in with your GitHub account — click **"Allow"**. If a browser tab opens asking you to authorize, approve it and return to the codespace. (If sign-in does not complete, use the token-based setup in *Appendix 3* instead.)
 
+![Starting the server](./images/mcp23a.png?raw=true "Starting the server")
 
-![Starting the server](./images/mcp23.png?raw=true "Starting the server")
-
-After a moment, you should see the text change to **"Running | Stop | Restart | ## tools | More..."**.
+After a moment, the text above the server name should change to **"Running | Stop | Restart | ## tools | More..."**.
 
 ![Starting the server](./images/mcp24.png?raw=true "Starting the server")
 
 <br><br>
 
-5. To see the available tools, make sure you're in **Agent** mode in the Chat panel. Click the small **tool icon** (sliders) in the Chat input area. Scroll down to the **MCP Server: GitHub MCP Server** section. You'll see all the tools Copilot can now use — things like searching issues, reading file contents from repos, listing PRs, and more.
+3. To see the available tools, make sure you're in **Agent** mode in the Chat panel. Click the small **Configure Tools** icon (sliders) in the Chat input area. Scroll down to the **GitHub MCP Server** group. You'll see all the tools Copilot can now use — things like searching issues, reading file contents from repos, listing PRs, and more.
 
 ![Viewing available tools](./images/mcp25.png?raw=true "Viewing available tools")
 
 <br><br>
 
-6. Let's use these tools. In Agent mode, enter a prompt like the following one:
+4. Let's use these tools. In Agent mode, enter a prompt like the following one:
 
 ```
 Give me a list of the open issues for the current GitHub repo
 ```
 <br><br>
 
-7. Watch the output — you'll see a note like **"Ran <tool_name> - GitHub MCP Server"** early in the response. This confirms Copilot is using the MCP tools to access GitHub data directly rather than guessing from its training data.
+5. Watch the output — you'll see a note like **"Ran <tool_name> - GitHub MCP Server"** early in the response. This confirms Copilot is using the MCP tools to access GitHub data directly rather than guessing from its training data.
 
 
 ![Example usage](./images/ct162.png?raw=true "Example usage")
 
 <br><br>
 
-8. Now let's combine MCP-sourced GitHub context with our local code. Enter the following prompt:
+6. Now let's combine MCP-sourced GitHub context with our local code. Enter the following prompt:
 
 ```
 Is issue #8 in the GitHub repository already solved by my local code?
@@ -676,7 +643,7 @@ If you need to **Allow** or **Approve** operations from the Agent, go ahead. Cop
 
 <br><br>
 
-9. If you click the **Extensions** icon on the left sidebar, you'll see a category for **MCP SERVERS - INSTALLED** showing the GitHub MCP Server. Clicking the search icon will bring up a button you can click to `Enable MCP Servers Marketplace`.
+7. If you click the **Extensions** icon on the left sidebar, you'll see a category for **MCP SERVERS - INSTALLED** showing the GitHub MCP Server. Clicking the search icon will bring up a button you can click to `Enable MCP Servers Marketplace`.
 
 ![Extensions and browser](./images/cpho92.png?raw=true "Extensions and browser")
 
@@ -684,17 +651,17 @@ If you need to **Allow** or **Approve** operations from the Agent, go ahead. Cop
 
 <br><br>
 
-10. By enabling this, you can get to another page that shows a list of available MCP servers to use. 
+8. By enabling this, you can get to another page that shows a list of available MCP servers to use. 
 
 ![MCP Servers](./images/cpho91.png?raw=true "MCP Servers")
 
-11. **Key takeaways:**
-    - MCP servers give Agent mode access to external tools and data sources
-    - The GitHub MCP Server is just one example — servers exist for Docker, databases, and many other tools
-    - MCP tools only work in **Agent** mode (not Ask or Edit)
-    - MCP configuration lives in `.vscode/mcp.json` and can be shared with your team via the repo
+**Key takeaways:**
+- MCP servers give Agent mode access to external tools and data sources
+- The GitHub MCP Server is one example — servers exist for Docker, databases, and many other tools
+- MCP tools are used in **Agent** mode (not Ask)
+- MCP configuration lives in `.vscode/mcp.json` and can be shared with your team via the repo; the workspace must be trusted for those servers to start
 
-**Heads-up:** the server config, the stored token, and the running server all persist in this codespace after this lab ends, so Agent mode keeps its GitHub tool access in anything you do afterward. Use **Stop** in *mcp.json* (or delete the file) to turn it back off.
+**Heads-up:** the server config, its GitHub sign-in, and the running server all persist in this codespace after this lab ends, so Agent mode keeps its GitHub tool access in anything you do afterward. Use **Stop** in *mcp.json* (or delete the file) to turn it back off.
 
 <p align="center">
 **[END OF LAB]**
@@ -715,7 +682,7 @@ If you need to **Allow** or **Approve** operations from the Agent, go ahead. Cop
 **Re-run note:** this lab changes your GitHub account, not the codespace, so starting a fresh codespace won't reset it. If you've done this lab before, GitHub will send you to your existing *sec-demo* fork instead of offering the fork screen, and the pull request in steps 5-7 may already exist. To run it clean, delete your old *sec-demo* fork (Settings > Danger Zone > Delete this repository) before starting, or close the earlier PR and use a different branch.
 <br><br>
 
-3. After the fork is complete, click on the Copilot button at the top right. The Chat dialog will open with a text input and some suggested questions. Click on the suggested prompt **"Give me a high level overview of this repo"** (or type your own question, such as "Tell me about this repository"). Copilot will provide an overview of the project. (The set of suggested prompts changes over time — if you don't see that exact one, just type the question in.)
+3. After the fork is complete, click on the Copilot button at the top right. The Chat dialog will open with a text input and some suggested questions. Click on the suggested prompt **"Give me a high level overview of this repo"** (or type your own question, such as "Tell me about this repository"). Copilot will provide an overview of the project. (The suggested prompts change over time — some repo pages show a shorter **"Give me a high-level overview"** instead; if you don't see either, type the question in.)
 
 ![Chat with Copilot](./images/cpho93.png?raw=true "Chat with Copilot")
 
@@ -745,9 +712,9 @@ Click the generated link to start the pull request.
 
 <br><br>
 
-6. On the next screen, click the "Create Pull Request" button. On the pull request creation screen, you can use Copilot to generate the title if you want, via clicking on the Copilot icon in the title section. Then click the **Copilot actions** button below the description field and select **Summary**. Copilot will generate a detailed PR description in markdown.
+6. On the next screen, click the "Create Pull Request" button. On the pull request creation screen, you can use Copilot to generate the title if you want, via clicking on the Copilot icon in the title section. Then click the **Copilot actions** icon in the toolbar at the top of the description field and select **Summary**. Copilot will generate a detailed PR description in markdown.
 
-(**NOTE:** If you are on the free plan and don't see the Copilot icon in the pull request area, you can skip this step and just create the pull request with a manual description.)
+(**NOTE:** Pull request summaries are not included in the Free plan. If you don't see the Copilot icon in the description toolbar, skip this step and create the pull request with a manual description.)
 
 ![Generate title](./images/cpho98.png?raw=true "Generate title")
 
@@ -761,7 +728,7 @@ Click the generated link to start the pull request.
 
 <br><br>
 
-8. In the PR view, click the **Files changed** tab to see the diffs. On the right side of the screen, scroll down and look for a small floating dropdown arrow. Find a line that looks interesting. Click the arrow and select **Copilot** from the menu and then **Explain** to get an explanation of the changes on that line.
+8. In the PR view, click the **Files changed** tab to see the diffs. Find a line that looks interesting. To the right of that line, click the small dropdown icon, select **Copilot** from the menu, then **Explain** to get an explanation of the change on that line. (**Ask about this diff** in the same menu opens Copilot Chat beside the diff with the change attached, so you can ask your own questions. To cover several lines, click the first line number, then shift-click the last, before opening the menu.)
 
 ![Explain line](./images/cpho77.png?raw=true "Explain line")
 
@@ -833,7 +800,7 @@ git clone git@github.com:skillrepos/sec-demo (if using ssh)
 
 4. Create a new repository in your GitHub space named *sec-demo*. Go to [**https://github.com/new**](https://github.com/new). Fill in the "repo name" field with "sec-demo" and then click on the "Create repository" button.
 
-5. On the page that comes up after that, select the appropriate protocol (https or ssh) and then follow the instructions for "...or push an existing repository from the command line" to push your content back to the GitHub repository. If you're using https you will be prompted for a password at push time. Just paste in the classic token.
+5. On the page that comes up after that, select the appropriate protocol (https or ssh) and then follow the instructions for "...or push an existing repository from the command line" to push your content back to the GitHub repository. If you're using https you will be prompted for a password at push time. Paste in the classic token.
 
 
 </br></br></br>
@@ -843,7 +810,7 @@ git clone git@github.com:skillrepos/sec-demo (if using ssh)
 
 These labs assume a **fresh codespace, run once, in order**. Starting a new codespace is always the cleanest reset and is what we recommend. If you need to re-run the labs in the codespace you already have — for example, you're an instructor rehearsing the material — the commands below put the workspace back to its original state.
 
-**Labs that actually break on a re-run**
+**Labs that break on a re-run**
 
 | Lab | Leaves behind | Effect on a re-run |
 |---|---|---|
@@ -858,10 +825,10 @@ These labs assume a **fresh codespace, run once, in order**. Starting a new code
 | 1 | *index.js* | Step 3's first completion is shaped by your old code. Steps 4 and 8 clear the file anyway, so the lab recovers on its own |
 | 2 | *prime.py* rewritten (simplified, docstrings, validation) | "simplify this code" has less to simplify, so the response is thinner. Every step still works — and Lab 4 picks up this same file on purpose |
 | 6 | *.github/copilot-instructions.md*, *utils.py*, selected model | Instructions apply to **all** later chats, including re-runs of Labs 1-5, so generated code won't match the earlier screenshots |
-| 7 | *.vscode/mcp.json*, stored PAT, running MCP server | Agent mode keeps GitHub tool access in every later lab |
+| 7 | *.vscode/mcp.json*, the server's GitHub sign-in, running MCP server | Agent mode keeps GitHub tool access in every later lab |
 | 8 | A *sec-demo* fork and a pull request **in your GitHub account** | Not fixed by a new codespace — see the re-run note in that lab |
 
-Copilot also keeps **memories** per repository, which is why it can open a step by referring to work from a previous run. Two Command Palette commands (Cmd/Ctrl+Shift+P) manage these:
+Chat in VS Code also keeps local **memory files** per repository (its built-in memory tool), which is why it can open a step by referring to work from a previous run. Two Command Palette commands (Cmd/Ctrl+Shift+P) manage these:
 
 - **Chat: Show Memory Files** — see what Copilot has recorded about this repo
 - **Chat: Clear All Memory Files** — wipe them, so the next run starts with no recollection of the last one
@@ -887,3 +854,33 @@ git status
 ```
 
 `git status` should report no changes. Then start a new chat with the **"+"** icon in the Chat panel, and run **Chat: Clear All Memory Files** from the Command Palette so Copilot doesn't carry notes from the previous run into this one.
+
+</br></br></br>
+
+# Appendix 3
+## GitHub MCP Server with a personal access token (fallback for Lab 7)
+
+Use this only if the GitHub sign-in in Lab 7 step 2 does not complete (for example, an organization policy blocks the OAuth app). It replaces steps 1 and 2 of Lab 7; continue with step 3 afterwards.
+
+1. Create a personal access token (PAT). Click the link below, provide a note, and click the green **"Generate token"** button at the bottom:
+
+Link: [Generate classic personal access token (repo scope)](https://github.com/settings/tokens/new?scopes=repo)
+
+![Getting token](./images/cpho79.png?raw=true "Getting token")
+
+![Getting token](./images/mcp87.png?raw=true "Getting token")
+
+2. On the next screen, **copy the generated token and save it** — you won't be able to see it again! (**Important:** Never commit PATs to a repository. This token is for local use only.)
+
+![Copying token](./images/mcp11.png?raw=true "Copying token")
+
+3. Copy the token-based config instead of the default one, and open it:
+
+```
+cd /workspaces/copilot-hands-on
+mkdir -p .vscode
+cp extra/mcp_github_settings_pat.json .vscode/mcp.json
+code .vscode/mcp.json
+```
+
+4. Click **"Start"** above the server name. A dialog will prompt you to paste your PAT. Paste it and hit *Enter*. (The token will be masked.) The text should change to **"Running | Stop | Restart | ## tools | More..."** — go to Lab 7 step 3.

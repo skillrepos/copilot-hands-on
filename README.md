@@ -9,8 +9,9 @@ If you prefer and if you know one of the other IDEs supported by Copilot, you ca
 3. The default environment will be a GitHub Codespace (with Copilot already installed). If you prefer to use your own IDE, you are responsible for installing Copilot in it. Some things in the lab may be different if you use your own environment.
 4. To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.
 5. VPNs may interfere with the ability to run the codespace. It is recommended to not use a VPN if you run into problems.
-6. Copilot Free is included with any GitHub account (no separate Copilot signup needed), but it is limited: 2,000 code completions/month, a limited chat & agent allowance, and **auto model selection only** (no model picker). Labs 6 (model selection) and parts of Lab 7 work best on a paid plan. 
+6. Copilot Free is included with any GitHub account (no separate Copilot signup needed), but it is limited: 2,000 code completions/month, a small monthly allowance of AI credits for chat and agents, and **auto model selection only** (no model picker). Verified students get Copilot Student free. Lab 6 (model selection) and the pull request summary in Lab 8 need a paid plan (Pro $10/mo, Pro+ $39/mo, Max $100/mo).
 7. When the codespace starts, Copilot may take up to a minute to finish signing in. Until it does, the Chat mode selector may show only **Agent** (no *Ask* or *Plan*) — see step 4 below.
+8. Newer VS Code builds show a **Session Target** control (Local / Copilot / Claude / Codex / Cloud) in the Chat input. The labs use **Local** — switch to it if you see anything else selected.
 </br></br></br>
 
 These steps **must** be completed prior to starting the actual labs.
@@ -51,7 +52,7 @@ Then click on the option to create a new codespace.
 
 **This will run for several minutes while it gets everything ready.**
 
-If asked about trusting the authors of the files in this folder, just select `Trust folder and continue`.
+If asked about trusting the authors of the files in this folder, select `Trust folder and continue`.
 
 
 ![Trust folder](./images/ollama48.png?raw=true "Trust folder")
@@ -60,7 +61,7 @@ If asked about trusting the authors of the files in this folder, just select `Tr
   
 ## 4. In the Codespace, sign into GitHub (if needed). 
 
-After the codespace has started, look in the lower right of the codespace to see if there is a `Sign in` indicator for Copilot (see figure). If so, click on that and authenticate as needed.
+After the codespace has started, look in the lower right of the codespace to see if there is a `Sign in` indicator for Copilot (see figure). If so, click on that and authenticate as needed. (The same GitHub sign-in is reused in Lab 7 when the GitHub MCP Server starts — no token to create.)
 
 ![Sign in to Copilot](./images/cpho81.png?raw=true "Sign in to Copilot")
 
