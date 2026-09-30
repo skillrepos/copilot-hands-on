@@ -2,7 +2,7 @@
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
 
-## Revision 4.3 - 09/30/26
+## Revision 4.4 - 09/30/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -717,7 +717,7 @@ Is issue #8 in the GitHub repository already solved by my local code?
 
 <br><br>
 
-5. Go back to the main repo (github.com/*your-github-userid*/sec-demo). In this repo, the *dev* branch has security fixes for the *main* branch. Let's create a pull request. Click on the Copilot icon at the top. In the Chat input, ask Copilot:
+5. In this repo, the *dev* branch has security fixes for the *main* branch. Let's create a pull request. Click on the Copilot icon at the top. In the Chat input, ask Copilot:
 
 ```
 Generate a clickable link that I can use to create a pull request to merge the dev branch into the main branch
@@ -874,44 +874,4 @@ git status
 
 </br></br></br>
 
-# Appendix 3
-## Finishing the GitHub MCP Server sign-in (fallback for Lab 7)
 
-Use this only if the GitHub sign-in in Lab 7 step 2 does not complete. Try **Option A** first; use **Option B** if your organization blocks the OAuth app. Either one takes you back to Lab 7 step 3.
-
-**Option A - Device code**
-
-1. In the codespace, click **Cancel** on the *Signing in to github.com...* notification in the lower right.
-
-2. When asked whether to try a different way (device code), click **Yes**.
-
-![Device code sign-in](./images/cpho116.png?raw=true "Device code sign-in")
-
-3. Click **Copy & Continue to Browser**. On the GitHub page, click **Continue**, paste the code, and click **Continue** again.
-
-4. Click **Authorize Visual Studio Code** (GitHub may ask you to confirm with your password or 2FA code). Back in *mcp.json*, the text above the server name changes to **"Running | Stop | Restart | ## tools | More..."** — go to Lab 7 step 3.
-
-**Option B - Personal access token**
-
-1. Create a personal access token (PAT). Click the link below, provide a note, and click the green **"Generate token"** button at the bottom:
-
-Link: [Generate classic personal access token (repo scope)](https://github.com/settings/tokens/new?scopes=repo)
-
-![Getting token](./images/cpho79.png?raw=true "Getting token")
-
-![Getting token](./images/mcp87.png?raw=true "Getting token")
-
-2. On the next screen, **copy the generated token and save it** — you won't be able to see it again! (**Important:** Never commit PATs to a repository. This token is for local use only.)
-
-![Copying token](./images/mcp11.png?raw=true "Copying token")
-
-3. Copy the token-based config instead of the default one, and open it:
-
-```
-cd /workspaces/copilot-hands-on
-mkdir -p .vscode
-cp extra/mcp_github_settings_pat.json .vscode/mcp.json
-code .vscode/mcp.json
-```
-
-4. Click **"Start"** above the server name. A dialog will prompt you to paste your PAT. Paste it and hit *Enter*. (The token will be masked.) The text should change to **"Running | Stop | Restart | ## tools | More..."** — go to Lab 7 step 3.
