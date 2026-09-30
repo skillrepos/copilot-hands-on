@@ -2,7 +2,7 @@
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
 
-## Revision 4.1 - 09/30/26
+## Revision 4.2 - 09/30/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -374,7 +374,7 @@ What other conditions should be tested? Suggest a single set of code to add the 
 ![Inspecting changes](./images/cpho48.png?raw=true "Inspecting changes  ")
 <br><br>
 
-> $${\color{red}NOTE}$$ **On the Free plan, code review is limited to reviewing a selection (which is what this step does) and may be slow or unavailable once your AI-credit allowance is used up.**
+> $${\color{red}NOTE}$$ **On the Free plan, code review is limited and the free model may not be supported. If you get an error 400 or similar, you can skip the next two steps.**
 
 9. Now let's have Copilot **review** our implementation code. Go back to the *prime.py* file and select all the code. Right-click and select **Review** from the context menu. (Depending on your version, this may be under *Generate Code > Review* or accessible via a keyboard shortcut.)
 
