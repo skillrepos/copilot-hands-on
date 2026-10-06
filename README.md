@@ -11,7 +11,7 @@ If you prefer and if you know one of the other IDEs supported by Copilot, you ca
 5. VPNs may interfere with the ability to run the codespace. It is recommended to not use a VPN if you run into problems.
 6. Copilot Free is included with any GitHub account (no separate Copilot signup needed), but it is limited: 2,000 code completions/month, a small monthly allowance of AI credits for chat and agents, and **auto model selection only** (no model picker). Verified students get Copilot Student free. Lab 6 (model selection) and the pull request summary in Lab 8 need a paid plan (Pro $10/mo, Pro+ $39/mo, Max $100/mo).
 7. When the codespace starts, Copilot may take up to a minute to finish signing in. Until it does, the Chat mode selector may show only **Agent** (no *Ask* or *Plan*). If a **Sign in** indicator is showing in the status bar, click it right away — see step 4 below.
-8. Newer VS Code builds show a **Session Target** control (Local / Copilot / Cloud / Claude, plus others from installed extensions) below the Chat input. The labs use **Local** — switch to it if you see anything else selected.
+8. Newer VS Code builds show a **Session Target** control (Local / Copilot / Cloud / Claude, plus others from installed extensions) below the Chat input. The labs use **Local**, and the codespace is set up to start new chats there — switch to it if you see anything else selected.
 </br></br></br>
 
 These steps **must** be completed prior to starting the actual labs.
@@ -61,7 +61,7 @@ If asked about trusting the authors of the files in this folder, select `Trust F
   
 ## 4. In the Codespace, sign into GitHub (if needed). 
 
-After the codespace has started, look in the lower right of the codespace to see if there is a `Sign in` indicator for Copilot (see figure). If so, click on that and authenticate as needed. (Lab 7 asks you to approve a GitHub sign-in once more for the GitHub MCP Server — no token to create.)
+After the codespace has started, look in the lower right of the codespace to see if there is a `Sign in` indicator for Copilot (see figure). If so, click on that and authenticate as needed. (Lab 7 has you create a GitHub personal access token for the GitHub MCP Server.)
 
 ![Sign in to Copilot](./images/cpho81.png?raw=true "Sign in to Copilot")
 

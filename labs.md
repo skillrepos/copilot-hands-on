@@ -2,7 +2,7 @@
 ## Practical Tips and Best Practices
 ## Session labs (codespace version)
 
-## Revision 4.4 - 09/30/26
+## Revision 4.5 - 10/06/26
 
 **Versions of dialogs, buttons, etc. shown in screenshots may differ from current version of Copilot**
 
@@ -19,7 +19,7 @@
 > 8. Copilot's responses are non-deterministic — your results may differ slightly from what is shown in screenshots or described in steps. This is expected.
 > 9. When the codespace first starts, Copilot may still be signing in. Until it finishes, the Chat panel's mode selector may show only **Agent**. If *Ask* and *Plan* are missing, click the *Sign in* indicator in the lower-right status bar (see README step 4), wait a few seconds, then re-open the selector.
 > 10. Unless otherwise noted, pop-up dialogs, when running applications, can be ignored and dismissed.
-> 11. Newer VS Code builds add a **Session Target** control (Local / Copilot / Cloud / Claude, plus others from installed extensions) below the Chat input (clicking it opens a *Continue In* menu). These labs use **Local**. If you see that control set to anything else, switch it to **Local** first — the *Ask/Agent/Plan* modes and the *Keep/Undo* review buttons used in the labs are Local-session features.
+> 11. Newer VS Code builds add a **Session Target** control (Local / Copilot / Cloud / Claude, plus others from installed extensions) below the Chat input (clicking it opens a *Continue In* menu). These labs use **Local**, and the codespace is set up to start new chats there. If you see that control set to anything else, switch it to **Local** first — the *Ask/Agent/Plan* modes and the *Keep/Undo* review buttons used in the labs are Local-session features.
 >
 > ![Session Target menu](./images/cpho113.png?raw=true "Session Target menu")
 
@@ -179,7 +179,7 @@ Copilot responds with an explanation and a new code block in the Chat panel. Thi
 Add detailed docstrings to each function in prime.py explaining parameters, return values, and examples
 ```
 
-Agent mode edits the file directly and shows the changes as inline diffs. Click **"Keep"** to apply them or **"Undo"** to reject.
+Agent mode edits the file directly and shows the changes as inline diffs. (If it asks to run a command such as `python -m doctest prime.py` to check the examples, click **Allow**.) Click **"Keep"** to apply them or **"Undo"** to reject.
 
 ![Agent mode](./images/cpho17.png?raw=true "Agent mode")
 
@@ -222,7 +222,7 @@ Add input validation and error handling to the functions in prime.py. Do not cre
 
 <br><br>
 
-12. Copilot presents the plan. Under *Proceed from Plan*, click **"Start Implementation"**. If Agent mode asks to run commands, choose **"Allow"**. When it finishes, review the diffs and click **"Keep"**.
+12. Copilot presents the plan. Under *Proceed from Plan*, click **"Start Implementation"**. If Agent mode asks to run commands or use the Pylance MCP server, choose **"Allow"** (or **"Allow in this Session"**). When it finishes, review the diffs and click **"Keep"**.
 
 ![Ready to implement](./images/cpho33.png?raw=true "Ready to implement")
 
@@ -350,7 +350,7 @@ You should see text explaining how to test along with multiple code blocks and c
 
 <br><br>
 
-5. Save the file as **test_prime.py** (File > Save As, or Ctrl+S / Cmd+S and enter the filename).
+5. Save the file as **test_prime.py** (File > Save As, or Ctrl+S / Cmd+S). The suggested name may be the first line of code — replace it with `test_prime.py`.
 
 ![Save file](./images/cpho46.png?raw=true "Save file")
 
@@ -382,7 +382,7 @@ What other conditions should be tested? Suggest a single set of code to add the 
 
 <br><br>
 
-10. After a few moments, Copilot will add inline review comments identifying potential issues, improvements, or suggestions. The **Comments** panel at the bottom (to the right of *Ports*) opens automatically and lists all of them. Click any row to navigate to that suggestion. For each comment, you can click **"Apply and Go to Next"** to accept or **"Discard and Go to Next"** to skip. (If there's only one comment, it will have **"Apply"** and **"Discard"**.)
+10. After a few moments, Copilot will add inline review comments identifying potential issues, improvements, or suggestions. The **Comments** panel at the bottom (to the right of *Ports*) opens automatically and lists all of them. Click any row to navigate to that suggestion. For each comment, you can click **"Apply and Go to Next"** to accept or **"Discard and Go to Next"** to skip. (If there's only one comment, it will have **"Apply"** and **"Discard"**. If a comment says *No change found to suggest*, Apply is disabled — use Discard.)
 
 ![Review comment](./images/cpho50.png?raw=true "Review comment")
 
@@ -439,7 +439,7 @@ Referencing the issue at https://github.com/skillrepos/copilot-hands-on/issues/8
 
 <br><br>
 
-6. You may be asked to allow Copilot to run additional commands (expect up to three prompts; one may show a red risk note). If so, select `Allow`.
+6. You may be asked to allow Copilot to run additional commands (often three or four prompts; some show a yellow or red risk note, and one may ask to run *within /workspaces*). Select `Allow` for each.
    
 7. Watch Agent mode work. Unlike Ask mode, the Agent will **autonomously**: analyze the codebase, reason about what changes are needed, edit one or more files, and possibly run terminal commands to verify its work. You may see it update *app.py* and potentially *datastore.py*. If Agent requests permission to run a terminal command, click **"Allow"** to let it proceed.
 
@@ -593,7 +593,7 @@ Write a function that takes a JSON file path and returns a sorted list of all un
 
 **Purpose: In this lab, we'll set up and use the GitHub MCP Server to give Copilot access to external tools.**
 
-1. MCP (Model Context Protocol) servers extend Copilot's Agent mode with external tool integrations. For authentication to the GitHub MCP Server, we need a personal access token (PAT). Click the link below, provide a note, and click the green **"Generate token"** button at the bottom:
+1. MCP (Model Context Protocol) servers extend Copilot's Agent mode with external tool integrations. For authentication to the GitHub MCP Server, we need a personal access token (PAT). Click the link below (GitHub may ask you to confirm access first), provide a note, and click the green **"Generate token"** button at the bottom:
 
 Link: [Generate classic personal access token (repo & workflow scopes)](https://github.com/settings/tokens/new?scopes=repo,workflow)
 
@@ -608,17 +608,17 @@ Link: [Generate classic personal access token (repo & workflow scopes)](https://
 
 <br><br>
 
-3. Now we'll add the MCP Server configuration. We already have a sample config file we can use. Run these commands in the terminal:
+3. Now we'll add the MCP Server configuration. We have a sample config file that prompts for your token. Run these commands in the terminal:
 
 ```
 cd /workspaces/copilot-hands-on
 mkdir -p .vscode
-cp extra/mcp_github_settings.json .vscode/mcp.json
+cp extra/mcp_github_settings_pat.json .vscode/mcp.json
 code .vscode/mcp.json
 ```
 <br><br>
 
-4. In the *mcp.json* file, click the small **"Start"** link that appears above the server name. A dialog will prompt you to paste your PAT. Paste it and hit *Enter*. (The token will be masked.) 
+4. In the *mcp.json* file, click the small **"Start"** link that appears above the server name. A prompt for your **GitHub Personal Access Token** opens at the top of the window. Paste your PAT and hit *Enter*. (The token will be masked.)
 
 
 ![Starting the server](./images/mcp23.png?raw=true "Starting the server")
@@ -629,20 +629,20 @@ After a moment, you should see the text change to **"Running | Stop | Restart | 
 
 <br><br>
 
-5. To see the available tools, make sure you're in **Agent** mode in the Chat panel. Click the small **Configure Tools** icon (sliders) in the Chat input area. In the list that opens, expand the **GitHub MCP Server** group with its arrow. You'll see all the tools Copilot can now use — things like searching issues, reading file contents from repos, listing PRs, and more. Click **OK** to close the list.
+5. To see the available tools, make sure you're in **Agent** mode in the Chat panel. Click the small **Configure Tools** icon (sliders) in the Chat input area. In the list that opens, expand the **GitHub MCP Server** group with its arrow. You'll see all the tools Copilot can now use — searching issues, reading repo files, listing PRs, and more. Click **OK** to close the list.
 
 ![Viewing available tools](./images/mcp25.png?raw=true "Viewing available tools")
 
 <br><br>
 
-6. Let's use these tools. In Agent mode, enter a prompt like the following one:
+6. Let's use these tools. Start a new chat with the **"+"** icon (it stays in Agent mode) and enter a prompt like the following one:
 
 ```
 Give me a list of the open issues for the current GitHub repo
 ```
 <br><br>
 
-7. Watch the output — you'll see a note like **"Ran <tool_name> - GitHub MCP Server"** early in the response. (Click **Allow** if asked to run a `git` command. When the response finishes, these notes collapse under *Completed N steps* — click it to expand.) This confirms Copilot is using the MCP tools to access GitHub data directly rather than guessing from its training data.
+7. Watch the output — you'll see a note like **"Ran <tool_name> - GitHub MCP Server"** early in the response. (Click **Allow** if asked to run a `git` command. If it proposes a `gh` command instead, click **Skip** and reply `Use the GitHub MCP Server tools`. When the response finishes, these notes collapse under *Completed N steps* — click it to expand.) This confirms Copilot is using the MCP tools to access GitHub data directly rather than guessing from its training data.
 
 
 ![Example usage](./images/ct162.png?raw=true "Example usage")
@@ -677,9 +677,9 @@ Is issue #8 in the GitHub repository already solved by my local code?
 - MCP servers give Agent mode access to external tools and data sources
 - The GitHub MCP Server is one example — servers exist for Docker, databases, and many other tools
 - MCP tools are used in **Agent** mode (not Ask)
-- MCP configuration lives in `.vscode/mcp.json` and can be shared with your team via the repo; the workspace must be trusted for those servers to start
+- MCP configuration lives in `.vscode/mcp.json` and can be shared with your team via the repo (the `inputs` prompt keeps tokens out of the file); the workspace must be trusted for those servers to start
 
-**Heads-up:** the server config, its GitHub sign-in, and the running server all persist in this codespace after this lab ends, so Agent mode keeps its GitHub tool access in anything you do afterward. Use **Stop** in *mcp.json* (or delete the file) to turn it back off.
+**Heads-up:** the server config, your stored token, and the running server persist in this codespace, so Agent mode keeps GitHub tool access afterward. Use **Stop** in *mcp.json* (or delete the file) to turn it off, and delete the token at [github.com/settings/tokens](https://github.com/settings/tokens) when you're done.
 
 <p align="center">
 **[END OF LAB]**
@@ -690,6 +690,8 @@ Is issue #8 in the GitHub repository already solved by my local code?
 
 **Purpose: In this lab, we'll use the integrated Copilot features available on GitHub.com.**
 
+**Re-run note:** this lab changes your GitHub account, so a fresh codespace won't reset it. If you've done it before, the fork screen lists your account as *fork already exists*, and Copilot's link in step 5 opens your earlier pull request instead of the creation form. To run it clean, delete your old *sec-demo* fork first (*Settings > Danger Zone > Delete this repository*), or close the earlier pull request if it was never merged.
+
 1. Switch to GitHub in your browser and go to https://github.com/skillrepos/sec-demo. Make sure you are logged in with your GitHub account that has Copilot access.
 <br><br>
 
@@ -699,7 +701,11 @@ Is issue #8 in the GitHub repository already solved by my local code?
 
 <br><br>
 
-3. After the fork is complete, click on the Copilot button at the top right. The Chat dialog will open with a text input and some suggested questions. Click on the suggested prompt **"Give me a high level overview of this repo"** (suggestions vary; if you don't see it, type the question in). Copilot will provide an overview of the project.
+3. After the fork is complete, click on the Copilot button at the top right (if the panel doesn't open, click it again). The Chat dialog will open with a text input and some suggested questions. **Type** the prompt below into the input and hit *Enter*. (Don't click the matching suggestion — it starts a background *deep research* session instead of answering in the chat.) Copilot will provide an overview of the project.
+
+```
+Give me a high level overview of this repo
+```
 
 ![Chat with Copilot](./images/cpho93.png?raw=true "Chat with Copilot")
 
@@ -709,7 +715,7 @@ Is issue #8 in the GitHub repository already solved by my local code?
 
 <br><br>
 
-4. Go back to the repo. In the file list, click on **main.go** to open it. In the toolbar above the file contents, click the **Ask Copilot about this file** icon (the Copilot face, icon left of *Raw*). If the Copilot panel shows your earlier conversation, click its **New chat** (pencil) icon. Then click the suggested prompt **"Summarize this file for me."**
+4. Go back to the repo. In the file list, click on **main.go** to open it. In the toolbar above the file contents, click the **Ask Copilot about this file** icon (the Copilot face, two icons left of *Raw* — not the cloud-shaped *New agent session* icon). If the Copilot panel shows your earlier conversation, click its **New chat** (pencil) icon. Then click the suggested prompt **"Summarize this file for me."**
 
 ![Prompt](./images/cpho117.png?raw=true "Prompt")
 
@@ -729,7 +735,7 @@ Click the generated link to start the pull request.
 
 <br><br>
 
-6. If the next screen shows a **Create pull request** button, click it to open the pull request form. On the form, you can have Copilot generate the title with the Copilot icon in the title field (if the title doesn't change after a few seconds, type one). Then click the **Copilot actions** icon in the toolbar at the top of the description field and select **Summary**. Copilot will generate a detailed PR description in markdown.
+6. If the next screen shows a **Create pull request** button, click it to open the pull request form. On the form, type a short title. (You can also try the Copilot icon in the title field to generate one; if nothing changes after a few seconds, keep your own.) Then click the **Copilot actions** icon in the toolbar at the top of the description field and select **Summary**. Copilot will generate a detailed PR description in markdown.
 
 (**NOTE:** Pull request summaries are not included in the Free plan. If you don't see the Copilot icon in the description toolbar, skip this step and create the pull request with a manual description.)
 
@@ -842,7 +848,7 @@ These labs assume a **fresh codespace, run once, in order**. Starting a new code
 | 1 | *index.js* | Step 3's first completion is shaped by your old code. Steps 4 and 8 clear the file anyway, so the lab recovers on its own |
 | 2 | *prime.py* rewritten (simplified, docstrings, validation) | "simplify this code" has less to simplify, so the response is thinner. Every step still works — and Lab 4 picks up this same file on purpose |
 | 6 | *.github/copilot-instructions.md*, *utils.py*, selected model | Instructions apply to **all** later chats, including re-runs of Labs 1-5, so generated code won't match the earlier screenshots |
-| 7 | *.vscode/mcp.json*, the server's GitHub sign-in, running MCP server | Agent mode keeps GitHub tool access in every later lab |
+| 7 | *.vscode/mcp.json*, the stored PAT, running MCP server | Agent mode keeps GitHub tool access in every later lab |
 | 8 | A *sec-demo* fork and a pull request **in your GitHub account** | Not fixed by a new codespace — see the re-run note in that lab |
 
 Chat in VS Code also keeps local **memory files** per repository (its built-in memory tool), which is why it can open a step by referring to work from a previous run. Two Command Palette commands (Cmd/Ctrl+Shift+P) manage these:
