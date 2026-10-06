@@ -21,6 +21,10 @@
 			 // Keep voice/keyword activation off so Cmd+I/Ctrl+I only opens inline chat
 			 "accessibility.voice.keywordActivation": "off",
 			 "github.copilot.chat.setupTests.enabled": false,
+			 // Open new chats in the Local session target (Ask/Agent/Plan modes, Keep/Undo, local MCP servers)
+			 // instead of the experimental Copilot harness that some VS Code builds default to
+			 "chat.defaultToCopilotHarness": false,
+			 "chat.editor.preferCopilotHarness": false,
 			 // Open Markdown files in preview mode by default
             		 "workbench.editorAssociations": {
               		     "*.md": "vscode.markdown.preview.editor"
